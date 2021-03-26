@@ -1,0 +1,885 @@
+archetype (adl_version=1.4; uid=5dd444a9-9fce-4194-ace5-3ebc2741c176)
+	openEHR-EHR-CLUSTER.colorectal_carcinoma_no.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::nb]>
+
+description
+	original_author = <
+		["date"] = <"2017-12-07">
+		["name"] = <"Sonja Steigen">
+		["organisation"] = <"Universtetssykehuset i Nord-Norge HF">
+		["email"] = <"sonja.eriksson.steigen@unn.no">
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Sabine Leh", ...>
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"Registrering av histopatologiske variable ved kolorektale resektater med karsinom">
+			keywords = <"Kolorektale karsinom", ...>
+			copyright = <"© Nasjonal IKT HF">
+			use = <"Templat for registrering av kolorektale karsinom som er basert på nåværende maler som er i bruk i patologiavdelinger og et utkast  for \"Elektronisk mal for patologirapportering av hovedfunn ved kolorektaleresektater med primært karsinom\" utarbeidet av Else Marit Løberg, Roger Bjugn og Hege E. G. Russnes. ">
+			misuse = <"Brukes ved OBSERVATION.lab_test.histopathology">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Nasjonal IKT">
+		["references"] = <"1.	WHO Classification of Tumours of the Digistive System. Bosman FT, Carneiro F, Hruman RH, Theise ND, editors. Lyon: International Agency for Research on Cancer; 2010.
+2.	Brierley JD, Gospodarowicz MK, Wittekind C. TNM Classification of Malignant Tumours. 8th ed. Navarra, Spain: Wiley Blackwell; 2017.
+3.	Bateman AC, Jaynes E, Bateman AR. Rectal cancer staging post neoadjuvant therapy--how should the changes be assessed? Histopathology. 2009;54(6):713-21.
+
+">
+		["original_namespace"] = <"no.nasjonalikt">
+		["original_publisher"] = <"Nasjonal IKT">
+		["custodian_namespace"] = <"no.nasjonalikt">
+		["MD5-CAM-1.0.1"] = <"CEA29EA04D7AAD04BFC4B434C6705E85">
+		["build_uid"] = <"bedd2296-ca6c-4262-9774-8d6d2d8d4cf3">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Kolorektal karsinom
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0013] occurrences matches {0..1} matches {    -- Operasjonstype
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0014,    -- Høyresidig hemikolektomi
+							at0015,    -- Reseksjon av kolon transversum
+							at0016,    -- Venstresidig hemikolektomi
+							at0017,    -- Reseksjon av kolon sigmoideum
+							at0018,    -- Total kolektomi
+							at0019,    -- Annen kolonreseksjon
+							at0020,    -- Reseksjon av rektum og kolon sigmoideum
+							at0021,    -- Reseksjon av rektum
+							at0022]    -- Reseksjon av rektum og anus
+						}
+					}
+				}
+			}
+			ELEMENT[at0023] occurrences matches {0..1} matches {    -- Tumorperforasjon av tarm
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0024,    -- Påvist
+							at0025,    -- Ikke påvist
+							at0026]    -- Kan ikke angis
+						}
+					}
+				}
+			}
+			ELEMENT[at0027] occurrences matches {0..1} matches {    -- Antall karsinomer
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Tumors lokalisasjon
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[ac0002]
+						}
+					}
+				}
+			}
+			ELEMENT[at0028] occurrences matches {0..1} matches {    -- SNOMED T-kode
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0029,    -- Kodeverdi for C18.0-C18.9
+							at0030,    -- Kodeverdi for C19.9
+							at0031]    -- Kodeverdi for C20.9
+						}
+					}
+				}
+			}
+			ELEMENT[at0032] occurrences matches {0..1} matches {    -- Tumors histologiske type
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0033,    -- Adenokarsinom UNS
+							at0034,    -- Adenokarsinom, mucinøs type
+							at0035,    -- Adenokarsinom, medullær type
+							at0036,    -- Adenokarsinom, signetcelle type
+							at0037,    -- Adenokarsinom, mikropapillær type
+							at0038,    -- Adenoskvamøst karsinom
+							at0039,    -- Plateepitelkarsinom
+							at0040]    -- Udifferensiert karsinom
+						}
+					}
+				}
+			}
+			ELEMENT[at0041] occurrences matches {0..1} matches {    -- SNOMED M-kode primærtumor
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0042,    -- M81403
+							at0044,    -- M81403 og M84803
+							at0043,    -- M81403 og  M85103
+							at0045,    -- M81403 og M84903
+							at0049,    -- M81403 og M82653
+							at0046,    -- M85603
+							at0047,    -- M80703
+							at0048]    -- M80203
+						}
+					}
+				}
+			}
+			ELEMENT[at0050] occurrences matches {0..1} matches {    -- Tumors differensieringsgrad, adenokarsinom
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0051,    -- Høyt differensiert
+							at0052,    -- Middels differensiert
+							at0053,    -- Lavt differensiert
+							at0054]    -- Udifferensiert
+						}
+					}
+				}
+			}
+			ELEMENT[at0055] occurrences matches {0..1} matches {    -- Tumors differensieringsgrad, plateepitelkarsinom
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0056,    -- Høyt differensiert
+							at0057,    -- Middels differensiert
+							at0058]    -- Lavt differensiert
+						}
+					}
+				}
+			}
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Tumors største diameter
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0059] occurrences matches {0..1} matches {    -- Tumors dypeste infiltrasjon
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0060,    -- Tumor infilterer submucosa
+							at0061,    -- Tumor infiltrer muscularis propria
+							at0062,    -- Tumor infiltrerer perikolisk  vev
+							at0063,    -- Tumor infiltrerer perikolisk/perirektalt vev
+							at0064,    -- Tumor vokser gjennom viscerale peritoneum (serosa)
+							at0065,    -- Tumor infiltrer annet organ (mikroskopisk)
+							at0066]    -- Kan ikke angis
+						}
+					}
+				}
+			}
+			ELEMENT[at0067] occurrences matches {0..1} matches {    -- Nærmeste endereseksjonsrand
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0068,    -- Proksimal (oral) endereseksjonsrand
+							at0069,    -- Distal (anal) enderesksjonsrand
+							at0070]    -- Kan ikke angis
+						}
+					}
+				}
+			}
+			ELEMENT[at0071] occurrences matches {0..1} matches {    -- Fjerneste endereseksjonsrand
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0072,    -- Proksimal (oral) endereseksjonsrand
+							at0073,    -- Distal (anal) endereseksjonsrand
+							at0074]    -- Kan ikke angis
+						}
+					}
+				}
+			}
+			ELEMENT[at0075] occurrences matches {0..1} matches {    -- Minste avstand til sirkumferente reseksjonsrand
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0076] occurrences matches {0..1} matches {    -- Tumorinfiltrasjon i ekstramurale vener
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0077,    -- Påvist
+							at0078]    -- Ikke påvist
+						}
+					}
+				}
+			}
+			ELEMENT[at0079] occurrences matches {0..1} matches {    -- Perineural infiltrasjon
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0080,    -- Påvist
+							at0081]    -- Ikke påvist
+						}
+					}
+				}
+			}
+			ELEMENT[at0086] occurrences matches {0..1} matches {    -- Neoadjuvant behandling
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0087,    -- Ja
+							at0088,    -- Nei
+							at0089]    -- Ikke angitt
+						}
+					}
+				}
+			}
+			ELEMENT[at0082] occurrences matches {0..1} matches {    -- Neoadjuvant behandlingseffekt
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0083,    -- m-RCRG 1
+							at0084,    -- m-RCRG 2
+							at0085]    -- m-RCRG 3
+						}
+					}
+				}
+			}
+			ELEMENT[at0090] occurrences matches {0..1} matches {    -- Totalt antall lymfeknuter
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0091] occurrences matches {0..1} matches {    -- Antall regionale lymfeknuter med metastaser
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0092] occurrences matches {0..1} matches {    -- Antall regionale lymfeknuter med metastaser med perinodal vekst
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0097] occurrences matches {0..1} matches {    -- Isolerte tumorknuter
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0098,    -- Påvist
+							at0099]    -- Ikke påvist
+						}
+					}
+				}
+			}
+			ELEMENT[at0093] occurrences matches {0..1} matches {    -- SNOMED M-kode lymfeknuter
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0126,    -- M09450
+							at0127]    -- m81406
+						}
+					}
+				}
+			}
+			ELEMENT[at0100] occurrences matches {0..1} matches {    -- Immunhistokjemisk MMR proteinuttrykk-test
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0101,    -- Utført
+							at0102]    -- Ikke utført
+						}
+					}
+				}
+			}
+			ELEMENT[at0103] occurrences matches {0..1} matches {    -- Resultat av immunhistokjemisk MMR proteinuttykk-test
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0104] occurrences matches {0..1} matches {    -- Mikrosatelitt instabilitet (MSI)-test
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0105,    -- Utført
+							at0106]    -- Ikke utført
+						}
+					}
+				}
+			}
+			ELEMENT[at0107] occurrences matches {0..1} matches {    -- Resultat av mikrosatelitt instabilitet (MSI)-test
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0108] occurrences matches {0..1} matches {    -- Somatisk mutasjons-test (RAS/BRAF)
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0109,    -- Utført
+							at0110]    -- Ikke utført
+						}
+					}
+				}
+			}
+			ELEMENT[at0111] occurrences matches {0..1} matches {    -- Resultat av somatisk mutasjons-test (RAS/BRAF)
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0112] occurrences matches {0..1} matches {    -- pTNM-klassifikasjon - pT
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0113,    -- pT1
+							at0114,    -- pT2
+							at0115,    -- pT3
+							at0116,    -- pT4
+							at0117,    -- pT4b
+							at0118]    -- pTx
+						}
+					}
+				}
+			}
+			ELEMENT[at0119] occurrences matches {0..1} matches {    -- pTNM-klassifikasjon - pN
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0120,    -- pN0
+							at0121,    -- pN1a
+							at0122,    -- pN1b
+							at0123,    -- pN1c
+							at0124,    -- pN2a
+							at0125]    -- pN2b
+						}
+					}
+				}
+			}
+			ELEMENT[at0128] occurrences matches {0..1} matches {    -- pTNM-klassifikasjon - pM
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0129,    -- pM1a
+							at0130]    -- pM1b
+						}
+					}
+				}
+			}
+			ELEMENT[at0131] occurrences matches {0..1} matches {    -- Annet
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"Kolorektal karsinom">
+					description = <"Funn ved resektater med kolorektale karsinom">
+				>
+				["at0001"] = <
+					text = <"Tumors største diameter">
+					description = <"*Største diameter av tumor i millimeter">
+				>
+				["at0002"] = <
+					text = <"Tumors lokalisasjon">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Operasjonstype">
+					description = <"*Type operasjon">
+				>
+				["at0014"] = <
+					text = <"Høyresidig hemikolektomi">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Reseksjon av kolon transversum">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Venstresidig hemikolektomi">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"Reseksjon av kolon sigmoideum">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"Total kolektomi">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"Annen kolonreseksjon">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"Reseksjon av rektum og kolon sigmoideum">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"Reseksjon av rektum">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"Reseksjon av rektum og anus">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"Tumorperforasjon av tarm">
+					description = <"*">
+				>
+				["at0024"] = <
+					text = <"Påvist">
+					description = <"*">
+				>
+				["at0025"] = <
+					text = <"Ikke påvist">
+					description = <"*">
+				>
+				["at0026"] = <
+					text = <"Kan ikke angis">
+					description = <"*">
+				>
+				["at0027"] = <
+					text = <"Antall karsinomer">
+					description = <"*Tallverdi (hele tall)">
+				>
+				["at0028"] = <
+					text = <"SNOMED T-kode">
+					description = <"*SNOMED-kode (T) skal automatisk legges inn når lokalisasjon velges i element \"Tumor lokalisasjon\"">
+				>
+				["at0029"] = <
+					text = <"Kodeverdi for C18.0-C18.9">
+					description = <"T67000 Colon UNS">
+				>
+				["at0030"] = <
+					text = <"Kodeverdi for C19.9">
+					description = <"T68200 Rectosigmoid">
+				>
+				["at0031"] = <
+					text = <"Kodeverdi for C20.9">
+					description = <"T68000 Rectum UNS">
+				>
+				["at0032"] = <
+					text = <"Tumors histologiske type">
+					description = <"*Histologisk type (WHO 2010)">
+				>
+				["at0033"] = <
+					text = <"Adenokarsinom UNS">
+					description = <"*">
+				>
+				["at0034"] = <
+					text = <"Adenokarsinom, mucinøs type">
+					description = <"> 50 % slim">
+				>
+				["at0035"] = <
+					text = <"Adenokarsinom, medullær type">
+					description = <"Solid vekstmønster, helt uten kjerteldannelse">
+				>
+				["at0036"] = <
+					text = <"Adenokarsinom, signetcelle type">
+					description = <"> 50 % signetceller">
+				>
+				["at0037"] = <
+					text = <"Adenokarsinom, mikropapillær type">
+					description = <"*">
+				>
+				["at0038"] = <
+					text = <"Adenoskvamøst karsinom">
+					description = <"*">
+				>
+				["at0039"] = <
+					text = <"Plateepitelkarsinom">
+					description = <"*">
+				>
+				["at0040"] = <
+					text = <"Udifferensiert karsinom">
+					description = <"< 5 % kjerteldifferensiering">
+				>
+				["at0041"] = <
+					text = <"SNOMED M-kode primærtumor">
+					description = <"*SNOMED-kode (M) skal automatisk legges inn når histologisk type velges under \"Tumors histologiske type\"">
+				>
+				["at0042"] = <
+					text = <"M81403">
+					description = <"Adenokarsinom UNS">
+				>
+				["at0043"] = <
+					text = <"M81403 og  M85103">
+					description = <"Adenokarsinom, medullær type">
+				>
+				["at0044"] = <
+					text = <"M81403 og M84803">
+					description = <"Adenokarsinom, mucinøs type">
+				>
+				["at0045"] = <
+					text = <"M81403 og M84903">
+					description = <"Adenokarsinom, signetcelle type">
+				>
+				["at0046"] = <
+					text = <"M85603">
+					description = <"Adenoskvamøst karsinom">
+				>
+				["at0047"] = <
+					text = <"M80703">
+					description = <"Plateepitelkarsinom">
+				>
+				["at0048"] = <
+					text = <"M80203">
+					description = <"Udifferensiert karsinom">
+				>
+				["at0049"] = <
+					text = <"M81403 og M82653">
+					description = <"Adenokarsinom, mikropapillær type">
+				>
+				["at0050"] = <
+					text = <"Tumors differensieringsgrad, adenokarsinom">
+					description = <"*Kodeverdi for adenokarsinom (WHO 2010)">
+				>
+				["at0051"] = <
+					text = <"Høyt differensiert">
+					description = <"> 95 %  kjertler">
+				>
+				["at0052"] = <
+					text = <"Middels differensiert">
+					description = <"50-95 % kjertler">
+				>
+				["at0053"] = <
+					text = <"Lavt differensiert">
+					description = <"5-50 % kjertler">
+				>
+				["at0054"] = <
+					text = <"Udifferensiert">
+					description = <"< 5 % kjertler">
+				>
+				["at0055"] = <
+					text = <"Tumors differensieringsgrad, plateepitelkarsinom">
+					description = <"*Kodeverdi for plateepitelkarsinom (WHO 2010)">
+				>
+				["at0056"] = <
+					text = <"Høyt differensiert">
+					description = <"Keratinisering">
+				>
+				["at0057"] = <
+					text = <"Middels differensiert">
+					description = <"Plateepitelmodning, ikke/lite keratinisering">
+				>
+				["at0058"] = <
+					text = <"Lavt differensiert">
+					description = <"*">
+				>
+				["at0059"] = <
+					text = <"Tumors dypeste infiltrasjon">
+					description = <"*Tumors dypeste infiltrasjonn vurdert mikroskopisk">
+				>
+				["at0060"] = <
+					text = <"Tumor infilterer submucosa">
+					description = <"*">
+				>
+				["at0061"] = <
+					text = <"Tumor infiltrer muscularis propria">
+					description = <"*">
+				>
+				["at0062"] = <
+					text = <"Tumor infiltrerer perikolisk  vev">
+					description = <"*">
+				>
+				["at0063"] = <
+					text = <"Tumor infiltrerer perikolisk/perirektalt vev">
+					description = <"*">
+				>
+				["at0064"] = <
+					text = <"Tumor vokser gjennom viscerale peritoneum (serosa)">
+					description = <"*">
+				>
+				["at0065"] = <
+					text = <"Tumor infiltrer annet organ (mikroskopisk)">
+					description = <"*">
+				>
+				["at0066"] = <
+					text = <"Kan ikke angis">
+					description = <"*">
+				>
+				["at0067"] = <
+					text = <"Nærmeste endereseksjonsrand">
+					description = <"*Avstand i millimeter til nærmeste endereseksjonsrand">
+				>
+				["at0068"] = <
+					text = <"Proksimal (oral) endereseksjonsrand">
+					description = <"*">
+				>
+				["at0069"] = <
+					text = <"Distal (anal) enderesksjonsrand">
+					description = <"*">
+				>
+				["at0070"] = <
+					text = <"Kan ikke angis">
+					description = <"*">
+				>
+				["at0071"] = <
+					text = <"Fjerneste endereseksjonsrand">
+					description = <"*Fjerneste endereseksjonsrand målt i millimeter">
+				>
+				["at0072"] = <
+					text = <"Proksimal (oral) endereseksjonsrand">
+					description = <"*">
+				>
+				["at0073"] = <
+					text = <"Distal (anal) endereseksjonsrand">
+					description = <"*">
+				>
+				["at0074"] = <
+					text = <"Kan ikke angis">
+					description = <"*">
+				>
+				["at0075"] = <
+					text = <"Minste avstand til sirkumferente reseksjonsrand">
+					description = <"*Avstand til sirkumferente reseksjonsflate målt i millimeter">
+				>
+				["at0076"] = <
+					text = <"Tumorinfiltrasjon i ekstramurale vener">
+					description = <"*">
+				>
+				["at0077"] = <
+					text = <"Påvist">
+					description = <"*">
+				>
+				["at0078"] = <
+					text = <"Ikke påvist">
+					description = <"*">
+				>
+				["at0079"] = <
+					text = <"Perineural infiltrasjon">
+					description = <"*">
+				>
+				["at0080"] = <
+					text = <"Påvist">
+					description = <"*">
+				>
+				["at0081"] = <
+					text = <"Ikke påvist">
+					description = <"*">
+				>
+				["at0082"] = <
+					text = <"Neoadjuvant behandlingseffekt">
+					description = <"*Ad modum Bateman 2009">
+				>
+				["at0083"] = <
+					text = <"m-RCRG 1">
+					description = <"Ikke påvist karsinomceller/ foci av karsinomceller i < 5 % av tumorområdet. Mucinsjøer kan sees, men mangler karsinomceller">
+				>
+				["at0084"] = <
+					text = <"m-RCRG 2">
+					description = <"Kombinasjon av karsinomceller of fibrose der karsinomcellene utgjøre 5-50 % av tumorområdet">
+				>
+				["at0085"] = <
+					text = <"m-RCRG 3">
+					description = <"Karsinomcellene utgjør >50 % av tumorområdet. Noe fibrose kan sees, kan være vanskelig å skjelne fra desmoplastisk respons">
+				>
+				["at0086"] = <
+					text = <"Neoadjuvant behandling">
+					description = <"*Stråling og/eller cellegift før operasjon">
+				>
+				["at0087"] = <
+					text = <"Ja">
+					description = <"*">
+				>
+				["at0088"] = <
+					text = <"Nei">
+					description = <"*">
+				>
+				["at0089"] = <
+					text = <"Ikke angitt">
+					description = <"*">
+				>
+				["at0090"] = <
+					text = <"Totalt antall lymfeknuter">
+					description = <"*Tallverdi (hele tall)">
+				>
+				["at0091"] = <
+					text = <"Antall regionale lymfeknuter med metastaser">
+					description = <"*Tallverdi (hele tall)">
+				>
+				["at0092"] = <
+					text = <"Antall regionale lymfeknuter med metastaser med perinodal vekst">
+					description = <"*Tallverdi (hele tall)">
+				>
+				["at0093"] = <
+					text = <"SNOMED M-kode lymfeknuter">
+					description = <"*Kode dersom man har >0 lymfeknuter med metastaser">
+				>
+				["at0097"] = <
+					text = <"Isolerte tumorknuter">
+					description = <"*Isolerte tumorknuter i mesocolon uten sikker lymfeknuteopprinnelse (ujevne eller infiltrative ytre begrensninger) kan representere diskontinuerlig spredning, venøs invasjon med ekstavaskulær spredning eller en totalt reorganisert lymfeknute (N1/2). I T1 eller T2 lesjoner defineres disse som N1c. Dersom man er sikker på at det er en lymfeknute klassifiseres den som dette og antall lymfeknuter beregnes ut fra dette. ">
+				>
+				["at0098"] = <
+					text = <"Påvist">
+					description = <"*">
+				>
+				["at0099"] = <
+					text = <"Ikke påvist">
+					description = <"*">
+				>
+				["at0100"] = <
+					text = <"Immunhistokjemisk MMR proteinuttrykk-test">
+					description = <"*Undersøkelse på reperasjonsproteiner med tanke på Lynch eller immunterapi">
+				>
+				["at0101"] = <
+					text = <"Utført">
+					description = <"*">
+				>
+				["at0102"] = <
+					text = <"Ikke utført">
+					description = <"*">
+				>
+				["at0103"] = <
+					text = <"Resultat av immunhistokjemisk MMR proteinuttykk-test">
+					description = <"*Fritekst dersom utført">
+				>
+				["at0104"] = <
+					text = <"Mikrosatelitt instabilitet (MSI)-test">
+					description = <"*I forbindelse med utredning for Lynch syndrom eller immunterapi">
+				>
+				["at0105"] = <
+					text = <"Utført">
+					description = <"*">
+				>
+				["at0106"] = <
+					text = <"Ikke utført">
+					description = <"*">
+				>
+				["at0107"] = <
+					text = <"Resultat av mikrosatelitt instabilitet (MSI)-test">
+					description = <"*Fritekst dersom utført">
+				>
+				["at0108"] = <
+					text = <"Somatisk mutasjons-test (RAS/BRAF)">
+					description = <"*Test på KRAS, NRAS og BRAF">
+				>
+				["at0109"] = <
+					text = <"Utført">
+					description = <"*">
+				>
+				["at0110"] = <
+					text = <"Ikke utført">
+					description = <"*">
+				>
+				["at0111"] = <
+					text = <"Resultat av somatisk mutasjons-test (RAS/BRAF)">
+					description = <"*Fritekst dersom utført">
+				>
+				["at0112"] = <
+					text = <"pTNM-klassifikasjon - pT">
+					description = <"*Kodeverdi som automatisk generes ettersom hva man har valt under \"Tumors dypeste infiltrasjon\". Dersom neoadjuvant behandling skal prefikset y komme foran p">
+				>
+				["at0113"] = <
+					text = <"pT1">
+					description = <"Tumor vokser inn i submucosa">
+				>
+				["at0114"] = <
+					text = <"pT2">
+					description = <"Tumor vokser inn i muscularis propria">
+				>
+				["at0115"] = <
+					text = <"pT3">
+					description = <"Tumor vokser inn i perikolisk /perirektalt fettvev">
+				>
+				["at0116"] = <
+					text = <"pT4">
+					description = <"Tumor vokser gjennom serosa (viscerale peritoneum). ">
+				>
+				["at0117"] = <
+					text = <"pT4b">
+					description = <"Tumor vokser inn i andre organer eller strukturer, også tumorer som vokser inn i andre colonsegment.">
+				>
+				["at0118"] = <
+					text = <"pTx">
+					description = <"Kan ikke angis">
+				>
+				["at0119"] = <
+					text = <"pTNM-klassifikasjon - pN">
+					description = <"*Kodeverdi automatisk genereres som følge av hva man har valg under Antaøø regionale lymfeknutemetastaser og isolerte tumorknuter">
+				>
+				["at0120"] = <
+					text = <"pN0">
+					description = <"Ikke påvist lymfeknutemetastaser">
+				>
+				["at0121"] = <
+					text = <"pN1a">
+					description = <"Metastase til 1 regional lymfeknute.">
+				>
+				["at0122"] = <
+					text = <"pN1b">
+					description = <"Metastaser til 2-3 regionale lymfeknuter">
+				>
+				["at0123"] = <
+					text = <"pN1c">
+					description = <"Tumorknute (satellitt(er)) i subserosa eller i ikke-peritonealisert pericolisk bløtvev uten regionale lymfeknutemetastaser">
+				>
+				["at0124"] = <
+					text = <"pN2a">
+					description = <"Metastaser til 4-6 regionale lymfeknuter">
+				>
+				["at0125"] = <
+					text = <"pN2b">
+					description = <"Metastaser til ≥  7 regionale lymfeknuter">
+				>
+				["at0126"] = <
+					text = <"M09450">
+					description = <"Malignt tumorvev ikke påvist">
+				>
+				["at0127"] = <
+					text = <"m81406">
+					description = <"Metastase påvist">
+				>
+				["at0128"] = <
+					text = <"pTNM-klassifikasjon - pM">
+					description = <"*Fjernmetastaser">
+				>
+				["at0129"] = <
+					text = <"pM1a">
+					description = <"Metastaser til et organ (lever, lunge, ovarium, ikke-regional lymfeknute)">
+				>
+				["at0130"] = <
+					text = <"pM1b">
+					description = <"Metastaser til mer enn et organ eller til peritoneum">
+				>
+				["at0131"] = <
+					text = <"Annet">
+					description = <"*Fritekst">
+				>
+			>
+		>
+	>
+	constraint_definitions = <
+		["nb"] = <
+			items = <
+				["ac0002"] = <
+					text = <"New constraint">
+					description = <"*SNOMED-kode (T) skal automatisk  legges inn når lokalisasjon velges">
+				>
+			>
+		>
+	>
