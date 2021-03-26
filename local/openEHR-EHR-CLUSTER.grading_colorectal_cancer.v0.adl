@@ -1,0 +1,120 @@
+archetype (adl_version=1.4; uid=f9bbdc70-b303-4e10-9fd5-b82b9af155a9)
+	openEHR-EHR-CLUSTER.grading_colorectal_cancer.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2018-06-29">
+		["name"] = <"Sabine Leh">
+		["organisation"] = <"Haukeland University Hospital">
+		["email"] = <"sabine.leh@helse-bergen.no">
+	>
+	lifecycle_state = <"in_development">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the grade of a colorectal cancer ">
+			keywords = <"histopathology","cancer","colonic","rectal","pathology","grade","microscopic">
+			use = <"To record the grade of a colorectal cancer by applying one of the commonly used grading systems for colorectal cancer. Use as a componenet archetype in the context of a suite of archetypes that make up a histopathology report i.e. openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0.">
+		>
+	>
+	other_details = <
+		["references"] = <"College of American Pathologists. Protocol for the Examination of Specimens from Patients with Primary Carcinomas of the Colon and Rectum (version: Colon Rectum 4.0.0.1)[Internet]. 2017 Jun ;[cited 2018 Mar 01]
+Available from: http://www.cap.org/ShowProperty?nodePath=/UCMCon/Contribution%20Folders/WebContent/pdf/cp-colon-17protocol-4001.pdf">
+		["MD5-CAM-1.0.1"] = <"4A2E188BEBDB97C347E94CD37584955C">
+		["build_uid"] = <"7e652bee-24a3-45e5-a02c-bd1d8299baa3">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Grading colorectal cancer
+		items cardinality matches {1..*; unordered} matches {
+			CLUSTER[at0011] occurrences matches {0..1} matches {    -- Grade
+				items cardinality matches {1..1; unordered} matches {
+					ELEMENT[at0001] occurrences matches {0..1} matches {    -- Grade (three-tier system)
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0002,    -- Grade 1 - well differentiated
+									at0003,    -- Grade 2 - moderately differentiated
+									at0004]    -- Grade 3 - poorly differentiated
+								}
+							}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- Grade (two-tier system)
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0007,    -- Low-grade
+									at0008]    -- High-grade
+								}
+							}
+						}
+					}
+				}
+			}
+			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Comment
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Grading colorectal cancer">
+					description = <"Grading of colorectal cancer">
+				>
+				["at0001"] = <
+					text = <"Grade (three-tier system)">
+					description = <"*Histological grade of the tumour  (three-tier grading system).">
+					comment = <"The grading system applies only to adenocarcinomas, not otherwise specified.">
+				>
+				["at0002"] = <
+					text = <"Grade 1 - well differentiated">
+					description = <">90% gland formation">
+				>
+				["at0003"] = <
+					text = <"Grade 2 - moderately differentiated">
+					description = <"50 - 95% glands">
+				>
+				["at0004"] = <
+					text = <"Grade 3 - poorly differentiated">
+					description = <"<50% glands">
+				>
+				["at0006"] = <
+					text = <"Grade (two-tier system)">
+					description = <"*Histological grade of the tumour  (two-tier grading system).">
+					comment = <"The grading system applies only to adenocarcinomas, not otherwise specified. ">
+				>
+				["at0007"] = <
+					text = <"Low-grade">
+					description = <"Well or moderately differentiated">
+				>
+				["at0008"] = <
+					text = <"High-grade">
+					description = <"Poorly differentiated">
+				>
+				["at0010"] = <
+					text = <"Comment">
+					description = <"*A text comment on histological grading.">
+				>
+				["at0011"] = <
+					text = <"Grade">
+					description = <"*Histological grade of the tumour">
+				>
+			>
+		>
+	>
