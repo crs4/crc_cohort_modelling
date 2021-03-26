@@ -1,0 +1,931 @@
+archetype (adl_version=1.4; uid=48a2846c-507b-4c9d-8ea0-cf17ee8686e8)
+	openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2018-04-19">
+		["name"] = <"Silje Ljosland Bakke">
+		["organisation"] = <"Nasjonal IKT HF, Norway">
+		["email"] = <"silje.ljosland.bakke@nasjonalikt.no">
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Vebjørn Arntzen, Oslo universitetssykehus HF, Norway (Nasjonal IKT redaktør)","Koray Atalag, University of Auckland, New Zealand","Silje Ljosland Bakke, Nasjonal IKT HF, Norway (Nasjonal IKT redaktør)","Matt Cordell, NEHTA, Australia","Hans Kristian Haugland, Helse Bergen, Norway (Nasjonal IKT redaktør)","Sabine Leh, Helse Bergen, Norway (Nasjonal IKT redaktør)","David McKillop, NEHTA, Australia","Ian McNicoll, FreshEHR, United Kingdom","Cathy Richardson, NEHTA, Australia","David Rowed, Ocean Informatics, Australia","Sonja Steigen, Universitetssykehuset Nord-Norge, Norway (Nasjonal IKT redaktør)","John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record synoptic findings about colorectal cancer found on histopathological examination.">
+			keywords = <"histopathology","cancer","laboratory","lab","malignancy","pathology","colonic","rectal","anal","GI","gastrointestinal","bowel","microscopic","macroscopic">
+			copyright = <"© openEHR Foundation, Nasjonal IKT HF">
+			use = <"To record detailed findings about examination of tissue related to colorectal cancer.
+Use as a component archetype in the context of a suite of archetypes that make up a histopathology report.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Nasjonal IKT">
+		["references"] = <"College of American Pathologists. Protocol for the Examination of Specimens from Patients with Primary Carcinomas of the Colon and Rectum (version: Colon Rectum 4.0.0.1)[Internet]. 2017 Jun ;[cited 2018 Mar 01]
+Available from: http://www.cap.org/ShowProperty?nodePath=/UCMCon/Contribution%20Folders/WebContent/pdf/cp-colon-17protocol-4001.pdf
+
+Royal College of Pathologists. Dataset for colorectal cancer (4th edition) [Internet]. 2017 Dec ;[cited 2018 May 06 ]
+Available from: https://www.rcpath.org/resourceLibrary/g049-dataset-for-histopathological-reporting-of-colorectal-cancer.html
+
+Royal College of Pathologists of Australasia. Colorectal Cancer Structured Reporting Protocol (3rd Edition 2016). [Internet]. 2016;[cited 2018 Mar 01]
+Available from: https://www.rcpa.edu.au/Library/Practising-Pathology/Structured-Pathology-Reporting-of-Cancer/Cancer-Protocols/Gastrointestinal/Protocol-colorectal-cancer
+
+World Health Organization Classification of Tumours Pathology and Genetics of Tumours of the Digestive System, 2010, 4th edition © International Agency for Research on Cancer (IARC). 
+
+Oslo universitetssykehus. Elektronisk mal for patologirapportering av hovedfunn ved kolorektalresektater med primært karsinom. Malversjon 2.0, dokumentversjon 1.0. 21.07.2017.
+">
+		["original_namespace"] = <"no.nasjonalikt">
+		["original_publisher"] = <"Nasjonal IKT">
+		["custodian_namespace"] = <"no.nasjonalikt">
+		["MD5-CAM-1.0.1"] = <"5BA2D58ADA02C3132A4AD522AB5A8C63">
+		["build_uid"] = <"5325ef39-36df-42c6-833f-c45609b994a5">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Synoptic details - Colorectal cancer
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0330] occurrences matches {0..1} matches {    -- Neoadjuvant therapy given
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0331,    -- Yes
+							at0332,    -- No
+							at0333]    -- Not known
+						}
+					}
+				}
+			}
+			allow_archetype CLUSTER[at0006] occurrences matches {0..*} matches {    -- Resection margin
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_resection_margins\.v0/}
+			}
+			CLUSTER[at0004] occurrences matches {0..1} matches {    -- Macroscopic findings
+				items cardinality matches {1..*; unordered} matches {
+					allow_archetype CLUSTER[at0005] occurrences matches {0..1} matches {    -- Tumour dimensions
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.physical_properties(-[a-zA-Z0-9_]+)*\.v0/}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Maximum extramuscular extension
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"mm">
+										magnitude = <|>=0.0|>
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Anastomotic doughnuts submitted
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					CLUSTER[at0009] occurrences matches {0..1} matches {    -- Tumour perforation
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0010] occurrences matches {0..1} matches {    -- Tumour perforation
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0018,    -- Present
+											at0019,    -- Absent
+											at0420,    -- Equivocal
+											at0017]    -- Indeterminate
+										}
+									}
+								}
+							}
+							ELEMENT[at0011] occurrences matches {0..1} matches {    -- Perforation location
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0020,    -- Retro/infra peritoneal
+											at0021]    -- Serosal
+										}
+									}
+								}
+							}
+							ELEMENT[at0012] occurrences matches {0..1} matches {    -- Comment
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0013] occurrences matches {0..1} matches {    -- For rectal tumours
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0014] occurrences matches {0..1} matches {    -- Relationship to anterior peritoneal reflection
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0022,    -- Entirely above
+											at0023,    -- Astride
+											at0024,    -- Entirely below
+											at0372]    -- Indeterminate
+										}
+									}
+								}
+							}
+							ELEMENT[at0015] occurrences matches {0..1} matches {    -- Intactness of the mesorectum
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0027,    -- Complete
+											at0026,    -- Nearly complete
+											at0025,    -- Incomplete
+											at0028]    -- Indeterminate
+										}
+									}
+								}
+							}
+						}
+					}
+					ELEMENT[at0373] occurrences matches {0..1} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0001] occurrences matches {0..1} matches {    -- Microscopic findings
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0033] occurrences matches {0..1} matches {    -- Histological tumour type
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0034,    -- Adenocarcinoma
+									at0410,    -- Adenocarcinoma, cribriform comedo-type
+									at0039,    -- Medullary carcinoma
+									at0411,    -- Adenocarcinoma, micropapillary type
+									at0035,    -- Mucinous adenocarcinoma
+									at0412,    -- Adenocarcinoma, serrated type
+									at0036,    -- Signet ring cell carcinoma
+									at0038,    -- Adenosquamous carcinoma
+									at0413,    -- Spindle cell carcinoma
+									at0037,    -- Squamous cell carcinoma
+									at0041,    -- Undifferentiated carcinoma
+									at0040,    -- Neuroendocrine tumour G1
+									at0414,    -- Neuroendocrine tumour G2
+									at0418,    -- Neuroendocrine carcinoma
+									at0415,    -- Neuroendocrine carcinoma, large cell
+									at0416,    -- Neuroendocrine carcinoma, small cell
+									at0417]    -- Mixed adenoneuroendocrine carcinoma
+								}
+							}
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0002] occurrences matches {0..1} matches {    -- pTNM classification
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.tnm_stage_pathological\.v0/}
+					}
+					ELEMENT[at0323] occurrences matches {0..1} matches {    -- Distance of invasion
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"mm">
+										magnitude = <|>=0.0|>
+									>
+								>
+							>
+						}
+					}
+					CLUSTER[at0389] occurrences matches {0..1} matches {    -- Response to neoadjuvant therapy
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0390] occurrences matches {0..1} matches {    -- Description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							allow_archetype CLUSTER[at0003] occurrences matches {0..1} matches {    -- Details
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+					CLUSTER[at0269] occurrences matches {0..1} matches {    -- Histological grading
+						items cardinality matches {1..*; unordered} matches {
+							allow_archetype Not_Set[at0391] occurrences matches {0..*} matches {    -- Grade
+								include
+									archetype_id/value matches {/.*/}
+							}
+							ELEMENT[at0271] occurrences matches {0..1} matches {    -- Comment
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0030] occurrences matches {0..1} matches {    -- Lymph node findings
+						items cardinality matches {1..*; unordered} matches {
+							allow_archetype CLUSTER[at0087] occurrences matches {0..1} matches {    -- Lymph node detail
+								include
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.lymph_node_metastases\.v1/}
+							}
+							ELEMENT[at0365] occurrences matches {0..1} matches {    -- Status of apical lymph node
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0376,    -- Metastasis present
+											at0377,    -- Metastasis absent
+											at0378,    -- Equivocal
+											at0379]    -- Indeterminate
+										}
+									}
+								}
+							}
+							ELEMENT[at0348] occurrences matches {0..1} matches {    -- Comment
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0403] occurrences matches {0..1} matches {    -- Tumour deposits
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0404] occurrences matches {0..1} matches {    -- Assessment of tumour deposits
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0405,    -- Present
+											at0406,    -- Absent
+											at0407,    -- Equivocal
+											at0408]    -- Indeterminate
+										}
+									}
+								}
+							}
+							ELEMENT[at0281] occurrences matches {0..1} matches {    -- Number of tumour deposits
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0380,    -- Not applicable
+											at0388,    -- 0
+											at0381,    -- 1
+											at0382,    -- 2
+											at0383,    -- 3
+											at0384,    -- 4
+											at0385,    -- 5
+											at0386,    -- >5
+											at0387,    -- Equivocal
+											at0284]    -- Indeterminate
+										}
+									}
+								}
+							}
+							ELEMENT[at0409] occurrences matches {0..1} matches {    -- Comment
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0278] occurrences matches {0..1} matches {    -- Local tissue invasion
+						items cardinality matches {1..*; unordered} matches {
+							allow_archetype CLUSTER[at0374] occurrences matches {0..*} matches {    -- Large vessel (venous) invasion
+								include
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
+							}
+							allow_archetype CLUSTER[at0277] occurrences matches {0..*} matches {    -- Small vessel invasion
+								include
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
+							}
+							allow_archetype CLUSTER[at0286] occurrences matches {0..*} matches {    -- Perineural invasion
+								include
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.tumour_invasion\.v1/}
+							}
+						}
+					}
+					CLUSTER[at0263] occurrences matches {0..1} matches {    -- Distant metastasis
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0264] occurrences matches {0..1} matches {    -- Distant metastasis
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0362,    -- Present
+											at0363,    -- Absent
+											at0364]    -- Indeterminate
+										}
+									}
+								}
+							}
+							allow_archetype CLUSTER[at0287] occurrences matches {0..*} matches {    -- Sites
+								include
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1/}
+							}
+							ELEMENT[at0265] occurrences matches {0..1} matches {    -- Description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0366] occurrences matches {0..*} matches {    -- Polyps
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0359] occurrences matches {0..1} matches {    -- Type of polyp
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0338] occurrences matches {0..1} matches {    -- Number of polyps
+								value matches {
+									DV_COUNT matches {
+										magnitude matches {|>=0|}
+									}
+								}
+							}
+							ELEMENT[at0367] occurrences matches {0..1} matches {    -- Polyposis syndrome
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0368,    -- Present
+											at0369,    -- Absent
+											at0419,    -- Equivocal
+											at0370]    -- Indeterminate
+										}
+									}
+								}
+							}
+							ELEMENT[at0371] occurrences matches {0..1} matches {    -- Comment
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0179] occurrences matches {0..1} matches {    -- Additional findings
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0250] occurrences matches {0..*} matches {    -- Additional finding
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0293,    -- Synchronous carcinoma
+											at0294,    -- Ulcerative colitis
+											at0295,    -- Ulcerative colitis with dysplasia
+											at0296,    -- Crohn's disease
+											at0297,    -- Crohn's disease with dysplasia
+											at0340]    -- Diverticulosis
+										}
+									}
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0220] occurrences matches {0..1} matches {    -- Description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					ELEMENT[at0309] occurrences matches {0..1} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	terminologies_available = <"ICD-O-3.1","SNOMED-CT">
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Synoptic details - Colorectal cancer">
+					description = <"Synoptic findings about colorectal cancer found on histopathological examination.">
+				>
+				["at0001"] = <
+					text = <"Microscopic findings">
+					description = <"Microscopic anatomical pathology findings related to colorectal cancer.">
+				>
+				["at0002"] = <
+					text = <"pTNM classification">
+					description = <"pTNM pathological classification.">
+				>
+				["at0003"] = <
+					text = <"Details">
+					description = <"Details of response to neoadjuvant therapy.">
+					comment = <"For example different grading systems">
+				>
+				["at0004"] = <
+					text = <"Macroscopic findings">
+					description = <"Macroscopic anatomical pathology findings related to colorectal cancer.">
+				>
+				["at0005"] = <
+					text = <"Tumour dimensions">
+					description = <"Details of maximum dimensions of the tumour.">
+				>
+				["at0006"] = <
+					text = <"Resection margin">
+					description = <"Details about a specified resection margin, including the distance from the tumour to the margin.">
+				>
+				["at0007"] = <
+					text = <"Maximum extramuscular extension">
+					description = <"The maximum extramuscular extension of the tumour.">
+				>
+				["at0008"] = <
+					text = <"Anastomotic doughnuts submitted">
+					description = <"Have anastomotic doughnuts been submitted for analysis?">
+				>
+				["at0009"] = <
+					text = <"Tumour perforation">
+					description = <"Findings related to tumour perforation.">
+				>
+				["at0010"] = <
+					text = <"Tumour perforation">
+					description = <"Finding of tumour perforation. Tumor perforation is a macroscopically visible defect through the tumor, so that the bowel lumen is in communication with the external surface of the resection specimen.">
+				>
+				["at0011"] = <
+					text = <"Perforation location">
+					description = <"The location of a perforation, if present.">
+				>
+				["at0012"] = <
+					text = <"Comment">
+					description = <"Narrative comment on the perforation.">
+				>
+				["at0013"] = <
+					text = <"For rectal tumours">
+					description = <"Findings related solely to rectal tumours.">
+				>
+				["at0014"] = <
+					text = <"Relationship to anterior peritoneal reflection">
+					description = <"The relationship of rectal tumour to the lowest level of the anterior peritoneal reflection.">
+				>
+				["at0015"] = <
+					text = <"Intactness of the mesorectum">
+					description = <"An assessment of the intactness of the mesorectum. The specimen is scored according to the worst area.">
+				>
+				["at0017"] = <
+					text = <"Indeterminate">
+					description = <"Presence of tumour perforation has not been determined.">
+				>
+				["at0018"] = <
+					text = <"Present">
+					description = <"Tumour perforation is present.">
+				>
+				["at0019"] = <
+					text = <"Absent">
+					description = <"Tumour perforation is absent.">
+				>
+				["at0020"] = <
+					text = <"Retro/infra peritoneal">
+					description = <"The perforation is retro/infra peritoneal.">
+				>
+				["at0021"] = <
+					text = <"Serosal">
+					description = <"The perforation is serosal.">
+				>
+				["at0022"] = <
+					text = <"Entirely above">
+					description = <"The tumour is entirely above the level of the peritoneal reflection anteriorly.">
+				>
+				["at0023"] = <
+					text = <"Astride">
+					description = <"The tumour is astride (or at)  the level of the peritoneal reflection anteriorly.">
+				>
+				["at0024"] = <
+					text = <"Entirely below">
+					description = <"The tumour is entirely below the level of the peritoneal reflection anteriorly.">
+				>
+				["at0025"] = <
+					text = <"Incomplete">
+					description = <"Little bulk of mesorectum, very irregular with defects down to the muscularis propria.">
+				>
+				["at0026"] = <
+					text = <"Nearly complete">
+					description = <"Moderate bulk of mesorectum. Irregular surface with defects greater than 5 mm, but not extending to the muscularis propria. Moderate degree of coning may be seen.">
+				>
+				["at0027"] = <
+					text = <"Complete">
+					description = <"A good bulk of mesorectum with a smooth surface. No coning near the tumor. No defects more than 5 mm deep.">
+				>
+				["at0028"] = <
+					text = <"Indeterminate">
+					description = <"Intactness of the mesorectum has not been determined.">
+				>
+				["at0030"] = <
+					text = <"Lymph node findings">
+					description = <"Findings related to the involvement of tumour in lymph nodes.">
+				>
+				["at0033"] = <
+					text = <"Histological tumour type">
+					description = <"Histologic classification of the tumour.">
+					comment = <"Use of a terminology is preferred. Commonly the WHO classification is used.">
+				>
+				["at0034"] = <
+					text = <"Adenocarcinoma">
+					description = <"Usual type of colorectal carcinoma.">
+				>
+				["at0035"] = <
+					text = <"Mucinous adenocarcinoma">
+					description = <"Variant of adenocarcinoma with more than 50% extracellular mucin.">
+				>
+				["at0036"] = <
+					text = <"Signet ring cell carcinoma">
+					description = <"Variant of adenocarcinoma with more than 50% signet ring cells.">
+				>
+				["at0037"] = <
+					text = <"Squamous cell carcinoma">
+					description = <"Primary squamous carcinoma excluding upwardly spreading anal tumours.">
+				>
+				["at0038"] = <
+					text = <"Adenosquamous carcinoma">
+					description = <"A neoplasm comprising both adenocarcinoma and squamous cell carcinoma.">
+				>
+				["at0039"] = <
+					text = <"Medullary carcinoma">
+					description = <"Variant with a solid architecture and prominent tumor infiltrating lymphocytes.">
+				>
+				["at0040"] = <
+					text = <"Neuroendocrine tumour G1">
+					description = <"A tumour with neuroendocrine features and a mitotic sount <2 per 10 HPF  and/or < 3% Ki67 index.">
+				>
+				["at0041"] = <
+					text = <"Undifferentiated carcinoma">
+					description = <"Carcinoma without gland formation, mucin, squamous or neuroendocrine differentiation.">
+				>
+				["at0087"] = <
+					text = <"Lymph node detail">
+					description = <"Findings related to the involvement of tumour in lymph nodes.">
+				>
+				["at0179"] = <
+					text = <"Additional findings">
+					description = <"Additional histopathological findings.">
+				>
+				["at0220"] = <
+					text = <"Description">
+					description = <"A text description of additional findings.">
+				>
+				["at0250"] = <
+					text = <"Additional finding">
+					description = <"A single additional histopathological finding.">
+				>
+				["at0263"] = <
+					text = <"Distant metastasis">
+					description = <"Findings related to distant metastasis.">
+				>
+				["at0264"] = <
+					text = <"Distant metastasis">
+					description = <"Findings of histologically confirmed distant metastasis.">
+				>
+				["at0265"] = <
+					text = <"Description">
+					description = <"A text description of distant metastases.">
+				>
+				["at0269"] = <
+					text = <"Histological grading">
+					description = <"Histological tumour grade.">
+				>
+				["at0271"] = <
+					text = <"Comment">
+					description = <"A text comment on histological grading.">
+				>
+				["at0277"] = <
+					text = <"Small vessel invasion">
+					description = <"Details of tumour invasion in thin-walled structures (lymphatics, capillaries, venules).">
+				>
+				["at0278"] = <
+					text = <"Local tissue invasion">
+					description = <"Findings related to local tissue invasion by tumour.">
+				>
+				["at0281"] = <
+					text = <"Number of tumour deposits">
+					description = <"Number of  tumour deposits. Only relevant if lymph node metastasis is absent.">
+				>
+				["at0284"] = <
+					text = <"Indeterminate">
+					description = <"Presence of tumour deposits has not been determined.">
+				>
+				["at0286"] = <
+					text = <"Perineural invasion">
+					description = <"Details of perineural invasion by tumour.">
+				>
+				["at0287"] = <
+					text = <"Sites">
+					description = <"Details of sites of histologically confirmed distant metastases.">
+				>
+				["at0293"] = <
+					text = <"Synchronous carcinoma">
+					description = <"Synchronous carcinoma is present.">
+				>
+				["at0294"] = <
+					text = <"Ulcerative colitis">
+					description = <"Ulcerative colitis is present.">
+				>
+				["at0295"] = <
+					text = <"Ulcerative colitis with dysplasia">
+					description = <"Ulcerative colitis with dysplasia is present.">
+				>
+				["at0296"] = <
+					text = <"Crohn's disease">
+					description = <"Crohn's disease is present.">
+				>
+				["at0297"] = <
+					text = <"Crohn's disease with dysplasia">
+					description = <"Crohn's disease with dysplasia is present.">
+				>
+				["at0309"] = <
+					text = <"Comment">
+					description = <"A text comment on the microscopic findings.">
+				>
+				["at0323"] = <
+					text = <"Distance of invasion">
+					description = <"Maximal distance of tumour invasion beyond the muscularis propria.">
+					comment = <"Only applicable for tumors invading beyond the muscularis propria (T3) and not yet having invaded the peritoneum or adjacent structures.">
+				>
+				["at0330"] = <
+					text = <"Neoadjuvant therapy given">
+					description = <"Has neoadjuvant therapy been given?">
+				>
+				["at0331"] = <
+					text = <"Yes">
+					description = <"Neoadjuvant therapy has been given.">
+				>
+				["at0332"] = <
+					text = <"No">
+					description = <"Neoadjuvant therapy has not been given.">
+				>
+				["at0333"] = <
+					text = <"Not known">
+					description = <"It is not known if neoadjuvant therapy has been given.">
+				>
+				["at0338"] = <
+					text = <"Number of polyps">
+					description = <"Number of polyps specified above.">
+				>
+				["at0340"] = <
+					text = <"Diverticulosis">
+					description = <"Diverticulosis is present.">
+				>
+				["at0348"] = <
+					text = <"Comment">
+					description = <"An additional text comment on lymph node findings.">
+				>
+				["at0359"] = <
+					text = <"Type of polyp">
+					description = <"Type of polyp. Coding of the specific polyp with a terminology is preferred, where possible.">
+				>
+				["at0362"] = <
+					text = <"Present">
+					description = <"Evidence of distant metastasis.">
+				>
+				["at0363"] = <
+					text = <"Absent">
+					description = <"No evidence of distant metastasis.">
+				>
+				["at0364"] = <
+					text = <"Indeterminate">
+					description = <"Evidence of metastasis has not been determined.">
+				>
+				["at0365"] = <
+					text = <"Status of apical lymph node">
+					description = <"Status of the highest lymph node closest to the main vascular tie(s).">
+				>
+				["at0366"] = <
+					text = <"Polyps">
+					description = <"Findings of polyps.">
+				>
+				["at0367"] = <
+					text = <"Polyposis syndrome">
+					description = <"Evidence of polyposis syndrome.">
+				>
+				["at0368"] = <
+					text = <"Present">
+					description = <"There is evidence of polyposis syndrome.">
+				>
+				["at0369"] = <
+					text = <"Absent">
+					description = <"There is no evidence of polyposis syndrome.">
+				>
+				["at0370"] = <
+					text = <"Indeterminate">
+					description = <"Evidence of polyposis syndrome has not been determined.">
+				>
+				["at0371"] = <
+					text = <"Comment">
+					description = <"Comment concerning  polyps.">
+				>
+				["at0372"] = <
+					text = <"Indeterminate">
+					description = <"Relationship to anterior peritoneal reflection has not been determined.">
+				>
+				["at0373"] = <
+					text = <"Comment">
+					description = <"A text comment on the macroscopic findings.">
+				>
+				["at0374"] = <
+					text = <"Large vessel (venous) invasion">
+					description = <"Details of venous tumour invasion.">
+				>
+				["at0376"] = <
+					text = <"Metastasis present">
+					description = <"A metastasis in the highest lymph node is detected.">
+				>
+				["at0377"] = <
+					text = <"Metastasis absent">
+					description = <"A metastasis in the highest lymph node is not detected.">
+				>
+				["at0378"] = <
+					text = <"Equivocal">
+					description = <"It is uncertain whether a metastasis is present or not.">
+				>
+				["at0379"] = <
+					text = <"Indeterminate">
+					description = <"The status of the highest lymph node could not be assessed, e.g. because the resection did not contain an apical lymph node.">
+				>
+				["at0380"] = <
+					text = <"Not applicable">
+					description = <"If positive lymph nodes are present, the status of tumour deposits is irrelevant and thus not applicable.">
+				>
+				["at0381"] = <
+					text = <"1">
+					description = <"One tumor deposit is present.">
+				>
+				["at0382"] = <
+					text = <"2">
+					description = <"Two tumor deposits are present.">
+				>
+				["at0383"] = <
+					text = <"3">
+					description = <"Three tumor deposits are present.">
+				>
+				["at0384"] = <
+					text = <"4">
+					description = <"Four tumor deposits are present.">
+				>
+				["at0385"] = <
+					text = <"5">
+					description = <"Five tumor deposits are present.">
+				>
+				["at0386"] = <
+					text = <">5">
+					description = <"More than five tumor deposits are present.">
+				>
+				["at0387"] = <
+					text = <"Equivocal">
+					description = <"It is uncertain whether tumor deposits are present.">
+				>
+				["at0388"] = <
+					text = <"0">
+					description = <"Tumor deposits are absent.">
+				>
+				["at0389"] = <
+					text = <"Response to neoadjuvant therapy">
+					description = <"Assessment of response to neoadjuvant therapy.">
+				>
+				["at0390"] = <
+					text = <"Description">
+					description = <"Text description of regression changes after neoadjuvant therapy.">
+				>
+				["at0391"] = <
+					text = <"Grade">
+					description = <"Histological grading system for colorectal carcinoma.">
+					comment = <"Only adenocarcinomas (not otherwise specified) are graded with a grading system. Squamous cell carcinomas are graded with 3 grades. Tumours after neoadjuvant therapy are not graded. ">
+				>
+				["at0403"] = <
+					text = <"Tumour deposits">
+					description = <"Details about tumour deposits.">
+					comment = <"Tumour deposits (satellites) are discrete macroscopic or microscopic nodules of cancer in the pericolorectal adipose tissue’s lymph drainage area of a primary carcinoma that are discontinuous from the primary and without histological evidence of residual lymph node or identifiable vascular or neural structures. ">
+				>
+				["at0404"] = <
+					text = <"Assessment of tumour deposits">
+					description = <"Simple assessment of tumour deposits.">
+				>
+				["at0405"] = <
+					text = <"Present">
+					description = <"Tumour deposits are detected.">
+				>
+				["at0406"] = <
+					text = <"Absent">
+					description = <"Tumour deposits are not detected.">
+				>
+				["at0407"] = <
+					text = <"Equivocal">
+					description = <"Det er uncertain whether tumour deposits are present or absent.">
+				>
+				["at0408"] = <
+					text = <"Indeterminate">
+					description = <"Presence or absence of tumour deposits has not been assessed.">
+				>
+				["at0409"] = <
+					text = <"Comment">
+					description = <"Comment on tumour deposits.">
+				>
+				["at0410"] = <
+					text = <"Adenocarcinoma, cribriform comedo-type">
+					description = <"Carcinoma with extensive large cribriform glands with central necrosis.">
+				>
+				["at0411"] = <
+					text = <"Adenocarcinoma, micropapillary type">
+					description = <"Variant with small clusters of tumor cells within stromal spaces.">
+				>
+				["at0412"] = <
+					text = <"Adenocarcinoma, serrated type">
+					description = <"Variant with glandular serration similar to a sessile serrated polyp.">
+				>
+				["at0413"] = <
+					text = <"Spindle cell carcinoma">
+					description = <"A biphasic carcinoma with a spindle- cell sarcomatoid component in which the tumour cells are at least focally immunoreactive for keratins.">
+				>
+				["at0414"] = <
+					text = <"Neuroendocrine tumour G2">
+					description = <"A tumour with neuroendocrine features and a mitotic sount 2-20 per 10 HPF  and/or 3-20% Ki67 index.">
+				>
+				["at0415"] = <
+					text = <"Neuroendocrine carcinoma, large cell">
+					description = <"A carcinoma with neurendocrine features composed of intermediate to large cells with a mitotic count >20 per 10 HPF and/or >20% Ki67 index.">
+				>
+				["at0416"] = <
+					text = <"Neuroendocrine carcinoma, small cell">
+					description = <"A carcinoma with neurendocrine features composed of small cells with a mitotic count >20 per 10 HPF and/or >20% Ki67 index.">
+				>
+				["at0417"] = <
+					text = <"Mixed adenoneuroendocrine carcinoma">
+					description = <"A carcinoma with morphologicalle recognizable phenotype composed of both epithelial and neuroendocrine elements where at least 30% of either component is identified.">
+				>
+				["at0418"] = <
+					text = <"Neuroendocrine carcinoma">
+					description = <"A carcinoma with neurendocrine features and a mitotic count >20 per 10 HPF and/or >20% Ki67 index.">
+				>
+				["at0419"] = <
+					text = <"Equivocal">
+					description = <"It is uncertain whether a polyposis syndrome is present.">
+				>
+				["at0420"] = <
+					text = <"Equivocal">
+					description = <"It is uncertain whether a tumour perforation is present.">
+				>
+			>
+		>
+	>
+	term_bindings = <
+		["ICD-O-3.1"] = <
+			items = <
+				["at0034"] = <[ICD-O-3.1::81403]>
+				["at0035"] = <[ICD-O-3.1::84803]>
+				["at0036"] = <[ICD-O-3.1::84903]>
+				["at0037"] = <[ICD-O-3.1::80703]>
+				["at0038"] = <[ICD-O-3.1::85603]>
+				["at0039"] = <[ICD-O-3.1::85103]>
+				["at0040"] = <[ICD-O-3.1::82403]>
+				["at0041"] = <[ICD-O-3.1::80203]>
+				["at0410"] = <[ICD-O-3.1::82013]>
+				["at0411"] = <[ICD-O-3.1::82653]>
+				["at0412"] = <[ICD-O-3.1::82133]>
+				["at0413"] = <[ICD-O-3.1::80323]>
+				["at0414"] = <[ICD-O-3.1::82493]>
+				["at0415"] = <[ICD-O-3.1::80133]>
+				["at0416"] = <[ICD-O-3.1::80413]>
+				["at0417"] = <[ICD-O-3.1::82443]>
+				["at0418"] = <[ICD-O-3.1::82463]>
+			>
+		>
+		["SNOMED-CT"] = <
+			items = <
+				["at0034"] = <[SNOMED-CT::35917007]>
+				["at0035"] = <[SNOMED-CT::72495009]>
+				["at0036"] = <[SNOMED-CT::87737001]>
+				["at0037"] = <[SNOMED-CT::28899001]>
+				["at0038"] = <[SNOMED-CT::59367005]>
+				["at0039"] = <[SNOMED-CT::32913002]>
+				["at0040"] = <[SNOMED-CT::127572005]>
+				["at0041"] = <[SNOMED-CT::38549000]>
+				["at0410"] = <[SNOMED-CT::733838009]>
+				["at0411"] = <[SNOMED-CT::733878002]>
+				["at0412"] = <[SNOMED-CT::450948005]>
+				["at0413"] = <[SNOMED-CT::65692009]>
+				["at0414"] = <[SNOMED-CT::127573000]>
+				["at0415"] = <[SNOMED-CT::128628002]>
+				["at0416"] = <[SNOMED-CT::719105002]>
+				["at0417"] = <[SNOMED-CT::51465000]>
+				["at0418"] = <[SNOMED-CT::55937004]>
+			>
+		>
+	>
