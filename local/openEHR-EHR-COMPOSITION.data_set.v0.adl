@@ -29,7 +29,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5CB5FECD224DABB2118F808E89A300CE">
+		["MD5-CAM-1.0.1"] = <"09d1aed1cf979a5192d79536c2c7b4b5">
 		["build_uid"] = <"65dcc5c5-9c7a-4c6d-9fd1-a73590b0dbee">
 		["revision"] = <"0.0.1-alpha">
 	>
