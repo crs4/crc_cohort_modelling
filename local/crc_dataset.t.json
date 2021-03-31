@@ -20,7 +20,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "0.1.0",
-      "MD5-CAM-1.0.1" : "488d841ff5928190a2ff0d5e8ec2deda",
+      "MD5-CAM-1.0.1" : "98aee0f96d80707fc18ddf368865fbf3",
       "PARENT:MD5-CAM-1.0.1" : "09d1aed1cf979a5192d79536c2c7b4b5"
     },
     "details" : {
@@ -1126,7 +1126,24 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0029.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Healthy colon tissue", "Tumor tissue", "Other" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
