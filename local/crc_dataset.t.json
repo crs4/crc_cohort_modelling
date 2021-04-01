@@ -20,7 +20,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "0.1.0",
-      "MD5-CAM-1.0.1" : "e6165744c35322313ffde154e6138487",
+      "MD5-CAM-1.0.1" : "7da3855eec2d21021a9d268f7433b034",
       "PARENT:MD5-CAM-1.0.1" : "09d1aed1cf979a5192d79536c2c7b4b5"
     },
     "details" : {
@@ -3415,7 +3415,7 @@
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_TEXT",
                   "defaultValue" : {
-                    "value" : "Recurrence",
+                    "value" : "Primary diagnosis",
                     "@type" : "DV_TEXT"
                   },
                   "attributes" : [ ],
