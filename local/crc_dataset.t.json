@@ -20,7 +20,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "0.1.0",
-      "MD5-CAM-1.0.1" : "715ed5d557e06a0c7ad3b32ca644f768",
+      "MD5-CAM-1.0.1" : "f3ced1227de45ab3a6e2f8662f18090c",
       "PARENT:MD5-CAM-1.0.1" : "09d1aed1cf979a5192d79536c2c7b4b5"
     },
     "details" : {
@@ -3429,7 +3429,7 @@
                       "@type" : "C_DURATION",
                       "rmTypeName" : "DURATION",
                       "occurrences" : "1..1",
-                      "patternedConstraint" : "PY",
+                      "patternedConstraint" : "PW",
                       "constraint" : [ {
                         "lower" : "P0Y",
                         "lowerIncluded" : true,
@@ -3490,7 +3490,7 @@
           "at0009.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0009.2",
-            "text" : "Time of recurrence relative",
+            "text" : "Time of recurrence",
             "description" : "The period of time before or after the named event when the activity should take place. Negative durations can be used to signify that the activity should be taken before a known event.",
             "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'."
           }
