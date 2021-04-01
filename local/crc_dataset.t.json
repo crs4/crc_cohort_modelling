@@ -20,7 +20,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "0.1.0",
-      "MD5-CAM-1.0.1" : "04afd696ff76ac46e9c3308c7e5bd2a8",
+      "MD5-CAM-1.0.1" : "b1775762fe139db05806a3174abcf670",
       "PARENT:MD5-CAM-1.0.1" : "09d1aed1cf979a5192d79536c2c7b4b5"
     },
     "details" : {
@@ -3751,6 +3751,12 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0049.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
               "occurrences" : "1..1",
               "nodeId" : "at0063.1",
               "attributes" : [ {
@@ -3766,6 +3772,30 @@
                       "@type" : "C_STRING",
                       "rmTypeName" : "STRING",
                       "constraint" : [ "C 18.0 - Cecum", "C 18.1 - Appendix", "C 18.2 - Ascending (right)", "C 18.3 - Hepatic flexure", "C 18.4 - Transverse colon", "C 18.5 - Splenic flexure", "C 18.6 - Descending (left)", "C 18.7 - Sigmoid", "C 19 - Rectosigmoid", "C 19.9 - Rectosigmoid", "C 20 - Rectum", "C 20.9 - Rectum" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
+              "nodeId" : "at0048.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_STRING",
+                      "rmTypeName" : "STRING",
+                      "constraint" : [ "R0", "R1", "R2", "RX" ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -3805,6 +3835,20 @@
             "text" : "Surgery type",
             "description" : "Identification of the procedure by name.",
             "comment" : "Coding of the specific procedure with a terminology is preferred, where possible."
+          },
+          "at0049.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0049.1",
+            "text" : "Surgery type other",
+            "description" : "Narrative description about the procedure, as appropriate for the pathway step.",
+            "comment" : "For example: description about the performance and findings from the the procedure, the aborted attempt or the cancellation of the procedure."
+          },
+          "at0048.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0048.1",
+            "text" : "Surgery radicality",
+            "description" : "Outcome of procedure performed.",
+            "comment" : "Coding with a terminology is preferred, where possible."
           }
         },
         "ar-sy" : { },
