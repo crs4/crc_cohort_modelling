@@ -20,7 +20,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "0.1.0",
-      "MD5-CAM-1.0.1" : "5250514c159e13e4844ff9404ad21e41",
+      "MD5-CAM-1.0.1" : "16e5378a2f3c35ed7bf94feb4807cfed",
       "PARENT:MD5-CAM-1.0.1" : "09d1aed1cf979a5192d79536c2c7b4b5"
     },
     "details" : {
@@ -172,6 +172,15 @@
           "attributes" : [ ],
           "attributeTuples" : [ ],
           "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-gender-001.v1",
+          "referenceType" : "archetypeOverlay"
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "EVALUATION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.4",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-problem_diagnosis-001.v1",
           "referenceType" : "archetypeOverlay"
         } ]
       } ],
@@ -2140,7 +2149,55 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "EF681A049575CDCED3F513DFE65343E9"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Erfassung des Geschlechts einer Person.",
+          "keywords" : [ "Geschlecht", "männlich", "weiblich", "divers", "androgyn", "Junge", "Mädchen", "Mann", "Frau", "transexuell", "Bigender", "geschlechtslos", "agender", "transgeschlechtlich", "transident", "Trans Frau", "Trans Mann" ],
+          "use" : "Zur Erfassung des Geschlechts der Person, einschließlich des administrativen, rechtlichen und zugewiesenem Geschlechts, sowie der Geschlechtsidentität, dem Ausdruck des Geschlechts und des bevorzugten Pronomens.\r\n\r\nDas Ziel dieses Archetyps ist es, Details, die mit dem Geschlecht einer Person verbunden sind, zu erfassen. Aufgrund des modernen Gender-Denkens sowie neuer Erkenntnisse über psychologische, biologische und soziale Manifestationen von Geschlecht ergibt sich ein breiteres Spektrum an Beschreibungen.\r\n\r\nDieser Archetyp erlaubt auch die Erfassung und Unterscheidung zwischen rechtlichem und administrativem Geschlecht.\r\n\r\nIn den meisten Fällen wird das \"administrative Geschlecht\" als Äquivalent zur traditionellen Definition von \"Geschlecht\" in veralteten Systemen verwendet.\r\n",
+          "misuse" : "Nicht zur Aufzeichnung von Informationen über die sexuelle Orientierung oder Ausübung einer Person verwenden.\r\n\r\nNicht für die Aufzeichnung des genetischen Geschlechts verwenden. Derzeit wird dies in der Regel entweder als Diagnose oder als Laborbefund erfasst. Die Werte für \"Genetisches Geschlecht\" sind noch nicht genau definiert und können die Kombination von verschiedenen Informationen, einschließlich Chromosomen- und Rezeptordaten, Mosaikvarianten und Diagnosen beinhalten.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere individets kjønn.",
+          "keywords" : [ "kjønn", "mann", "kvinne", "androgyn", "gutt", "jente", "pike", "trans", "transmann", "transkvinne", "transseksuell" ],
+          "use" : "Brukes for å angi individets kjønn, inkludert administrativt, juridisk, og anatomisk kjønn. I tillegg kjønnsidentitet, fremtoning og foretrukne pronomen.\r\n\r\nArketypen er laget for å brukes innenfor en ENTRY-arketype der det er relevant, f.eks. i OBSERVATION.story (Anamnese), INSTRUCTION.laboratory_test (Laboratorierekvisisjon) eller CLUSTER.interpreter.\r\n\r\nAmbisjonen til denne arketypen er å gjøre det mulig å registrere et bredere spekter av detaljer som er knyttet til kjønnet til et individ, som gjenspeiler moderne tenkning om kjønn så vel som ny kunnskap om hvordan kjønn manifesterer seg psykologisk, biologisk og sosialt.\r\n\r\nI Norge er det niende sifferet i fødselsnummeret en markering på kjønn. De fleste systemer i Norge benytter dette til å utlede individets kjønn. Med denne arketypen kan man skille mellom det juridiske kjønnet, slik det fremkommer i fødselsnummeret og det kjønnet man administrativt vil tilordne et individ, for eksempel for praktiske formål som å planlegge hvilket rom et individ skal legges på. Det er opp til leverandørene og implementasjon om man som utgangspunkt skal benytte \"Administrativt kjønn\" eller \"Juridisk kjønn\", eller om man vil sette verdien i disse to elementene likt og åpne for å kunne endre manuelt i de tilfellene man trenger det. Eksempel på dette siste er om juridisk kjønn ikke er oppdatert i henhold til hvordan et individ fremstår.\r\n\r\nDenne arketypen kan på et senere utvides til å inneholde informasjon om kjønn som ennå ikke er vanlig brukt, eller dette kan legges inn i SLOT'et \"Detaljer\".",
+          "misuse" : "Skal ikke brukes til å registrere informasjon relatert til seksuell orientering eller adferd.\r\n\r\nSkal ikke brukes til å registrere genetisk kjønn. Per i dag registeres dette som regel som en diagnose eller et laboratoriesvar. Verdisett for et dataelement som \"Genetisk kjønn\" er heller ennå ikke godt definert, og kan bestå av kombinasjoner av forskjellige akser, inkludert data knyttet til kromosomer og reseptorkjønn, mosaikktilstander og diagnoser.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about the gender of an individual.",
+          "keywords" : [ "sex", "male", "female", "androgynous", "boy", "girl", "man", "woman", "transsexual", "bigender", "agender", "transgender", "transman", "transwoman" ],
+          "use" : "Use to record details about the individual's gender, including administrative and legal gender and assigned sex at birth, in addition to gender identity, expression and preferred pronoun.\r\n\r\nThe intent of this archetype is todetails about a broad range of details connected to the gender of an individual, due to modern thinking of gender as well as new knowledge of psychological, biological and social manifestations of gender. \r\n\r\nThis archetype also allows the recording of, and differentiation between, legal and administrative gender.\r\n\r\nIn most common use cases 'Administrative gender' will be used, as equivalent of the traditional definition of \"Sex\" in current or legacy systems.",
+          "misuse" : "Not to be used for recording information relating to the sexual orientation or sexual activity of an individual.\r\n\r\nNot to be used for recording genetic or chromosomal sex. Currently this is usually recorded as a laboratory test result. Formal representation of 'Genetic sex' is not yet well defined and may involve the combination of information axes, including chromosomal and receptor data, mosaic variants and diagnoses.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.gender.v1",
     "differential" : true,
@@ -2204,6 +2261,486 @@
         "name" : "Vebjørn Arntzen, Mikkel Johan Gaup Grønmo, Silje Ljosland Bakke",
         "organisation" : "Oslo universitetssykehus, Helse Nord, Helse Vest IKT AS",
         "email" : "silje.ljosland.bakke@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "347e5f45-f9de-412d-8f7c-b4932244bc46",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "4BF04E7D09B866397CA12BAFED2BC216"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.problem_diagnosis.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-problem_diagnosis-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "defaultValue" : {
+                    "value" : "Colorectal cancer",
+                    "@type" : "DV_TEXT"
+                  },
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0009.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0012.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0077.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_DATE_TIME",
+                      "rmTypeName" : "DATE_TIME",
+                      "constraint" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0003.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0043.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-timing_nondaily-001.v1",
+              "referenceType" : "archetypeOverlay"
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "es" : { },
+        "es-ar" : { },
+        "de" : { },
+        "en" : {
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Diagnosis",
+            "description" : "Identification of the problem or diagnosis, by name.",
+            "comment" : "Coding of the name of the problem or diagnosis with a terminology is preferred, where possible."
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Date diagnosis",
+            "description" : "Estimated or actual date/time the diagnosis or problem was recognised by a healthcare professional.",
+            "comment" : "Partial dates are acceptable. If the subject of care is under the age of one year, then the complete date or a minimum of the month and year is necessary to enable accurate age calculations - for example, if used to drive decision support. Data captured/imported as \"Age at time of clinical recognition\" should be converted to a date using the subject's date of birth."
+          }
+        },
+        "ar-sy" : { },
+        "pt-br" : { },
+        "nb" : { },
+        "sv" : { },
+        "ko" : { },
+        "fi" : { },
+        "it" : { },
+        "nl" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "b10b572f-a16a-43cb-b61f-d62d5c572ac1",
+    "rmName" : "openehr",
+    "rmRelease" : "1.0.3",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Aljoscha Kindermann, Jasmin Buck, Sebastian Garde",
+        "organisation" : "Universityhospital of Heidelberg, University of Heidelberg, Central Queensland University"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Kirsi Poikela",
+        "organisation" : "Tieto Sweden AB",
+        "email" : "ext.kirsi.poikela@tieto.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fi"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es-ar"
+      },
+      "author" : {
+        "name" : "Alan March",
+        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina",
+        "email" : "alandmarch@gmail.com"
+      },
+      "accreditation" : "-",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, John Tore Valand",
+        "organisation" : "Helse Bergen HF"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ko"
+      },
+      "author" : {
+        "name" : "Seung-Jong Yu",
+        "organisation" : "InfoClinic Co.,Ltd.",
+        "email" : "seungjong.yu@gmail.com"
+      },
+      "accreditation" : "M.D.",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Adriana Kitajima, Gabriela Alves, Maria Angela Scatena, Marivan Abrahäo",
+        "organisation" : "Core Consulting",
+        "email" : "contato@coreconsulting.com.br"
+      },
+      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "it"
+      },
+      "author" : {
+        "name" : "Cecilia Mascia",
+        "organisation" : "CRS4 - Center for advanced studies, research and development in Sardinia, Pula (Cagliari), Italy",
+        "email" : "cecilia.mascia@crs4.it"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Pablo Pazos",
+        "organisation" : "CaboLabs"
+      },
+      "accreditation" : "Computer Engineer",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Joost Holslag",
+        "organisation" : "Nedap",
+        "email" : "joost.holslag@nedap.com"
+      },
+      "accreditation" : "MD",
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "9eaeacfe-dc76-48e4-bad8-2d4335683ccb",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "47B10A6B5F4FD1E21ED98352AE29F6AD"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.timing_nondaily.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-timing_nondaily-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "CLUSTER",
+          "nodeId" : "at0006",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0005.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "defaultValue" : {
+                    "value" : "Primary diagnosis",
+                    "@type" : "DV_TEXT"
+                  },
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0009.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DURATION",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_DURATION",
+                      "rmTypeName" : "DURATION",
+                      "occurrences" : "1..1",
+                      "patternedConstraint" : "PY",
+                      "constraint" : [ {
+                        "lower" : "P0Y",
+                        "lowerIncluded" : true,
+                        "upperIncluded" : false,
+                        "lowerUnbounded" : false,
+                        "upperUnbounded" : true
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0009.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.1",
+            "text" : "Age at primary diagnosis",
+            "description" : "The period of time before or after the named event when the activity should take place. Negative durations can be used to signify that the activity should be taken before a known event.",
+            "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'."
+          }
+        },
+        "pt-br" : { },
+        "nb" : { },
+        "de" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "46b1c10d-fc28-4eed-a32c-d4928150d24c",
+    "rmName" : "openehr",
+    "rmRelease" : "1.0.3",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Caroline Bönisch, Natalia Strauch",
+        "organisation" : "UMG, Medizinische Hochschule Hannover",
+        "email" : "Caroline.Thoms@med.uni-goettingen.de, Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke",
+        "organisation" : "Nasjonal IKT HF"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Osmeire Chamelette Sanzovo",
+        "organisation" : "Hospital Sírio Libanês - SP",
+        "email" : "osmeire.acsanzovo@hsl.org.br"
       },
       "otherDetails" : { }
     } ]
