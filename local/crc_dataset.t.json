@@ -20,7 +20,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "0.1.0",
-      "MD5-CAM-1.0.1" : "7da3855eec2d21021a9d268f7433b034",
+      "MD5-CAM-1.0.1" : "4e8b1c2b7cea77de55ce085e297b416b",
       "PARENT:MD5-CAM-1.0.1" : "09d1aed1cf979a5192d79536c2c7b4b5"
     },
     "details" : {
@@ -3473,6 +3473,12 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Diagnosis timing",
+            "description" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
+          },
           "at0009.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0009.1",
@@ -5076,7 +5082,7 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "CLUSTER",
-          "nodeId" : "at0006",
+          "nodeId" : "at0006.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -5091,7 +5097,7 @@
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_TEXT",
                   "defaultValue" : {
-                    "value" : "Initial diagnosis",
+                    "value" : "Primary diagnosis",
                     "@type" : "DV_TEXT"
                   },
                   "attributes" : [ ],
@@ -5150,6 +5156,12 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Surgery timing",
+            "description" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
+          },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
@@ -5162,6 +5174,12 @@
             "text" : "Surgery start relative",
             "description" : "The period of time before or after the named event when the activity should take place. Negative durations can be used to signify that the activity should be taken before a known event.",
             "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'."
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "Surgery",
+            "description" : "The activity should take place in relation to a specific named event."
           }
         },
         "pt-br" : {
