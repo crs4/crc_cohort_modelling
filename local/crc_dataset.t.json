@@ -20,7 +20,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "0.1.0",
-      "MD5-CAM-1.0.1" : "b4a749e1d3011601d8c3ec385cc0d3b4",
+      "MD5-CAM-1.0.1" : "74803b83529a447748f2396c1e0b5c64",
       "PARENT:MD5-CAM-1.0.1" : "09d1aed1cf979a5192d79536c2c7b4b5"
     },
     "details" : {
@@ -7383,7 +7383,7 @@
                       "terminologyId" : {
                         "value" : "local"
                       },
-                      "constraint" : [ "ac0.3" ],
+                      "constraint" : [ "ac0.7" ],
                       "selectedTerminologies" : [ ]
                     } ]
                   } ],
@@ -7408,10 +7408,10 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "ac0.3" : {
+          "ac0.7" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.3",
+            "code" : "ac0.7",
             "description" : ""
           }
         }
@@ -7433,6 +7433,26 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.3",
           "members" : [ "at0034", "at0410", "at0039", "at0411", "at0035", "at0412", "at0036", "at0038", "at0413", "at0037", "at0041", "at0040", "at0414", "at0418", "at0415", "at0416", "at0417" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ "at0034", "at0039", "at0411", "at0035", "at0412", "at0036", "at0038", "at0413", "at0037", "at0041", "at0040", "at0414", "at0418", "at0415", "at0416", "at0417" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "at0034", "at0039", "at0411", "at0035", "at0412", "at0036", "at0038", "at0413", "at0037", "at0041", "at0414", "at0418", "at0415", "at0416", "at0417" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ "at0034", "at0039", "at0411", "at0035", "at0412", "at0036", "at0038", "at0413", "at0037", "at0041", "at0418", "at0415", "at0416", "at0417" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ "at0034", "at0039", "at0411", "at0035", "at0412", "at0036", "at0038", "at0413", "at0037", "at0041", "at0415", "at0416", "at0417" ]
         }
       }
     },
