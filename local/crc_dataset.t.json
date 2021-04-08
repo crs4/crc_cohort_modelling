@@ -20,7 +20,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "0.1.0",
-      "MD5-CAM-1.0.1" : "500ef18d1ee946c58411b125f92bb071",
+      "MD5-CAM-1.0.1" : "67c5dae7d3c1030e6db5c1954ba771fa",
       "PARENT:MD5-CAM-1.0.1" : "09d1aed1cf979a5192d79536c2c7b4b5"
     },
     "details" : {
@@ -7666,6 +7666,39 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
+              "nodeId" : "at0269",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0271.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_STRING",
+                          "rmTypeName" : "STRING",
+                          "constraint" : [ "1st ed. (1979-1990)", "2nd ed. (1991- 2000)", "3rd ed. (2001-2010)", "4th ed. (used since 2011)", "Edition not known" ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
               "nodeId" : "at0263",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -7715,6 +7748,12 @@
             "text" : "(Synthesized)",
             "code" : "ac0.8",
             "description" : ""
+          },
+          "at0271.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0271.1",
+            "text" : "WHO version",
+            "description" : "A text comment on histological grading."
           }
         }
       },
