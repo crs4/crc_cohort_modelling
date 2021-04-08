@@ -20,7 +20,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "0.1.0",
-      "MD5-CAM-1.0.1" : "74803b83529a447748f2396c1e0b5c64",
+      "MD5-CAM-1.0.1" : "5b029596c4d2385e6b8bc249c6dcaaa4",
       "PARENT:MD5-CAM-1.0.1" : "09d1aed1cf979a5192d79536c2c7b4b5"
     },
     "details" : {
@@ -7366,6 +7366,7 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
               "nodeId" : "at0033.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -7383,7 +7384,7 @@
                       "terminologyId" : {
                         "value" : "local"
                       },
-                      "constraint" : [ "ac0.7" ],
+                      "constraint" : [ "ac0.8" ],
                       "selectedTerminologies" : [ ]
                     } ]
                   } ],
@@ -7408,10 +7409,17 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "ac0.7" : {
+          "at0033.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0033.1",
+            "text" : "Morphology",
+            "description" : "Histologic classification of the tumour.",
+            "comment" : "Use of a terminology is preferred. Commonly the WHO classification is used."
+          },
+          "ac0.8" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.7",
+            "code" : "ac0.8",
             "description" : ""
           }
         }
@@ -7452,6 +7460,11 @@
         "ac0.7" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.7",
+          "members" : [ "at0034", "at0039", "at0411", "at0035", "at0412", "at0036", "at0038", "at0413", "at0037", "at0041", "at0415", "at0416", "at0417" ]
+        },
+        "ac0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.8",
           "members" : [ "at0034", "at0039", "at0411", "at0035", "at0412", "at0036", "at0038", "at0413", "at0037", "at0041", "at0415", "at0416", "at0417" ]
         }
       }
