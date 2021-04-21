@@ -1,0 +1,2937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns="openEHR/v1/Template">
+    <id>ff34735d-ebda-43a3-b3a0-a03348494a5e</id>
+    <name>crc_cohort</name>
+    <description>
+        <original_author>
+            <item>
+                <key>date</key>
+                <value>2021-04-09</value>
+            </item>
+        </original_author>
+        <lifecycle_state>unmanaged</lifecycle_state>
+        <details/>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>sem_ver</key>
+                <value>0.1.0</value>
+            </item>
+            <item>
+                <key>MD5-CAM-1.0.1</key>
+                <value>9605c1db75854a53c09b5f65335aec5f</value>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>641B268BE8805CEB8DC21AB82C53AB3F</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::en</value>
+            </item>
+        </other_details>
+    </description>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.case_identification.v0]/items[at0001]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Identifier</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>PATIENT_ID</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.case_identification.v0]/items[at0006]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_2_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>CLINICAL_STUDY_PARTICIPANT</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.demographics_rcp.v1]/items[openEHR-EHR-EVALUATION.gender.v1]/data[at0002]/items[at0019]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_85_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>SEX</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.demographics_rcp.v1]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1, 'Primary diagnosis']/data[at0001]/items[at0003]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_51_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>DATE_DIAGNOSIS</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.demographics_rcp.v1]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1, 'Primary diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_3_1</value>
+            </item>
+            <item>
+                <key>Data element label</key>
+                <value>AGE_AT_PRIMARY_DIAGNOSIS</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.demographics_rcp.v1]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1, 'Metastasis diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_4_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>TIME_OF_RECURRENCE_RELATIVE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0071]">
+        <items>
+            <item>
+                <key>fhir_mapping</key>
+                <value>Specimen.collection.collector</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0013]">
+        <items>
+            <item>
+                <key>fhir_mapping</key>
+                <value>Specimen.collection.sourceSite</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0027]">
+        <items>
+            <item>
+                <key>fhir_mapping</key>
+                <value>Specimen.collection.quantity</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0029]">
+        <items>
+            <item>
+                <key>fhir_mapping</key>
+                <value>Specimen.type</value>
+            </item>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_54_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>SAMPLE_MATERIAL_TYPE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0088]">
+        <items>
+            <item>
+                <key>fhir_mapping</key>
+                <value>Specimen.identifier</value>
+            </item>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_56_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>SAMPLE_ID</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0045]">
+        <items>
+            <item>
+                <key>fhir_mapping</key>
+                <value>Specimen.note</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0001]">
+        <items>
+            <item>
+                <key>fhir_mapping</key>
+                <value>Specimen.accessionIdentifier</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0034]">
+        <items>
+            <item>
+                <key>fhir_mapping</key>
+                <value>Specimen.receivedTime</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0007]">
+        <items>
+            <item>
+                <key>fhir_mapping</key>
+                <value>Specimen.collection.method</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0070]">
+        <items>
+            <item>
+                <key>fhir_mapping</key>
+                <value>Specimen.collection.collector</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0015]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_89_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>YEAR_OF_SAMPLE_COLLECTION</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.specimen_preparation.v0]/items[at0074]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_55_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>SAMPLE_PRESERVATION_MODE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.multimedia_source.v0]/items[at0005]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_57_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>DIGITAL_IMAGING_AVAILABILITY </value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0, 'Invasion front']/items[at0005]/items[openEHR-EHR-CLUSTER.multimedia_source.v0]/items[at0005]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_58_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>DIGITAL_IMAGING_INVASION_FRONT_AVAILABILITY</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0, 'Recurrence']/items[at0005]/items[at0006]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_82_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>BIOLOGICAL_MATERIAL_FROM_RECURRENCE_AVAILABLE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[at0012]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_92_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>HIST_LOCALIZATION</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[at0033]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_91_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>HIST_MORPHOLOGY</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[at0269]/items[at0271]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_53_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>WHO_GRADE_VERSION</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[at0263]/items[openEHR-EHR-CLUSTER.anatomical_location.v1]/items[at0001]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_68_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>HIST_METASTASIS</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0005.1]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_75_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>TNM_DISTANT_METASTASIS</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0003.1]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_71_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>TNM_PRIMARY_TUMOR</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0004.1]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_77_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>TNM_REGIONAL_LYMPH_NODES</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0031.1]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_70_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>UICC_STAGE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0032]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_73_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>UICC_VERSION </value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0006]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_83_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>WHO_GRADE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[at0063]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_93_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>SURGERY_LOCATION</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[at0049]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_67_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>SURGERY_TYPE_OTHER</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[at0048]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_9_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>SURGERY_RADICALITY</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[at0002]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_49_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>SURGERY_TYPE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_13_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>RADIATION_THERAPY_END_RELATIVE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_12_4</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>RADIATION_THERAPY_START_RELATIVE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_36_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>TARGETED_THERAPY_END_RELATIVE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_35_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>TARGETED_THERAPY_START_RELATIVE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[at0020]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_59_5</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>PHARMACOTHERAPY_SCHEME</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[at0156]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_81_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>PHARMACOTHERAPY_SCHEME_DESCRIPTION</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_11_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>PHARMACOTHERAPY_END_RELATIVE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_10_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>PHARMACOTHERAPY_START_RELATIVE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/data[at0001]/items[at0002]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_33_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>THERAPY_RESPONSE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_34_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>THERAPY_RESPONSE_TIMESTAMP_RELATIVE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'Colonoscopy']/description[at0001]/items[at0048]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_88_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>DIAG_COLONOSCOPY</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'CT']/description[at0001]/items[at0048]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_31_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>DIAG_CT_DONE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'Liver imaging']/description[at0001]/items[at0048]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_61_5</value>
+            </item>
+            <item>
+                <key>Dat model label</key>
+                <value>DIAG_LIVER_IMAGING_DONE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'Lung imaging']/description[at0001]/items[at0048]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_63_4</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>DIAG_X_DONE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'MRI']/description[at0001]/items[at0048]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_30_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>DIAG_MRI_DONE</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1, 'Oncogenic mutations test']/data[at0001]/events[at0002]/data[at0003]/items[at0057]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_87_1</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>BRAF_PIC3CA_HER_MUTATION_STATUS</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1, 'Microsatellites instability analysis']/data[at0001]/events[at0002]/data[at0003]/items[at0057]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_14_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>MM_MICROSAT_INSTABILITY</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Molecular markers']/items[at0002]/items[openEHR-EHR-EVALUATION.health_risk.v1]/data[at0001]/items[at0003]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_16_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>MM_RISK_SITUATION_HNPCC</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1, 'KRAS mutation status']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.genetic_variant_presence.v0, 'NRAS exon 4 (codons 117 or 146)']/items[at0002]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_25_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>MM_KRAS_MUTATION_NRAS_EX4</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1, 'KRAS mutation status']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.genetic_variant_presence.v0, 'NRAS exon 3 (codons 59 or 61)']/items[at0002]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_24_4</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>MM_KRAS_MUTATION_NRAS_EX3</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1, 'KRAS mutation status']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.genetic_variant_presence.v0, 'NRAS exon 2 (codons 12 or 13)']/items[at0002]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_23_5 </value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>MM_KRAS_MUTATION_NRAS_EX2</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1, 'KRAS mutation status']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.genetic_variant_presence.v0, 'KRAS exon 4 (codons 117 or 146)']/items[at0002]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_22_4</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>MM_KRAS_MUTATION_KRAS_EX4</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1, 'KRAS mutation status']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.genetic_variant_presence.v0, 'KRAS exon 3 (codons 59 or 61)']/items[at0002]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_21_5</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>MM_KRAS_MUTATION_KRAS_EX3</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1, 'KRAS mutation status']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.genetic_variant_presence.v0, 'KRAS exon 2 (codons 12 or 13)']/items[at0002]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_20_3</value>
+            </item>
+            <item>
+                <key>Dala model label</key>
+                <value>MM_KRAS_MUTATION_KRAS_EX2</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1]/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/data[at0001]/items[at0002]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_5_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>VITAL_STATUS</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1]/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_7_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>OVERALL_SURVIVAL_STATUS</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1]/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0001]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_6_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>VITAL_STATUS_TIMESTAMP </value>
+            </item>
+        </items>
+    </annotations>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.report.v1"
+        concept_name="Report" name="crc_cohort"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Content archetype_id="openEHR-EHR-SECTION.demographics_rcp.v1"
+            concept_name="Patient demographics" max="1"
+            name="Patient data" path="/content" xsi:type="tem:SECTION">
+            <Item archetype_id="openEHR-EHR-EVALUATION.gender.v1"
+                max="1" path="/items" xsi:type="tem:EVALUATION">
+                <Rule max="0" path="/data[at0002]/items[at0022]"/>
+                <Rule max="0" path="/data[at0002]/items[at0026]"/>
+                <Rule min="1" name="Biological sex" path="/data[at0002]/items[at0019]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>female</includedValues>
+                        <includedValues>male</includedValues>
+                        <includedValues>other</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0002]/items[at0025]"/>
+                <Rule max="0" path="/data[at0002]/items[at0001]"/>
+                <Rule max="0" path="/data[at0002]/items[at0020]"/>
+                <Rule max="0" path="/data[at0002]/items[at0014]"/>
+                <Rule max="0" path="/protocol[at0003]/items[at0004]"/>
+            </Item>
+            <Item
+                archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1"
+                concept_name="Problem/Diagnosis" max="1"
+                name="Primary diagnosis" path="/items" xsi:type="tem:EVALUATION">
+                <Rule default="Colorectal cancer"
+                    name="Primary diagnosis" path="/data[at0001]/items[at0002]"/>
+                <Rule max="0" path="/data[at0001]/items[at0009]"/>
+                <Rule max="0" path="/data[at0001]/items[at0012]"/>
+                <Rule max="0" path="/data[at0001]/items[at0077]"/>
+                <Rule name="Date of diagnosis" path="/data[at0001]/items[at0003]"/>
+                <Rule max="0" path="/data[at0001]/items[at0005]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Coded_text</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/items[at0072]"/>
+                <Rule max="0" path="/data[at0001]/items[at0030]"/>
+                <Rule max="0" path="/data[at0001]/items[at0073]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Coded_text</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/items[at0069]"/>
+                <Rule max="0" path="/protocol[at0032]/items[at0070]"/>
+                <Items
+                    archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                    concept_name="Timing - non-daily" max="1"
+                    name="Diagnosis timing"
+                    path="/data[at0001]/items[at0043]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0002]">
+                        <constraint xsi:type="tem:durationConstraint">
+                            <pattern>PYMWD</pattern>
+                            <minMagnitude>P0D</minMagnitude>
+                            <includesMaximum>false</includesMaximum>
+                            <includesMinimum>false</includesMinimum>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0014]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>1/a</unit>
+                                <maxMagnitude>366.0</maxMagnitude>
+                                <minMagnitude>1.0</minMagnitude>
+                                <includesMaximum>true</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>1/wk</unit>
+                                <maxMagnitude>7.0</maxMagnitude>
+                                <minMagnitude>1.0</minMagnitude>
+                                <includesMaximum>true</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>1/mo</unit>
+                                <maxMagnitude>31.0</maxMagnitude>
+                                <minMagnitude>1.0</minMagnitude>
+                                <includesMaximum>true</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0001]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0003]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Count</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0021]"/>
+                    <Rule name="Primary diagnosis" path="/items[at0006]"/>
+                    <Rule default="Primary diagnosis" max="0" path="/items[at0006]/items[at0005]"/>
+                    <Rule min="1" name="Age at diagnosis" path="/items[at0006]/items[at0009]">
+                        <constraint xsi:type="tem:durationConstraint">
+                            <pattern>PY</pattern>
+                            <minMagnitude>P0Y</minMagnitude>
+                            <includesMaximum>false</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0010]"/>
+                </Items>
+            </Item>
+            <Item
+                archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1"
+                concept_name="Problem/Diagnosis" max="1"
+                name="Metastasis diagnosis" path="/items" xsi:type="tem:EVALUATION">
+                <Rule default="Metastasis" name="Metastasis diagnosis" path="/data[at0001]/items[at0002]"/>
+                <Rule max="0" path="/data[at0001]/items[at0009]"/>
+                <Rule max="0" path="/data[at0001]/items[at0012]"/>
+                <Rule max="0" path="/data[at0001]/items[at0077]"/>
+                <Rule max="0" path="/data[at0001]/items[at0003]"/>
+                <Rule max="0" path="/data[at0001]/items[at0005]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Coded_text</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/items[at0072]"/>
+                <Rule max="0" path="/data[at0001]/items[at0030]"/>
+                <Rule max="0" path="/data[at0001]/items[at0073]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Coded_text</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/items[at0069]"/>
+                <Rule max="0" path="/protocol[at0032]/items[at0070]"/>
+                <Items
+                    archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                    concept_name="Timing - non-daily" max="1"
+                    name="Metastasis diagnosis"
+                    path="/data[at0001]/items[at0043]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0002]">
+                        <constraint xsi:type="tem:durationConstraint">
+                            <pattern>PYMWD</pattern>
+                            <minMagnitude>P0D</minMagnitude>
+                            <includesMaximum>false</includesMaximum>
+                            <includesMinimum>false</includesMinimum>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0014]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>1/a</unit>
+                                <maxMagnitude>366.0</maxMagnitude>
+                                <minMagnitude>1.0</minMagnitude>
+                                <includesMaximum>true</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>1/wk</unit>
+                                <maxMagnitude>7.0</maxMagnitude>
+                                <minMagnitude>1.0</minMagnitude>
+                                <includesMaximum>true</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>1/mo</unit>
+                                <maxMagnitude>31.0</maxMagnitude>
+                                <minMagnitude>1.0</minMagnitude>
+                                <includesMaximum>true</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0001]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0003]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Count</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0021]"/>
+                    <Rule name="Metastasis diagnosis" path="/items[at0006]"/>
+                    <Rule default="Primary diagnosis" name="From event" path="/items[at0006]/items[at0005]"/>
+                    <Rule name="Time of recurrence" path="/items[at0006]/items[at0009]">
+                        <constraint xsi:type="tem:durationConstraint">
+                            <pattern>PW</pattern>
+                            <minMagnitude>P0W</minMagnitude>
+                            <includesMaximum>false</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0010]"/>
+                </Items>
+            </Item>
+        </Content>
+        <Content archetype_id="openEHR-EHR-SECTION.result_details.v0"
+            concept_name="Lab result details" max="1"
+            name="Histopathology" path="/content" xsi:type="tem:SECTION">
+            <Item
+                archetype_id="openEHR-EHR-OBSERVATION.laboratory_test_result.v1"
+                max="1" path="/items[at0002]/items[at0003]" xsi:type="tem:OBSERVATION">
+                <Rule default="Histopathology analysis" path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0073]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Coded_text</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0075]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0077]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0100]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0057]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0098]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0101]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/state[at0112]/items[at0113]"/>
+                <Rule max="0" path="/protocol[at0004]/items[at0068]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Identifier</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/protocol[at0004]/items[at0094]"/>
+                <Rule max="0" path="/protocol[at0004]/items[at0111]"/>
+                <Rule max="0" path="/protocol[at0004]/items[at0121]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Boolean</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                        <includedTypes>MultiMedia</includedTypes>
+                        <includedTypes>Quantity</includedTypes>
+                        <includedTypes>Count</includedTypes>
+                        <includedTypes>Date_Time</includedTypes>
+                        <includedTypes>Date</includedTypes>
+                        <includedTypes>Time</includedTypes>
+                        <includedTypes>Duration</includedTypes>
+                        <includedTypes>Ordinal</includedTypes>
+                        <includedTypes>Proportion</includedTypes>
+                        <includedTypes>URI</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Coded_text</includedTypes>
+                        <includedTypes>Parsable</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>URI</includedTypes>
+                    </constraint>
+                </Rule>
+                <Items archetype_id="openEHR-EHR-CLUSTER.specimen.v1"
+                    max="1"
+                    path="/data[at0001]/events[at0002]/data[at0003]/items[at0065]" xsi:type="tem:CLUSTER">
+                    <Rule min="1" name="Material Type" path="/items[at0029]">
+                        <constraint xsi:type="tem:textConstraint">
+                            <includedValues>Healthy colon tissue</includedValues>
+                            <includedValues>Tumor tissue</includedValues>
+                            <includedValues>Other</includedValues>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0001]"/>
+                    <Rule max="1" min="1" name="Sample ID" path="/items[at0088]"/>
+                    <Rule max="0" path="/items[at0034]"/>
+                    <Rule max="0" path="/items[at0008]"/>
+                    <Rule max="0" path="/items[at0007]"/>
+                    <Rule max="0" path="/items[at0079]"/>
+                    <Rule max="0" path="/items[at0087]"/>
+                    <Rule min="1" name="Year of sample collection" path="/items[at0015]"/>
+                    <Rule max="0" path="/items[at0005]"/>
+                    <Rule max="0" path="/items[at0067]"/>
+                    <Rule max="0" path="/items[at0070]"/>
+                    <Rule max="0" path="/items[at0080]">
+                        <constraint xsi:type="tem:countConstraint">
+                            <minMagnitude>0</minMagnitude>
+                            <includesMaximum>false</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0003]"/>
+                    <Rule max="0" path="/items[at0042]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Coded_text</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0041]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Coded_text</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0045]"/>
+                    <Items
+                        archetype_id="openEHR-EHR-CLUSTER.specimen_preparation.v0"
+                        max="1" min="1" path="/items[at0068]" xsi:type="tem:CLUSTER">
+                        <Rule max="0" path="/items[at0072]"/>
+                        <Rule max="0" path="/items[at0071]"/>
+                        <Rule min="1" name="Preservation mode" path="/items[at0074]">
+                            <constraint xsi:type="tem:textConstraint">
+                                <includedValues>Cryopreservation</includedValues>
+                                <includedValues>FFPE</includedValues>
+                                <includedValues>Other</includedValues>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0087]"/>
+                        <Rule max="0" path="/items[at0086]"/>
+                    </Items>
+                    <Items
+                        archetype_id="openEHR-EHR-CLUSTER.multimedia_source.v0"
+                        max="1" path="/items[at0096]" xsi:type="tem:CLUSTER">
+                        <Rule max="0" path="/items[at0002]"/>
+                        <Rule max="0" path="/items[at0010]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Identifier</includedTypes>
+                                <includedTypes>Text</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule name="Availability digital imaging" path="/items[at0005]">
+                            <constraint xsi:type="tem:textConstraint">
+                                <includedValues>Can be generated</includedValues>
+                                <includedValues>No</includedValues>
+                                <includedValues>Readily available</includedValues>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0001]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>MultiMedia</includedTypes>
+                                <includedTypes>URI</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0004]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Date_Time</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0007]"/>
+                    </Items>
+                </Items>
+                <Items
+                    archetype_id="openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0"
+                    concept_name="Anatomical pathology examination"
+                    max="1" name="Invasion front"
+                    path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0019]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Coded_text</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule default="Invasion front" path="/items[at0005]/items[at0023]"/>
+                    <Rule max="0" path="/items[at0005]/items[at0008]"/>
+                    <Rule max="0" path="/items[at0005]/items[at0010]"/>
+                    <Rule max="0" path="/items[at0005]/items[at0017]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>URI</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0005]/items[at0006]"/>
+                    <Rule max="0" path="/items[at0011]"/>
+                    <Rule max="0" path="/items[at0018]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>URI</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Items
+                        archetype_id="openEHR-EHR-CLUSTER.multimedia_source.v0"
+                        concept_name="Multimedia source" max="1"
+                        name="Digital imaging invasion front"
+                        path="/items[at0005]/items[at0022]" xsi:type="tem:CLUSTER">
+                        <Rule max="0" path="/items[at0002]"/>
+                        <Rule max="0" path="/items[at0010]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Identifier</includedTypes>
+                                <includedTypes>Text</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule
+                            name="Availability invasion front digital imaging" path="/items[at0005]">
+                            <constraint xsi:type="tem:textConstraint">
+                                <includedValues>Can be generated</includedValues>
+                                <includedValues>Invasion front not included</includedValues>
+                                <includedValues>No</includedValues>
+                                <includedValues>Readily available</includedValues>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0001]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>MultiMedia</includedTypes>
+                                <includedTypes>URI</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0004]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Date_Time</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0007]"/>
+                    </Items>
+                </Items>
+                <Items
+                    archetype_id="openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0"
+                    concept_name="Anatomical pathology examination"
+                    max="1" name="Recurrence"
+                    path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0019]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Coded_text</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule default="Recurrence" path="/items[at0005]/items[at0023]"/>
+                    <Rule max="0" path="/items[at0005]/items[at0008]"/>
+                    <Rule max="0" path="/items[at0005]/items[at0010]"/>
+                    <Rule max="0" path="/items[at0005]/items[at0017]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>URI</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule
+                        name="Biological material from recurrence available" path="/items[at0005]/items[at0006]"/>
+                    <Rule max="0" path="/items[at0011]"/>
+                    <Rule max="0" path="/items[at0018]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Identifier</includedTypes>
+                            <includedTypes>URI</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                </Items>
+            </Item>
+            <Item
+                archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1"
+                concept_name="Problem/Diagnosis" max="1"
+                name="Cancer diagnosis"
+                path="/items[at0002]/items[at0004]" xsi:type="tem:EVALUATION">
+                <Rule default="Cancer" path="/data[at0001]/items[at0002]"/>
+                <Rule max="0" path="/data[at0001]/items[at0009]"/>
+                <Rule max="1" min="1"
+                    name="Localization of primary tumor" path="/data[at0001]/items[at0012]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>C 18.0 - Caecum</includedValues>
+                        <includedValues>C 18.1 - Appendix</includedValues>
+                        <includedValues>C 18.2 - Ascending colon</includedValues>
+                        <includedValues>C 18.3 - Hepatic flexure</includedValues>
+                        <includedValues>C 18.4 - Transverse colon</includedValues>
+                        <includedValues>C 18.5 - Splenic flexure</includedValues>
+                        <includedValues>C 18.6 - Descending colon</includedValues>
+                        <includedValues>C 18.7 - Sigmoid colon</includedValues>
+                        <includedValues>C 19 - Rectosigmoid junction</includedValues>
+                        <includedValues>C 20 - Rectum</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/items[at0077]"/>
+                <Rule max="0" path="/data[at0001]/items[at0003]"/>
+                <Rule max="0" path="/data[at0001]/items[at0005]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Coded_text</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/items[at0072]"/>
+                <Rule max="0" path="/data[at0001]/items[at0030]"/>
+                <Rule max="0" path="/data[at0001]/items[at0073]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Coded_text</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/items[at0069]"/>
+                <Rule max="0" path="/protocol[at0032]/items[at0070]"/>
+                <Items
+                    archetype_id="openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0"
+                    max="1" path="/data[at0001]/items[at0043]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0330]"/>
+                    <Rule max="0" path="/items[at0004]"/>
+                    <Rule path="/items[at0004]/items[at0007]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>mm</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                    <Rule min="1" name="Morphology" path="/items[at0001]/items[at0033]">
+                        <constraint xsi:type="tem:textConstraint">
+                            <excludedValues>local::at0410</excludedValues>
+                            <excludedValues>local::at0040</excludedValues>
+                            <excludedValues>local::at0414</excludedValues>
+                            <excludedValues>local::at0418</excludedValues>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0001]/items[at0323]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>mm</unit>
+                                <minMagnitude>0.0</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0001]/items[at0389]"/>
+                    <Rule min="1" path="/items[at0001]/items[at0269]"/>
+                    <Rule min="1" name="WHO version" path="/items[at0001]/items[at0269]/items[at0271]">
+                        <constraint xsi:type="tem:textConstraint">
+                            <includedValues>1st ed. (1979-1990)</includedValues>
+                            <includedValues>2nd ed. (1991- 2000)</includedValues>
+                            <includedValues>3rd ed. (2001-2010)</includedValues>
+                            <includedValues>4th ed. (used since 2011)</includedValues>
+                            <includedValues>Edition not known</includedValues>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0001]/items[at0030]"/>
+                    <Rule max="0" path="/items[at0001]/items[at0403]"/>
+                    <Rule max="0" path="/items[at0001]/items[at0278]"/>
+                    <Rule max="0" path="/items[at0001]/items[at0263]/items[at0265]"/>
+                    <Rule max="0" path="/items[at0001]/items[at0366]"/>
+                    <Rule max="0" path="/items[at0001]/items[at0179]"/>
+                    <Rule max="0" path="/items[at0001]/items[at0309]"/>
+                    <Items
+                        archetype_id="openEHR-EHR-CLUSTER.anatomical_location.v1"
+                        max="1"
+                        path="/items[at0001]/items[at0263]/items[at0287]" xsi:type="tem:CLUSTER">
+                        <Rule name="Localization of metastasis" path="/items[at0001]">
+                            <constraint xsi:type="tem:textConstraint">
+                                <includedValues>Adrenals</includedValues>
+                                <includedValues>Bone marrow</includedValues>
+                                <includedValues>Brain</includedValues>
+                                <includedValues>Hepatic</includedValues>
+                                <includedValues>Lymph nodes</includedValues>
+                                <includedValues>None</includedValues>
+                                <includedValues>Osseous</includedValues>
+                                <includedValues>Peritoneum</includedValues>
+                                <includedValues>Pleura</includedValues>
+                                <includedValues>Pulmonary</includedValues>
+                                <includedValues>Skin</includedValues>
+                                <includedValues>Others</includedValues>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0065]"/>
+                        <Rule max="0" path="/items[at0002]"/>
+                        <Rule max="0" path="/items[at0064]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Coded_text</includedTypes>
+                                <includedTypes>Text</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0055]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Coded_text</includedTypes>
+                                <includedTypes>Text</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0023]"/>
+                    </Items>
+                    <Items
+                        archetype_id="openEHR-EHR-CLUSTER.tnm-pathological.v1"
+                        max="1" path="/items[at0001]/items[at0002]" xsi:type="tem:CLUSTER">
+                        <Rule max="0" path="/items[at0001]"/>
+                        <Rule max="0" path="/items[at0002]"/>
+                        <Rule min="1" name="Primary tumour" path="/items[at0003.1]">
+                            <constraint xsi:type="tem:textConstraint">
+                                <includedValues>T0</includedValues>
+                                <includedValues>T1</includedValues>
+                                <includedValues>T2</includedValues>
+                                <includedValues>T3</includedValues>
+                                <includedValues>T4</includedValues>
+                                <includedValues>T4a</includedValues>
+                                <includedValues>T4b</includedValues>
+                                <includedValues>Tis</includedValues>
+                                <includedValues>TX</includedValues>
+                            </constraint>
+                        </Rule>
+                        <Rule min="1" name="Regional lymph nodes" path="/items[at0004.1]">
+                            <constraint xsi:type="tem:textConstraint">
+                                <includedValues>N0</includedValues>
+                                <includedValues>N1</includedValues>
+                                <includedValues>N1a</includedValues>
+                                <includedValues>N1b</includedValues>
+                                <includedValues>N1c</includedValues>
+                                <includedValues>N2</includedValues>
+                                <includedValues>N2a</includedValues>
+                                <includedValues>N2b</includedValues>
+                                <includedValues>N3</includedValues>
+                                <includedValues>NX</includedValues>
+                            </constraint>
+                        </Rule>
+                        <Rule min="1" name="Distant metastasis" path="/items[at0005.1]">
+                            <constraint xsi:type="tem:textConstraint">
+                                <includedValues>M0</includedValues>
+                                <includedValues>M1</includedValues>
+                                <includedValues>M1a</includedValues>
+                                <includedValues>M1b</includedValues>
+                                <includedValues>M1c</includedValues>
+                                <includedValues>MX</includedValues>
+                            </constraint>
+                        </Rule>
+                        <Rule min="1" name="Grade" path="/items[at0006]">
+                            <constraint xsi:type="tem:textConstraint">
+                                <includedValues>G1</includedValues>
+                                <includedValues>G2</includedValues>
+                                <includedValues>G3</includedValues>
+                                <includedValues>G4</includedValues>
+                                <includedValues>GX</includedValues>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0007]"/>
+                        <Rule max="0" path="/items[at0012]"/>
+                        <Rule max="0" path="/items[at0016]"/>
+                        <Rule max="0" path="/items[at0021]"/>
+                        <Rule max="0" path="/items[at0025.1]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Count</includedTypes>
+                                <includedTypes>Boolean</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0026]"/>
+                        <Rule max="0" path="/items[at0027]"/>
+                        <Rule max="0" path="/items[at0028]"/>
+                        <Rule max="0" path="/items[at0029]"/>
+                        <Rule max="0" path="/items[at0030.1]"/>
+                        <Rule min="1" name="Stage" path="/items[at0031.1]">
+                            <constraint xsi:type="tem:textConstraint">
+                                <includedValues>0</includedValues>
+                                <includedValues>I</includedValues>
+                                <includedValues>II</includedValues>
+                                <includedValues>II A</includedValues>
+                                <includedValues>IIB</includedValues>
+                                <includedValues>IIC</includedValues>
+                                <includedValues>III</includedValues>
+                                <includedValues>IIIA</includedValues>
+                                <includedValues>IIIB</includedValues>
+                                <includedValues>IIIC</includedValues>
+                                <includedValues>IV</includedValues>
+                                <includedValues>IVA</includedValues>
+                                <includedValues>IVB</includedValues>
+                                <includedValues>IVC</includedValues>
+                            </constraint>
+                        </Rule>
+                        <Rule min="1" name="UICC version" path="/items[at0032]">
+                            <constraint xsi:type="tem:textConstraint">
+                                <includedValues>4th. ed (used before 1998)</includedValues>
+                                <includedValues>5th. ed (used 1998-2002)</includedValues>
+                                <includedValues>6th. ed (used 2003-2009)</includedValues>
+                                <includedValues>7th ed. (used 2010- 2017)</includedValues>
+                                <includedValues>8th ed. (used since 2017)</includedValues>
+                                <includedValues>Not known</includedValues>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0.1]"/>
+                        <Rule max="0" path="/items[at0.2]"/>
+                        <Rule max="0" path="/items[at0.3]"/>
+                        <Rule max="0" path="/items[at0.8]"/>
+                    </Items>
+                </Items>
+            </Item>
+        </Content>
+        <Content archetype_id="openEHR-EHR-SECTION.procedures_rcp.v1"
+            concept_name="Procedures" max="1" name="Surgery"
+            path="/content" xsi:type="tem:SECTION">
+            <Item archetype_id="openEHR-EHR-ACTION.procedure.v1"
+                concept_name="Procedure" max="1" name="Surgery"
+                path="/items" xsi:type="tem:ACTION">
+                <Rule max="0" min="0" path="/ism_transition[at0004]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0034]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0007]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0035]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0038]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0039]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0036]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0068]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0047]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0040]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0041]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0043]"/>
+                <Rule name="Surgery type" path="/description[at0001]/items[at0002]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>Abdomino-perineal resection</includedValues>
+                        <includedValues>Anterior resection of rectum</includedValues>
+                        <includedValues>Endo-rectal tumor resection</includedValues>
+                        <includedValues>Left hemicolectomy</includedValues>
+                        <includedValues>Low anteroir colon resection</includedValues>
+                        <includedValues>Pan-procto colectomy</includedValues>
+                        <includedValues>Right hemicolectomy</includedValues>
+                        <includedValues>Sigmoid colectomy</includedValues>
+                        <includedValues>Total colectomy</includedValues>
+                        <includedValues>Transverse colectomy</includedValues>
+                        <includedValues>Other</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule name="Other surgery type" path="/description[at0001]/items[at0049]"/>
+                <Rule max="0" path="/description[at0001]/items[at0070]"/>
+                <Rule max="0" path="/description[at0001]/items[at0065]"/>
+                <Rule max="0" path="/description[at0001]/items[at0058]"/>
+                <Rule max="1" min="1" name="Location of the tumor" path="/description[at0001]/items[at0063]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>C 18.0 - Cecum</includedValues>
+                        <includedValues>C 18.1 - Appendix</includedValues>
+                        <includedValues>C 18.2 - Ascending (right)</includedValues>
+                        <includedValues>C 18.3 - Hepatic flexure</includedValues>
+                        <includedValues>C 18.4 - Transverse colon</includedValues>
+                        <includedValues>C 18.5 - Splenic flexure</includedValues>
+                        <includedValues>C 18.6 - Descending (left)</includedValues>
+                        <includedValues>C 18.7 - Sigmoid</includedValues>
+                        <includedValues>C 19 - Rectosigmoid</includedValues>
+                        <includedValues>C 19.9 - Rectosigmoid</includedValues>
+                        <includedValues>C 20 - Rectum</includedValues>
+                        <includedValues>C 20.9 - Rectum</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule max="1" min="1" name="Surgery radicality" path="/description[at0001]/items[at0048]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>R0</includedValues>
+                        <includedValues>R1</includedValues>
+                        <includedValues>R2</includedValues>
+                        <includedValues>RX</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/description[at0001]/items[at0069]"/>
+                <Rule max="0" path="/description[at0001]/items[at0006]"/>
+                <Rule max="0" path="/description[at0001]/items[at0066]"/>
+                <Rule max="0" path="/description[at0001]/items[at0060]"/>
+                <Rule max="0" path="/description[at0001]/items[at0061]">
+                    <constraint xsi:type="tem:durationConstraint">
+                        <minMagnitude>PT0S</minMagnitude>
+                        <includesMaximum>false</includesMaximum>
+                        <includesMinimum>true</includesMinimum>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/description[at0001]/items[at0067]"/>
+                <Rule max="0" path="/description[at0001]/items[at0014]"/>
+                <Rule max="0" path="/description[at0001]/items[at0005]"/>
+                <Rule max="0" path="/protocol[at0053]/items[at0054]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/protocol[at0053]/items[at0056]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                    </constraint>
+                </Rule>
+                <Items
+                    archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                    concept_name="Timing - non-daily" max="1"
+                    name="Surgery timing"
+                    path="/description[at0001]/items[at0003]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0002]">
+                        <constraint xsi:type="tem:durationConstraint">
+                            <pattern>PYMWD</pattern>
+                            <minMagnitude>P0D</minMagnitude>
+                            <includesMaximum>false</includesMaximum>
+                            <includesMinimum>false</includesMinimum>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0014]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>1/a</unit>
+                                <maxMagnitude>366.0</maxMagnitude>
+                                <minMagnitude>1.0</minMagnitude>
+                                <includesMaximum>true</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>1/wk</unit>
+                                <maxMagnitude>7.0</maxMagnitude>
+                                <minMagnitude>1.0</minMagnitude>
+                                <includesMaximum>true</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>1/mo</unit>
+                                <maxMagnitude>31.0</maxMagnitude>
+                                <minMagnitude>1.0</minMagnitude>
+                                <includesMaximum>true</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0001]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Date</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0003]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Count</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0021]"/>
+                    <Rule name="Surgery" path="/items[at0006]"/>
+                    <Rule default="Primary diagnosis" name="From event" path="/items[at0006]/items[at0005]"/>
+                    <Rule min="1" name="Surgery start relative" path="/items[at0006]/items[at0009]">
+                        <constraint xsi:type="tem:durationConstraint">
+                            <pattern>PW</pattern>
+                            <minMagnitude>P0W</minMagnitude>
+                            <includesMaximum>false</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0010]"/>
+                </Items>
+            </Item>
+        </Content>
+        <Content archetype_id="openEHR-EHR-SECTION.procedures_rcp.v1"
+            concept_name="Procedures" max="1" name="Therapies"
+            path="/content" xsi:type="tem:SECTION">
+            <Item archetype_id="openEHR-EHR-SECTION.adhoc.v1"
+                concept_name="Ad hoc heading" max="1"
+                name="Radiation therapy" path="/items" xsi:type="tem:SECTION">
+                <Item archetype_id="openEHR-EHR-ACTION.procedure.v1"
+                    concept_name="Procedure" max="1"
+                    name="Radiation therapy" path="/items" xsi:type="tem:ACTION">
+                    <Rule max="0" min="0" path="/ism_transition[at0004]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0034]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0007]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0035]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0038]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0039]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0036]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0068]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0047]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0040]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0041]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0043]"/>
+                    <Rule default="Radiation therapy" name="Therapy" path="/description[at0001]/items[at0002]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0049]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0070]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0065]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0058]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0063]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0048]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0069]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0006]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0066]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0060]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0061]">
+                        <constraint xsi:type="tem:durationConstraint">
+                            <minMagnitude>PT0S</minMagnitude>
+                            <includesMaximum>false</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/description[at0001]/items[at0067]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0014]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0005]"/>
+                    <Rule max="0" path="/protocol[at0053]/items[at0054]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Text</includedTypes>
+                            <includedTypes>Identifier</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/protocol[at0053]/items[at0056]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Text</includedTypes>
+                            <includedTypes>Identifier</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Items
+                        archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                        concept_name="Timing - non-daily" max="1"
+                        name="Radiation timing"
+                        path="/description[at0001]/items[at0003]" xsi:type="tem:CLUSTER">
+                        <Rule max="0" path="/items[at0002]">
+                            <constraint xsi:type="tem:durationConstraint">
+                                <pattern>PYMWD</pattern>
+                                <minMagnitude>P0D</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>false</includesMinimum>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0014]">
+                            <constraint xsi:type="tem:quantityConstraint">
+                                <unitMagnitude>
+                                    <unit>1/a</unit>
+                                    <maxMagnitude>366.0</maxMagnitude>
+                                    <minMagnitude>1.0</minMagnitude>
+                                    <includesMaximum>true</includesMaximum>
+                                    <includesMinimum>true</includesMinimum>
+                                </unitMagnitude>
+                                <unitMagnitude>
+                                    <unit>1/wk</unit>
+                                    <maxMagnitude>7.0</maxMagnitude>
+                                    <minMagnitude>1.0</minMagnitude>
+                                    <includesMaximum>true</includesMaximum>
+                                    <includesMinimum>true</includesMinimum>
+                                </unitMagnitude>
+                                <unitMagnitude>
+                                    <unit>1/mo</unit>
+                                    <maxMagnitude>31.0</maxMagnitude>
+                                    <minMagnitude>1.0</minMagnitude>
+                                    <includesMaximum>true</includesMaximum>
+                                    <includesMinimum>true</includesMinimum>
+                                </unitMagnitude>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0001]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Date</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0003]"/>
+                        <Rule max="0" path="/items[at0004]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Count</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0021]"/>
+                        <Rule max="1" min="1"
+                            name="Start of radiation therapy" path="/items[at0006]"/>
+                        <Rule default="Primary diagnosis"
+                            name="From event" path="/items[at0006, 'Start of radiation therapy']/items[at0005]"/>
+                        <Rule min="1"
+                            name="Date of start of radiation therapy" path="/items[at0006, 'Start of radiation therapy']/items[at0009]">
+                            <constraint xsi:type="tem:durationConstraint">
+                                <pattern>PW</pattern>
+                                <minMagnitude>P0W</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </constraint>
+                        </Rule>
+                        <Rule clone="true" max="1" min="1"
+                            name="End of radiation therapy" path="/items[at0006]"/>
+                        <Rule default="Primary diagnosis"
+                            name="From event" path="/items[at0006, 'End of radiation therapy']/items[at0005]"/>
+                        <Rule min="1"
+                            name="Date of end of radiation therapy" path="/items[at0006, 'End of radiation therapy']/items[at0009]">
+                            <constraint xsi:type="tem:durationConstraint">
+                                <pattern>PW</pattern>
+                                <minMagnitude>P0W</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0010]"/>
+                    </Items>
+                </Item>
+            </Item>
+            <Item archetype_id="openEHR-EHR-SECTION.adhoc.v1"
+                concept_name="Ad hoc heading" max="1"
+                name="Targeted therapy" path="/items" xsi:type="tem:SECTION">
+                <Item archetype_id="openEHR-EHR-ACTION.procedure.v1"
+                    concept_name="Procedure" max="1"
+                    name="Targeted therapy" path="/items" xsi:type="tem:ACTION">
+                    <Rule max="0" min="0" path="/ism_transition[at0004]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0034]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0007]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0035]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0038]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0039]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0036]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0068]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0047]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0040]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0041]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0043]"/>
+                    <Rule default="Targeted therapy" name="Therapy" path="/description[at0001]/items[at0002]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0049]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0070]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0065]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0058]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0063]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0048]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0069]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0006]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0066]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0060]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0061]">
+                        <constraint xsi:type="tem:durationConstraint">
+                            <minMagnitude>PT0S</minMagnitude>
+                            <includesMaximum>false</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/description[at0001]/items[at0067]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0014]"/>
+                    <Rule max="0" path="/description[at0001]/items[at0005]"/>
+                    <Rule max="0" path="/protocol[at0053]/items[at0054]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Text</includedTypes>
+                            <includedTypes>Identifier</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/protocol[at0053]/items[at0056]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Text</includedTypes>
+                            <includedTypes>Identifier</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Items
+                        archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                        concept_name="Timing - non-daily" max="1"
+                        name="Targeted therapy timing"
+                        path="/description[at0001]/items[at0003]" xsi:type="tem:CLUSTER">
+                        <Rule max="0" path="/items[at0002]">
+                            <constraint xsi:type="tem:durationConstraint">
+                                <pattern>PYMWD</pattern>
+                                <minMagnitude>P0D</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>false</includesMinimum>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0014]">
+                            <constraint xsi:type="tem:quantityConstraint">
+                                <unitMagnitude>
+                                    <unit>1/a</unit>
+                                    <maxMagnitude>366.0</maxMagnitude>
+                                    <minMagnitude>1.0</minMagnitude>
+                                    <includesMaximum>true</includesMaximum>
+                                    <includesMinimum>true</includesMinimum>
+                                </unitMagnitude>
+                                <unitMagnitude>
+                                    <unit>1/wk</unit>
+                                    <maxMagnitude>7.0</maxMagnitude>
+                                    <minMagnitude>1.0</minMagnitude>
+                                    <includesMaximum>true</includesMaximum>
+                                    <includesMinimum>true</includesMinimum>
+                                </unitMagnitude>
+                                <unitMagnitude>
+                                    <unit>1/mo</unit>
+                                    <maxMagnitude>31.0</maxMagnitude>
+                                    <minMagnitude>1.0</minMagnitude>
+                                    <includesMaximum>true</includesMaximum>
+                                    <includesMinimum>true</includesMinimum>
+                                </unitMagnitude>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0001]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Date</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0003]"/>
+                        <Rule max="0" path="/items[at0004]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Count</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0021]"/>
+                        <Rule max="1" min="1"
+                            name="Start of targeted therapy" path="/items[at0006]"/>
+                        <Rule default="Primary diagnosis" path="/items[at0006, 'Start of targeted therapy']/items[at0005]"/>
+                        <Rule min="1"
+                            name="Date of start of targeted therapy" path="/items[at0006, 'Start of targeted therapy']/items[at0009]">
+                            <constraint xsi:type="tem:durationConstraint">
+                                <pattern>PW</pattern>
+                                <minMagnitude>P0W</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </constraint>
+                        </Rule>
+                        <Rule clone="true" max="1"
+                            name="End of targeted therapy" path="/items[at0006]"/>
+                        <Rule default="Primary diagnosis"
+                            name="From event" path="/items[at0006, 'End of targeted therapy']/items[at0005]"/>
+                        <Rule name="Date of end of targeted therapy" path="/items[at0006, 'End of targeted therapy']/items[at0009]">
+                            <constraint xsi:type="tem:durationConstraint">
+                                <pattern>PW</pattern>
+                                <minMagnitude>P0W</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0010]"/>
+                    </Items>
+                </Item>
+            </Item>
+            <Item archetype_id="openEHR-EHR-SECTION.adhoc.v1"
+                concept_name="Ad hoc heading" max="1"
+                name="Pharmacotherapy" path="/items" xsi:type="tem:SECTION">
+                <Item archetype_id="openEHR-EHR-ACTION.medication.v1"
+                    max="1" path="/items" xsi:type="tem:ACTION">
+                    <Rule max="0" min="0" path="/ism_transition[at0109]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0145]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0013]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0012]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0150]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0016]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0153]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0002]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0003]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0106]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0010]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0148]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0004]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0041]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0005]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0006]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0018]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0044]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0008]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0009]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0011]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0015]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0039]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0151]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0007]"/>
+                    <Rule max="0" min="0" path="/ism_transition[at0152]"/>
+                    <Rule min="1" name="Scheme of pharmacotherapy" path="/description[at0017]/items[at0020]">
+                        <constraint xsi:type="tem:textConstraint">
+                            <includedValues>5-FU 1000 mg/m2 i.v. continuous infusion, day 1-5, weeks 1 and 5</includedValues>
+                            <includedValues>5-FU 225 mg/m2 i.v. continuous infusion, 5 days per week</includedValues>
+                            <includedValues>5-FU 325-350 mg/m2 + LV 20 mg/m2i.v. bolus, day1-5, weeks 1 and 5</includedValues>
+                            <includedValues>5-FU 400 mg/m2 + 100 mg i.v. bolus, d 1,2, 11,12,21,22</includedValues>
+                            <includedValues>Capecitabine 800-825 mg/m2 bid po, day 1-5, together with radiation or continuously untill end of radiation</includedValues>
+                            <includedValues>Only preoperatively (no standard): 5-FU 250 mg/m2 i.v. continuous infusion on days 1- 13 nad 22-35 and oxaliplatin 50mg/m2 i.v. day 1,8,22 and 29</includedValues>
+                            <includedValues>UFT (300-340mg/m2/day) and LV (22.5-90 mg/day) po continuously, 5(-7) days per week, together with radiotherapy</includedValues>
+                            <includedValues>Other</includedValues>
+                        </constraint>
+                    </Rule>
+                    <Rule name="Other pharmacotherapy scheme" path="/description[at0017]/items[at0156]"/>
+                    <Rule max="0" path="/description[at0017]/items[at0132]"/>
+                    <Rule max="0" path="/description[at0017]/items[at0133]"/>
+                    <Rule max="0" path="/description[at0017]/items[at0043]"/>
+                    <Rule max="0" path="/description[at0017]/items[at0154]"/>
+                    <Rule max="0" path="/description[at0017]/items[at0155]"/>
+                    <Rule max="0" path="/description[at0017]/items[at0021]"/>
+                    <Rule max="0" path="/description[at0017]/items[at0140]/items[at0147]"/>
+                    <Rule max="0" path="/description[at0017]/items[at0140]/items[at0141]"/>
+                    <Rule max="0" path="/description[at0017]/items[at0140]/items[at0143]"/>
+                    <Rule max="0" path="/description[at0017]/items[at0033]"/>
+                    <Rule max="0" path="/description[at0017]/items[at0149]"/>
+                    <Rule max="0" path="/description[at0017]/items[at0025]"/>
+                    <Rule max="0" path="/description[at0017]/items[at0024]"/>
+                    <Rule max="0" path="/protocol[at0030]/items[at0103]"/>
+                    <Items
+                        archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                        concept_name="Timing - non-daily" max="1"
+                        min="1" name="Pharmacotherapy timing"
+                        path="/description[at0017]/items[at0053]" xsi:type="tem:CLUSTER">
+                        <Rule max="0" path="/items[at0002]">
+                            <constraint xsi:type="tem:durationConstraint">
+                                <pattern>PYMWD</pattern>
+                                <minMagnitude>P0D</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>false</includesMinimum>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0014]">
+                            <constraint xsi:type="tem:quantityConstraint">
+                                <unitMagnitude>
+                                    <unit>1/a</unit>
+                                    <maxMagnitude>366.0</maxMagnitude>
+                                    <minMagnitude>1.0</minMagnitude>
+                                    <includesMaximum>true</includesMaximum>
+                                    <includesMinimum>true</includesMinimum>
+                                </unitMagnitude>
+                                <unitMagnitude>
+                                    <unit>1/wk</unit>
+                                    <maxMagnitude>7.0</maxMagnitude>
+                                    <minMagnitude>1.0</minMagnitude>
+                                    <includesMaximum>true</includesMaximum>
+                                    <includesMinimum>true</includesMinimum>
+                                </unitMagnitude>
+                                <unitMagnitude>
+                                    <unit>1/mo</unit>
+                                    <maxMagnitude>31.0</maxMagnitude>
+                                    <minMagnitude>1.0</minMagnitude>
+                                    <includesMaximum>true</includesMaximum>
+                                    <includesMinimum>true</includesMinimum>
+                                </unitMagnitude>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0001]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Date</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0003]"/>
+                        <Rule max="0" path="/items[at0004]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Count</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0021]"/>
+                        <Rule max="1" min="1"
+                            name="Start of pharmacotherapy" path="/items[at0006]"/>
+                        <Rule default="Primary diagnosis"
+                            name="From event" path="/items[at0006, 'Start of pharmacotherapy']/items[at0005]"/>
+                        <Rule min="1"
+                            name="Date of start of pharmacotherapy" path="/items[at0006, 'Start of pharmacotherapy']/items[at0009]">
+                            <constraint xsi:type="tem:durationConstraint">
+                                <pattern>PW</pattern>
+                                <minMagnitude>P0W</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </constraint>
+                        </Rule>
+                        <Rule clone="true" name="End of pharmacotherapy" path="/items[at0006]"/>
+                        <Rule default="Primary diagnosis"
+                            name="From event" path="/items[at0006, 'End of pharmacotherapy']/items[at0005]"/>
+                        <Rule min="1"
+                            name="Date of end of pharmacotherapy" path="/items[at0006, 'End of pharmacotherapy']/items[at0009]">
+                            <constraint xsi:type="tem:durationConstraint">
+                                <pattern>PW</pattern>
+                                <minMagnitude>P0W</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0010]"/>
+                    </Items>
+                </Item>
+            </Item>
+            <Item archetype_id="openEHR-EHR-SECTION.adhoc.v1"
+                concept_name="Ad hoc heading" max="1"
+                name="Response to therapy" path="/items" xsi:type="tem:SECTION">
+                <Item
+                    archetype_id="openEHR-EHR-EVALUATION.clinical_synopsis.v1"
+                    max="1" path="/items" xsi:type="tem:EVALUATION">
+                    <Rule name="Specific response" path="/data[at0001]/items[at0002]">
+                        <constraint xsi:type="tem:textConstraint">
+                            <includedValues>Complete response</includedValues>
+                            <includedValues>Partial response</includedValues>
+                            <includedValues>Progressive disease</includedValues>
+                            <includedValues>Stable disease</includedValues>
+                        </constraint>
+                    </Rule>
+                    <Items
+                        archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                        concept_name="Timing - non-daily" max="1"
+                        min="1" name="Response timing"
+                        path="/protocol[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
+                        <Rule max="0" path="/items[at0002]">
+                            <constraint xsi:type="tem:durationConstraint">
+                                <pattern>PYMWD</pattern>
+                                <minMagnitude>P0D</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>false</includesMinimum>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0014]">
+                            <constraint xsi:type="tem:quantityConstraint">
+                                <unitMagnitude>
+                                    <unit>1/a</unit>
+                                    <maxMagnitude>366.0</maxMagnitude>
+                                    <minMagnitude>1.0</minMagnitude>
+                                    <includesMaximum>true</includesMaximum>
+                                    <includesMinimum>true</includesMinimum>
+                                </unitMagnitude>
+                                <unitMagnitude>
+                                    <unit>1/wk</unit>
+                                    <maxMagnitude>7.0</maxMagnitude>
+                                    <minMagnitude>1.0</minMagnitude>
+                                    <includesMaximum>true</includesMaximum>
+                                    <includesMinimum>true</includesMinimum>
+                                </unitMagnitude>
+                                <unitMagnitude>
+                                    <unit>1/mo</unit>
+                                    <maxMagnitude>31.0</maxMagnitude>
+                                    <minMagnitude>1.0</minMagnitude>
+                                    <includesMaximum>true</includesMaximum>
+                                    <includesMinimum>true</includesMinimum>
+                                </unitMagnitude>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0001]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Date</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0003]"/>
+                        <Rule max="0" path="/items[at0004]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Count</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0021]"/>
+                        <Rule name="Therapy response timestamp" path="/items[at0006]"/>
+                        <Rule default="Primary diagnosis"
+                            name="From event" path="/items[at0006]/items[at0005]"/>
+                        <Rule min="1" name="Time of therapy response" path="/items[at0006]/items[at0009]">
+                            <constraint xsi:type="tem:durationConstraint">
+                                <pattern>PW</pattern>
+                                <minMagnitude>P0W</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0010]"/>
+                    </Items>
+                </Item>
+            </Item>
+        </Content>
+        <Content archetype_id="openEHR-EHR-SECTION.procedures_rcp.v1"
+            concept_name="Procedures" max="1"
+            name="Diagnostic examinations" path="/content" xsi:type="tem:SECTION">
+            <Item archetype_id="openEHR-EHR-ACTION.procedure.v1"
+                concept_name="Procedure" max="1" min="1"
+                name="Colonoscopy" path="/items" xsi:type="tem:ACTION">
+                <Rule max="0" min="0" path="/ism_transition[at0004]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0034]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0007]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0035]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0038]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0039]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0036]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0068]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0047]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0040]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0041]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0043]"/>
+                <Rule default="Colonoscopy" path="/description[at0001]/items[at0002]"/>
+                <Rule max="0" path="/description[at0001]/items[at0049]"/>
+                <Rule max="0" path="/description[at0001]/items[at0070]"/>
+                <Rule max="0" path="/description[at0001]/items[at0065]"/>
+                <Rule max="0" path="/description[at0001]/items[at0058]"/>
+                <Rule max="0" path="/description[at0001]/items[at0063]"/>
+                <Rule max="1" min="1" name="Colonoscopy" path="/description[at0001]/items[at0048]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>Negative</includedValues>
+                        <includedValues>Positive</includedValues>
+                        <includedValues>Not done</includedValues>
+                        <includedValues>Unknown</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/description[at0001]/items[at0069]"/>
+                <Rule max="0" path="/description[at0001]/items[at0006]"/>
+                <Rule max="0" path="/description[at0001]/items[at0066]"/>
+                <Rule max="0" path="/description[at0001]/items[at0060]"/>
+                <Rule max="0" path="/description[at0001]/items[at0061]">
+                    <constraint xsi:type="tem:durationConstraint">
+                        <minMagnitude>PT0S</minMagnitude>
+                        <includesMaximum>false</includesMaximum>
+                        <includesMinimum>true</includesMinimum>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/description[at0001]/items[at0067]"/>
+                <Rule max="0" path="/description[at0001]/items[at0014]"/>
+                <Rule max="0" path="/description[at0001]/items[at0005]"/>
+                <Rule max="0" path="/protocol[at0053]/items[at0054]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/protocol[at0053]/items[at0056]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                    </constraint>
+                </Rule>
+            </Item>
+            <Item archetype_id="openEHR-EHR-ACTION.procedure.v1"
+                concept_name="Procedure" max="1" name="CT" path="/items" xsi:type="tem:ACTION">
+                <Rule max="0" min="0" path="/ism_transition[at0004]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0034]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0007]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0035]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0038]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0039]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0036]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0068]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0047]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0040]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0041]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0043]"/>
+                <Rule default="CT" path="/description[at0001]/items[at0002]"/>
+                <Rule max="0" path="/description[at0001]/items[at0049]"/>
+                <Rule max="0" path="/description[at0001]/items[at0070]"/>
+                <Rule max="0" path="/description[at0001]/items[at0065]"/>
+                <Rule max="0" path="/description[at0001]/items[at0058]"/>
+                <Rule max="0" path="/description[at0001]/items[at0063]"/>
+                <Rule max="1" min="1" name="CT" path="/description[at0001]/items[at0048]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>Done, data available</includedValues>
+                        <includedValues>Done, data not available</includedValues>
+                        <includedValues>Not done</includedValues>
+                        <includedValues>Unknown</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/description[at0001]/items[at0069]"/>
+                <Rule max="0" path="/description[at0001]/items[at0006]"/>
+                <Rule max="0" path="/description[at0001]/items[at0066]"/>
+                <Rule max="0" path="/description[at0001]/items[at0060]"/>
+                <Rule max="0" path="/description[at0001]/items[at0061]">
+                    <constraint xsi:type="tem:durationConstraint">
+                        <minMagnitude>PT0S</minMagnitude>
+                        <includesMaximum>false</includesMaximum>
+                        <includesMinimum>true</includesMinimum>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/description[at0001]/items[at0067]"/>
+                <Rule max="0" path="/description[at0001]/items[at0014]"/>
+                <Rule max="0" path="/description[at0001]/items[at0005]"/>
+                <Rule max="0" path="/protocol[at0053]/items[at0054]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/protocol[at0053]/items[at0056]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                    </constraint>
+                </Rule>
+            </Item>
+            <Item archetype_id="openEHR-EHR-ACTION.procedure.v1"
+                concept_name="Procedure" max="1" name="Liver imaging"
+                path="/items" xsi:type="tem:ACTION">
+                <Rule max="0" min="0" path="/ism_transition[at0004]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0034]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0007]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0035]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0038]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0039]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0036]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0068]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0047]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0040]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0041]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0043]"/>
+                <Rule default="Liver imaging" path="/description[at0001]/items[at0002]"/>
+                <Rule max="0" path="/description[at0001]/items[at0049]"/>
+                <Rule max="0" path="/description[at0001]/items[at0070]"/>
+                <Rule max="0" path="/description[at0001]/items[at0065]"/>
+                <Rule max="0" path="/description[at0001]/items[at0058]"/>
+                <Rule max="0" path="/description[at0001]/items[at0063]"/>
+                <Rule max="1" min="1" name="Liver imaging" path="/description[at0001]/items[at0048]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>Done, data available</includedValues>
+                        <includedValues>Done, data not available</includedValues>
+                        <includedValues>Not done</includedValues>
+                        <includedValues>Unknown</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/description[at0001]/items[at0069]"/>
+                <Rule max="0" path="/description[at0001]/items[at0006]"/>
+                <Rule max="0" path="/description[at0001]/items[at0066]"/>
+                <Rule max="0" path="/description[at0001]/items[at0060]"/>
+                <Rule max="0" path="/description[at0001]/items[at0061]">
+                    <constraint xsi:type="tem:durationConstraint">
+                        <minMagnitude>PT0S</minMagnitude>
+                        <includesMaximum>false</includesMaximum>
+                        <includesMinimum>true</includesMinimum>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/description[at0001]/items[at0067]"/>
+                <Rule max="0" path="/description[at0001]/items[at0014]"/>
+                <Rule max="0" path="/description[at0001]/items[at0005]"/>
+                <Rule max="0" path="/protocol[at0053]/items[at0054]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/protocol[at0053]/items[at0056]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                    </constraint>
+                </Rule>
+            </Item>
+            <Item archetype_id="openEHR-EHR-ACTION.procedure.v1"
+                concept_name="Procedure" max="1" name="Lung imaging"
+                path="/items" xsi:type="tem:ACTION">
+                <Rule max="0" min="0" path="/ism_transition[at0004]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0034]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0007]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0035]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0038]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0039]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0036]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0068]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0047]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0040]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0041]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0043]"/>
+                <Rule default="Lung imaging" path="/description[at0001]/items[at0002]"/>
+                <Rule max="0" path="/description[at0001]/items[at0049]"/>
+                <Rule max="0" path="/description[at0001]/items[at0070]"/>
+                <Rule max="0" path="/description[at0001]/items[at0065]"/>
+                <Rule max="0" path="/description[at0001]/items[at0058]"/>
+                <Rule max="0" path="/description[at0001]/items[at0063]"/>
+                <Rule max="1" min="1" name="Lung imaging" path="/description[at0001]/items[at0048]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>Done, data available</includedValues>
+                        <includedValues>Done, data not available</includedValues>
+                        <includedValues>Not done</includedValues>
+                        <includedValues>Unknown</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/description[at0001]/items[at0069]"/>
+                <Rule max="0" path="/description[at0001]/items[at0006]"/>
+                <Rule max="0" path="/description[at0001]/items[at0066]"/>
+                <Rule max="0" path="/description[at0001]/items[at0060]"/>
+                <Rule max="0" path="/description[at0001]/items[at0061]">
+                    <constraint xsi:type="tem:durationConstraint">
+                        <minMagnitude>PT0S</minMagnitude>
+                        <includesMaximum>false</includesMaximum>
+                        <includesMinimum>true</includesMinimum>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/description[at0001]/items[at0067]"/>
+                <Rule max="0" path="/description[at0001]/items[at0014]"/>
+                <Rule max="0" path="/description[at0001]/items[at0005]"/>
+                <Rule max="0" path="/protocol[at0053]/items[at0054]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/protocol[at0053]/items[at0056]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                    </constraint>
+                </Rule>
+            </Item>
+            <Item archetype_id="openEHR-EHR-ACTION.procedure.v1"
+                concept_name="Procedure" max="1" name="MRI"
+                path="/items" xsi:type="tem:ACTION">
+                <Rule max="0" min="0" path="/ism_transition[at0004]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0034]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0007]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0035]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0038]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0039]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0036]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0068]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0047]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0040]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0041]"/>
+                <Rule max="0" min="0" path="/ism_transition[at0043]"/>
+                <Rule default="MRI" path="/description[at0001]/items[at0002]"/>
+                <Rule max="0" path="/description[at0001]/items[at0049]"/>
+                <Rule max="0" path="/description[at0001]/items[at0070]"/>
+                <Rule max="0" path="/description[at0001]/items[at0065]"/>
+                <Rule max="0" path="/description[at0001]/items[at0058]"/>
+                <Rule max="0" path="/description[at0001]/items[at0063]"/>
+                <Rule max="1" min="1" name="MRI" path="/description[at0001]/items[at0048]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>Done, data available</includedValues>
+                        <includedValues>Done, data not available</includedValues>
+                        <includedValues>Not done</includedValues>
+                        <includedValues>Unknown</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/description[at0001]/items[at0069]"/>
+                <Rule max="0" path="/description[at0001]/items[at0006]"/>
+                <Rule max="0" path="/description[at0001]/items[at0066]"/>
+                <Rule max="0" path="/description[at0001]/items[at0060]"/>
+                <Rule max="0" path="/description[at0001]/items[at0061]">
+                    <constraint xsi:type="tem:durationConstraint">
+                        <minMagnitude>PT0S</minMagnitude>
+                        <includesMaximum>false</includesMaximum>
+                        <includesMinimum>true</includesMinimum>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/description[at0001]/items[at0067]"/>
+                <Rule max="0" path="/description[at0001]/items[at0014]"/>
+                <Rule max="0" path="/description[at0001]/items[at0005]"/>
+                <Rule max="0" path="/protocol[at0053]/items[at0054]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/protocol[at0053]/items[at0056]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                    </constraint>
+                </Rule>
+            </Item>
+        </Content>
+        <Content archetype_id="openEHR-EHR-SECTION.result_details.v0"
+            concept_name="Lab result details" max="1"
+            name="Molecular markers" path="/content" xsi:type="tem:SECTION">
+            <Item
+                archetype_id="openEHR-EHR-OBSERVATION.laboratory_test_result.v1"
+                concept_name="Laboratory test result" max="1"
+                name="Oncogenic mutations test"
+                path="/items[at0002]/items[at0003]" xsi:type="tem:OBSERVATION">
+                <Rule default="BRAF, PIC3CA, HER2 mutation test" path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0073]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Coded_text</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0075]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0077]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0100]"/>
+                <Rule name="BRAF, PIC3CA, HER2 mutation status" path="/data[at0001]/events[at0002]/data[at0003]/items[at0057]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>Mutated</includedValues>
+                        <includedValues>Not mutated</includedValues>
+                        <includedValues>Partial information available</includedValues>
+                        <includedValues>Not done</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0098]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0101]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/state[at0112]/items[at0113]"/>
+                <Rule max="0" path="/protocol[at0004]/items[at0068]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Identifier</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/protocol[at0004]/items[at0094]"/>
+                <Rule max="0" path="/protocol[at0004]/items[at0111]"/>
+                <Rule max="0" path="/protocol[at0004]/items[at0121]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Boolean</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                        <includedTypes>MultiMedia</includedTypes>
+                        <includedTypes>Quantity</includedTypes>
+                        <includedTypes>Count</includedTypes>
+                        <includedTypes>Date_Time</includedTypes>
+                        <includedTypes>Date</includedTypes>
+                        <includedTypes>Time</includedTypes>
+                        <includedTypes>Duration</includedTypes>
+                        <includedTypes>Ordinal</includedTypes>
+                        <includedTypes>Proportion</includedTypes>
+                        <includedTypes>URI</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Coded_text</includedTypes>
+                        <includedTypes>Parsable</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>URI</includedTypes>
+                    </constraint>
+                </Rule>
+                <Items
+                    archetype_id="openEHR-EHR-CLUSTER.sequencing_assay.v0"
+                    max="1" path="/protocol[at0004]/items[at0110]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0001]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Coded_text</includedTypes>
+                            <includedTypes>Text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0002]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Text</includedTypes>
+                            <includedTypes>Coded_text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0003]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Text</includedTypes>
+                            <includedTypes>Coded_text</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0020]">
+                        <constraint xsi:type="tem:countConstraint">
+                            <maxMagnitude>100</maxMagnitude>
+                            <minMagnitude>0</minMagnitude>
+                            <includesMaximum>true</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </constraint>
+                    </Rule>
+                    <Rule name="Tested Genes" path="/items[at0006]"/>
+                    <Rule default="BRAF" path="/items[at0006, 'Tested Genes']/items[at0007]"/>
+                    <Rule max="0" path="/items[at0006, 'Tested Genes']/items[at0008]"/>
+                    <Rule clone="true" name="Tested Genes (2)" path="/items[at0006]"/>
+                    <Rule default="PIC3CA" path="/items[at0006, 'Tested Genes (2)']/items[at0007]"/>
+                    <Rule max="0" path="/items[at0006, 'Tested Genes (2)']/items[at0008]"/>
+                    <Rule clone="true" name="Tested Genes (3)" path="/items[at0006]"/>
+                    <Rule default="HER2" path="/items[at0006, 'Tested Genes (3)']/items[at0007]"/>
+                    <Rule max="0" path="/items[at0006, 'Tested Genes (3)']/items[at0008]"/>
+                    <Rule max="0" path="/items[at0030]"/>
+                    <Rule max="0" path="/items[at0037]"/>
+                </Items>
+            </Item>
+            <Item
+                archetype_id="openEHR-EHR-OBSERVATION.laboratory_test_result.v1"
+                concept_name="Laboratory test result"
+                name="Microsatellites instability analysis"
+                path="/items[at0002]/items[at0003]" xsi:type="tem:OBSERVATION">
+                <Rule default="Microsatellite instability test" path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0073]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Coded_text</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0075]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0077]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0100]"/>
+                <Rule min="1" name="Microsatellite instability" path="/data[at0001]/events[at0002]/data[at0003]/items[at0057]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>Yes</includedValues>
+                        <includedValues>No</includedValues>
+                        <includedValues>Not done</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0098]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0101]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/state[at0112]/items[at0113]"/>
+                <Rule max="0" path="/protocol[at0004]/items[at0068]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Identifier</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/protocol[at0004]/items[at0094]"/>
+                <Rule max="0" path="/protocol[at0004]/items[at0111]"/>
+                <Rule max="0" path="/protocol[at0004]/items[at0121]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Boolean</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                        <includedTypes>MultiMedia</includedTypes>
+                        <includedTypes>Quantity</includedTypes>
+                        <includedTypes>Count</includedTypes>
+                        <includedTypes>Date_Time</includedTypes>
+                        <includedTypes>Date</includedTypes>
+                        <includedTypes>Time</includedTypes>
+                        <includedTypes>Duration</includedTypes>
+                        <includedTypes>Ordinal</includedTypes>
+                        <includedTypes>Proportion</includedTypes>
+                        <includedTypes>URI</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Coded_text</includedTypes>
+                        <includedTypes>Parsable</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>URI</includedTypes>
+                    </constraint>
+                </Rule>
+            </Item>
+            <Item archetype_id="openEHR-EHR-EVALUATION.health_risk.v1"
+                max="1" path="/items[at0002]/items[at0004]" xsi:type="tem:EVALUATION">
+                <Rule default="HNPCC" path="/data[at0001]/items[at0002]"/>
+                <Rule max="0" path="/data[at0001]/items[at0016]"/>
+                <Rule name="Risk situation (only HNPCC)" path="/data[at0001]/items[at0003]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>TRUE</includedValues>
+                        <includedValues>FALSE</includedValues>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/items[at0020]"/>
+                <Rule max="0" path="/data[at0001]/items[at0023]"/>
+                <Rule max="0" path="/data[at0001]/items[at0004]"/>
+                <Rule max="0" path="/data[at0001]/items[at0015]"/>
+                <Rule max="0" path="/protocol[at0010]/items[at0024]"/>
+                <Rule default="Amsterdam criteria" path="/protocol[at0010]/items[at0025]"/>
+            </Item>
+            <Item
+                archetype_id="openEHR-EHR-OBSERVATION.laboratory_test_result.v1"
+                concept_name="Laboratory test result" max="1"
+                name="KRAS mutation status"
+                path="/items[at0002]/items[at0003]" xsi:type="tem:OBSERVATION">
+                <Rule default="KRAS mutation test" path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0073]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Coded_text</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0075]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0077]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0100]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0057]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0098]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0101]"/>
+                <Rule max="0" path="/data[at0001]/events[at0002]/state[at0112]/items[at0113]"/>
+                <Rule max="0" path="/protocol[at0004]/items[at0068]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Identifier</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                    </constraint>
+                </Rule>
+                <Rule max="0" path="/protocol[at0004]/items[at0094]"/>
+                <Rule max="0" path="/protocol[at0004]/items[at0111]"/>
+                <Rule max="0" path="/protocol[at0004]/items[at0121]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Boolean</includedTypes>
+                        <includedTypes>Identifier</includedTypes>
+                        <includedTypes>MultiMedia</includedTypes>
+                        <includedTypes>Quantity</includedTypes>
+                        <includedTypes>Count</includedTypes>
+                        <includedTypes>Date_Time</includedTypes>
+                        <includedTypes>Date</includedTypes>
+                        <includedTypes>Time</includedTypes>
+                        <includedTypes>Duration</includedTypes>
+                        <includedTypes>Ordinal</includedTypes>
+                        <includedTypes>Proportion</includedTypes>
+                        <includedTypes>URI</includedTypes>
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Coded_text</includedTypes>
+                        <includedTypes>Parsable</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>Interval</includedTypes>
+                        <includedTypes>URI</includedTypes>
+                    </constraint>
+                </Rule>
+                <Items
+                    archetype_id="openEHR-EHR-CLUSTER.genetic_variant_presence.v0"
+                    concept_name="Genetic variant presence" max="1"
+                    min="1" name="NRAS exon 4 (codons 117 or 146)"
+                    path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]" xsi:type="tem:CLUSTER">
+                    <Rule default="NRAS exon 4 (codons 117 or 146)" path="/items[at0001]"/>
+                    <Rule min="1" name="NRAS exon 4 (codons 117 or 146)" path="/items[at0002]">
+                        <constraint xsi:type="tem:textConstraint">
+                            <excludedValues>local::at0006</excludedValues>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0003]"/>
+                </Items>
+                <Items
+                    archetype_id="openEHR-EHR-CLUSTER.genetic_variant_presence.v0"
+                    concept_name="Genetic variant presence" max="1"
+                    min="1" name="NRAS exon 3 (codons 59 or 61)"
+                    path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]" xsi:type="tem:CLUSTER">
+                    <Rule default="NRAS exon 3 (codons 59 or 61)"
+                        min="1" path="/items[at0001]"/>
+                    <Rule min="1" name="NRAS exon 3 (codons 59 or 61)" path="/items[at0002]">
+                        <constraint xsi:type="tem:textConstraint">
+                            <excludedValues>local::at0006</excludedValues>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0003]"/>
+                </Items>
+                <Items
+                    archetype_id="openEHR-EHR-CLUSTER.genetic_variant_presence.v0"
+                    concept_name="Genetic variant presence" max="1"
+                    min="1" name="NRAS exon 2 (codons 12 or 13)"
+                    path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]" xsi:type="tem:CLUSTER">
+                    <Rule default="NRAS exon 2 (codons 12 or 13)"
+                        min="1" path="/items[at0001]"/>
+                    <Rule min="1" name="NRAS exon 2 (codons 12 or 13)" path="/items[at0002]">
+                        <constraint xsi:type="tem:textConstraint">
+                            <excludedValues>local::at0006</excludedValues>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0003]"/>
+                </Items>
+                <Items
+                    archetype_id="openEHR-EHR-CLUSTER.genetic_variant_presence.v0"
+                    concept_name="Genetic variant presence" max="1"
+                    min="1" name="KRAS exon 4 (codons 117 or 146)"
+                    path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]" xsi:type="tem:CLUSTER">
+                    <Rule default="KRAS exon 4 (codons 117 or 146)"
+                        min="1" path="/items[at0001]"/>
+                    <Rule min="1" name="KRAS exon 4 (codons 117 or 146)" path="/items[at0002]">
+                        <constraint xsi:type="tem:textConstraint">
+                            <excludedValues>local::at0006</excludedValues>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0003]"/>
+                </Items>
+                <Items
+                    archetype_id="openEHR-EHR-CLUSTER.genetic_variant_presence.v0"
+                    concept_name="Genetic variant presence" max="1"
+                    min="1" name="KRAS exon 3 (codons 59 or 61)"
+                    path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]" xsi:type="tem:CLUSTER">
+                    <Rule default="KRAS exon 3 (codons 59 or 61)"
+                        min="1" path="/items[at0001]"/>
+                    <Rule min="1" name="KRAS exon 3 (codons 59 or 61)" path="/items[at0002]">
+                        <constraint xsi:type="tem:textConstraint">
+                            <excludedValues>local::at0006</excludedValues>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0003]"/>
+                </Items>
+                <Items
+                    archetype_id="openEHR-EHR-CLUSTER.genetic_variant_presence.v0"
+                    concept_name="Genetic variant presence" max="1"
+                    min="1" name="KRAS exon 2 (codons 12 or 13)"
+                    path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]" xsi:type="tem:CLUSTER">
+                    <Rule default="KRAS exon 2 (codons 12 or 13)"
+                        min="1" path="/items[at0001]"/>
+                    <Rule min="1" name="KRAS exon 2 (codons 12 or 13)" path="/items[at0002]">
+                        <constraint xsi:type="tem:textConstraint">
+                            <excludedValues>local::at0006</excludedValues>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0003]"/>
+                </Items>
+            </Item>
+        </Content>
+        <Content archetype_id="openEHR-EHR-SECTION.adhoc.v1"
+            concept_name="Ad hoc heading" max="1"
+            name="Vital status and survival information" path="/content" xsi:type="tem:SECTION">
+            <Item
+                archetype_id="openEHR-EHR-EVALUATION.clinical_synopsis.v1"
+                concept_name="Clinical synopsis" max="1"
+                name="Vital status and survival information"
+                path="/items" xsi:type="tem:EVALUATION">
+                <Rule name="Vital status" path="/data[at0001]/items[at0002]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>death due to colon cancer</includedValues>
+                        <includedValues>death due to other reasons</includedValues>
+                        <includedValues>death for unknown reasons</includedValues>
+                        <includedValues>person is still alive</includedValues>
+                        <includedValues>unknown</includedValues>
+                    </constraint>
+                </Rule>
+                <Items
+                    archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                    concept_name="Timing - non-daily" max="1"
+                    name="Vital status timing"
+                    path="/protocol[at0003]/items[at0004]" xsi:type="tem:CLUSTER">
+                    <Rule max="0" path="/items[at0002]">
+                        <constraint xsi:type="tem:durationConstraint">
+                            <pattern>PYMWD</pattern>
+                            <minMagnitude>P0D</minMagnitude>
+                            <includesMaximum>false</includesMaximum>
+                            <includesMinimum>false</includesMinimum>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0014]">
+                        <constraint xsi:type="tem:quantityConstraint">
+                            <unitMagnitude>
+                                <unit>1/a</unit>
+                                <maxMagnitude>366.0</maxMagnitude>
+                                <minMagnitude>1.0</minMagnitude>
+                                <includesMaximum>true</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>1/wk</unit>
+                                <maxMagnitude>7.0</maxMagnitude>
+                                <minMagnitude>1.0</minMagnitude>
+                                <includesMaximum>true</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                            <unitMagnitude>
+                                <unit>1/mo</unit>
+                                <maxMagnitude>31.0</maxMagnitude>
+                                <minMagnitude>1.0</minMagnitude>
+                                <includesMaximum>true</includesMaximum>
+                                <includesMinimum>true</includesMinimum>
+                            </unitMagnitude>
+                        </constraint>
+                    </Rule>
+                    <Rule max="1"
+                        name="Timestamp of last update of vital status" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0003]"/>
+                    <Rule max="0" path="/items[at0004]">
+                        <constraint xsi:type="tem:multipleConstraint">
+                            <includedTypes>Count</includedTypes>
+                            <includedTypes>Interval</includedTypes>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0021]"/>
+                    <Rule name="Overall survival status" path="/items[at0006]"/>
+                    <Rule default="First colon cancer therapy"
+                        name="From event" path="/items[at0006]/items[at0005]"/>
+                    <Rule min="1" name="Overall survival status" path="/items[at0006]/items[at0009]">
+                        <constraint xsi:type="tem:durationConstraint">
+                            <pattern>PW</pattern>
+                            <minMagnitude>P0W</minMagnitude>
+                            <includesMaximum>false</includesMaximum>
+                            <includesMinimum>true</includesMinimum>
+                        </constraint>
+                    </Rule>
+                    <Rule max="0" path="/items[at0010]"/>
+                </Items>
+            </Item>
+        </Content>
+        <Context>
+            <Items
+                archetype_id="openEHR-EHR-CLUSTER.case_identification.v0"
+                max="1"
+                path="/context/other_context[at0001]/items[at0006]" xsi:type="tem:CLUSTER">
+                <Rule min="1" name="Patient pseudonym" path="/items[at0001]"/>
+                <Rule max="0" path="/items[at0002]"/>
+                <Rule max="0" path="/items[at0003]"/>
+                <Rule name="Participation in clinical study" path="/items[at0006]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>TRUE</includedValues>
+                        <includedValues>FALSE</includedValues>
+                    </constraint>
+                </Rule>
+            </Items>
+        </Context>
+        <Rule max="0" path="/context/other_context[at0001]/items[at0002]"/>
+        <Rule max="0" path="/context/other_context[at0001]/items[at0005]"/>
+    </definition>
+    <view>
+        <constraints path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/protocol">
+            <items id="VisibleInView">
+                <value>protocol</value>
+            </items>
+        </constraints>
+        <constraints path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/protocol">
+            <items id="VisibleInView">
+                <value>protocol</value>
+            </items>
+        </constraints>
+    </view>
+    <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.report.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">641B268BE8805CEB8DC21AB82C53AB3F</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-CLUSTER.case_identification.v0"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">D94F932D76D2D0389D242063ED336124</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-SECTION.demographics_rcp.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">C3D0A860CF49C4BD76BD102DA118E012</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-EVALUATION.gender.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">EF681A049575CDCED3F513DFE65343E9</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">4BF04E7D09B866397CA12BAFED2BC216</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">47B10A6B5F4FD1E21ED98352AE29F6AD</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-SECTION.result_details.v0"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">5F046998E9BD3174F2499443BF7BB7E7</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-OBSERVATION.laboratory_test_result.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">6FF739561BD390420231096ACAD27FC3</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.specimen.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">0A48CEA5CFCABE46203C50BDC1AA6760</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-CLUSTER.specimen_preparation.v0"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">C90F6FADFEB1D1C3AE7A8B590EF3C854</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-CLUSTER.multimedia_source.v0"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">705FA8078781F2C4FD5B73FBBF4D1709</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">F537F96BF4102BD332807BA2111BDBD8</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">5BA2D58ADA02C3132A4AD522AB5A8C63</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-CLUSTER.anatomical_location.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">62823A86BC1C2B02574125E21F5DECCB</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-CLUSTER.tnm-pathological.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">D5BC5C645975EFCAE96A7231F81479ED</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-SECTION.procedures_rcp.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">77530BD1AE5D2F25431190EC9984A04C</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-ACTION.procedure.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">7976419EEFB8BFACDA7BAB23201F9BEF</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-SECTION.adhoc.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">8FE80F3E80C594AAF99D3BA540A53D73</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-ACTION.medication.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">349128D416894EE06EB3F7A776A289CA</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-EVALUATION.clinical_synopsis.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">1C27320A9B0499317426B81E69A5862D</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-CLUSTER.sequencing_assay.v0"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">4085C8FA38395506EC96B4C63D2A7F75</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-EVALUATION.health_risk.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">23BF02C2A580CB46F49E6342FFF77789</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-CLUSTER.genetic_variant_presence.v0"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">FA49B7ED2418260198D18D3F69CEABD7</digest>
+    </integrity_checks>
+</template>
