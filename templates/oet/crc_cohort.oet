@@ -38,7 +38,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>9605c1db75854a53c09b5f65335aec5f</value>
+                <value>0550c063942d53381bd4bd8cbf090785</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -877,8 +877,9 @@
                     <Rule min="1" name="Age at diagnosis" path="/items[at0006]/items[at0009]">
                         <constraint xsi:type="tem:durationConstraint">
                             <pattern>PY</pattern>
+                            <maxMagnitude>P1000Y</maxMagnitude>
                             <minMagnitude>P0Y</minMagnitude>
-                            <includesMaximum>false</includesMaximum>
+                            <includesMaximum>true</includesMaximum>
                             <includesMinimum>true</includesMinimum>
                         </constraint>
                     </Rule>
@@ -967,8 +968,9 @@
                     <Rule name="Time of recurrence" path="/items[at0006]/items[at0009]">
                         <constraint xsi:type="tem:durationConstraint">
                             <pattern>PW</pattern>
+                            <maxMagnitude>P600W</maxMagnitude>
                             <minMagnitude>P0W</minMagnitude>
-                            <includesMaximum>false</includesMaximum>
+                            <includesMaximum>true</includesMaximum>
                             <includesMinimum>true</includesMinimum>
                         </constraint>
                     </Rule>
@@ -1591,8 +1593,9 @@
                     <Rule min="1" name="Surgery start relative" path="/items[at0006]/items[at0009]">
                         <constraint xsi:type="tem:durationConstraint">
                             <pattern>PW</pattern>
+                            <maxMagnitude>P600W</maxMagnitude>
                             <minMagnitude>P0W</minMagnitude>
-                            <includesMaximum>false</includesMaximum>
+                            <includesMaximum>true</includesMaximum>
                             <includesMinimum>true</includesMinimum>
                         </constraint>
                     </Rule>
@@ -1714,8 +1717,9 @@
                             name="Date of start of radiation therapy" path="/items[at0006, 'Start of radiation therapy']/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
                                 <pattern>PW</pattern>
+                                <maxMagnitude>P600W</maxMagnitude>
                                 <minMagnitude>P0W</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
+                                <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
                         </Rule>
@@ -1727,8 +1731,9 @@
                             name="Date of end of radiation therapy" path="/items[at0006, 'End of radiation therapy']/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
                                 <pattern>PW</pattern>
+                                <maxMagnitude>P600W</maxMagnitude>
                                 <minMagnitude>P0W</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
+                                <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
                         </Rule>
@@ -1846,8 +1851,9 @@
                             name="Date of start of targeted therapy" path="/items[at0006, 'Start of targeted therapy']/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
                                 <pattern>PW</pattern>
+                                <maxMagnitude>P600W</maxMagnitude>
                                 <minMagnitude>P0W</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
+                                <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
                         </Rule>
@@ -1858,8 +1864,9 @@
                         <Rule name="Date of end of targeted therapy" path="/items[at0006, 'End of targeted therapy']/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
                                 <pattern>PW</pattern>
+                                <maxMagnitude>P600W</maxMagnitude>
                                 <minMagnitude>P0W</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
+                                <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
                         </Rule>
@@ -1985,8 +1992,9 @@
                             name="Date of start of pharmacotherapy" path="/items[at0006, 'Start of pharmacotherapy']/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
                                 <pattern>PW</pattern>
+                                <maxMagnitude>P600W</maxMagnitude>
                                 <minMagnitude>P0W</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
+                                <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
                         </Rule>
@@ -1997,8 +2005,9 @@
                             name="Date of end of pharmacotherapy" path="/items[at0006, 'End of pharmacotherapy']/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
                                 <pattern>PW</pattern>
+                                <maxMagnitude>P600W</maxMagnitude>
                                 <minMagnitude>P0W</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
+                                <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
                         </Rule>
@@ -2078,8 +2087,9 @@
                         <Rule min="1" name="Time of therapy response" path="/items[at0006]/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
                                 <pattern>PW</pattern>
+                                <maxMagnitude>P600W</maxMagnitude>
                                 <minMagnitude>P0W</minMagnitude>
-                                <includesMaximum>false</includesMaximum>
+                                <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
                         </Rule>
@@ -2762,8 +2772,9 @@
                     <Rule min="1" name="Overall survival status" path="/items[at0006]/items[at0009]">
                         <constraint xsi:type="tem:durationConstraint">
                             <pattern>PW</pattern>
+                            <maxMagnitude>P600W</maxMagnitude>
                             <minMagnitude>P0W</minMagnitude>
-                            <includesMaximum>false</includesMaximum>
+                            <includesMaximum>true</includesMaximum>
                             <includesMinimum>true</includesMinimum>
                         </constraint>
                     </Rule>
