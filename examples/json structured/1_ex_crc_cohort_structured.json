@@ -1,0 +1,1066 @@
+{
+    "meta": {
+        "href": "https://cdr.code4health.org/rest/v1/composition/250fec60-d20c-4926-978e-81fad55fd122::8b3ed808-d8b1-450f-b8e2-766770b9eb43::1"
+    },
+    "compositionUid": "250fec60-d20c-4926-978e-81fad55fd122::8b3ed808-d8b1-450f-b8e2-766770b9eb43::1",
+    "format": "STRUCTURED",
+    "templateId": "crc_cohort",
+    "composition": {
+        "crc_cohort": {
+            "_uid": [
+                "250fec60-d20c-4926-978e-81fad55fd122::8b3ed808-d8b1-450f-b8e2-766770b9eb43::1"
+            ],
+            "language": [
+                {
+                    "|code": "en",
+                    "|terminology": "ISO_639-1"
+                }
+            ],
+            "territory": [
+                {
+                    "|code": "AT",
+                    "|terminology": "ISO_3166-1"
+                }
+            ],
+            "context": [
+                {
+                    "case_identification": [
+                        {
+                            "patient_pseudonym": [
+                                "pp_21042021_1633"
+                            ],
+                            "participation_in_clinical_study": [
+                                "TRUE"
+                            ]
+                        }
+                    ],
+                    "start_time": [
+                        "2021-04-22T10:19:49.915Z"
+                    ],
+                    "setting": [
+                        {
+                            "|code": "238",
+                            "|value": "other care",
+                            "|terminology": "openehr"
+                        }
+                    ]
+                }
+            ],
+            "patient_data": [
+                {
+                    "gender": [
+                        {
+                            "biological_sex": [
+                                "male"
+                            ],
+                            "language": [
+                                {
+                                    "|code": "en",
+                                    "|terminology": "ISO_639-1"
+                                }
+                            ],
+                            "encoding": [
+                                {
+                                    "|code": "UTF-8",
+                                    "|terminology": "IANA_character-sets"
+                                }
+                            ]
+                        }
+                    ],
+                    "primary_diagnosis": [
+                        {
+                            "primary_diagnosis": [
+                                "Colorectal cancer"
+                            ],
+                            "date_of_diagnosis": [
+                                "2020-06-21T14:25:54.709Z"
+                            ],
+                            "diagnosis_timing": [
+                                {
+                                    "primary_diagnosis": [
+                                        {
+                                            "age_at_diagnosis": [
+                                                "P56Y"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "language": [
+                                {
+                                    "|code": "en",
+                                    "|terminology": "ISO_639-1"
+                                }
+                            ],
+                            "encoding": [
+                                {
+                                    "|code": "UTF-8",
+                                    "|terminology": "IANA_character-sets"
+                                }
+                            ]
+                        }
+                    ],
+                    "metastasis_diagnosis": [
+                        {
+                            "metastasis_diagnosis": [
+                                "Metastasis"
+                            ],
+                            "metastasis_diagnosis2": [
+                                {
+                                    "metastasis_diagnosis": [
+                                        {
+                                            "from_event": [
+                                                "Primary diagnosis"
+                                            ],
+                                            "time_of_recurrence": [
+                                                "P40W"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "language": [
+                                {
+                                    "|code": "en",
+                                    "|terminology": "ISO_639-1"
+                                }
+                            ],
+                            "encoding": [
+                                {
+                                    "|code": "UTF-8",
+                                    "|terminology": "IANA_character-sets"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "histopathology": [
+                {
+                    "result_group": [
+                        {
+                            "laboratory_test_result": [
+                                {
+                                    "any_event": [
+                                        {
+                                            "test_name": [
+                                                "Histopathology analysis"
+                                            ],
+                                            "specimen": [
+                                                {
+                                                    "material_type": [
+                                                        "Tumor tissue"
+                                                    ],
+                                                    "sample_id": [
+                                                        {
+                                                            "|id": "4d1223dc-25d9-4f0a-91cb-653a26817cc9"
+                                                        }
+                                                    ],
+                                                    "year_of_sample_collection": [
+                                                        "2021-01-01T00:00Z"
+                                                    ],
+                                                    "specimen_preparation": [
+                                                        {
+                                                            "preservation_mode": [
+                                                                "FFPE"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "multimedia_source": [
+                                                        {
+                                                            "availability_digital_imaging": [
+                                                                "Can be generated"
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "invasion_front": [
+                                                {
+                                                    "anatomical_pathology_finding": [
+                                                        {
+                                                            "finding_label": [
+                                                                "Invasion front"
+                                                            ],
+                                                            "digital_imaging_invasion_front": [
+                                                                {
+                                                                    "availability_invasion_front_digital_imaging": [
+                                                                        "No"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "recurrence": [
+                                                {
+                                                    "anatomical_pathology_finding": [
+                                                        {
+                                                            "finding_label": [
+                                                                "Recurrence"
+                                                            ],
+                                                            "biological_material_from_recurrence_available": [
+                                                                true
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "time": [
+                                                "2021-04-22T10:19:49.915Z"
+                                            ]
+                                        }
+                                    ],
+                                    "language": [
+                                        {
+                                            "|code": "en",
+                                            "|terminology": "ISO_639-1"
+                                        }
+                                    ],
+                                    "encoding": [
+                                        {
+                                            "|code": "UTF-8",
+                                            "|terminology": "IANA_character-sets"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "cancer_diagnosis": [
+                                {
+                                    "problem_diagnosis_name": [
+                                        "Cancer"
+                                    ],
+                                    "localization_of_primary_tumor": [
+                                        "C 20 - Rectum"
+                                    ],
+                                    "synoptic_details_-_colorectal_cancer": [
+                                        {
+                                            "microscopic_findings": [
+                                                {
+                                                    "morphology": [
+                                                        {
+                                                            "|code": "at0034",
+                                                            "|value": "Adenocarcinoma",
+                                                            "|terminology": "local"
+                                                        }
+                                                    ],
+                                                    "tnm_pathological_classification": [
+                                                        {
+                                                            "primary_tumour": [
+                                                                "TX"
+                                                            ],
+                                                            "regional_lymph_nodes": [
+                                                                "N2"
+                                                            ],
+                                                            "distant_metastasis": [
+                                                                "M1b"
+                                                            ],
+                                                            "grade": [
+                                                                "G4"
+                                                            ],
+                                                            "stage": [
+                                                                "IIB"
+                                                            ],
+                                                            "uicc_version": [
+                                                                "7th ed. (used 2010- 2017)"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "histological_grading": [
+                                                        {
+                                                            "who_version": [
+                                                                "Edition not known"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "distant_metastasis": [
+                                                        {
+                                                            "distant_metastasis": [
+                                                                {
+                                                                    "|code": "at0363",
+                                                                    "|value": "Absent",
+                                                                    "|terminology": "local"
+                                                                }
+                                                            ],
+                                                            "anatomical_location": [
+                                                                {
+                                                                    "localization_of_metastasis": [
+                                                                        "Lymph nodes"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "language": [
+                                        {
+                                            "|code": "en",
+                                            "|terminology": "ISO_639-1"
+                                        }
+                                    ],
+                                    "encoding": [
+                                        {
+                                            "|code": "UTF-8",
+                                            "|terminology": "IANA_character-sets"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "surgery": [
+                {
+                    "surgery": [
+                        {
+                            "ism_transition": [
+                                {
+                                    "current_state": [
+                                        {
+                                            "|code": "532",
+                                            "|value": "completed",
+                                            "|terminology": "openehr"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "surgery_type": [
+                                "Pan-procto colectomy"
+                            ],
+                            "location_of_the_tumor": [
+                                "C 18.7 - Sigmoid"
+                            ],
+                            "surgery_timing": [
+                                {
+                                    "surgery": [
+                                        {
+                                            "from_event": [
+                                                "Primary diagnosis"
+                                            ],
+                                            "surgery_start_relative": [
+                                                "P20W"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "surgery_radicality": [
+                                "R0"
+                            ],
+                            "time": [
+                                "2021-04-22T10:19:49.915Z"
+                            ],
+                            "language": [
+                                {
+                                    "|code": "en",
+                                    "|terminology": "ISO_639-1"
+                                }
+                            ],
+                            "encoding": [
+                                {
+                                    "|code": "UTF-8",
+                                    "|terminology": "IANA_character-sets"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "therapies": [
+                {
+                    "radiation_therapy": [
+                        {
+                            "radiation_therapy": [
+                                {
+                                    "ism_transition": [
+                                        {
+                                            "current_state": [
+                                                {
+                                                    "|code": "532",
+                                                    "|value": "completed",
+                                                    "|terminology": "openehr"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "therapy": [
+                                        "Radiation therapy"
+                                    ],
+                                    "radiation_timing": [
+                                        {
+                                            "start_of_radiation_therapy": [
+                                                {
+                                                    "from_event": [
+                                                        "Primary diagnosis"
+                                                    ],
+                                                    "date_of_start_of_radiation_therapy": [
+                                                        "P10W"
+                                                    ]
+                                                }
+                                            ],
+                                            "end_of_radiation_therapy": [
+                                                {
+                                                    "from_event": [
+                                                        "Primary diagnosis"
+                                                    ],
+                                                    "date_of_end_of_radiation_therapy": [
+                                                        "P15W"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "time": [
+                                        "2021-04-22T10:19:49.915Z"
+                                    ],
+                                    "language": [
+                                        {
+                                            "|code": "en",
+                                            "|terminology": "ISO_639-1"
+                                        }
+                                    ],
+                                    "encoding": [
+                                        {
+                                            "|code": "UTF-8",
+                                            "|terminology": "IANA_character-sets"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "targeted_therapy": [
+                        {
+                            "targeted_therapy": [
+                                {
+                                    "ism_transition": [
+                                        {
+                                            "current_state": [
+                                                {
+                                                    "|code": "532",
+                                                    "|value": "completed",
+                                                    "|terminology": "openehr"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "therapy": [
+                                        "Targeted therapy"
+                                    ],
+                                    "targeted_therapy_timing": [
+                                        {
+                                            "start_of_targeted_therapy": [
+                                                {
+                                                    "event_name": [
+                                                        "Primary diagnosis"
+                                                    ],
+                                                    "date_of_start_of_targeted_therapy": [
+                                                        "P5W"
+                                                    ]
+                                                }
+                                            ],
+                                            "end_of_targeted_therapy": [
+                                                {
+                                                    "from_event": [
+                                                        "Primary diagnosis"
+                                                    ],
+                                                    "date_of_end_of_targeted_therapy": [
+                                                        "P15W"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "time": [
+                                        "2021-04-22T10:19:49.915Z"
+                                    ],
+                                    "language": [
+                                        {
+                                            "|code": "en",
+                                            "|terminology": "ISO_639-1"
+                                        }
+                                    ],
+                                    "encoding": [
+                                        {
+                                            "|code": "UTF-8",
+                                            "|terminology": "IANA_character-sets"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "pharmacotherapy": [
+                        {
+                            "medication_management": [
+                                {
+                                    "ism_transition": [
+                                        {
+                                            "current_state": [
+                                                {
+                                                    "|code": "532",
+                                                    "|value": "completed",
+                                                    "|terminology": "openehr"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "scheme_of_pharmacotherapy": [
+                                        "5-FU 225 mg/m2 i.v. continuous infusion, 5 days per week"
+                                    ],
+                                    "pharmacotherapy_timing": [
+                                        {
+                                            "start_of_pharmacotherapy": [
+                                                {
+                                                    "from_event": [
+                                                        "Primary diagnosis"
+                                                    ],
+                                                    "date_of_start_of_pharmacotherapy": [
+                                                        "P1W"
+                                                    ]
+                                                }
+                                            ],
+                                            "end_of_pharmacotherapy": [
+                                                {
+                                                    "from_event": [
+                                                        "Primary diagnosis"
+                                                    ],
+                                                    "date_of_end_of_pharmacotherapy": [
+                                                        "P30W"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "time": [
+                                        "2021-04-22T10:19:49.915Z"
+                                    ],
+                                    "language": [
+                                        {
+                                            "|code": "en",
+                                            "|terminology": "ISO_639-1"
+                                        }
+                                    ],
+                                    "encoding": [
+                                        {
+                                            "|code": "UTF-8",
+                                            "|terminology": "IANA_character-sets"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "response_to_therapy": [
+                        {
+                            "clinical_synopsis": [
+                                {
+                                    "specific_response": [
+                                        "Stable disease"
+                                    ],
+                                    "response_timing": [
+                                        {
+                                            "therapy_response_timestamp": [
+                                                {
+                                                    "from_event": [
+                                                        "Primary diagnosis"
+                                                    ],
+                                                    "time_of_therapy_response": [
+                                                        "P40W"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "language": [
+                                        {
+                                            "|code": "en",
+                                            "|terminology": "ISO_639-1"
+                                        }
+                                    ],
+                                    "encoding": [
+                                        {
+                                            "|code": "UTF-8",
+                                            "|terminology": "IANA_character-sets"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "diagnostic_examinations": [
+                {
+                    "colonoscopy": [
+                        {
+                            "ism_transition": [
+                                {
+                                    "current_state": [
+                                        {
+                                            "|code": "532",
+                                            "|value": "completed",
+                                            "|terminology": "openehr"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "procedure_name": [
+                                "Colonoscopy"
+                            ],
+                            "colonoscopy": [
+                                "Positive"
+                            ],
+                            "time": [
+                                "2021-04-22T10:19:49.915Z"
+                            ],
+                            "language": [
+                                {
+                                    "|code": "en",
+                                    "|terminology": "ISO_639-1"
+                                }
+                            ],
+                            "encoding": [
+                                {
+                                    "|code": "UTF-8",
+                                    "|terminology": "IANA_character-sets"
+                                }
+                            ]
+                        }
+                    ],
+                    "ct": [
+                        {
+                            "ism_transition": [
+                                {
+                                    "current_state": [
+                                        {
+                                            "|code": "532",
+                                            "|value": "completed",
+                                            "|terminology": "openehr"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "procedure_name": [
+                                "CT"
+                            ],
+                            "ct": [
+                                "Not done"
+                            ],
+                            "time": [
+                                "2021-04-22T10:19:49.915Z"
+                            ],
+                            "language": [
+                                {
+                                    "|code": "en",
+                                    "|terminology": "ISO_639-1"
+                                }
+                            ],
+                            "encoding": [
+                                {
+                                    "|code": "UTF-8",
+                                    "|terminology": "IANA_character-sets"
+                                }
+                            ]
+                        }
+                    ],
+                    "liver_imaging": [
+                        {
+                            "ism_transition": [
+                                {
+                                    "current_state": [
+                                        {
+                                            "|code": "532",
+                                            "|value": "completed",
+                                            "|terminology": "openehr"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "procedure_name": [
+                                "Liver imaging"
+                            ],
+                            "liver_imaging": [
+                                "Done, data not available"
+                            ],
+                            "time": [
+                                "2021-04-22T10:19:49.915Z"
+                            ],
+                            "language": [
+                                {
+                                    "|code": "en",
+                                    "|terminology": "ISO_639-1"
+                                }
+                            ],
+                            "encoding": [
+                                {
+                                    "|code": "UTF-8",
+                                    "|terminology": "IANA_character-sets"
+                                }
+                            ]
+                        }
+                    ],
+                    "lung_imaging": [
+                        {
+                            "ism_transition": [
+                                {
+                                    "current_state": [
+                                        {
+                                            "|code": "532",
+                                            "|value": "completed",
+                                            "|terminology": "openehr"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "procedure_name": [
+                                "Lung imaging"
+                            ],
+                            "lung_imaging": [
+                                "Not done"
+                            ],
+                            "time": [
+                                "2021-04-22T10:19:49.915Z"
+                            ],
+                            "language": [
+                                {
+                                    "|code": "en",
+                                    "|terminology": "ISO_639-1"
+                                }
+                            ],
+                            "encoding": [
+                                {
+                                    "|code": "UTF-8",
+                                    "|terminology": "IANA_character-sets"
+                                }
+                            ]
+                        }
+                    ],
+                    "mri": [
+                        {
+                            "ism_transition": [
+                                {
+                                    "current_state": [
+                                        {
+                                            "|code": "532",
+                                            "|value": "completed",
+                                            "|terminology": "openehr"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "procedure_name": [
+                                "MRI"
+                            ],
+                            "mri": [
+                                "Not done"
+                            ],
+                            "time": [
+                                "2021-04-22T10:19:49.915Z"
+                            ],
+                            "language": [
+                                {
+                                    "|code": "en",
+                                    "|terminology": "ISO_639-1"
+                                }
+                            ],
+                            "encoding": [
+                                {
+                                    "|code": "UTF-8",
+                                    "|terminology": "IANA_character-sets"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "molecular_markers": [
+                {
+                    "result_group": [
+                        {
+                            "oncogenic_mutations_test": [
+                                {
+                                    "any_event": [
+                                        {
+                                            "test_name": [
+                                                "BRAF, PIC3CA, HER2 mutation test"
+                                            ],
+                                            "braf_pic3ca_her2_mutation_status": [
+                                                "Not mutated"
+                                            ],
+                                            "time": [
+                                                "2021-04-22T10:19:49.915Z"
+                                            ]
+                                        }
+                                    ],
+                                    "sequencing_assay": [
+                                        {
+                                            "tested_genes": [
+                                                {
+                                                    "gen_symbol": [
+                                                        "BRAF"
+                                                    ]
+                                                }
+                                            ],
+                                            "tested_genes_2": [
+                                                {
+                                                    "gen_symbol": [
+                                                        "PIC3CA"
+                                                    ]
+                                                }
+                                            ],
+                                            "tested_genes_3": [
+                                                {
+                                                    "gen_symbol": [
+                                                        "HER2"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "language": [
+                                        {
+                                            "|code": "en",
+                                            "|terminology": "ISO_639-1"
+                                        }
+                                    ],
+                                    "encoding": [
+                                        {
+                                            "|code": "UTF-8",
+                                            "|terminology": "IANA_character-sets"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "microsatellites_instability_analysis": [
+                                {
+                                    "any_event": [
+                                        {
+                                            "test_name": [
+                                                "Microsatellite instability test"
+                                            ],
+                                            "microsatellite_instability": [
+                                                "Yes"
+                                            ],
+                                            "time": [
+                                                "2021-04-22T10:19:49.915Z"
+                                            ]
+                                        }
+                                    ],
+                                    "language": [
+                                        {
+                                            "|code": "en",
+                                            "|terminology": "ISO_639-1"
+                                        }
+                                    ],
+                                    "encoding": [
+                                        {
+                                            "|code": "UTF-8",
+                                            "|terminology": "IANA_character-sets"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "kras_mutation_status": [
+                                {
+                                    "any_event": [
+                                        {
+                                            "test_name": [
+                                                "KRAS mutation test"
+                                            ],
+                                            "nras_exon_4_codons_117_or_146": [
+                                                {
+                                                    "variant_name": [
+                                                        "NRAS exon 4 (codons 117 or 146)"
+                                                    ],
+                                                    "nras_exon_4_codons_117_or_146": [
+                                                        {
+                                                            "|code": "at0004",
+                                                            "|value": "Present",
+                                                            "|terminology": "local"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "nras_exon_3_codons_59_or_61": [
+                                                {
+                                                    "variant_name": [
+                                                        "NRAS exon 3 (codons 59 or 61)"
+                                                    ],
+                                                    "nras_exon_3_codons_59_or_61": [
+                                                        {
+                                                            "|code": "at0007",
+                                                            "|value": "Indeterminate",
+                                                            "|terminology": "local"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "nras_exon_2_codons_12_or_13": [
+                                                {
+                                                    "variant_name": [
+                                                        "NRAS exon 2 (codons 12 or 13)"
+                                                    ],
+                                                    "nras_exon_2_codons_12_or_13": [
+                                                        {
+                                                            "|code": "at0004",
+                                                            "|value": "Present",
+                                                            "|terminology": "local"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "kras_exon_4_codons_117_or_146": [
+                                                {
+                                                    "variant_name": [
+                                                        "KRAS exon 4 (codons 117 or 146)"
+                                                    ],
+                                                    "kras_exon_4_codons_117_or_146": [
+                                                        {
+                                                            "|code": "at0004",
+                                                            "|value": "Present",
+                                                            "|terminology": "local"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "kras_exon_3_codons_59_or_61": [
+                                                {
+                                                    "variant_name": [
+                                                        "KRAS exon 3 (codons 59 or 61)"
+                                                    ],
+                                                    "kras_exon_3_codons_59_or_61": [
+                                                        {
+                                                            "|code": "at0005",
+                                                            "|value": "Absent",
+                                                            "|terminology": "local"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "kras_exon_2_codons_12_or_13": [
+                                                {
+                                                    "variant_name": [
+                                                        "KRAS exon 2 (codons 12 or 13)"
+                                                    ],
+                                                    "kras_exon_2_codons_12_or_13": [
+                                                        {
+                                                            "|code": "at0004",
+                                                            "|value": "Present",
+                                                            "|terminology": "local"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "time": [
+                                                "2021-04-22T10:19:49.915Z"
+                                            ]
+                                        }
+                                    ],
+                                    "language": [
+                                        {
+                                            "|code": "en",
+                                            "|terminology": "ISO_639-1"
+                                        }
+                                    ],
+                                    "encoding": [
+                                        {
+                                            "|code": "UTF-8",
+                                            "|terminology": "IANA_character-sets"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "health_risk_assessment": [
+                                {
+                                    "health_risk": [
+                                        "HNPCC"
+                                    ],
+                                    "risk_situation_only_hnpcc": [
+                                        "FALSE"
+                                    ],
+                                    "assessment_method": [
+                                        "Amsterdam criteria"
+                                    ],
+                                    "language": [
+                                        {
+                                            "|code": "en",
+                                            "|terminology": "ISO_639-1"
+                                        }
+                                    ],
+                                    "encoding": [
+                                        {
+                                            "|code": "UTF-8",
+                                            "|terminology": "IANA_character-sets"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "vital_status_and_survival_information": [
+                {
+                    "vital_status_and_survival_information": [
+                        {
+                            "vital_status": [
+                                "death for unknown reasons"
+                            ],
+                            "vital_status_timing": [
+                                {
+                                    "timestamp_of_last_update_of_vital_status": [
+                                        "2021-04-21"
+                                    ],
+                                    "overall_survival_status": [
+                                        {
+                                            "from_event": [
+                                                "First colon cancer therapy"
+                                            ],
+                                            "overall_survival_status": [
+                                                "P50W"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "language": [
+                                {
+                                    "|code": "en",
+                                    "|terminology": "ISO_639-1"
+                                }
+                            ],
+                            "encoding": [
+                                {
+                                    "|code": "UTF-8",
+                                    "|terminology": "IANA_character-sets"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "category": [
+                {
+                    "|code": "433",
+                    "|value": "event",
+                    "|terminology": "openehr"
+                }
+            ],
+            "composer": [
+                {
+                    "|name": "crc_committer"
+                }
+            ]
+        }
+    },
+    "deleted": false,
+    "lastVersion": true,
+    "ehrId": "cf7f2b9e-6e81-4fa3-b23a-8eec8a9df85c",
+    "lifecycleState": "COMPLETE"
+}
