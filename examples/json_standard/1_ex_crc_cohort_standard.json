@@ -1,0 +1,3316 @@
+{
+    "_type": "COMPOSITION",
+    "name": {
+        "_type": "DV_TEXT",
+        "value": "crc_cohort"
+    },
+    "uid": {
+        "_type": "OBJECT_VERSION_ID",
+        "value": "250fec60-d20c-4926-978e-81fad55fd122::8b3ed808-d8b1-450f-b8e2-766770b9eb43::1"
+    },
+    "archetype_details": {
+        "_type": "ARCHETYPED",
+        "archetype_id": {
+            "_type": "ARCHETYPE_ID",
+            "value": "openEHR-EHR-COMPOSITION.report.v1"
+        },
+        "template_id": {
+            "_type": "TEMPLATE_ID",
+            "value": "crc_cohort"
+        },
+        "rm_version": "1.0.4"
+    },
+    "archetype_node_id": "openEHR-EHR-COMPOSITION.report.v1",
+    "language": {
+        "_type": "CODE_PHRASE",
+        "terminology_id": {
+            "_type": "TERMINOLOGY_ID",
+            "value": "ISO_639-1"
+        },
+        "code_string": "en"
+    },
+    "territory": {
+        "_type": "CODE_PHRASE",
+        "terminology_id": {
+            "_type": "TERMINOLOGY_ID",
+            "value": "ISO_3166-1"
+        },
+        "code_string": "AT"
+    },
+    "category": {
+        "_type": "DV_CODED_TEXT",
+        "value": "event",
+        "defining_code": {
+            "_type": "CODE_PHRASE",
+            "terminology_id": {
+                "_type": "TERMINOLOGY_ID",
+                "value": "openehr"
+            },
+            "code_string": "433"
+        }
+    },
+    "composer": {
+        "_type": "PARTY_IDENTIFIED",
+        "name": "crc_committer"
+    },
+    "context": {
+        "_type": "EVENT_CONTEXT",
+        "start_time": {
+            "_type": "DV_DATE_TIME",
+            "value": "2021-04-22T10:19:49.915Z"
+        },
+        "setting": {
+            "_type": "DV_CODED_TEXT",
+            "value": "other care",
+            "defining_code": {
+                "_type": "CODE_PHRASE",
+                "terminology_id": {
+                    "_type": "TERMINOLOGY_ID",
+                    "value": "openehr"
+                },
+                "code_string": "238"
+            }
+        },
+        "other_context": {
+            "_type": "ITEM_TREE",
+            "name": {
+                "_type": "DV_TEXT",
+                "value": "Tree"
+            },
+            "archetype_node_id": "at0001",
+            "items": [
+                {
+                    "_type": "CLUSTER",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Case identification"
+                    },
+                    "archetype_details": {
+                        "_type": "ARCHETYPED",
+                        "archetype_id": {
+                            "_type": "ARCHETYPE_ID",
+                            "value": "openEHR-EHR-CLUSTER.case_identification.v0"
+                        },
+                        "rm_version": "1.0.4"
+                    },
+                    "archetype_node_id": "openEHR-EHR-CLUSTER.case_identification.v0",
+                    "items": [
+                        {
+                            "_type": "ELEMENT",
+                            "name": {
+                                "_type": "DV_TEXT",
+                                "value": "Patient pseudonym"
+                            },
+                            "archetype_node_id": "at0001",
+                            "value": {
+                                "_type": "DV_TEXT",
+                                "value": "pp_21042021_1633"
+                            }
+                        },
+                        {
+                            "_type": "ELEMENT",
+                            "name": {
+                                "_type": "DV_TEXT",
+                                "value": "Participation in clinical study"
+                            },
+                            "archetype_node_id": "at0006",
+                            "value": {
+                                "_type": "DV_TEXT",
+                                "value": "TRUE"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "content": [
+        {
+            "_type": "SECTION",
+            "name": {
+                "_type": "DV_TEXT",
+                "value": "Patient data"
+            },
+            "archetype_details": {
+                "_type": "ARCHETYPED",
+                "archetype_id": {
+                    "_type": "ARCHETYPE_ID",
+                    "value": "openEHR-EHR-SECTION.demographics_rcp.v1"
+                },
+                "rm_version": "1.0.4"
+            },
+            "archetype_node_id": "openEHR-EHR-SECTION.demographics_rcp.v1",
+            "items": [
+                {
+                    "_type": "EVALUATION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Gender"
+                    },
+                    "archetype_details": {
+                        "_type": "ARCHETYPED",
+                        "archetype_id": {
+                            "_type": "ARCHETYPE_ID",
+                            "value": "openEHR-EHR-EVALUATION.gender.v1"
+                        },
+                        "rm_version": "1.0.4"
+                    },
+                    "archetype_node_id": "openEHR-EHR-EVALUATION.gender.v1",
+                    "language": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "ISO_639-1"
+                        },
+                        "code_string": "en"
+                    },
+                    "encoding": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "IANA_character-sets"
+                        },
+                        "code_string": "UTF-8"
+                    },
+                    "subject": {
+                        "_type": "PARTY_SELF"
+                    },
+                    "data": {
+                        "_type": "ITEM_TREE",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Tree"
+                        },
+                        "archetype_node_id": "at0002",
+                        "items": [
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Biological sex"
+                                },
+                                "archetype_node_id": "at0019",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "male"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "_type": "EVALUATION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Primary diagnosis"
+                    },
+                    "archetype_details": {
+                        "_type": "ARCHETYPED",
+                        "archetype_id": {
+                            "_type": "ARCHETYPE_ID",
+                            "value": "openEHR-EHR-EVALUATION.problem_diagnosis.v1"
+                        },
+                        "rm_version": "1.0.4"
+                    },
+                    "archetype_node_id": "openEHR-EHR-EVALUATION.problem_diagnosis.v1",
+                    "language": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "ISO_639-1"
+                        },
+                        "code_string": "en"
+                    },
+                    "encoding": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "IANA_character-sets"
+                        },
+                        "code_string": "UTF-8"
+                    },
+                    "subject": {
+                        "_type": "PARTY_SELF"
+                    },
+                    "data": {
+                        "_type": "ITEM_TREE",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "structure"
+                        },
+                        "archetype_node_id": "at0001",
+                        "items": [
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Primary diagnosis"
+                                },
+                                "archetype_node_id": "at0002",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Colorectal cancer"
+                                }
+                            },
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Date of diagnosis"
+                                },
+                                "archetype_node_id": "at0003",
+                                "value": {
+                                    "_type": "DV_DATE_TIME",
+                                    "value": "2020-06-21T14:25:54.709Z"
+                                }
+                            },
+                            {
+                                "_type": "CLUSTER",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Diagnosis timing"
+                                },
+                                "archetype_details": {
+                                    "_type": "ARCHETYPED",
+                                    "archetype_id": {
+                                        "_type": "ARCHETYPE_ID",
+                                        "value": "openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                                    },
+                                    "rm_version": "1.0.4"
+                                },
+                                "archetype_node_id": "openEHR-EHR-CLUSTER.timing_nondaily.v1",
+                                "items": [
+                                    {
+                                        "_type": "CLUSTER",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Primary diagnosis"
+                                        },
+                                        "archetype_node_id": "at0006",
+                                        "items": [
+                                            {
+                                                "_type": "ELEMENT",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "Age at diagnosis"
+                                                },
+                                                "archetype_node_id": "at0009",
+                                                "value": {
+                                                    "_type": "DV_DURATION",
+                                                    "value": "P56Y"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "_type": "EVALUATION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Metastasis diagnosis"
+                    },
+                    "archetype_details": {
+                        "_type": "ARCHETYPED",
+                        "archetype_id": {
+                            "_type": "ARCHETYPE_ID",
+                            "value": "openEHR-EHR-EVALUATION.problem_diagnosis.v1"
+                        },
+                        "rm_version": "1.0.4"
+                    },
+                    "archetype_node_id": "openEHR-EHR-EVALUATION.problem_diagnosis.v1",
+                    "language": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "ISO_639-1"
+                        },
+                        "code_string": "en"
+                    },
+                    "encoding": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "IANA_character-sets"
+                        },
+                        "code_string": "UTF-8"
+                    },
+                    "subject": {
+                        "_type": "PARTY_SELF"
+                    },
+                    "data": {
+                        "_type": "ITEM_TREE",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "structure"
+                        },
+                        "archetype_node_id": "at0001",
+                        "items": [
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Metastasis diagnosis"
+                                },
+                                "archetype_node_id": "at0002",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Metastasis"
+                                }
+                            },
+                            {
+                                "_type": "CLUSTER",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Metastasis diagnosis"
+                                },
+                                "archetype_details": {
+                                    "_type": "ARCHETYPED",
+                                    "archetype_id": {
+                                        "_type": "ARCHETYPE_ID",
+                                        "value": "openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                                    },
+                                    "rm_version": "1.0.4"
+                                },
+                                "archetype_node_id": "openEHR-EHR-CLUSTER.timing_nondaily.v1",
+                                "items": [
+                                    {
+                                        "_type": "CLUSTER",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Metastasis diagnosis"
+                                        },
+                                        "archetype_node_id": "at0006",
+                                        "items": [
+                                            {
+                                                "_type": "ELEMENT",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "From event"
+                                                },
+                                                "archetype_node_id": "at0005",
+                                                "value": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "Primary diagnosis"
+                                                }
+                                            },
+                                            {
+                                                "_type": "ELEMENT",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "Time of recurrence"
+                                                },
+                                                "archetype_node_id": "at0009",
+                                                "value": {
+                                                    "_type": "DV_DURATION",
+                                                    "value": "P40Y"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "_type": "SECTION",
+            "name": {
+                "_type": "DV_TEXT",
+                "value": "Histopathology"
+            },
+            "archetype_details": {
+                "_type": "ARCHETYPED",
+                "archetype_id": {
+                    "_type": "ARCHETYPE_ID",
+                    "value": "openEHR-EHR-SECTION.result_details.v0"
+                },
+                "rm_version": "1.0.4"
+            },
+            "archetype_node_id": "openEHR-EHR-SECTION.result_details.v0",
+            "items": [
+                {
+                    "_type": "SECTION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Result group"
+                    },
+                    "archetype_node_id": "at0002",
+                    "items": [
+                        {
+                            "_type": "OBSERVATION",
+                            "name": {
+                                "_type": "DV_TEXT",
+                                "value": "Laboratory test result"
+                            },
+                            "archetype_details": {
+                                "_type": "ARCHETYPED",
+                                "archetype_id": {
+                                    "_type": "ARCHETYPE_ID",
+                                    "value": "openEHR-EHR-OBSERVATION.laboratory_test_result.v1"
+                                },
+                                "rm_version": "1.0.4"
+                            },
+                            "archetype_node_id": "openEHR-EHR-OBSERVATION.laboratory_test_result.v1",
+                            "language": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "ISO_639-1"
+                                },
+                                "code_string": "en"
+                            },
+                            "encoding": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "IANA_character-sets"
+                                },
+                                "code_string": "UTF-8"
+                            },
+                            "subject": {
+                                "_type": "PARTY_SELF"
+                            },
+                            "data": {
+                                "_type": "HISTORY",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Event Series"
+                                },
+                                "archetype_node_id": "at0001",
+                                "origin": {
+                                    "_type": "DV_DATE_TIME",
+                                    "value": "2021-04-22T10:19:49.915Z"
+                                },
+                                "events": [
+                                    {
+                                        "_type": "POINT_EVENT",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Any event"
+                                        },
+                                        "archetype_node_id": "at0002",
+                                        "time": {
+                                            "_type": "DV_DATE_TIME",
+                                            "value": "2021-04-22T10:19:49.915Z"
+                                        },
+                                        "data": {
+                                            "_type": "ITEM_TREE",
+                                            "name": {
+                                                "_type": "DV_TEXT",
+                                                "value": "Tree"
+                                            },
+                                            "archetype_node_id": "at0003",
+                                            "items": [
+                                                {
+                                                    "_type": "ELEMENT",
+                                                    "name": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "Test name"
+                                                    },
+                                                    "archetype_node_id": "at0005",
+                                                    "value": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "Histopathology analysis"
+                                                    }
+                                                },
+                                                {
+                                                    "_type": "CLUSTER",
+                                                    "name": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "Specimen"
+                                                    },
+                                                    "archetype_details": {
+                                                        "_type": "ARCHETYPED",
+                                                        "archetype_id": {
+                                                            "_type": "ARCHETYPE_ID",
+                                                            "value": "openEHR-EHR-CLUSTER.specimen.v1"
+                                                        },
+                                                        "rm_version": "1.0.4"
+                                                    },
+                                                    "archetype_node_id": "openEHR-EHR-CLUSTER.specimen.v1",
+                                                    "items": [
+                                                        {
+                                                            "_type": "ELEMENT",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "Material Type"
+                                                            },
+                                                            "archetype_node_id": "at0029",
+                                                            "value": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "Tumor tissue"
+                                                            }
+                                                        },
+                                                        {
+                                                            "_type": "ELEMENT",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "Sample ID"
+                                                            },
+                                                            "archetype_node_id": "at0088",
+                                                            "value": {
+                                                                "_type": "DV_IDENTIFIER",
+                                                                "id": "4d1223dc-25d9-4f0a-91cb-653a26817cc9"
+                                                            }
+                                                        },
+                                                        {
+                                                            "_type": "ELEMENT",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "Year of sample collection"
+                                                            },
+                                                            "archetype_node_id": "at0015",
+                                                            "value": {
+                                                                "_type": "DV_DATE_TIME",
+                                                                "value": "2021-01-01T00:00:00Z"
+                                                            }
+                                                        },
+                                                        {
+                                                            "_type": "CLUSTER",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "Specimen preparation"
+                                                            },
+                                                            "archetype_details": {
+                                                                "_type": "ARCHETYPED",
+                                                                "archetype_id": {
+                                                                    "_type": "ARCHETYPE_ID",
+                                                                    "value": "openEHR-EHR-CLUSTER.specimen_preparation.v0"
+                                                                },
+                                                                "rm_version": "1.0.4"
+                                                            },
+                                                            "archetype_node_id": "openEHR-EHR-CLUSTER.specimen_preparation.v0",
+                                                            "items": [
+                                                                {
+                                                                    "_type": "ELEMENT",
+                                                                    "name": {
+                                                                        "_type": "DV_TEXT",
+                                                                        "value": "Preservation mode"
+                                                                    },
+                                                                    "archetype_node_id": "at0074",
+                                                                    "value": {
+                                                                        "_type": "DV_TEXT",
+                                                                        "value": "FFPE"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "_type": "CLUSTER",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "Multimedia source"
+                                                            },
+                                                            "archetype_details": {
+                                                                "_type": "ARCHETYPED",
+                                                                "archetype_id": {
+                                                                    "_type": "ARCHETYPE_ID",
+                                                                    "value": "openEHR-EHR-CLUSTER.multimedia_source.v0"
+                                                                },
+                                                                "rm_version": "1.0.4"
+                                                            },
+                                                            "archetype_node_id": "openEHR-EHR-CLUSTER.multimedia_source.v0",
+                                                            "items": [
+                                                                {
+                                                                    "_type": "ELEMENT",
+                                                                    "name": {
+                                                                        "_type": "DV_TEXT",
+                                                                        "value": "Availability digital imaging"
+                                                                    },
+                                                                    "archetype_node_id": "at0005",
+                                                                    "value": {
+                                                                        "_type": "DV_TEXT",
+                                                                        "value": "Can be generated"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "_type": "CLUSTER",
+                                                    "name": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "Invasion front"
+                                                    },
+                                                    "archetype_details": {
+                                                        "_type": "ARCHETYPED",
+                                                        "archetype_id": {
+                                                            "_type": "ARCHETYPE_ID",
+                                                            "value": "openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0"
+                                                        },
+                                                        "rm_version": "1.0.4"
+                                                    },
+                                                    "archetype_node_id": "openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0",
+                                                    "items": [
+                                                        {
+                                                            "_type": "CLUSTER",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "Anatomical pathology finding"
+                                                            },
+                                                            "archetype_node_id": "at0005",
+                                                            "items": [
+                                                                {
+                                                                    "_type": "ELEMENT",
+                                                                    "name": {
+                                                                        "_type": "DV_TEXT",
+                                                                        "value": "Finding label"
+                                                                    },
+                                                                    "archetype_node_id": "at0023",
+                                                                    "value": {
+                                                                        "_type": "DV_TEXT",
+                                                                        "value": "Invasion front"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "_type": "CLUSTER",
+                                                                    "name": {
+                                                                        "_type": "DV_TEXT",
+                                                                        "value": "Digital imaging invasion front"
+                                                                    },
+                                                                    "archetype_details": {
+                                                                        "_type": "ARCHETYPED",
+                                                                        "archetype_id": {
+                                                                            "_type": "ARCHETYPE_ID",
+                                                                            "value": "openEHR-EHR-CLUSTER.multimedia_source.v0"
+                                                                        },
+                                                                        "rm_version": "1.0.4"
+                                                                    },
+                                                                    "archetype_node_id": "openEHR-EHR-CLUSTER.multimedia_source.v0",
+                                                                    "items": [
+                                                                        {
+                                                                            "_type": "ELEMENT",
+                                                                            "name": {
+                                                                                "_type": "DV_TEXT",
+                                                                                "value": "Availability invasion front digital imaging"
+                                                                            },
+                                                                            "archetype_node_id": "at0005",
+                                                                            "value": {
+                                                                                "_type": "DV_TEXT",
+                                                                                "value": "No"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "_type": "CLUSTER",
+                                                    "name": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "Recurrence"
+                                                    },
+                                                    "archetype_details": {
+                                                        "_type": "ARCHETYPED",
+                                                        "archetype_id": {
+                                                            "_type": "ARCHETYPE_ID",
+                                                            "value": "openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0"
+                                                        },
+                                                        "rm_version": "1.0.4"
+                                                    },
+                                                    "archetype_node_id": "openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0",
+                                                    "items": [
+                                                        {
+                                                            "_type": "CLUSTER",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "Anatomical pathology finding"
+                                                            },
+                                                            "archetype_node_id": "at0005",
+                                                            "items": [
+                                                                {
+                                                                    "_type": "ELEMENT",
+                                                                    "name": {
+                                                                        "_type": "DV_TEXT",
+                                                                        "value": "Finding label"
+                                                                    },
+                                                                    "archetype_node_id": "at0023",
+                                                                    "value": {
+                                                                        "_type": "DV_TEXT",
+                                                                        "value": "Recurrence"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "_type": "ELEMENT",
+                                                                    "name": {
+                                                                        "_type": "DV_TEXT",
+                                                                        "value": "Biological material from recurrence available"
+                                                                    },
+                                                                    "archetype_node_id": "at0006",
+                                                                    "value": {
+                                                                        "_type": "DV_BOOLEAN",
+                                                                        "value": true
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "_type": "EVALUATION",
+                            "name": {
+                                "_type": "DV_TEXT",
+                                "value": "Cancer diagnosis"
+                            },
+                            "archetype_details": {
+                                "_type": "ARCHETYPED",
+                                "archetype_id": {
+                                    "_type": "ARCHETYPE_ID",
+                                    "value": "openEHR-EHR-EVALUATION.problem_diagnosis.v1"
+                                },
+                                "rm_version": "1.0.4"
+                            },
+                            "archetype_node_id": "openEHR-EHR-EVALUATION.problem_diagnosis.v1",
+                            "language": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "ISO_639-1"
+                                },
+                                "code_string": "en"
+                            },
+                            "encoding": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "IANA_character-sets"
+                                },
+                                "code_string": "UTF-8"
+                            },
+                            "subject": {
+                                "_type": "PARTY_SELF"
+                            },
+                            "data": {
+                                "_type": "ITEM_TREE",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "structure"
+                                },
+                                "archetype_node_id": "at0001",
+                                "items": [
+                                    {
+                                        "_type": "ELEMENT",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Problem/Diagnosis name"
+                                        },
+                                        "archetype_node_id": "at0002",
+                                        "value": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Cancer"
+                                        }
+                                    },
+                                    {
+                                        "_type": "ELEMENT",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Localization of primary tumor"
+                                        },
+                                        "archetype_node_id": "at0012",
+                                        "value": {
+                                            "_type": "DV_TEXT",
+                                            "value": "C 20 - Rectum"
+                                        }
+                                    },
+                                    {
+                                        "_type": "CLUSTER",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Synoptic details - Colorectal cancer"
+                                        },
+                                        "archetype_details": {
+                                            "_type": "ARCHETYPED",
+                                            "archetype_id": {
+                                                "_type": "ARCHETYPE_ID",
+                                                "value": "openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0"
+                                            },
+                                            "rm_version": "1.0.4"
+                                        },
+                                        "archetype_node_id": "openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0",
+                                        "items": [
+                                            {
+                                                "_type": "CLUSTER",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "Microscopic findings"
+                                                },
+                                                "archetype_node_id": "at0001",
+                                                "items": [
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Morphology"
+                                                        },
+                                                        "archetype_node_id": "at0033",
+                                                        "value": {
+                                                            "_type": "DV_CODED_TEXT",
+                                                            "value": "Adenocarcinoma",
+                                                            "defining_code": {
+                                                                "_type": "CODE_PHRASE",
+                                                                "terminology_id": {
+                                                                    "_type": "TERMINOLOGY_ID",
+                                                                    "value": "local"
+                                                                },
+                                                                "code_string": "at0034"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "_type": "CLUSTER",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "TNM pathological classification"
+                                                        },
+                                                        "archetype_details": {
+                                                            "_type": "ARCHETYPED",
+                                                            "archetype_id": {
+                                                                "_type": "ARCHETYPE_ID",
+                                                                "value": "openEHR-EHR-CLUSTER.tnm-pathological.v1"
+                                                            },
+                                                            "rm_version": "1.0.4"
+                                                        },
+                                                        "archetype_node_id": "openEHR-EHR-CLUSTER.tnm-pathological.v1",
+                                                        "items": [
+                                                            {
+                                                                "_type": "ELEMENT",
+                                                                "name": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "Primary tumour"
+                                                                },
+                                                                "archetype_node_id": "at0003.1",
+                                                                "value": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "TX"
+                                                                }
+                                                            },
+                                                            {
+                                                                "_type": "ELEMENT",
+                                                                "name": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "Regional lymph nodes"
+                                                                },
+                                                                "archetype_node_id": "at0004.1",
+                                                                "value": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "N2"
+                                                                }
+                                                            },
+                                                            {
+                                                                "_type": "ELEMENT",
+                                                                "name": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "Distant metastasis"
+                                                                },
+                                                                "archetype_node_id": "at0005.1",
+                                                                "value": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "M1b"
+                                                                }
+                                                            },
+                                                            {
+                                                                "_type": "ELEMENT",
+                                                                "name": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "Grade"
+                                                                },
+                                                                "archetype_node_id": "at0006",
+                                                                "value": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "G4"
+                                                                }
+                                                            },
+                                                            {
+                                                                "_type": "ELEMENT",
+                                                                "name": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "Stage"
+                                                                },
+                                                                "archetype_node_id": "at0031.1",
+                                                                "value": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "IIB"
+                                                                }
+                                                            },
+                                                            {
+                                                                "_type": "ELEMENT",
+                                                                "name": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "UICC version"
+                                                                },
+                                                                "archetype_node_id": "at0032",
+                                                                "value": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "7th ed. (used 2010- 2017)"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "_type": "CLUSTER",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Histological grading"
+                                                        },
+                                                        "archetype_node_id": "at0269",
+                                                        "items": [
+                                                            {
+                                                                "_type": "ELEMENT",
+                                                                "name": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "WHO version"
+                                                                },
+                                                                "archetype_node_id": "at0271",
+                                                                "value": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "Edition not known"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "_type": "CLUSTER",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Distant metastasis"
+                                                        },
+                                                        "archetype_node_id": "at0263",
+                                                        "items": [
+                                                            {
+                                                                "_type": "ELEMENT",
+                                                                "name": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "Distant metastasis"
+                                                                },
+                                                                "archetype_node_id": "at0264",
+                                                                "value": {
+                                                                    "_type": "DV_CODED_TEXT",
+                                                                    "value": "Absent",
+                                                                    "defining_code": {
+                                                                        "_type": "CODE_PHRASE",
+                                                                        "terminology_id": {
+                                                                            "_type": "TERMINOLOGY_ID",
+                                                                            "value": "local"
+                                                                        },
+                                                                        "code_string": "at0363"
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "_type": "CLUSTER",
+                                                                "name": {
+                                                                    "_type": "DV_TEXT",
+                                                                    "value": "Anatomical location"
+                                                                },
+                                                                "archetype_details": {
+                                                                    "_type": "ARCHETYPED",
+                                                                    "archetype_id": {
+                                                                        "_type": "ARCHETYPE_ID",
+                                                                        "value": "openEHR-EHR-CLUSTER.anatomical_location.v1"
+                                                                    },
+                                                                    "rm_version": "1.0.4"
+                                                                },
+                                                                "archetype_node_id": "openEHR-EHR-CLUSTER.anatomical_location.v1",
+                                                                "items": [
+                                                                    {
+                                                                        "_type": "ELEMENT",
+                                                                        "name": {
+                                                                            "_type": "DV_TEXT",
+                                                                            "value": "Localization of metastasis"
+                                                                        },
+                                                                        "archetype_node_id": "at0001",
+                                                                        "value": {
+                                                                            "_type": "DV_TEXT",
+                                                                            "value": "Lymph nodes"
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "SECTION",
+            "name": {
+                "_type": "DV_TEXT",
+                "value": "Surgery"
+            },
+            "archetype_details": {
+                "_type": "ARCHETYPED",
+                "archetype_id": {
+                    "_type": "ARCHETYPE_ID",
+                    "value": "openEHR-EHR-SECTION.procedures_rcp.v1"
+                },
+                "rm_version": "1.0.4"
+            },
+            "archetype_node_id": "openEHR-EHR-SECTION.procedures_rcp.v1",
+            "items": [
+                {
+                    "_type": "ACTION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Surgery"
+                    },
+                    "archetype_details": {
+                        "_type": "ARCHETYPED",
+                        "archetype_id": {
+                            "_type": "ARCHETYPE_ID",
+                            "value": "openEHR-EHR-ACTION.procedure.v1"
+                        },
+                        "rm_version": "1.0.4"
+                    },
+                    "archetype_node_id": "openEHR-EHR-ACTION.procedure.v1",
+                    "language": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "ISO_639-1"
+                        },
+                        "code_string": "en"
+                    },
+                    "encoding": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "IANA_character-sets"
+                        },
+                        "code_string": "UTF-8"
+                    },
+                    "subject": {
+                        "_type": "PARTY_SELF"
+                    },
+                    "time": {
+                        "_type": "DV_DATE_TIME",
+                        "value": "2021-04-22T10:19:49.915Z"
+                    },
+                    "description": {
+                        "_type": "ITEM_TREE",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Tree"
+                        },
+                        "archetype_node_id": "at0001",
+                        "items": [
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Surgery type"
+                                },
+                                "archetype_node_id": "at0002",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Pan-procto colectomy"
+                                }
+                            },
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Location of the tumor"
+                                },
+                                "archetype_node_id": "at0063",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "C 18.7 - Sigmoid"
+                                }
+                            },
+                            {
+                                "_type": "CLUSTER",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Surgery timing"
+                                },
+                                "archetype_details": {
+                                    "_type": "ARCHETYPED",
+                                    "archetype_id": {
+                                        "_type": "ARCHETYPE_ID",
+                                        "value": "openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                                    },
+                                    "rm_version": "1.0.4"
+                                },
+                                "archetype_node_id": "openEHR-EHR-CLUSTER.timing_nondaily.v1",
+                                "items": [
+                                    {
+                                        "_type": "CLUSTER",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Surgery"
+                                        },
+                                        "archetype_node_id": "at0006",
+                                        "items": [
+                                            {
+                                                "_type": "ELEMENT",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "From event"
+                                                },
+                                                "archetype_node_id": "at0005",
+                                                "value": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "Primary diagnosis"
+                                                }
+                                            },
+                                            {
+                                                "_type": "ELEMENT",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "Surgery start relative"
+                                                },
+                                                "archetype_node_id": "at0009",
+                                                "value": {
+                                                    "_type": "DV_DURATION",
+                                                    "value": "P40Y"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Surgery radicality"
+                                },
+                                "archetype_node_id": "at0048",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "R0"
+                                }
+                            }
+                        ]
+                    },
+                    "ism_transition": {
+                        "_type": "ISM_TRANSITION",
+                        "current_state": {
+                            "_type": "DV_CODED_TEXT",
+                            "value": "completed",
+                            "defining_code": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "openehr"
+                                },
+                                "code_string": "532"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "_type": "SECTION",
+            "name": {
+                "_type": "DV_TEXT",
+                "value": "Therapies"
+            },
+            "archetype_details": {
+                "_type": "ARCHETYPED",
+                "archetype_id": {
+                    "_type": "ARCHETYPE_ID",
+                    "value": "openEHR-EHR-SECTION.procedures_rcp.v1"
+                },
+                "rm_version": "1.0.4"
+            },
+            "archetype_node_id": "openEHR-EHR-SECTION.procedures_rcp.v1",
+            "items": [
+                {
+                    "_type": "SECTION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Radiation therapy"
+                    },
+                    "archetype_details": {
+                        "_type": "ARCHETYPED",
+                        "archetype_id": {
+                            "_type": "ARCHETYPE_ID",
+                            "value": "openEHR-EHR-SECTION.adhoc.v1"
+                        },
+                        "rm_version": "1.0.4"
+                    },
+                    "archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+                    "items": [
+                        {
+                            "_type": "ACTION",
+                            "name": {
+                                "_type": "DV_TEXT",
+                                "value": "Radiation therapy"
+                            },
+                            "archetype_details": {
+                                "_type": "ARCHETYPED",
+                                "archetype_id": {
+                                    "_type": "ARCHETYPE_ID",
+                                    "value": "openEHR-EHR-ACTION.procedure.v1"
+                                },
+                                "rm_version": "1.0.4"
+                            },
+                            "archetype_node_id": "openEHR-EHR-ACTION.procedure.v1",
+                            "language": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "ISO_639-1"
+                                },
+                                "code_string": "en"
+                            },
+                            "encoding": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "IANA_character-sets"
+                                },
+                                "code_string": "UTF-8"
+                            },
+                            "subject": {
+                                "_type": "PARTY_SELF"
+                            },
+                            "time": {
+                                "_type": "DV_DATE_TIME",
+                                "value": "2021-04-22T10:19:49.915Z"
+                            },
+                            "description": {
+                                "_type": "ITEM_TREE",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Tree"
+                                },
+                                "archetype_node_id": "at0001",
+                                "items": [
+                                    {
+                                        "_type": "ELEMENT",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Therapy"
+                                        },
+                                        "archetype_node_id": "at0002",
+                                        "value": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Radiation therapy"
+                                        }
+                                    },
+                                    {
+                                        "_type": "CLUSTER",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Radiation timing"
+                                        },
+                                        "archetype_details": {
+                                            "_type": "ARCHETYPED",
+                                            "archetype_id": {
+                                                "_type": "ARCHETYPE_ID",
+                                                "value": "openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                                            },
+                                            "rm_version": "1.0.4"
+                                        },
+                                        "archetype_node_id": "openEHR-EHR-CLUSTER.timing_nondaily.v1",
+                                        "items": [
+                                            {
+                                                "_type": "CLUSTER",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "Start of radiation therapy"
+                                                },
+                                                "archetype_node_id": "at0006",
+                                                "items": [
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "From event"
+                                                        },
+                                                        "archetype_node_id": "at0005",
+                                                        "value": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Primary diagnosis"
+                                                        }
+                                                    },
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Date of start of radiation therapy"
+                                                        },
+                                                        "archetype_node_id": "at0009",
+                                                        "value": {
+                                                            "_type": "DV_DURATION",
+                                                            "value": "P40Y"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "_type": "CLUSTER",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "End of radiation therapy"
+                                                },
+                                                "archetype_node_id": "at0006",
+                                                "items": [
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "From event"
+                                                        },
+                                                        "archetype_node_id": "at0005",
+                                                        "value": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Primary diagnosis"
+                                                        }
+                                                    },
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Date of end of radiation therapy"
+                                                        },
+                                                        "archetype_node_id": "at0009",
+                                                        "value": {
+                                                            "_type": "DV_DURATION",
+                                                            "value": "P40Y"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "ism_transition": {
+                                "_type": "ISM_TRANSITION",
+                                "current_state": {
+                                    "_type": "DV_CODED_TEXT",
+                                    "value": "completed",
+                                    "defining_code": {
+                                        "_type": "CODE_PHRASE",
+                                        "terminology_id": {
+                                            "_type": "TERMINOLOGY_ID",
+                                            "value": "openehr"
+                                        },
+                                        "code_string": "532"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "_type": "SECTION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Targeted therapy"
+                    },
+                    "archetype_details": {
+                        "_type": "ARCHETYPED",
+                        "archetype_id": {
+                            "_type": "ARCHETYPE_ID",
+                            "value": "openEHR-EHR-SECTION.adhoc.v1"
+                        },
+                        "rm_version": "1.0.4"
+                    },
+                    "archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+                    "items": [
+                        {
+                            "_type": "ACTION",
+                            "name": {
+                                "_type": "DV_TEXT",
+                                "value": "Targeted therapy"
+                            },
+                            "archetype_details": {
+                                "_type": "ARCHETYPED",
+                                "archetype_id": {
+                                    "_type": "ARCHETYPE_ID",
+                                    "value": "openEHR-EHR-ACTION.procedure.v1"
+                                },
+                                "rm_version": "1.0.4"
+                            },
+                            "archetype_node_id": "openEHR-EHR-ACTION.procedure.v1",
+                            "language": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "ISO_639-1"
+                                },
+                                "code_string": "en"
+                            },
+                            "encoding": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "IANA_character-sets"
+                                },
+                                "code_string": "UTF-8"
+                            },
+                            "subject": {
+                                "_type": "PARTY_SELF"
+                            },
+                            "time": {
+                                "_type": "DV_DATE_TIME",
+                                "value": "2021-04-22T10:19:49.915Z"
+                            },
+                            "description": {
+                                "_type": "ITEM_TREE",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Tree"
+                                },
+                                "archetype_node_id": "at0001",
+                                "items": [
+                                    {
+                                        "_type": "ELEMENT",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Therapy"
+                                        },
+                                        "archetype_node_id": "at0002",
+                                        "value": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Targeted therapy"
+                                        }
+                                    },
+                                    {
+                                        "_type": "CLUSTER",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Targeted therapy timing"
+                                        },
+                                        "archetype_details": {
+                                            "_type": "ARCHETYPED",
+                                            "archetype_id": {
+                                                "_type": "ARCHETYPE_ID",
+                                                "value": "openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                                            },
+                                            "rm_version": "1.0.4"
+                                        },
+                                        "archetype_node_id": "openEHR-EHR-CLUSTER.timing_nondaily.v1",
+                                        "items": [
+                                            {
+                                                "_type": "CLUSTER",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "Start of targeted therapy"
+                                                },
+                                                "archetype_node_id": "at0006",
+                                                "items": [
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Event name"
+                                                        },
+                                                        "archetype_node_id": "at0005",
+                                                        "value": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Primary diagnosis"
+                                                        }
+                                                    },
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Date of start of targeted therapy"
+                                                        },
+                                                        "archetype_node_id": "at0009",
+                                                        "value": {
+                                                            "_type": "DV_DURATION",
+                                                            "value": "P5W"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "_type": "CLUSTER",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "End of targeted therapy"
+                                                },
+                                                "archetype_node_id": "at0006",
+                                                "items": [
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "From event"
+                                                        },
+                                                        "archetype_node_id": "at0005",
+                                                        "value": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Primary diagnosis"
+                                                        }
+                                                    },
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Date of end of targeted therapy"
+                                                        },
+                                                        "archetype_node_id": "at0009",
+                                                        "value": {
+                                                            "_type": "DV_DURATION",
+                                                            "value": "P40Y"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "ism_transition": {
+                                "_type": "ISM_TRANSITION",
+                                "current_state": {
+                                    "_type": "DV_CODED_TEXT",
+                                    "value": "completed",
+                                    "defining_code": {
+                                        "_type": "CODE_PHRASE",
+                                        "terminology_id": {
+                                            "_type": "TERMINOLOGY_ID",
+                                            "value": "openehr"
+                                        },
+                                        "code_string": "532"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "_type": "SECTION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Pharmacotherapy"
+                    },
+                    "archetype_details": {
+                        "_type": "ARCHETYPED",
+                        "archetype_id": {
+                            "_type": "ARCHETYPE_ID",
+                            "value": "openEHR-EHR-SECTION.adhoc.v1"
+                        },
+                        "rm_version": "1.0.4"
+                    },
+                    "archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+                    "items": [
+                        {
+                            "_type": "ACTION",
+                            "name": {
+                                "_type": "DV_TEXT",
+                                "value": "Medication management"
+                            },
+                            "archetype_details": {
+                                "_type": "ARCHETYPED",
+                                "archetype_id": {
+                                    "_type": "ARCHETYPE_ID",
+                                    "value": "openEHR-EHR-ACTION.medication.v1"
+                                },
+                                "rm_version": "1.0.4"
+                            },
+                            "archetype_node_id": "openEHR-EHR-ACTION.medication.v1",
+                            "language": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "ISO_639-1"
+                                },
+                                "code_string": "en"
+                            },
+                            "encoding": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "IANA_character-sets"
+                                },
+                                "code_string": "UTF-8"
+                            },
+                            "subject": {
+                                "_type": "PARTY_SELF"
+                            },
+                            "time": {
+                                "_type": "DV_DATE_TIME",
+                                "value": "2021-04-22T10:19:49.915Z"
+                            },
+                            "description": {
+                                "_type": "ITEM_TREE",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Tree"
+                                },
+                                "archetype_node_id": "at0017",
+                                "items": [
+                                    {
+                                        "_type": "ELEMENT",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Scheme of pharmacotherapy"
+                                        },
+                                        "archetype_node_id": "at0020",
+                                        "value": {
+                                            "_type": "DV_TEXT",
+                                            "value": "5-FU 225 mg/m2 i.v. continuous infusion, 5 days per week"
+                                        }
+                                    },
+                                    {
+                                        "_type": "CLUSTER",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Pharmacotherapy timing"
+                                        },
+                                        "archetype_details": {
+                                            "_type": "ARCHETYPED",
+                                            "archetype_id": {
+                                                "_type": "ARCHETYPE_ID",
+                                                "value": "openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                                            },
+                                            "rm_version": "1.0.4"
+                                        },
+                                        "archetype_node_id": "openEHR-EHR-CLUSTER.timing_nondaily.v1",
+                                        "items": [
+                                            {
+                                                "_type": "CLUSTER",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "Start of pharmacotherapy"
+                                                },
+                                                "archetype_node_id": "at0006",
+                                                "items": [
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "From event"
+                                                        },
+                                                        "archetype_node_id": "at0005",
+                                                        "value": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Primary diagnosis"
+                                                        }
+                                                    },
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Date of start of pharmacotherapy"
+                                                        },
+                                                        "archetype_node_id": "at0009",
+                                                        "value": {
+                                                            "_type": "DV_DURATION",
+                                                            "value": "P1W"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "_type": "CLUSTER",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "End of pharmacotherapy"
+                                                },
+                                                "archetype_node_id": "at0006",
+                                                "items": [
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "From event"
+                                                        },
+                                                        "archetype_node_id": "at0005",
+                                                        "value": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Primary diagnosis"
+                                                        }
+                                                    },
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Date of end of pharmacotherapy"
+                                                        },
+                                                        "archetype_node_id": "at0009",
+                                                        "value": {
+                                                            "_type": "DV_DURATION",
+                                                            "value": "P40Y"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "ism_transition": {
+                                "_type": "ISM_TRANSITION",
+                                "current_state": {
+                                    "_type": "DV_CODED_TEXT",
+                                    "value": "completed",
+                                    "defining_code": {
+                                        "_type": "CODE_PHRASE",
+                                        "terminology_id": {
+                                            "_type": "TERMINOLOGY_ID",
+                                            "value": "openehr"
+                                        },
+                                        "code_string": "532"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "_type": "SECTION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Response to therapy"
+                    },
+                    "archetype_details": {
+                        "_type": "ARCHETYPED",
+                        "archetype_id": {
+                            "_type": "ARCHETYPE_ID",
+                            "value": "openEHR-EHR-SECTION.adhoc.v1"
+                        },
+                        "rm_version": "1.0.4"
+                    },
+                    "archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+                    "items": [
+                        {
+                            "_type": "EVALUATION",
+                            "name": {
+                                "_type": "DV_TEXT",
+                                "value": "Clinical synopsis"
+                            },
+                            "archetype_details": {
+                                "_type": "ARCHETYPED",
+                                "archetype_id": {
+                                    "_type": "ARCHETYPE_ID",
+                                    "value": "openEHR-EHR-EVALUATION.clinical_synopsis.v1"
+                                },
+                                "rm_version": "1.0.4"
+                            },
+                            "archetype_node_id": "openEHR-EHR-EVALUATION.clinical_synopsis.v1",
+                            "language": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "ISO_639-1"
+                                },
+                                "code_string": "en"
+                            },
+                            "encoding": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "IANA_character-sets"
+                                },
+                                "code_string": "UTF-8"
+                            },
+                            "subject": {
+                                "_type": "PARTY_SELF"
+                            },
+                            "protocol": {
+                                "_type": "ITEM_TREE",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Tree"
+                                },
+                                "archetype_node_id": "at0003",
+                                "items": [
+                                    {
+                                        "_type": "CLUSTER",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Response timing"
+                                        },
+                                        "archetype_details": {
+                                            "_type": "ARCHETYPED",
+                                            "archetype_id": {
+                                                "_type": "ARCHETYPE_ID",
+                                                "value": "openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                                            },
+                                            "rm_version": "1.0.4"
+                                        },
+                                        "archetype_node_id": "openEHR-EHR-CLUSTER.timing_nondaily.v1",
+                                        "items": [
+                                            {
+                                                "_type": "CLUSTER",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "Therapy response timestamp"
+                                                },
+                                                "archetype_node_id": "at0006",
+                                                "items": [
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "From event"
+                                                        },
+                                                        "archetype_node_id": "at0005",
+                                                        "value": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Primary diagnosis"
+                                                        }
+                                                    },
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Time of therapy response"
+                                                        },
+                                                        "archetype_node_id": "at0009",
+                                                        "value": {
+                                                            "_type": "DV_DURATION",
+                                                            "value": "P40Y"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "data": {
+                                "_type": "ITEM_TREE",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "List"
+                                },
+                                "archetype_node_id": "at0001",
+                                "items": [
+                                    {
+                                        "_type": "ELEMENT",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Specific response"
+                                        },
+                                        "archetype_node_id": "at0002",
+                                        "value": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Stable disease"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "SECTION",
+            "name": {
+                "_type": "DV_TEXT",
+                "value": "Diagnostic examinations"
+            },
+            "archetype_details": {
+                "_type": "ARCHETYPED",
+                "archetype_id": {
+                    "_type": "ARCHETYPE_ID",
+                    "value": "openEHR-EHR-SECTION.procedures_rcp.v1"
+                },
+                "rm_version": "1.0.4"
+            },
+            "archetype_node_id": "openEHR-EHR-SECTION.procedures_rcp.v1",
+            "items": [
+                {
+                    "_type": "ACTION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Colonoscopy"
+                    },
+                    "archetype_details": {
+                        "_type": "ARCHETYPED",
+                        "archetype_id": {
+                            "_type": "ARCHETYPE_ID",
+                            "value": "openEHR-EHR-ACTION.procedure.v1"
+                        },
+                        "rm_version": "1.0.4"
+                    },
+                    "archetype_node_id": "openEHR-EHR-ACTION.procedure.v1",
+                    "language": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "ISO_639-1"
+                        },
+                        "code_string": "en"
+                    },
+                    "encoding": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "IANA_character-sets"
+                        },
+                        "code_string": "UTF-8"
+                    },
+                    "subject": {
+                        "_type": "PARTY_SELF"
+                    },
+                    "time": {
+                        "_type": "DV_DATE_TIME",
+                        "value": "2021-04-22T10:19:49.915Z"
+                    },
+                    "description": {
+                        "_type": "ITEM_TREE",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Tree"
+                        },
+                        "archetype_node_id": "at0001",
+                        "items": [
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Procedure name"
+                                },
+                                "archetype_node_id": "at0002",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Colonoscopy"
+                                }
+                            },
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Colonoscopy"
+                                },
+                                "archetype_node_id": "at0048",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Positive"
+                                }
+                            }
+                        ]
+                    },
+                    "ism_transition": {
+                        "_type": "ISM_TRANSITION",
+                        "current_state": {
+                            "_type": "DV_CODED_TEXT",
+                            "value": "completed",
+                            "defining_code": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "openehr"
+                                },
+                                "code_string": "532"
+                            }
+                        }
+                    }
+                },
+                {
+                    "_type": "ACTION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "CT"
+                    },
+                    "archetype_details": {
+                        "_type": "ARCHETYPED",
+                        "archetype_id": {
+                            "_type": "ARCHETYPE_ID",
+                            "value": "openEHR-EHR-ACTION.procedure.v1"
+                        },
+                        "rm_version": "1.0.4"
+                    },
+                    "archetype_node_id": "openEHR-EHR-ACTION.procedure.v1",
+                    "language": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "ISO_639-1"
+                        },
+                        "code_string": "en"
+                    },
+                    "encoding": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "IANA_character-sets"
+                        },
+                        "code_string": "UTF-8"
+                    },
+                    "subject": {
+                        "_type": "PARTY_SELF"
+                    },
+                    "time": {
+                        "_type": "DV_DATE_TIME",
+                        "value": "2021-04-22T10:19:49.915Z"
+                    },
+                    "description": {
+                        "_type": "ITEM_TREE",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Tree"
+                        },
+                        "archetype_node_id": "at0001",
+                        "items": [
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Procedure name"
+                                },
+                                "archetype_node_id": "at0002",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "CT"
+                                }
+                            },
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "CT"
+                                },
+                                "archetype_node_id": "at0048",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Not done"
+                                }
+                            }
+                        ]
+                    },
+                    "ism_transition": {
+                        "_type": "ISM_TRANSITION",
+                        "current_state": {
+                            "_type": "DV_CODED_TEXT",
+                            "value": "completed",
+                            "defining_code": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "openehr"
+                                },
+                                "code_string": "532"
+                            }
+                        }
+                    }
+                },
+                {
+                    "_type": "ACTION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Liver imaging"
+                    },
+                    "archetype_details": {
+                        "_type": "ARCHETYPED",
+                        "archetype_id": {
+                            "_type": "ARCHETYPE_ID",
+                            "value": "openEHR-EHR-ACTION.procedure.v1"
+                        },
+                        "rm_version": "1.0.4"
+                    },
+                    "archetype_node_id": "openEHR-EHR-ACTION.procedure.v1",
+                    "language": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "ISO_639-1"
+                        },
+                        "code_string": "en"
+                    },
+                    "encoding": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "IANA_character-sets"
+                        },
+                        "code_string": "UTF-8"
+                    },
+                    "subject": {
+                        "_type": "PARTY_SELF"
+                    },
+                    "time": {
+                        "_type": "DV_DATE_TIME",
+                        "value": "2021-04-22T10:19:49.915Z"
+                    },
+                    "description": {
+                        "_type": "ITEM_TREE",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Tree"
+                        },
+                        "archetype_node_id": "at0001",
+                        "items": [
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Procedure name"
+                                },
+                                "archetype_node_id": "at0002",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Liver imaging"
+                                }
+                            },
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Liver imaging"
+                                },
+                                "archetype_node_id": "at0048",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Done, data not available"
+                                }
+                            }
+                        ]
+                    },
+                    "ism_transition": {
+                        "_type": "ISM_TRANSITION",
+                        "current_state": {
+                            "_type": "DV_CODED_TEXT",
+                            "value": "completed",
+                            "defining_code": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "openehr"
+                                },
+                                "code_string": "532"
+                            }
+                        }
+                    }
+                },
+                {
+                    "_type": "ACTION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Lung imaging"
+                    },
+                    "archetype_details": {
+                        "_type": "ARCHETYPED",
+                        "archetype_id": {
+                            "_type": "ARCHETYPE_ID",
+                            "value": "openEHR-EHR-ACTION.procedure.v1"
+                        },
+                        "rm_version": "1.0.4"
+                    },
+                    "archetype_node_id": "openEHR-EHR-ACTION.procedure.v1",
+                    "language": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "ISO_639-1"
+                        },
+                        "code_string": "en"
+                    },
+                    "encoding": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "IANA_character-sets"
+                        },
+                        "code_string": "UTF-8"
+                    },
+                    "subject": {
+                        "_type": "PARTY_SELF"
+                    },
+                    "time": {
+                        "_type": "DV_DATE_TIME",
+                        "value": "2021-04-22T10:19:49.915Z"
+                    },
+                    "description": {
+                        "_type": "ITEM_TREE",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Tree"
+                        },
+                        "archetype_node_id": "at0001",
+                        "items": [
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Procedure name"
+                                },
+                                "archetype_node_id": "at0002",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Lung imaging"
+                                }
+                            },
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Lung imaging"
+                                },
+                                "archetype_node_id": "at0048",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Not done"
+                                }
+                            }
+                        ]
+                    },
+                    "ism_transition": {
+                        "_type": "ISM_TRANSITION",
+                        "current_state": {
+                            "_type": "DV_CODED_TEXT",
+                            "value": "completed",
+                            "defining_code": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "openehr"
+                                },
+                                "code_string": "532"
+                            }
+                        }
+                    }
+                },
+                {
+                    "_type": "ACTION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "MRI"
+                    },
+                    "archetype_details": {
+                        "_type": "ARCHETYPED",
+                        "archetype_id": {
+                            "_type": "ARCHETYPE_ID",
+                            "value": "openEHR-EHR-ACTION.procedure.v1"
+                        },
+                        "rm_version": "1.0.4"
+                    },
+                    "archetype_node_id": "openEHR-EHR-ACTION.procedure.v1",
+                    "language": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "ISO_639-1"
+                        },
+                        "code_string": "en"
+                    },
+                    "encoding": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "IANA_character-sets"
+                        },
+                        "code_string": "UTF-8"
+                    },
+                    "subject": {
+                        "_type": "PARTY_SELF"
+                    },
+                    "time": {
+                        "_type": "DV_DATE_TIME",
+                        "value": "2021-04-22T10:19:49.915Z"
+                    },
+                    "description": {
+                        "_type": "ITEM_TREE",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Tree"
+                        },
+                        "archetype_node_id": "at0001",
+                        "items": [
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Procedure name"
+                                },
+                                "archetype_node_id": "at0002",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "MRI"
+                                }
+                            },
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "MRI"
+                                },
+                                "archetype_node_id": "at0048",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Not done"
+                                }
+                            }
+                        ]
+                    },
+                    "ism_transition": {
+                        "_type": "ISM_TRANSITION",
+                        "current_state": {
+                            "_type": "DV_CODED_TEXT",
+                            "value": "completed",
+                            "defining_code": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "openehr"
+                                },
+                                "code_string": "532"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "_type": "SECTION",
+            "name": {
+                "_type": "DV_TEXT",
+                "value": "Molecular markers"
+            },
+            "archetype_details": {
+                "_type": "ARCHETYPED",
+                "archetype_id": {
+                    "_type": "ARCHETYPE_ID",
+                    "value": "openEHR-EHR-SECTION.result_details.v0"
+                },
+                "rm_version": "1.0.4"
+            },
+            "archetype_node_id": "openEHR-EHR-SECTION.result_details.v0",
+            "items": [
+                {
+                    "_type": "SECTION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Result group"
+                    },
+                    "archetype_node_id": "at0002",
+                    "items": [
+                        {
+                            "_type": "OBSERVATION",
+                            "name": {
+                                "_type": "DV_TEXT",
+                                "value": "Oncogenic mutations test"
+                            },
+                            "archetype_details": {
+                                "_type": "ARCHETYPED",
+                                "archetype_id": {
+                                    "_type": "ARCHETYPE_ID",
+                                    "value": "openEHR-EHR-OBSERVATION.laboratory_test_result.v1"
+                                },
+                                "rm_version": "1.0.4"
+                            },
+                            "archetype_node_id": "openEHR-EHR-OBSERVATION.laboratory_test_result.v1",
+                            "language": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "ISO_639-1"
+                                },
+                                "code_string": "en"
+                            },
+                            "encoding": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "IANA_character-sets"
+                                },
+                                "code_string": "UTF-8"
+                            },
+                            "subject": {
+                                "_type": "PARTY_SELF"
+                            },
+                            "protocol": {
+                                "_type": "ITEM_TREE",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Tree"
+                                },
+                                "archetype_node_id": "at0004",
+                                "items": [
+                                    {
+                                        "_type": "CLUSTER",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Sequencing assay"
+                                        },
+                                        "archetype_details": {
+                                            "_type": "ARCHETYPED",
+                                            "archetype_id": {
+                                                "_type": "ARCHETYPE_ID",
+                                                "value": "openEHR-EHR-CLUSTER.sequencing_assay.v0"
+                                            },
+                                            "rm_version": "1.0.4"
+                                        },
+                                        "archetype_node_id": "openEHR-EHR-CLUSTER.sequencing_assay.v0",
+                                        "items": [
+                                            {
+                                                "_type": "CLUSTER",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "Tested Genes"
+                                                },
+                                                "archetype_node_id": "at0006",
+                                                "items": [
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Gen symbol"
+                                                        },
+                                                        "archetype_node_id": "at0007",
+                                                        "value": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "BRAF"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "_type": "CLUSTER",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "Tested Genes (2)"
+                                                },
+                                                "archetype_node_id": "at0006",
+                                                "items": [
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Gen symbol"
+                                                        },
+                                                        "archetype_node_id": "at0007",
+                                                        "value": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "PIC3CA"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "_type": "CLUSTER",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "Tested Genes (3)"
+                                                },
+                                                "archetype_node_id": "at0006",
+                                                "items": [
+                                                    {
+                                                        "_type": "ELEMENT",
+                                                        "name": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "Gen symbol"
+                                                        },
+                                                        "archetype_node_id": "at0007",
+                                                        "value": {
+                                                            "_type": "DV_TEXT",
+                                                            "value": "HER2"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "data": {
+                                "_type": "HISTORY",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Event Series"
+                                },
+                                "archetype_node_id": "at0001",
+                                "origin": {
+                                    "_type": "DV_DATE_TIME",
+                                    "value": "2021-04-22T10:19:49.915Z"
+                                },
+                                "events": [
+                                    {
+                                        "_type": "POINT_EVENT",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Any event"
+                                        },
+                                        "archetype_node_id": "at0002",
+                                        "time": {
+                                            "_type": "DV_DATE_TIME",
+                                            "value": "2021-04-22T10:19:49.915Z"
+                                        },
+                                        "data": {
+                                            "_type": "ITEM_TREE",
+                                            "name": {
+                                                "_type": "DV_TEXT",
+                                                "value": "Tree"
+                                            },
+                                            "archetype_node_id": "at0003",
+                                            "items": [
+                                                {
+                                                    "_type": "ELEMENT",
+                                                    "name": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "Test name"
+                                                    },
+                                                    "archetype_node_id": "at0005",
+                                                    "value": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "BRAF, PIC3CA, HER2 mutation test"
+                                                    }
+                                                },
+                                                {
+                                                    "_type": "ELEMENT",
+                                                    "name": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "BRAF, PIC3CA, HER2 mutation status"
+                                                    },
+                                                    "archetype_node_id": "at0057",
+                                                    "value": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "Not mutated"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "_type": "OBSERVATION",
+                            "name": {
+                                "_type": "DV_TEXT",
+                                "value": "Microsatellites instability analysis"
+                            },
+                            "archetype_details": {
+                                "_type": "ARCHETYPED",
+                                "archetype_id": {
+                                    "_type": "ARCHETYPE_ID",
+                                    "value": "openEHR-EHR-OBSERVATION.laboratory_test_result.v1"
+                                },
+                                "rm_version": "1.0.4"
+                            },
+                            "archetype_node_id": "openEHR-EHR-OBSERVATION.laboratory_test_result.v1",
+                            "language": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "ISO_639-1"
+                                },
+                                "code_string": "en"
+                            },
+                            "encoding": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "IANA_character-sets"
+                                },
+                                "code_string": "UTF-8"
+                            },
+                            "subject": {
+                                "_type": "PARTY_SELF"
+                            },
+                            "data": {
+                                "_type": "HISTORY",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Event Series"
+                                },
+                                "archetype_node_id": "at0001",
+                                "origin": {
+                                    "_type": "DV_DATE_TIME",
+                                    "value": "2021-04-22T10:19:49.915Z"
+                                },
+                                "events": [
+                                    {
+                                        "_type": "POINT_EVENT",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Any event"
+                                        },
+                                        "archetype_node_id": "at0002",
+                                        "time": {
+                                            "_type": "DV_DATE_TIME",
+                                            "value": "2021-04-22T10:19:49.915Z"
+                                        },
+                                        "data": {
+                                            "_type": "ITEM_TREE",
+                                            "name": {
+                                                "_type": "DV_TEXT",
+                                                "value": "Tree"
+                                            },
+                                            "archetype_node_id": "at0003",
+                                            "items": [
+                                                {
+                                                    "_type": "ELEMENT",
+                                                    "name": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "Test name"
+                                                    },
+                                                    "archetype_node_id": "at0005",
+                                                    "value": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "Microsatellite instability test"
+                                                    }
+                                                },
+                                                {
+                                                    "_type": "ELEMENT",
+                                                    "name": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "Microsatellite instability"
+                                                    },
+                                                    "archetype_node_id": "at0057",
+                                                    "value": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "Yes"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "_type": "OBSERVATION",
+                            "name": {
+                                "_type": "DV_TEXT",
+                                "value": "KRAS mutation status"
+                            },
+                            "archetype_details": {
+                                "_type": "ARCHETYPED",
+                                "archetype_id": {
+                                    "_type": "ARCHETYPE_ID",
+                                    "value": "openEHR-EHR-OBSERVATION.laboratory_test_result.v1"
+                                },
+                                "rm_version": "1.0.4"
+                            },
+                            "archetype_node_id": "openEHR-EHR-OBSERVATION.laboratory_test_result.v1",
+                            "language": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "ISO_639-1"
+                                },
+                                "code_string": "en"
+                            },
+                            "encoding": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "IANA_character-sets"
+                                },
+                                "code_string": "UTF-8"
+                            },
+                            "subject": {
+                                "_type": "PARTY_SELF"
+                            },
+                            "data": {
+                                "_type": "HISTORY",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Event Series"
+                                },
+                                "archetype_node_id": "at0001",
+                                "origin": {
+                                    "_type": "DV_DATE_TIME",
+                                    "value": "2021-04-22T10:19:49.915Z"
+                                },
+                                "events": [
+                                    {
+                                        "_type": "POINT_EVENT",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Any event"
+                                        },
+                                        "archetype_node_id": "at0002",
+                                        "time": {
+                                            "_type": "DV_DATE_TIME",
+                                            "value": "2021-04-22T10:19:49.915Z"
+                                        },
+                                        "data": {
+                                            "_type": "ITEM_TREE",
+                                            "name": {
+                                                "_type": "DV_TEXT",
+                                                "value": "Tree"
+                                            },
+                                            "archetype_node_id": "at0003",
+                                            "items": [
+                                                {
+                                                    "_type": "ELEMENT",
+                                                    "name": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "Test name"
+                                                    },
+                                                    "archetype_node_id": "at0005",
+                                                    "value": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "KRAS mutation test"
+                                                    }
+                                                },
+                                                {
+                                                    "_type": "CLUSTER",
+                                                    "name": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "NRAS exon 4 (codons 117 or 146)"
+                                                    },
+                                                    "archetype_details": {
+                                                        "_type": "ARCHETYPED",
+                                                        "archetype_id": {
+                                                            "_type": "ARCHETYPE_ID",
+                                                            "value": "openEHR-EHR-CLUSTER.genetic_variant_presence.v0"
+                                                        },
+                                                        "rm_version": "1.0.4"
+                                                    },
+                                                    "archetype_node_id": "openEHR-EHR-CLUSTER.genetic_variant_presence.v0",
+                                                    "items": [
+                                                        {
+                                                            "_type": "ELEMENT",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "Variant name"
+                                                            },
+                                                            "archetype_node_id": "at0001",
+                                                            "value": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "NRAS exon 4 (codons 117 or 146)"
+                                                            }
+                                                        },
+                                                        {
+                                                            "_type": "ELEMENT",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "NRAS exon 4 (codons 117 or 146)"
+                                                            },
+                                                            "archetype_node_id": "at0002",
+                                                            "value": {
+                                                                "_type": "DV_CODED_TEXT",
+                                                                "value": "Present",
+                                                                "defining_code": {
+                                                                    "_type": "CODE_PHRASE",
+                                                                    "terminology_id": {
+                                                                        "_type": "TERMINOLOGY_ID",
+                                                                        "value": "local"
+                                                                    },
+                                                                    "code_string": "at0004"
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "_type": "CLUSTER",
+                                                    "name": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "NRAS exon 3 (codons 59 or 61)"
+                                                    },
+                                                    "archetype_details": {
+                                                        "_type": "ARCHETYPED",
+                                                        "archetype_id": {
+                                                            "_type": "ARCHETYPE_ID",
+                                                            "value": "openEHR-EHR-CLUSTER.genetic_variant_presence.v0"
+                                                        },
+                                                        "rm_version": "1.0.4"
+                                                    },
+                                                    "archetype_node_id": "openEHR-EHR-CLUSTER.genetic_variant_presence.v0",
+                                                    "items": [
+                                                        {
+                                                            "_type": "ELEMENT",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "Variant name"
+                                                            },
+                                                            "archetype_node_id": "at0001",
+                                                            "value": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "NRAS exon 3 (codons 59 or 61)"
+                                                            }
+                                                        },
+                                                        {
+                                                            "_type": "ELEMENT",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "NRAS exon 3 (codons 59 or 61)"
+                                                            },
+                                                            "archetype_node_id": "at0002",
+                                                            "value": {
+                                                                "_type": "DV_CODED_TEXT",
+                                                                "value": "Indeterminate",
+                                                                "defining_code": {
+                                                                    "_type": "CODE_PHRASE",
+                                                                    "terminology_id": {
+                                                                        "_type": "TERMINOLOGY_ID",
+                                                                        "value": "local"
+                                                                    },
+                                                                    "code_string": "at0007"
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "_type": "CLUSTER",
+                                                    "name": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "NRAS exon 2 (codons 12 or 13)"
+                                                    },
+                                                    "archetype_details": {
+                                                        "_type": "ARCHETYPED",
+                                                        "archetype_id": {
+                                                            "_type": "ARCHETYPE_ID",
+                                                            "value": "openEHR-EHR-CLUSTER.genetic_variant_presence.v0"
+                                                        },
+                                                        "rm_version": "1.0.4"
+                                                    },
+                                                    "archetype_node_id": "openEHR-EHR-CLUSTER.genetic_variant_presence.v0",
+                                                    "items": [
+                                                        {
+                                                            "_type": "ELEMENT",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "Variant name"
+                                                            },
+                                                            "archetype_node_id": "at0001",
+                                                            "value": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "NRAS exon 2 (codons 12 or 13)"
+                                                            }
+                                                        },
+                                                        {
+                                                            "_type": "ELEMENT",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "NRAS exon 2 (codons 12 or 13)"
+                                                            },
+                                                            "archetype_node_id": "at0002",
+                                                            "value": {
+                                                                "_type": "DV_CODED_TEXT",
+                                                                "value": "Present",
+                                                                "defining_code": {
+                                                                    "_type": "CODE_PHRASE",
+                                                                    "terminology_id": {
+                                                                        "_type": "TERMINOLOGY_ID",
+                                                                        "value": "local"
+                                                                    },
+                                                                    "code_string": "at0004"
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "_type": "CLUSTER",
+                                                    "name": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "KRAS exon 4 (codons 117 or 146)"
+                                                    },
+                                                    "archetype_details": {
+                                                        "_type": "ARCHETYPED",
+                                                        "archetype_id": {
+                                                            "_type": "ARCHETYPE_ID",
+                                                            "value": "openEHR-EHR-CLUSTER.genetic_variant_presence.v0"
+                                                        },
+                                                        "rm_version": "1.0.4"
+                                                    },
+                                                    "archetype_node_id": "openEHR-EHR-CLUSTER.genetic_variant_presence.v0",
+                                                    "items": [
+                                                        {
+                                                            "_type": "ELEMENT",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "Variant name"
+                                                            },
+                                                            "archetype_node_id": "at0001",
+                                                            "value": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "KRAS exon 4 (codons 117 or 146)"
+                                                            }
+                                                        },
+                                                        {
+                                                            "_type": "ELEMENT",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "KRAS exon 4 (codons 117 or 146)"
+                                                            },
+                                                            "archetype_node_id": "at0002",
+                                                            "value": {
+                                                                "_type": "DV_CODED_TEXT",
+                                                                "value": "Present",
+                                                                "defining_code": {
+                                                                    "_type": "CODE_PHRASE",
+                                                                    "terminology_id": {
+                                                                        "_type": "TERMINOLOGY_ID",
+                                                                        "value": "local"
+                                                                    },
+                                                                    "code_string": "at0004"
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "_type": "CLUSTER",
+                                                    "name": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "KRAS exon 3 (codons 59 or 61)"
+                                                    },
+                                                    "archetype_details": {
+                                                        "_type": "ARCHETYPED",
+                                                        "archetype_id": {
+                                                            "_type": "ARCHETYPE_ID",
+                                                            "value": "openEHR-EHR-CLUSTER.genetic_variant_presence.v0"
+                                                        },
+                                                        "rm_version": "1.0.4"
+                                                    },
+                                                    "archetype_node_id": "openEHR-EHR-CLUSTER.genetic_variant_presence.v0",
+                                                    "items": [
+                                                        {
+                                                            "_type": "ELEMENT",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "Variant name"
+                                                            },
+                                                            "archetype_node_id": "at0001",
+                                                            "value": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "KRAS exon 3 (codons 59 or 61)"
+                                                            }
+                                                        },
+                                                        {
+                                                            "_type": "ELEMENT",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "KRAS exon 3 (codons 59 or 61)"
+                                                            },
+                                                            "archetype_node_id": "at0002",
+                                                            "value": {
+                                                                "_type": "DV_CODED_TEXT",
+                                                                "value": "Absent",
+                                                                "defining_code": {
+                                                                    "_type": "CODE_PHRASE",
+                                                                    "terminology_id": {
+                                                                        "_type": "TERMINOLOGY_ID",
+                                                                        "value": "local"
+                                                                    },
+                                                                    "code_string": "at0005"
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "_type": "CLUSTER",
+                                                    "name": {
+                                                        "_type": "DV_TEXT",
+                                                        "value": "KRAS exon 2 (codons 12 or 13)"
+                                                    },
+                                                    "archetype_details": {
+                                                        "_type": "ARCHETYPED",
+                                                        "archetype_id": {
+                                                            "_type": "ARCHETYPE_ID",
+                                                            "value": "openEHR-EHR-CLUSTER.genetic_variant_presence.v0"
+                                                        },
+                                                        "rm_version": "1.0.4"
+                                                    },
+                                                    "archetype_node_id": "openEHR-EHR-CLUSTER.genetic_variant_presence.v0",
+                                                    "items": [
+                                                        {
+                                                            "_type": "ELEMENT",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "Variant name"
+                                                            },
+                                                            "archetype_node_id": "at0001",
+                                                            "value": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "KRAS exon 2 (codons 12 or 13)"
+                                                            }
+                                                        },
+                                                        {
+                                                            "_type": "ELEMENT",
+                                                            "name": {
+                                                                "_type": "DV_TEXT",
+                                                                "value": "KRAS exon 2 (codons 12 or 13)"
+                                                            },
+                                                            "archetype_node_id": "at0002",
+                                                            "value": {
+                                                                "_type": "DV_CODED_TEXT",
+                                                                "value": "Present",
+                                                                "defining_code": {
+                                                                    "_type": "CODE_PHRASE",
+                                                                    "terminology_id": {
+                                                                        "_type": "TERMINOLOGY_ID",
+                                                                        "value": "local"
+                                                                    },
+                                                                    "code_string": "at0004"
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "_type": "EVALUATION",
+                            "name": {
+                                "_type": "DV_TEXT",
+                                "value": "Health risk assessment"
+                            },
+                            "archetype_details": {
+                                "_type": "ARCHETYPED",
+                                "archetype_id": {
+                                    "_type": "ARCHETYPE_ID",
+                                    "value": "openEHR-EHR-EVALUATION.health_risk.v1"
+                                },
+                                "rm_version": "1.0.4"
+                            },
+                            "archetype_node_id": "openEHR-EHR-EVALUATION.health_risk.v1",
+                            "language": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "ISO_639-1"
+                                },
+                                "code_string": "en"
+                            },
+                            "encoding": {
+                                "_type": "CODE_PHRASE",
+                                "terminology_id": {
+                                    "_type": "TERMINOLOGY_ID",
+                                    "value": "IANA_character-sets"
+                                },
+                                "code_string": "UTF-8"
+                            },
+                            "subject": {
+                                "_type": "PARTY_SELF"
+                            },
+                            "protocol": {
+                                "_type": "ITEM_TREE",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Tree"
+                                },
+                                "archetype_node_id": "at0010",
+                                "items": [
+                                    {
+                                        "_type": "ELEMENT",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Assessment method"
+                                        },
+                                        "archetype_node_id": "at0025",
+                                        "value": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Amsterdam criteria"
+                                        }
+                                    }
+                                ]
+                            },
+                            "data": {
+                                "_type": "ITEM_TREE",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "structure"
+                                },
+                                "archetype_node_id": "at0001",
+                                "items": [
+                                    {
+                                        "_type": "ELEMENT",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Health risk"
+                                        },
+                                        "archetype_node_id": "at0002",
+                                        "value": {
+                                            "_type": "DV_TEXT",
+                                            "value": "HNPCC"
+                                        }
+                                    },
+                                    {
+                                        "_type": "ELEMENT",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Risk situation (only HNPCC)"
+                                        },
+                                        "archetype_node_id": "at0003",
+                                        "value": {
+                                            "_type": "DV_TEXT",
+                                            "value": "FALSE"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_type": "SECTION",
+            "name": {
+                "_type": "DV_TEXT",
+                "value": "Vital status and survival information"
+            },
+            "archetype_details": {
+                "_type": "ARCHETYPED",
+                "archetype_id": {
+                    "_type": "ARCHETYPE_ID",
+                    "value": "openEHR-EHR-SECTION.adhoc.v1"
+                },
+                "rm_version": "1.0.4"
+            },
+            "archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+            "items": [
+                {
+                    "_type": "EVALUATION",
+                    "name": {
+                        "_type": "DV_TEXT",
+                        "value": "Vital status and survival information"
+                    },
+                    "archetype_details": {
+                        "_type": "ARCHETYPED",
+                        "archetype_id": {
+                            "_type": "ARCHETYPE_ID",
+                            "value": "openEHR-EHR-EVALUATION.clinical_synopsis.v1"
+                        },
+                        "rm_version": "1.0.4"
+                    },
+                    "archetype_node_id": "openEHR-EHR-EVALUATION.clinical_synopsis.v1",
+                    "language": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "ISO_639-1"
+                        },
+                        "code_string": "en"
+                    },
+                    "encoding": {
+                        "_type": "CODE_PHRASE",
+                        "terminology_id": {
+                            "_type": "TERMINOLOGY_ID",
+                            "value": "IANA_character-sets"
+                        },
+                        "code_string": "UTF-8"
+                    },
+                    "subject": {
+                        "_type": "PARTY_SELF"
+                    },
+                    "protocol": {
+                        "_type": "ITEM_TREE",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "Tree"
+                        },
+                        "archetype_node_id": "at0003",
+                        "items": [
+                            {
+                                "_type": "CLUSTER",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Vital status timing"
+                                },
+                                "archetype_details": {
+                                    "_type": "ARCHETYPED",
+                                    "archetype_id": {
+                                        "_type": "ARCHETYPE_ID",
+                                        "value": "openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                                    },
+                                    "rm_version": "1.0.4"
+                                },
+                                "archetype_node_id": "openEHR-EHR-CLUSTER.timing_nondaily.v1",
+                                "items": [
+                                    {
+                                        "_type": "ELEMENT",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Timestamp of last update of vital status"
+                                        },
+                                        "archetype_node_id": "at0001",
+                                        "value": {
+                                            "_type": "DV_DATE",
+                                            "value": "2021-04-21"
+                                        }
+                                    },
+                                    {
+                                        "_type": "CLUSTER",
+                                        "name": {
+                                            "_type": "DV_TEXT",
+                                            "value": "Overall survival status"
+                                        },
+                                        "archetype_node_id": "at0006",
+                                        "items": [
+                                            {
+                                                "_type": "ELEMENT",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "From event"
+                                                },
+                                                "archetype_node_id": "at0005",
+                                                "value": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "First colon cancer therapy"
+                                                }
+                                            },
+                                            {
+                                                "_type": "ELEMENT",
+                                                "name": {
+                                                    "_type": "DV_TEXT",
+                                                    "value": "Overall survival status"
+                                                },
+                                                "archetype_node_id": "at0009",
+                                                "value": {
+                                                    "_type": "DV_DURATION",
+                                                    "value": "P40Y"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "data": {
+                        "_type": "ITEM_TREE",
+                        "name": {
+                            "_type": "DV_TEXT",
+                            "value": "List"
+                        },
+                        "archetype_node_id": "at0001",
+                        "items": [
+                            {
+                                "_type": "ELEMENT",
+                                "name": {
+                                    "_type": "DV_TEXT",
+                                    "value": "Vital status"
+                                },
+                                "archetype_node_id": "at0002",
+                                "value": {
+                                    "_type": "DV_TEXT",
+                                    "value": "death for unknown reasons"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
