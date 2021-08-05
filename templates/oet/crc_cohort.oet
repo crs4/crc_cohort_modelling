@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="openEHR/v1/Template">
-    <id>ff34735d-ebda-43a3-b3a0-a03348494a5e</id>
+    <id>beffef0a-8d35-46cb-a424-0bcd0e9940d5</id>
     <name>crc_cohort</name>
     <description>
         <original_author>
@@ -34,15 +34,19 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>0.1.0</value>
+                <value>4.2.0</value>
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>0550c063942d53381bd4bd8cbf090785</value>
+                <value>0a63bc94bf538947867813c23c9644ef</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
                 <value>641B268BE8805CEB8DC21AB82C53AB3F</value>
+            </item>
+            <item>
+                <key>build_uid</key>
+                <value/>
             </item>
             <item>
                 <key>original_language</key>
@@ -60,6 +64,10 @@
                 <key>Data model label</key>
                 <value>PATIENT_ID</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.case_identification.v0]/items[at0006]">
@@ -71,6 +79,10 @@
             <item>
                 <key>Data model label</key>
                 <value>CLINICAL_STUDY_PARTICIPANT</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -84,6 +96,10 @@
                 <key>Data model label</key>
                 <value>SEX</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.demographics_rcp.v1]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1, 'Primary diagnosis']/data[at0001]/items[at0003]">
@@ -95,6 +111,10 @@
             <item>
                 <key>Data model label</key>
                 <value>DATE_DIAGNOSIS</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -108,6 +128,10 @@
                 <key>Data element label</key>
                 <value>AGE_AT_PRIMARY_DIAGNOSIS</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.demographics_rcp.v1]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1, 'Metastasis diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
@@ -119,6 +143,22 @@
             <item>
                 <key>Data model label</key>
                 <value>TIME_OF_RECURRENCE_RELATIVE</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Histopathology</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>Event.eventype</value>
             </item>
         </items>
     </annotations>
@@ -160,6 +200,10 @@
                 <key>Data model label</key>
                 <value>SAMPLE_MATERIAL_TYPE</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0088]">
@@ -175,6 +219,10 @@
             <item>
                 <key>Data model label</key>
                 <value>SAMPLE_ID</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -228,6 +276,22 @@
                 <key>Data model label</key>
                 <value>YEAR_OF_SAMPLE_COLLECTION</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Sample</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>Event.eventype</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.specimen_preparation.v0]/items[at0074]">
@@ -239,6 +303,10 @@
             <item>
                 <key>Data model label</key>
                 <value>SAMPLE_PRESERVATION_MODE</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -252,6 +320,10 @@
                 <key>Data model label</key>
                 <value>DIGITAL_IMAGING_AVAILABILITY </value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0, 'Invasion front']/items[at0005]/items[openEHR-EHR-CLUSTER.multimedia_source.v0]/items[at0005]">
@@ -263,6 +335,10 @@
             <item>
                 <key>Data model label</key>
                 <value>DIGITAL_IMAGING_INVASION_FRONT_AVAILABILITY</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -276,6 +352,10 @@
                 <key>Data model label</key>
                 <value>BIOLOGICAL_MATERIAL_FROM_RECURRENCE_AVAILABLE</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[at0012]">
@@ -287,6 +367,10 @@
             <item>
                 <key>Data model label</key>
                 <value>HIST_LOCALIZATION</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -300,6 +384,10 @@
                 <key>Data model label</key>
                 <value>HIST_MORPHOLOGY</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[at0269]/items[at0271]">
@@ -311,6 +399,10 @@
             <item>
                 <key>Data model label</key>
                 <value>WHO_GRADE_VERSION</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -324,6 +416,10 @@
                 <key>Data model label</key>
                 <value>HIST_METASTASIS</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0005.1]">
@@ -335,6 +431,10 @@
             <item>
                 <key>Data model label</key>
                 <value>TNM_DISTANT_METASTASIS</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -348,6 +448,10 @@
                 <key>Data model label</key>
                 <value>TNM_PRIMARY_TUMOR</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0004.1]">
@@ -359,6 +463,10 @@
             <item>
                 <key>Data model label</key>
                 <value>TNM_REGIONAL_LYMPH_NODES</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -372,6 +480,10 @@
                 <key>Data model label</key>
                 <value>UICC_STAGE</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0032]">
@@ -383,6 +495,10 @@
             <item>
                 <key>Data model label</key>
                 <value>UICC_VERSION </value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -396,6 +512,10 @@
                 <key>Data model label</key>
                 <value>WHO_GRADE</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[at0063]">
@@ -407,6 +527,10 @@
             <item>
                 <key>Data model label</key>
                 <value>SURGERY_LOCATION</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -420,6 +544,10 @@
                 <key>Data model label</key>
                 <value>SURGERY_TYPE_OTHER</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[at0048]">
@@ -431,6 +559,10 @@
             <item>
                 <key>Data model label</key>
                 <value>SURGERY_RADICALITY</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -444,21 +576,53 @@
                 <key>Data model label</key>
                 <value>SURGERY_TYPE</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]">
         <items>
             <item>
                 <key>XSD label</key>
-                <value>Dataelement_13_2</value>
+                <value>Surgery</value>
             </item>
             <item>
-                <key>Data model label</key>
-                <value>RADIATION_THERAPY_END_RELATIVE</value>
+                <key>XSD type</key>
+                <value>Event.eventype</value>
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_8_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>SURGERY_START_RELATIVE</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Radiation therapy</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>Event.eventype</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Radiation therapy start']/items[at0006]/items[at0009]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -468,9 +632,57 @@
                 <key>Data model label</key>
                 <value>RADIATION_THERAPY_START_RELATIVE</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Radiation therapy end']/items[at0006]/items[at0009]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_13_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>RADIATION_THERAPY_END_RELATIVE</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Targeted therapy</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>Event.eventype</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Targeted therapy start']/items[at0006]/items[at0009]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_35_3</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>TARGETED_THERAPY_START_RELATIVE</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Targeted therapy end']/items[at0006]/items[at0009]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -480,17 +692,9 @@
                 <key>Data model label</key>
                 <value>TARGETED_THERAPY_END_RELATIVE</value>
             </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
-        <items>
             <item>
-                <key>XSD label</key>
-                <value>Dataelement_35_3</value>
-            </item>
-            <item>
-                <key>Data model label</key>
-                <value>TARGETED_THERAPY_START_RELATIVE</value>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -504,6 +708,10 @@
                 <key>Data model label</key>
                 <value>PHARMACOTHERAPY_SCHEME</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[at0156]">
@@ -516,9 +724,41 @@
                 <key>Data model label</key>
                 <value>PHARMACOTHERAPY_SCHEME_DESCRIPTION</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]">
+        <items>
+            <item>
+                <key>XSD label </key>
+                <value>Pharmacotherapy</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>Event.eventype</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Pharmacotherapy start']/items[at0006]/items[at0009]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_10_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>PHARMACOTHERAPY_START_RELATIVE</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Pharmacotherapy end']/items[at0006]/items[at0009]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -528,17 +768,9 @@
                 <key>Data model label</key>
                 <value>PHARMACOTHERAPY_END_RELATIVE</value>
             </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
-        <items>
             <item>
-                <key>XSD label</key>
-                <value>Dataelement_10_2</value>
-            </item>
-            <item>
-                <key>Data model label</key>
-                <value>PHARMACOTHERAPY_START_RELATIVE</value>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -552,6 +784,22 @@
                 <key>Data model label</key>
                 <value>THERAPY_RESPONSE</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Response to therapy</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>Event.eventype</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
@@ -563,6 +811,10 @@
             <item>
                 <key>Data model label</key>
                 <value>THERAPY_RESPONSE_TIMESTAMP_RELATIVE</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -576,6 +828,10 @@
                 <key>Data model label</key>
                 <value>DIAG_COLONOSCOPY</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'CT']/description[at0001]/items[at0048]">
@@ -587,6 +843,10 @@
             <item>
                 <key>Data model label</key>
                 <value>DIAG_CT_DONE</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -600,6 +860,10 @@
                 <key>Dat model label</key>
                 <value>DIAG_LIVER_IMAGING_DONE</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'Lung imaging']/description[at0001]/items[at0048]">
@@ -611,6 +875,10 @@
             <item>
                 <key>Data model label</key>
                 <value>DIAG_X_DONE</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -624,6 +892,10 @@
                 <key>Data model label</key>
                 <value>DIAG_MRI_DONE</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1, 'Oncogenic mutations test']/data[at0001]/events[at0002]/data[at0003]/items[at0057]">
@@ -635,6 +907,10 @@
             <item>
                 <key>Data model label</key>
                 <value>BRAF_PIC3CA_HER_MUTATION_STATUS</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -648,6 +924,10 @@
                 <key>Data model label</key>
                 <value>MM_MICROSAT_INSTABILITY</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Molecular markers']/items[at0002]/items[openEHR-EHR-EVALUATION.health_risk.v1]/data[at0001]/items[at0003]">
@@ -659,6 +939,10 @@
             <item>
                 <key>Data model label</key>
                 <value>MM_RISK_SITUATION_HNPCC</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -672,6 +956,10 @@
                 <key>Data model label</key>
                 <value>MM_KRAS_MUTATION_NRAS_EX4</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1, 'KRAS mutation status']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.genetic_variant_presence.v0, 'NRAS exon 3 (codons 59 or 61)']/items[at0002]">
@@ -683,6 +971,10 @@
             <item>
                 <key>Data model label</key>
                 <value>MM_KRAS_MUTATION_NRAS_EX3</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -696,6 +988,10 @@
                 <key>Data model label</key>
                 <value>MM_KRAS_MUTATION_NRAS_EX2</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1, 'KRAS mutation status']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.genetic_variant_presence.v0, 'KRAS exon 4 (codons 117 or 146)']/items[at0002]">
@@ -707,6 +1003,10 @@
             <item>
                 <key>Data model label</key>
                 <value>MM_KRAS_MUTATION_KRAS_EX4</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -720,6 +1020,10 @@
                 <key>Data model label</key>
                 <value>MM_KRAS_MUTATION_KRAS_EX3</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1, 'KRAS mutation status']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.genetic_variant_presence.v0, 'KRAS exon 2 (codons 12 or 13)']/items[at0002]">
@@ -731,6 +1035,10 @@
             <item>
                 <key>Dala model label</key>
                 <value>MM_KRAS_MUTATION_KRAS_EX2</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -744,6 +1052,10 @@
                 <key>Data model label</key>
                 <value>VITAL_STATUS</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1]/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
@@ -756,6 +1068,10 @@
                 <key>Data model label</key>
                 <value>OVERALL_SURVIVAL_STATUS</value>
             </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
         </items>
     </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1]/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0001]">
@@ -767,6 +1083,10 @@
             <item>
                 <key>Data model label</key>
                 <value>VITAL_STATUS_TIMESTAMP </value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
             </item>
         </items>
     </annotations>
@@ -1033,7 +1353,7 @@
                     </constraint>
                 </Rule>
                 <Items archetype_id="openEHR-EHR-CLUSTER.specimen.v1"
-                    max="1"
+                    min="1"
                     path="/data[at0001]/events[at0002]/data[at0003]/items[at0065]" xsi:type="tem:CLUSTER">
                     <Rule min="1" name="Material Type" path="/items[at0029]">
                         <constraint xsi:type="tem:textConstraint">
@@ -1091,7 +1411,7 @@
                     </Items>
                     <Items
                         archetype_id="openEHR-EHR-CLUSTER.multimedia_source.v0"
-                        max="1" path="/items[at0096]" xsi:type="tem:CLUSTER">
+                        path="/items[at0096]" xsi:type="tem:CLUSTER">
                         <Rule max="0" path="/items[at0002]"/>
                         <Rule max="0" path="/items[at0010]">
                             <constraint xsi:type="tem:multipleConstraint">
@@ -1313,7 +1633,7 @@
                     <Rule max="0" path="/items[at0001]/items[at0309]"/>
                     <Items
                         archetype_id="openEHR-EHR-CLUSTER.anatomical_location.v1"
-                        max="1"
+                        min="1"
                         path="/items[at0001]/items[at0263]/items[at0287]" xsi:type="tem:CLUSTER">
                         <Rule name="Localization of metastasis" path="/items[at0001]">
                             <constraint xsi:type="tem:textConstraint">
@@ -1453,8 +1773,7 @@
             concept_name="Procedures" max="1" name="Surgery"
             path="/content" xsi:type="tem:SECTION">
             <Item archetype_id="openEHR-EHR-ACTION.procedure.v1"
-                concept_name="Procedure" max="1" name="Surgery"
-                path="/items" xsi:type="tem:ACTION">
+                concept_name="Procedure" name="Surgery" path="/items" xsi:type="tem:ACTION">
                 <Rule max="0" min="0" path="/ism_transition[at0004]"/>
                 <Rule max="0" min="0" path="/ism_transition[at0034]"/>
                 <Rule max="0" min="0" path="/ism_transition[at0007]"/>
@@ -1610,8 +1929,8 @@
                 concept_name="Ad hoc heading" max="1"
                 name="Radiation therapy" path="/items" xsi:type="tem:SECTION">
                 <Item archetype_id="openEHR-EHR-ACTION.procedure.v1"
-                    concept_name="Procedure" max="1"
-                    name="Radiation therapy" path="/items" xsi:type="tem:ACTION">
+                    concept_name="Procedure" name="Radiation therapy"
+                    path="/items" xsi:type="tem:ACTION">
                     <Rule max="0" min="0" path="/ism_transition[at0004]"/>
                     <Rule max="0" min="0" path="/ism_transition[at0034]"/>
                     <Rule max="0" min="0" path="/ism_transition[at0007]"/>
@@ -1660,7 +1979,7 @@
                     <Items
                         archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1"
                         concept_name="Timing - non-daily" max="1"
-                        name="Radiation timing"
+                        min="1" name="Radiation therapy start"
                         path="/description[at0001]/items[at0003]" xsi:type="tem:CLUSTER">
                         <Rule max="0" path="/items[at0002]">
                             <constraint xsi:type="tem:durationConstraint">
@@ -1671,28 +1990,9 @@
                             </constraint>
                         </Rule>
                         <Rule max="0" path="/items[at0014]">
-                            <constraint xsi:type="tem:quantityConstraint">
-                                <unitMagnitude>
-                                    <unit>1/a</unit>
-                                    <maxMagnitude>366.0</maxMagnitude>
-                                    <minMagnitude>1.0</minMagnitude>
-                                    <includesMaximum>true</includesMaximum>
-                                    <includesMinimum>true</includesMinimum>
-                                </unitMagnitude>
-                                <unitMagnitude>
-                                    <unit>1/wk</unit>
-                                    <maxMagnitude>7.0</maxMagnitude>
-                                    <minMagnitude>1.0</minMagnitude>
-                                    <includesMaximum>true</includesMaximum>
-                                    <includesMinimum>true</includesMinimum>
-                                </unitMagnitude>
-                                <unitMagnitude>
-                                    <unit>1/mo</unit>
-                                    <maxMagnitude>31.0</maxMagnitude>
-                                    <minMagnitude>1.0</minMagnitude>
-                                    <includesMaximum>true</includesMaximum>
-                                    <includesMinimum>true</includesMinimum>
-                                </unitMagnitude>
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Quantity</includedTypes>
+                                <includedTypes>Interval</includedTypes>
                             </constraint>
                         </Rule>
                         <Rule max="0" path="/items[at0001]">
@@ -1712,27 +2012,57 @@
                         <Rule max="1" min="1"
                             name="Start of radiation therapy" path="/items[at0006]"/>
                         <Rule default="Primary diagnosis"
-                            name="From event" path="/items[at0006, 'Start of radiation therapy']/items[at0005]"/>
+                            name="From event" path="/items[at0006]/items[at0005]"/>
                         <Rule min="1"
-                            name="Date of start of radiation therapy" path="/items[at0006, 'Start of radiation therapy']/items[at0009]">
+                            name="Date of start of radiation therapy" path="/items[at0006]/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
-                                <pattern>PW</pattern>
-                                <maxMagnitude>P600W</maxMagnitude>
-                                <minMagnitude>P0W</minMagnitude>
+                                <pattern>PYMWD</pattern>
                                 <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
                         </Rule>
-                        <Rule clone="true" max="1" min="1"
-                            name="End of radiation therapy" path="/items[at0006]"/>
-                        <Rule default="Primary diagnosis"
-                            name="From event" path="/items[at0006, 'End of radiation therapy']/items[at0005]"/>
-                        <Rule min="1"
-                            name="Date of end of radiation therapy" path="/items[at0006, 'End of radiation therapy']/items[at0009]">
+                        <Rule max="0" path="/items[at0010]"/>
+                    </Items>
+                    <Items
+                        archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                        concept_name="Timing - non-daily" max="1"
+                        name="Radiation therapy end"
+                        path="/description[at0001]/items[at0003]" xsi:type="tem:CLUSTER">
+                        <Rule max="0" path="/items[at0002]">
                             <constraint xsi:type="tem:durationConstraint">
-                                <pattern>PW</pattern>
-                                <maxMagnitude>P600W</maxMagnitude>
-                                <minMagnitude>P0W</minMagnitude>
+                                <pattern>PYMWD</pattern>
+                                <minMagnitude>P0D</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>false</includesMinimum>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0014]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Quantity</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0001]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Date</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0003]"/>
+                        <Rule max="0" path="/items[at0004]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Count</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0021]"/>
+                        <Rule name="End of radiation therapy" path="/items[at0006]"/>
+                        <Rule default="Primary diagnosis"
+                            name="From event" path="/items[at0006]/items[at0005]"/>
+                        <Rule min="1"
+                            name="Date of end of radiation therapy" path="/items[at0006]/items[at0009]">
+                            <constraint xsi:type="tem:durationConstraint">
+                                <pattern>PYMWD</pattern>
                                 <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
@@ -1745,8 +2075,8 @@
                 concept_name="Ad hoc heading" max="1"
                 name="Targeted therapy" path="/items" xsi:type="tem:SECTION">
                 <Item archetype_id="openEHR-EHR-ACTION.procedure.v1"
-                    concept_name="Procedure" max="1"
-                    name="Targeted therapy" path="/items" xsi:type="tem:ACTION">
+                    concept_name="Procedure" name="Targeted therapy"
+                    path="/items" xsi:type="tem:ACTION">
                     <Rule max="0" min="0" path="/ism_transition[at0004]"/>
                     <Rule max="0" min="0" path="/ism_transition[at0034]"/>
                     <Rule max="0" min="0" path="/ism_transition[at0007]"/>
@@ -1795,7 +2125,7 @@
                     <Items
                         archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1"
                         concept_name="Timing - non-daily" max="1"
-                        name="Targeted therapy timing"
+                        min="1" name="Targeted therapy start"
                         path="/description[at0001]/items[at0003]" xsi:type="tem:CLUSTER">
                         <Rule max="0" path="/items[at0002]">
                             <constraint xsi:type="tem:durationConstraint">
@@ -1806,28 +2136,9 @@
                             </constraint>
                         </Rule>
                         <Rule max="0" path="/items[at0014]">
-                            <constraint xsi:type="tem:quantityConstraint">
-                                <unitMagnitude>
-                                    <unit>1/a</unit>
-                                    <maxMagnitude>366.0</maxMagnitude>
-                                    <minMagnitude>1.0</minMagnitude>
-                                    <includesMaximum>true</includesMaximum>
-                                    <includesMinimum>true</includesMinimum>
-                                </unitMagnitude>
-                                <unitMagnitude>
-                                    <unit>1/wk</unit>
-                                    <maxMagnitude>7.0</maxMagnitude>
-                                    <minMagnitude>1.0</minMagnitude>
-                                    <includesMaximum>true</includesMaximum>
-                                    <includesMinimum>true</includesMinimum>
-                                </unitMagnitude>
-                                <unitMagnitude>
-                                    <unit>1/mo</unit>
-                                    <maxMagnitude>31.0</maxMagnitude>
-                                    <minMagnitude>1.0</minMagnitude>
-                                    <includesMaximum>true</includesMaximum>
-                                    <includesMinimum>true</includesMinimum>
-                                </unitMagnitude>
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Quantity</includedTypes>
+                                <includedTypes>Interval</includedTypes>
                             </constraint>
                         </Rule>
                         <Rule max="0" path="/items[at0001]">
@@ -1846,26 +2157,57 @@
                         <Rule max="0" path="/items[at0021]"/>
                         <Rule max="1" min="1"
                             name="Start of targeted therapy" path="/items[at0006]"/>
-                        <Rule default="Primary diagnosis" path="/items[at0006, 'Start of targeted therapy']/items[at0005]"/>
+                        <Rule default="Primary diagnosis"
+                            name="From event" path="/items[at0006]/items[at0005]"/>
                         <Rule min="1"
-                            name="Date of start of targeted therapy" path="/items[at0006, 'Start of targeted therapy']/items[at0009]">
+                            name="Date of start of targeted therapy" path="/items[at0006]/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
-                                <pattern>PW</pattern>
-                                <maxMagnitude>P600W</maxMagnitude>
-                                <minMagnitude>P0W</minMagnitude>
+                                <pattern>PYMWD</pattern>
                                 <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
                         </Rule>
-                        <Rule clone="true" max="1"
-                            name="End of targeted therapy" path="/items[at0006]"/>
-                        <Rule default="Primary diagnosis"
-                            name="From event" path="/items[at0006, 'End of targeted therapy']/items[at0005]"/>
-                        <Rule name="Date of end of targeted therapy" path="/items[at0006, 'End of targeted therapy']/items[at0009]">
+                        <Rule max="0" path="/items[at0010]"/>
+                    </Items>
+                    <Items
+                        archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                        concept_name="Timing - non-daily" max="1"
+                        name="Targeted therapy end"
+                        path="/description[at0001]/items[at0003]" xsi:type="tem:CLUSTER">
+                        <Rule max="0" path="/items[at0002]">
                             <constraint xsi:type="tem:durationConstraint">
-                                <pattern>PW</pattern>
-                                <maxMagnitude>P600W</maxMagnitude>
-                                <minMagnitude>P0W</minMagnitude>
+                                <pattern>PYMWD</pattern>
+                                <minMagnitude>P0D</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>false</includesMinimum>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0014]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Quantity</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0001]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Date</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0003]"/>
+                        <Rule max="0" path="/items[at0004]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Count</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0021]"/>
+                        <Rule name="End of targeted therapy" path="/items[at0006]"/>
+                        <Rule default="Primary diagnosis"
+                            name="From event" path="/items[at0006]/items[at0005]"/>
+                        <Rule name="Date of end of targeted therapy" path="/items[at0006]/items[at0009]">
+                            <constraint xsi:type="tem:durationConstraint">
+                                <pattern>PYMWD</pattern>
                                 <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
@@ -1878,7 +2220,7 @@
                 concept_name="Ad hoc heading" max="1"
                 name="Pharmacotherapy" path="/items" xsi:type="tem:SECTION">
                 <Item archetype_id="openEHR-EHR-ACTION.medication.v1"
-                    max="1" path="/items" xsi:type="tem:ACTION">
+                    path="/items" xsi:type="tem:ACTION">
                     <Rule max="0" min="0" path="/ism_transition[at0109]"/>
                     <Rule max="0" min="0" path="/ism_transition[at0145]"/>
                     <Rule max="0" min="0" path="/ism_transition[at0013]"/>
@@ -1935,7 +2277,7 @@
                     <Items
                         archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1"
                         concept_name="Timing - non-daily" max="1"
-                        min="1" name="Pharmacotherapy timing"
+                        min="1" name="Pharmacotherapy start"
                         path="/description[at0017]/items[at0053]" xsi:type="tem:CLUSTER">
                         <Rule max="0" path="/items[at0002]">
                             <constraint xsi:type="tem:durationConstraint">
@@ -1946,28 +2288,9 @@
                             </constraint>
                         </Rule>
                         <Rule max="0" path="/items[at0014]">
-                            <constraint xsi:type="tem:quantityConstraint">
-                                <unitMagnitude>
-                                    <unit>1/a</unit>
-                                    <maxMagnitude>366.0</maxMagnitude>
-                                    <minMagnitude>1.0</minMagnitude>
-                                    <includesMaximum>true</includesMaximum>
-                                    <includesMinimum>true</includesMinimum>
-                                </unitMagnitude>
-                                <unitMagnitude>
-                                    <unit>1/wk</unit>
-                                    <maxMagnitude>7.0</maxMagnitude>
-                                    <minMagnitude>1.0</minMagnitude>
-                                    <includesMaximum>true</includesMaximum>
-                                    <includesMinimum>true</includesMinimum>
-                                </unitMagnitude>
-                                <unitMagnitude>
-                                    <unit>1/mo</unit>
-                                    <maxMagnitude>31.0</maxMagnitude>
-                                    <minMagnitude>1.0</minMagnitude>
-                                    <includesMaximum>true</includesMaximum>
-                                    <includesMinimum>true</includesMinimum>
-                                </unitMagnitude>
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Quantity</includedTypes>
+                                <includedTypes>Interval</includedTypes>
                             </constraint>
                         </Rule>
                         <Rule max="0" path="/items[at0001]">
@@ -1986,27 +2309,58 @@
                         <Rule max="0" path="/items[at0021]"/>
                         <Rule max="1" min="1"
                             name="Start of pharmacotherapy" path="/items[at0006]"/>
-                        <Rule default="Primary diagnosis"
-                            name="From event" path="/items[at0006, 'Start of pharmacotherapy']/items[at0005]"/>
+                        <Rule name="From event" path="/items[at0006]/items[at0005]"/>
                         <Rule min="1"
-                            name="Date of start of pharmacotherapy" path="/items[at0006, 'Start of pharmacotherapy']/items[at0009]">
+                            name="Date of start of pharmacotherapy" path="/items[at0006]/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
-                                <pattern>PW</pattern>
-                                <maxMagnitude>P600W</maxMagnitude>
-                                <minMagnitude>P0W</minMagnitude>
+                                <pattern>PYMWD</pattern>
                                 <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
                         </Rule>
-                        <Rule clone="true" name="End of pharmacotherapy" path="/items[at0006]"/>
-                        <Rule default="Primary diagnosis"
-                            name="From event" path="/items[at0006, 'End of pharmacotherapy']/items[at0005]"/>
-                        <Rule min="1"
-                            name="Date of end of pharmacotherapy" path="/items[at0006, 'End of pharmacotherapy']/items[at0009]">
+                        <Rule max="0" path="/items[at0010]"/>
+                    </Items>
+                    <Items
+                        archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1"
+                        concept_name="Timing - non-daily" max="1"
+                        min="1" name="Pharmacotherapy end"
+                        path="/description[at0017]/items[at0053]" xsi:type="tem:CLUSTER">
+                        <Rule max="0" path="/items[at0002]">
                             <constraint xsi:type="tem:durationConstraint">
-                                <pattern>PW</pattern>
-                                <maxMagnitude>P600W</maxMagnitude>
-                                <minMagnitude>P0W</minMagnitude>
+                                <pattern>PYMWD</pattern>
+                                <minMagnitude>P0D</minMagnitude>
+                                <includesMaximum>false</includesMaximum>
+                                <includesMinimum>false</includesMinimum>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0014]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Quantity</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0001]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Date</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0003]"/>
+                        <Rule max="0" path="/items[at0004]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Count</includedTypes>
+                                <includedTypes>Interval</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0021]"/>
+                        <Rule max="1" min="1"
+                            name="End of pharmacotherapy" path="/items[at0006]"/>
+                        <Rule default="Primary diagnosis"
+                            name="From event" path="/items[at0006]/items[at0005]"/>
+                        <Rule min="1"
+                            name="Date of end of pharmacotherapy" path="/items[at0006]/items[at0009]">
+                            <constraint xsi:type="tem:durationConstraint">
+                                <pattern>PYMWD</pattern>
                                 <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
@@ -2020,7 +2374,7 @@
                 name="Response to therapy" path="/items" xsi:type="tem:SECTION">
                 <Item
                     archetype_id="openEHR-EHR-EVALUATION.clinical_synopsis.v1"
-                    max="1" path="/items" xsi:type="tem:EVALUATION">
+                    path="/items" xsi:type="tem:EVALUATION">
                     <Rule name="Specific response" path="/data[at0001]/items[at0002]">
                         <constraint xsi:type="tem:textConstraint">
                             <includedValues>Complete response</includedValues>
