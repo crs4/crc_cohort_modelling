@@ -1,6 +1,6 @@
 {
   "templateId" : "crc_cohort",
-  "semVer" : "0.1.0",
+  "semVer" : "4.2.0",
   "version" : "2.3",
   "defaultLanguage" : "en",
   "languages" : [ "en" ],
@@ -57,6 +57,7 @@
           },
           "annotations" : {
             "Data model label" : "PATIENT_ID",
+            "XSD type" : "tag",
             "XSD label" : "Identifier"
           },
           "aqlPath" : "/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.case_identification.v0]/items[at0001,'Patient pseudonym']/value",
@@ -79,6 +80,7 @@
           },
           "annotations" : {
             "Data model label" : "CLINICAL_STUDY_PARTICIPANT",
+            "XSD type" : "tag",
             "XSD label" : "Dataelement_2_2"
           },
           "aqlPath" : "/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.case_identification.v0]/items[at0006,'Participation in clinical study']/value",
@@ -168,6 +170,7 @@
           "annotations" : {
             "comment" : "For example: 'Male', 'Female', 'Intersex'. Coding with a terminology is recommended, where possible. Use the element 'Comment' or the SLOT 'Details' if needed to register more specific details of the individuals gender.",
             "Data model label" : "SEX",
+            "XSD type" : "tag",
             "XSD label" : "Dataelement_85_1"
           },
           "aqlPath" : "/content[openEHR-EHR-SECTION.demographics_rcp.v1,'Patient data']/items[openEHR-EHR-EVALUATION.gender.v1]/data[at0002]/items[at0019,'Biological sex']/value",
@@ -286,6 +289,7 @@
           "annotations" : {
             "comment" : "Partial dates are acceptable. If the subject of care is under the age of one year, then the complete date or a minimum of the month and year is necessary to enable accurate age calculations - for example, if used to drive decision support. Data captured/imported as \"Age at time of clinical recognition\" should be converted to a date using the subject's date of birth.",
             "Data model label" : "DATE_DIAGNOSIS",
+            "XSD type" : "tag",
             "XSD label" : "Dataelement_51_3"
           },
           "aqlPath" : "/content[openEHR-EHR-SECTION.demographics_rcp.v1,'Patient data']/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Primary diagnosis']/data[at0001]/items[at0003,'Date of diagnosis']/value",
@@ -339,6 +343,7 @@
               "annotations" : {
                 "Data element label" : "AGE_AT_PRIMARY_DIAGNOSIS",
                 "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'.",
+                "XSD type" : "tag",
                 "XSD label" : "Dataelement_3_1"
               },
               "aqlPath" : "/content[openEHR-EHR-SECTION.demographics_rcp.v1,'Patient data']/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Primary diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Diagnosis timing']/items[at0006,'Primary diagnosis']/items[at0009,'Age at diagnosis']/value",
@@ -515,6 +520,7 @@
               "annotations" : {
                 "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'.",
                 "Data model label" : "TIME_OF_RECURRENCE_RELATIVE",
+                "XSD type" : "tag",
                 "XSD label" : "Dataelement_4_3"
               },
               "aqlPath" : "/content[openEHR-EHR-SECTION.demographics_rcp.v1,'Patient data']/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Metastasis diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Metastasis diagnosis']/items[at0006,'Metastasis diagnosis']/items[at0009,'Time of recurrence']/value",
@@ -648,6 +654,10 @@
             "localizedDescriptions" : {
               "en" : "Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time."
             },
+            "annotations" : {
+              "XSD label" : "Histopathology",
+              "XSD type" : "Event.eventype"
+            },
             "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]",
             "children" : [ {
               "id" : "test_name",
@@ -677,8 +687,8 @@
               "localizedName" : "Specimen",
               "rmType" : "CLUSTER",
               "nodeId" : "openEHR-EHR-CLUSTER.specimen.v1",
-              "min" : 0,
-              "max" : 1,
+              "min" : 1,
+              "max" : -1,
               "localizedNames" : {
                 "en" : "Specimen"
               },
@@ -686,7 +696,9 @@
                 "en" : "A physical sample collected from, or related to, an individual for the purpose of investigation, examination or analysis."
               },
               "annotations" : {
-                "comment" : "For example: Tissue or body fluid."
+                "XSD label" : "Sample",
+                "comment" : "For example: Tissue or body fluid.",
+                "XSD type" : "Event.eventype"
               },
               "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]",
               "children" : [ {
@@ -706,6 +718,7 @@
                 "annotations" : {
                   "comment" : "For example: Venous blood, bacterial culture, cytology, or tissue sample. Coding of the specimen type with a terminology is preferred, where possible.",
                   "Data model label" : "SAMPLE_MATERIAL_TYPE",
+                  "XSD type" : "tag",
                   "XSD label" : "Dataelement_54_2",
                   "fhir_mapping" : "Specimen.type"
                 },
@@ -741,6 +754,7 @@
                 "annotations" : {
                   "comment" : "For example: 'Requester ID', 'Archive ID, 'Biobank ID'.",
                   "Data model label" : "SAMPLE_ID",
+                  "XSD type" : "tag",
                   "XSD label" : "Dataelement_56_2",
                   "fhir_mapping" : "Specimen.identifier"
                 },
@@ -775,6 +789,7 @@
                 "annotations" : {
                   "comment" : "This datetime will be captured primarily in the INSTRUCTION timing, ACTION time or OBSERVATION times. However, as this is a critical piece of information, it can be useful to also associate it directly with the specimen itself.",
                   "Data model label" : "YEAR_OF_SAMPLE_COLLECTION",
+                  "XSD type" : "tag",
                   "XSD label" : "Dataelement_89_3"
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0015,'Year of sample collection']/value",
@@ -815,6 +830,7 @@
                   },
                   "annotations" : {
                     "Data model label" : "SAMPLE_PRESERVATION_MODE",
+                    "XSD type" : "tag",
                     "XSD label" : "Dataelement_55_2"
                   },
                   "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.specimen_preparation.v0]/items[at0074,'Preservation mode']/value",
@@ -840,7 +856,7 @@
                 "rmType" : "CLUSTER",
                 "nodeId" : "openEHR-EHR-CLUSTER.multimedia_source.v0",
                 "min" : 0,
-                "max" : 1,
+                "max" : -1,
                 "localizedNames" : {
                   "en" : "Multimedia source"
                 },
@@ -864,6 +880,7 @@
                   },
                   "annotations" : {
                     "Data model label" : "DIGITAL_IMAGING_AVAILABILITY ",
+                    "XSD type" : "tag",
                     "XSD label" : "Dataelement_57_3"
                   },
                   "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.multimedia_source.v0]/items[at0005,'Availability digital imaging']/value",
@@ -963,6 +980,7 @@
                     },
                     "annotations" : {
                       "Data model label" : "DIGITAL_IMAGING_INVASION_FRONT_AVAILABILITY",
+                      "XSD type" : "tag",
                       "XSD label" : "Dataelement_58_2"
                     },
                     "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0,'Invasion front']/items[at0005]/items[openEHR-EHR-CLUSTER.multimedia_source.v0,'Digital imaging invasion front']/items[at0005,'Availability invasion front digital imaging']/value",
@@ -1051,6 +1069,7 @@
                   },
                   "annotations" : {
                     "Data model label" : "BIOLOGICAL_MATERIAL_FROM_RECURRENCE_AVAILABLE",
+                    "XSD type" : "tag",
                     "XSD label" : "Dataelement_82_1"
                   },
                   "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1]/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0,'Recurrence']/items[at0005]/items[at0006,'Biological material from recurrence available']/value",
@@ -1166,6 +1185,7 @@
             "annotations" : {
               "comment" : "Coding of the name of the anatomical location with a terminology is preferred, where possible.\r\nUse this data element to record precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'Structured anatomical location' SLOT in this archetype. Occurrences for this data element are unbounded to allow for clinical scenarios such as describing a rash in multiple locations but where all of the other attributes are identical. If the anatomical location is included in the Problem/diagnosis name via precoordinated codes, this data element becomes redundant. \r\n\r\n",
               "Data model label" : "HIST_LOCALIZATION",
+              "XSD type" : "tag",
               "XSD label" : "Dataelement_92_1"
             },
             "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Cancer diagnosis']/data[at0001]/items[at0012,'Localization of primary tumor']/value",
@@ -1251,6 +1271,7 @@
                 "annotations" : {
                   "comment" : "Use of a terminology is preferred. Commonly the WHO classification is used.",
                   "Data model label" : "HIST_MORPHOLOGY",
+                  "XSD type" : "tag",
                   "XSD label" : "Dataelement_91_1"
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Cancer diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[at0033,'Morphology']/value",
@@ -1541,6 +1562,7 @@
                   "annotations" : {
                     "comment" : "Coding with a T code appropriate for the tumour type and anatomical site is expected. For example: 'pT1'; or 'pT3'. Represented as 'pT' in the 'TNM assessment'.",
                     "Data model label" : "TNM_PRIMARY_TUMOR",
+                    "XSD type" : "tag",
                     "XSD label" : "Dataelement_71_1"
                   },
                   "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Cancer diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0003.1,'Primary tumour']/value",
@@ -1593,6 +1615,7 @@
                   "annotations" : {
                     "comment" : "Coding with an N code appropriate for the tumour type and anatomical site is expected. For example: 'pNX'; or 'pN2'. Represented as 'pN' in the 'TNM assessment'.",
                     "Data model label" : "TNM_REGIONAL_LYMPH_NODES",
+                    "XSD type" : "tag",
                     "XSD label" : "Dataelement_77_1"
                   },
                   "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Cancer diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0004.1,'Regional lymph nodes']/value",
@@ -1648,6 +1671,7 @@
                   "annotations" : {
                     "comment" : "Coding with an M code appropriate for the tumour type and anatomical site is expected. For example: 'pM1'. Represented as 'pM' in the 'TNM assessment'.",
                     "Data model label" : "TNM_DISTANT_METASTASIS",
+                    "XSD type" : "tag",
                     "XSD label" : "Dataelement_75_1"
                   },
                   "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Cancer diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0005.1,'Distant metastasis']/value",
@@ -1691,6 +1715,7 @@
                   "annotations" : {
                     "comment" : "Pretreatment histopathological assessment may be determined from a limited biopsy prior to formal resection. Coding with a G code appropriate for the identified tumour type and anatomical site is expected. For example: 'G2'; 'GX'; or 'low grade' for bone and soft tissue sarcoma classification. Represented as 'G' within the 'TNM assessment'.",
                     "Data model label" : "WHO_GRADE",
+                    "XSD type" : "tag",
                     "XSD label" : "Dataelement_83_1"
                   },
                   "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Cancer diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0006,'Grade']/value",
@@ -1731,6 +1756,7 @@
                   "annotations" : {
                     "comment" : "For example: carcinoma in situ is categorised as stage 0; or tumours with distant metastasis are categorised as stage IV.",
                     "Data model label" : "UICC_STAGE",
+                    "XSD type" : "tag",
                     "XSD label" : "Dataelement_70_2"
                   },
                   "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Cancer diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0031.1,'Stage']/value",
@@ -1797,6 +1823,7 @@
                   },
                   "annotations" : {
                     "Data model label" : "UICC_VERSION ",
+                    "XSD type" : "tag",
                     "XSD label" : "Dataelement_73_3"
                   },
                   "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Cancer diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0032,'UICC version']/value",
@@ -1855,6 +1882,7 @@
                   },
                   "annotations" : {
                     "Data model label" : "WHO_GRADE_VERSION",
+                    "XSD type" : "tag",
                     "XSD label" : "Dataelement_53_3"
                   },
                   "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Cancer diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[at0269]/items[at0271,'WHO version']/value",
@@ -1947,8 +1975,8 @@
                   "localizedName" : "Anatomical location",
                   "rmType" : "CLUSTER",
                   "nodeId" : "openEHR-EHR-CLUSTER.anatomical_location.v1",
-                  "min" : 0,
-                  "max" : 1,
+                  "min" : 1,
+                  "max" : -1,
                   "localizedNames" : {
                     "en" : "Anatomical location"
                   },
@@ -1973,6 +2001,7 @@
                     "annotations" : {
                       "comment" : "This data element is the only mandated data point in this archetype and should be used as the primary data point to record an anatomical location with a commonly used name. It is strongly recommended that 'Body site name' be recorded as specifically as is anatomically possible. For example: record 'upper eyelid' rather than recording 'eyelid' with 'upper' as a qualifier; 'fifth rib' rather than 'rib' with a numeric qualifier. Use the other data elements for laterality, aspect, region and anatomical line to provide more detail.\r\n\r\nThis data element should be coded with a terminology capable of triggering decision support, where possible - an appropriate termset for use here could comprise individual concepts or a list of precoordinated terms. Free text should be used only if there is no appropriate terminology available.\r\n\r\nIf body site name is already identified in the parent archetype, then this data element may be redundant. Alternatively, a use case has been identified where the value may be duplicated into this element to support semantic querying using this archetype, rather than the data element within the parent.",
                       "Data model label" : "HIST_METASTASIS",
+                      "XSD type" : "tag",
                       "XSD label" : "Dataelement_68_2"
                     },
                     "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Cancer diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[at0263]/items[openEHR-EHR-CLUSTER.anatomical_location.v1]/items[at0001,'Localization of metastasis']/value",
@@ -2083,12 +2112,16 @@
         "rmType" : "ACTION",
         "nodeId" : "openEHR-EHR-ACTION.procedure.v1",
         "min" : 0,
-        "max" : 1,
+        "max" : -1,
         "localizedNames" : {
           "en" : "Surgery"
         },
         "localizedDescriptions" : {
           "en" : "A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes."
+        },
+        "annotations" : {
+          "XSD label" : "Surgery",
+          "XSD type" : "Event.eventype"
         },
         "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']",
         "children" : [ {
@@ -2108,6 +2141,7 @@
           "annotations" : {
             "comment" : "Coding of the specific procedure with a terminology is preferred, where possible.",
             "Data model label" : "SURGERY_TYPE",
+            "XSD type" : "tag",
             "XSD label" : "Dataelement_49_1"
           },
           "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[at0002,'Surgery type']/value",
@@ -2166,6 +2200,7 @@
           "annotations" : {
             "comment" : "For example: description about the performance and findings from the the procedure, the aborted attempt or the cancellation of the procedure.",
             "Data model label" : "SURGERY_TYPE_OTHER",
+            "XSD type" : "tag",
             "XSD label" : "Dataelement_67_1"
           },
           "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[at0049,'Other surgery type']/value",
@@ -2189,6 +2224,7 @@
           "annotations" : {
             "comment" : "Occurrences for this data element are unbounded to allow for clinical scenarios such as removing multiple skin lesions in different places, but where all of the other attributes are identical. Use this data element to record simple terms or precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'Procedure detail' SLOT in this archetype. If the anatomical location is included in the 'Procedure name' via precoordinated codes, this data element becomes redundant.",
             "Data model label" : "SURGERY_LOCATION",
+            "XSD type" : "tag",
             "XSD label" : "Dataelement_93_1"
           },
           "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[at0063,'Location of the tumor']/value",
@@ -2300,7 +2336,10 @@
                 "en" : "The period of time before or after the named event when the activity should take place. Negative durations can be used to signify that the activity should be taken before a known event."
               },
               "annotations" : {
-                "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'."
+                "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'.",
+                "Data model label" : "SURGERY_START_RELATIVE",
+                "XSD type" : "tag",
+                "XSD label" : "Dataelement_8_3"
               },
               "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Surgery timing']/items[at0006,'Surgery']/items[at0009,'Surgery start relative']/value",
               "inputs" : [ {
@@ -2334,6 +2373,7 @@
           "annotations" : {
             "comment" : "Coding with a terminology is preferred, where possible.",
             "Data model label" : "SURGERY_RADICALITY",
+            "XSD type" : "tag",
             "XSD label" : "Dataelement_9_2"
           },
           "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[at0048,'Surgery radicality']/value",
@@ -2449,12 +2489,16 @@
           "rmType" : "ACTION",
           "nodeId" : "openEHR-EHR-ACTION.procedure.v1",
           "min" : 0,
-          "max" : 1,
+          "max" : -1,
           "localizedNames" : {
             "en" : "Radiation therapy"
           },
           "localizedDescriptions" : {
             "en" : "A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes."
+          },
+          "annotations" : {
+            "XSD label" : "Radiation therapy",
+            "XSD type" : "Event.eventype"
           },
           "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']",
           "children" : [ {
@@ -2480,20 +2524,20 @@
               "defaultValue" : "Radiation therapy"
             } ]
           }, {
-            "id" : "radiation_timing",
-            "name" : "Radiation timing",
-            "localizedName" : "Radiation timing",
+            "id" : "radiation_therapy_start",
+            "name" : "Radiation therapy start",
+            "localizedName" : "Radiation therapy start",
             "rmType" : "CLUSTER",
             "nodeId" : "openEHR-EHR-CLUSTER.timing_nondaily.v1",
-            "min" : 0,
+            "min" : 1,
             "max" : 1,
             "localizedNames" : {
-              "en" : "Radiation timing"
+              "en" : "Radiation therapy start"
             },
             "localizedDescriptions" : {
               "en" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation timing']",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy start']",
             "children" : [ {
               "id" : "start_of_radiation_therapy",
               "name" : "Start of radiation therapy",
@@ -2508,7 +2552,7 @@
               "localizedDescriptions" : {
                 "en" : "The activity should take place in relation to a specific named event."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation timing']/items[at0006,'Start of radiation therapy']",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy start']/items[at0006,'Start of radiation therapy']",
               "children" : [ {
                 "id" : "from_event",
                 "name" : "From event",
@@ -2526,7 +2570,7 @@
                 "annotations" : {
                   "comment" : "This element is intended for events that can occur at variable dates, such as onset of menstruation, and not for doses or activities that are conditional on a different varable. If required, the event name can be coded using a terminology, which could potentially be used to trigger an application to set a concrete date for the activity."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation timing']/items[at0006,'Start of radiation therapy']/items[at0005,'From event']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy start']/items[at0006,'Start of radiation therapy']/items[at0005,'From event']/value",
                 "inputs" : [ {
                   "type" : "TEXT",
                   "defaultValue" : "Primary diagnosis"
@@ -2548,37 +2592,79 @@
                 "annotations" : {
                   "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'.",
                   "Data model label" : "RADIATION_THERAPY_START_RELATIVE",
+                  "XSD type" : "tag",
                   "XSD label" : "Dataelement_12_4"
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation timing']/items[at0006,'Start of radiation therapy']/items[at0009,'Date of start of radiation therapy']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy start']/items[at0006,'Start of radiation therapy']/items[at0009,'Date of start of radiation therapy']/value",
                 "inputs" : [ {
+                  "suffix" : "year",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
+                    }
+                  }
+                }, {
+                  "suffix" : "month",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
+                    }
+                  }
+                }, {
                   "suffix" : "week",
                   "type" : "INTEGER",
                   "validation" : {
                     "range" : {
                       "minOp" : ">=",
-                      "min" : 0,
-                      "maxOp" : "<=",
-                      "max" : 600
+                      "min" : 0
+                    }
+                  }
+                }, {
+                  "suffix" : "day",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
                     }
                   }
                 } ]
               } ]
-            }, {
+            } ]
+          }, {
+            "id" : "radiation_therapy_end",
+            "name" : "Radiation therapy end",
+            "localizedName" : "Radiation therapy end",
+            "rmType" : "CLUSTER",
+            "nodeId" : "openEHR-EHR-CLUSTER.timing_nondaily.v1",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Radiation therapy end"
+            },
+            "localizedDescriptions" : {
+              "en" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
+            },
+            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy end']",
+            "children" : [ {
               "id" : "end_of_radiation_therapy",
               "name" : "End of radiation therapy",
               "localizedName" : "End of radiation therapy",
               "rmType" : "CLUSTER",
               "nodeId" : "at0006",
-              "min" : 1,
-              "max" : 1,
+              "min" : 0,
+              "max" : -1,
               "localizedNames" : {
                 "en" : "End of radiation therapy"
               },
               "localizedDescriptions" : {
                 "en" : "The activity should take place in relation to a specific named event."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation timing']/items[at0006,'End of radiation therapy']",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy end']/items[at0006,'End of radiation therapy']",
               "children" : [ {
                 "id" : "from_event",
                 "name" : "From event",
@@ -2596,7 +2682,7 @@
                 "annotations" : {
                   "comment" : "This element is intended for events that can occur at variable dates, such as onset of menstruation, and not for doses or activities that are conditional on a different varable. If required, the event name can be coded using a terminology, which could potentially be used to trigger an application to set a concrete date for the activity."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation timing']/items[at0006,'End of radiation therapy']/items[at0005,'From event']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy end']/items[at0006,'End of radiation therapy']/items[at0005,'From event']/value",
                 "inputs" : [ {
                   "type" : "TEXT",
                   "defaultValue" : "Primary diagnosis"
@@ -2616,18 +2702,46 @@
                   "en" : "The period of time before or after the named event when the activity should take place. Negative durations can be used to signify that the activity should be taken before a known event."
                 },
                 "annotations" : {
-                  "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'."
+                  "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'.",
+                  "Data model label" : "RADIATION_THERAPY_END_RELATIVE",
+                  "XSD type" : "tag",
+                  "XSD label" : "Dataelement_13_2"
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation timing']/items[at0006,'End of radiation therapy']/items[at0009,'Date of end of radiation therapy']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy end']/items[at0006,'End of radiation therapy']/items[at0009,'Date of end of radiation therapy']/value",
                 "inputs" : [ {
+                  "suffix" : "year",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
+                    }
+                  }
+                }, {
+                  "suffix" : "month",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
+                    }
+                  }
+                }, {
                   "suffix" : "week",
                   "type" : "INTEGER",
                   "validation" : {
                     "range" : {
                       "minOp" : ">=",
-                      "min" : 0,
-                      "maxOp" : "<=",
-                      "max" : 600
+                      "min" : 0
+                    }
+                  }
+                }, {
+                  "suffix" : "day",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
                     }
                   }
                 } ]
@@ -2713,12 +2827,16 @@
           "rmType" : "ACTION",
           "nodeId" : "openEHR-EHR-ACTION.procedure.v1",
           "min" : 0,
-          "max" : 1,
+          "max" : -1,
           "localizedNames" : {
             "en" : "Targeted therapy"
           },
           "localizedDescriptions" : {
             "en" : "A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes."
+          },
+          "annotations" : {
+            "XSD label" : "Targeted therapy",
+            "XSD type" : "Event.eventype"
           },
           "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']",
           "children" : [ {
@@ -2744,20 +2862,20 @@
               "defaultValue" : "Targeted therapy"
             } ]
           }, {
-            "id" : "targeted_therapy_timing",
-            "name" : "Targeted therapy timing",
-            "localizedName" : "Targeted therapy timing",
+            "id" : "targeted_therapy_start",
+            "name" : "Targeted therapy start",
+            "localizedName" : "Targeted therapy start",
             "rmType" : "CLUSTER",
             "nodeId" : "openEHR-EHR-CLUSTER.timing_nondaily.v1",
-            "min" : 0,
+            "min" : 1,
             "max" : 1,
             "localizedNames" : {
-              "en" : "Targeted therapy timing"
+              "en" : "Targeted therapy start"
             },
             "localizedDescriptions" : {
               "en" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy timing']",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy start']",
             "children" : [ {
               "id" : "start_of_targeted_therapy",
               "name" : "Start of targeted therapy",
@@ -2772,17 +2890,17 @@
               "localizedDescriptions" : {
                 "en" : "The activity should take place in relation to a specific named event."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy timing']/items[at0006,'Start of targeted therapy']",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy start']/items[at0006,'Start of targeted therapy']",
               "children" : [ {
-                "id" : "event_name",
-                "name" : "Event name",
-                "localizedName" : "Event name",
+                "id" : "from_event",
+                "name" : "From event",
+                "localizedName" : "From event",
                 "rmType" : "DV_TEXT",
                 "nodeId" : "at0005",
                 "min" : 0,
                 "max" : 1,
                 "localizedNames" : {
-                  "en" : "Event name"
+                  "en" : "From event"
                 },
                 "localizedDescriptions" : {
                   "en" : "The name of the event that triggers the activity to take place."
@@ -2790,7 +2908,7 @@
                 "annotations" : {
                   "comment" : "This element is intended for events that can occur at variable dates, such as onset of menstruation, and not for doses or activities that are conditional on a different varable. If required, the event name can be coded using a terminology, which could potentially be used to trigger an application to set a concrete date for the activity."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy timing']/items[at0006,'Start of targeted therapy']/items[at0005]/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy start']/items[at0006,'Start of targeted therapy']/items[at0005,'From event']/value",
                 "inputs" : [ {
                   "type" : "TEXT",
                   "defaultValue" : "Primary diagnosis"
@@ -2812,37 +2930,79 @@
                 "annotations" : {
                   "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'.",
                   "Data model label" : "TARGETED_THERAPY_START_RELATIVE",
+                  "XSD type" : "tag",
                   "XSD label" : "Dataelement_35_3"
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy timing']/items[at0006,'Start of targeted therapy']/items[at0009,'Date of start of targeted therapy']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy start']/items[at0006,'Start of targeted therapy']/items[at0009,'Date of start of targeted therapy']/value",
                 "inputs" : [ {
+                  "suffix" : "year",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
+                    }
+                  }
+                }, {
+                  "suffix" : "month",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
+                    }
+                  }
+                }, {
                   "suffix" : "week",
                   "type" : "INTEGER",
                   "validation" : {
                     "range" : {
                       "minOp" : ">=",
-                      "min" : 0,
-                      "maxOp" : "<=",
-                      "max" : 600
+                      "min" : 0
+                    }
+                  }
+                }, {
+                  "suffix" : "day",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
                     }
                   }
                 } ]
               } ]
-            }, {
+            } ]
+          }, {
+            "id" : "targeted_therapy_end",
+            "name" : "Targeted therapy end",
+            "localizedName" : "Targeted therapy end",
+            "rmType" : "CLUSTER",
+            "nodeId" : "openEHR-EHR-CLUSTER.timing_nondaily.v1",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Targeted therapy end"
+            },
+            "localizedDescriptions" : {
+              "en" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
+            },
+            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy end']",
+            "children" : [ {
               "id" : "end_of_targeted_therapy",
               "name" : "End of targeted therapy",
               "localizedName" : "End of targeted therapy",
               "rmType" : "CLUSTER",
               "nodeId" : "at0006",
               "min" : 0,
-              "max" : 1,
+              "max" : -1,
               "localizedNames" : {
                 "en" : "End of targeted therapy"
               },
               "localizedDescriptions" : {
                 "en" : "The activity should take place in relation to a specific named event."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy timing']/items[at0006,'End of targeted therapy']",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy end']/items[at0006,'End of targeted therapy']",
               "children" : [ {
                 "id" : "from_event",
                 "name" : "From event",
@@ -2860,7 +3020,7 @@
                 "annotations" : {
                   "comment" : "This element is intended for events that can occur at variable dates, such as onset of menstruation, and not for doses or activities that are conditional on a different varable. If required, the event name can be coded using a terminology, which could potentially be used to trigger an application to set a concrete date for the activity."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy timing']/items[at0006,'End of targeted therapy']/items[at0005,'From event']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy end']/items[at0006,'End of targeted therapy']/items[at0005,'From event']/value",
                 "inputs" : [ {
                   "type" : "TEXT",
                   "defaultValue" : "Primary diagnosis"
@@ -2880,18 +3040,46 @@
                   "en" : "The period of time before or after the named event when the activity should take place. Negative durations can be used to signify that the activity should be taken before a known event."
                 },
                 "annotations" : {
-                  "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'."
+                  "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'.",
+                  "Data model label" : "TARGETED_THERAPY_END_RELATIVE",
+                  "XSD type" : "tag",
+                  "XSD label" : "Dataelement_36_1"
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy timing']/items[at0006,'End of targeted therapy']/items[at0009,'Date of end of targeted therapy']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy end']/items[at0006,'End of targeted therapy']/items[at0009,'Date of end of targeted therapy']/value",
                 "inputs" : [ {
+                  "suffix" : "year",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
+                    }
+                  }
+                }, {
+                  "suffix" : "month",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
+                    }
+                  }
+                }, {
                   "suffix" : "week",
                   "type" : "INTEGER",
                   "validation" : {
                     "range" : {
                       "minOp" : ">=",
-                      "min" : 0,
-                      "maxOp" : "<=",
-                      "max" : 600
+                      "min" : 0
+                    }
+                  }
+                }, {
+                  "suffix" : "day",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
                     }
                   }
                 } ]
@@ -2977,7 +3165,7 @@
           "rmType" : "ACTION",
           "nodeId" : "openEHR-EHR-ACTION.medication.v1",
           "min" : 0,
-          "max" : 1,
+          "max" : -1,
           "localizedNames" : {
             "en" : "Medication management"
           },
@@ -2985,7 +3173,9 @@
             "en" : "Any activity related to the planning, scheduling, prescription management, dispensing, administration, cessation and other use of a medication, vaccine, nutritional product or other therapeutic item."
           },
           "annotations" : {
-            "comment" : "This is not limited to activities performed based on medication orders from clinicians, but could also include for example taking over the counter medication."
+            "XSD label " : "Pharmacotherapy",
+            "comment" : "This is not limited to activities performed based on medication orders from clinicians, but could also include for example taking over the counter medication.",
+            "XSD type" : "Event.eventype"
           },
           "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]",
           "children" : [ {
@@ -3005,6 +3195,7 @@
             "annotations" : {
               "comment" : "For example: 'Atenolol 100mg' or 'Tenormin tablets 100mg'. \r\nIt is strongly recommended that the 'Medication item' is coded with a terminology capable of triggering decision support, where possible. The extent of coding may vary from the simple name of the medication item through to structured details about the actual medication pack used. Free text entry should only be used if there is no appropriate terminology available.",
               "Data model label" : "PHARMACOTHERAPY_SCHEME",
+              "XSD type" : "tag",
               "XSD label" : "Dataelement_59_5"
             },
             "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[at0020,'Scheme of pharmacotherapy']/value",
@@ -3054,6 +3245,7 @@
             "annotations" : {
               "comment" : "For example: 'Angina' or 'Pain'. Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. If only an ACTION is used to record a medication indication, this data element can be used without additional consideration. However, if a clinical indication is recorded for both the Medication order INSTRUCTION and this Medication management ACTION, be aware that these indications might not be consistent.\"",
               "Data model label" : "PHARMACOTHERAPY_SCHEME_DESCRIPTION",
+              "XSD type" : "tag",
               "XSD label" : "Dataelement_81_3"
             },
             "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[at0156,'Other pharmacotherapy scheme']/value",
@@ -3061,20 +3253,20 @@
               "type" : "TEXT"
             } ]
           }, {
-            "id" : "pharmacotherapy_timing",
-            "name" : "Pharmacotherapy timing",
-            "localizedName" : "Pharmacotherapy timing",
+            "id" : "pharmacotherapy_start",
+            "name" : "Pharmacotherapy start",
+            "localizedName" : "Pharmacotherapy start",
             "rmType" : "CLUSTER",
             "nodeId" : "openEHR-EHR-CLUSTER.timing_nondaily.v1",
             "min" : 1,
             "max" : 1,
             "localizedNames" : {
-              "en" : "Pharmacotherapy timing"
+              "en" : "Pharmacotherapy start"
             },
             "localizedDescriptions" : {
               "en" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy timing']",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy start']",
             "children" : [ {
               "id" : "start_of_pharmacotherapy",
               "name" : "Start of pharmacotherapy",
@@ -3089,7 +3281,7 @@
               "localizedDescriptions" : {
                 "en" : "The activity should take place in relation to a specific named event."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy timing']/items[at0006,'Start of pharmacotherapy']",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy start']/items[at0006,'Start of pharmacotherapy']",
               "children" : [ {
                 "id" : "from_event",
                 "name" : "From event",
@@ -3107,10 +3299,9 @@
                 "annotations" : {
                   "comment" : "This element is intended for events that can occur at variable dates, such as onset of menstruation, and not for doses or activities that are conditional on a different varable. If required, the event name can be coded using a terminology, which could potentially be used to trigger an application to set a concrete date for the activity."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy timing']/items[at0006,'Start of pharmacotherapy']/items[at0005,'From event']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy start']/items[at0006,'Start of pharmacotherapy']/items[at0005,'From event']/value",
                 "inputs" : [ {
-                  "type" : "TEXT",
-                  "defaultValue" : "Primary diagnosis"
+                  "type" : "TEXT"
                 } ]
               }, {
                 "id" : "date_of_start_of_pharmacotherapy",
@@ -3129,37 +3320,79 @@
                 "annotations" : {
                   "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'.",
                   "Data model label" : "PHARMACOTHERAPY_START_RELATIVE",
+                  "XSD type" : "tag",
                   "XSD label" : "Dataelement_10_2"
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy timing']/items[at0006,'Start of pharmacotherapy']/items[at0009,'Date of start of pharmacotherapy']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy start']/items[at0006,'Start of pharmacotherapy']/items[at0009,'Date of start of pharmacotherapy']/value",
                 "inputs" : [ {
+                  "suffix" : "year",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
+                    }
+                  }
+                }, {
+                  "suffix" : "month",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
+                    }
+                  }
+                }, {
                   "suffix" : "week",
                   "type" : "INTEGER",
                   "validation" : {
                     "range" : {
                       "minOp" : ">=",
-                      "min" : 0,
-                      "maxOp" : "<=",
-                      "max" : 600
+                      "min" : 0
+                    }
+                  }
+                }, {
+                  "suffix" : "day",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
                     }
                   }
                 } ]
               } ]
-            }, {
+            } ]
+          }, {
+            "id" : "pharmacotherapy_end",
+            "name" : "Pharmacotherapy end",
+            "localizedName" : "Pharmacotherapy end",
+            "rmType" : "CLUSTER",
+            "nodeId" : "openEHR-EHR-CLUSTER.timing_nondaily.v1",
+            "min" : 1,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Pharmacotherapy end"
+            },
+            "localizedDescriptions" : {
+              "en" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
+            },
+            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy end']",
+            "children" : [ {
               "id" : "end_of_pharmacotherapy",
               "name" : "End of pharmacotherapy",
               "localizedName" : "End of pharmacotherapy",
               "rmType" : "CLUSTER",
               "nodeId" : "at0006",
-              "min" : 0,
-              "max" : -1,
+              "min" : 1,
+              "max" : 1,
               "localizedNames" : {
                 "en" : "End of pharmacotherapy"
               },
               "localizedDescriptions" : {
                 "en" : "The activity should take place in relation to a specific named event."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy timing']/items[at0006,'End of pharmacotherapy']",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy end']/items[at0006,'End of pharmacotherapy']",
               "children" : [ {
                 "id" : "from_event",
                 "name" : "From event",
@@ -3177,7 +3410,7 @@
                 "annotations" : {
                   "comment" : "This element is intended for events that can occur at variable dates, such as onset of menstruation, and not for doses or activities that are conditional on a different varable. If required, the event name can be coded using a terminology, which could potentially be used to trigger an application to set a concrete date for the activity."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy timing']/items[at0006,'End of pharmacotherapy']/items[at0005,'From event']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy end']/items[at0006,'End of pharmacotherapy']/items[at0005,'From event']/value",
                 "inputs" : [ {
                   "type" : "TEXT",
                   "defaultValue" : "Primary diagnosis"
@@ -3197,18 +3430,46 @@
                   "en" : "The period of time before or after the named event when the activity should take place. Negative durations can be used to signify that the activity should be taken before a known event."
                 },
                 "annotations" : {
-                  "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'."
+                  "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'.",
+                  "Data model label" : "PHARMACOTHERAPY_END_RELATIVE",
+                  "XSD type" : "tag",
+                  "XSD label" : "Dataelement_11_2"
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy timing']/items[at0006,'End of pharmacotherapy']/items[at0009,'Date of end of pharmacotherapy']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy end']/items[at0006,'End of pharmacotherapy']/items[at0009,'Date of end of pharmacotherapy']/value",
                 "inputs" : [ {
+                  "suffix" : "year",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
+                    }
+                  }
+                }, {
+                  "suffix" : "month",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
+                    }
+                  }
+                }, {
                   "suffix" : "week",
                   "type" : "INTEGER",
                   "validation" : {
                     "range" : {
                       "minOp" : ">=",
-                      "min" : 0,
-                      "maxOp" : "<=",
-                      "max" : 600
+                      "min" : 0
+                    }
+                  }
+                }, {
+                  "suffix" : "day",
+                  "type" : "INTEGER",
+                  "validation" : {
+                    "range" : {
+                      "minOp" : ">=",
+                      "min" : 0
                     }
                   }
                 } ]
@@ -3294,12 +3555,16 @@
           "rmType" : "EVALUATION",
           "nodeId" : "openEHR-EHR-EVALUATION.clinical_synopsis.v1",
           "min" : 0,
-          "max" : 1,
+          "max" : -1,
           "localizedNames" : {
             "en" : "Clinical synopsis"
           },
           "localizedDescriptions" : {
             "en" : "Narrative summary or overview about a patient, specifically from the perspective of a healthcare provider, and with or without associated interpretations."
+          },
+          "annotations" : {
+            "XSD label" : "Response to therapy",
+            "XSD type" : "Event.eventype"
           },
           "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]",
           "children" : [ {
@@ -3318,6 +3583,7 @@
             },
             "annotations" : {
               "Data model label" : "THERAPY_RESPONSE",
+              "XSD type" : "tag",
               "XSD label" : "Dataelement_33_1"
             },
             "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/data[at0001]/items[at0002,'Specific response']/value",
@@ -3408,6 +3674,7 @@
                 "annotations" : {
                   "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'.",
                   "Data model label" : "THERAPY_RESPONSE_TIMESTAMP_RELATIVE",
+                  "XSD type" : "tag",
                   "XSD label" : "Dataelement_34_1"
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Response timing']/items[at0006,'Therapy response timestamp']/items[at0009,'Time of therapy response']/value",
@@ -3534,6 +3801,7 @@
           "annotations" : {
             "comment" : "Coding with a terminology is preferred, where possible.",
             "Data model label" : "DIAG_COLONOSCOPY",
+            "XSD type" : "tag",
             "XSD label" : "Dataelement_88_1"
           },
           "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/description[at0001]/items[at0048,'Colonoscopy']/value",
@@ -3665,6 +3933,7 @@
           "annotations" : {
             "comment" : "Coding with a terminology is preferred, where possible.",
             "Data model label" : "DIAG_CT_DONE",
+            "XSD type" : "tag",
             "XSD label" : "Dataelement_31_3"
           },
           "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/description[at0001]/items[at0048,'CT']/value",
@@ -3795,6 +4064,7 @@
           },
           "annotations" : {
             "comment" : "Coding with a terminology is preferred, where possible.",
+            "XSD type" : "tag",
             "XSD label" : "Dataelement_61_5",
             "Dat model label" : "DIAG_LIVER_IMAGING_DONE"
           },
@@ -3927,6 +4197,7 @@
           "annotations" : {
             "comment" : "Coding with a terminology is preferred, where possible.",
             "Data model label" : "DIAG_X_DONE",
+            "XSD type" : "tag",
             "XSD label" : "Dataelement_63_4"
           },
           "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/description[at0001]/items[at0048,'Lung imaging']/value",
@@ -4058,6 +4329,7 @@
           "annotations" : {
             "comment" : "Coding with a terminology is preferred, where possible.",
             "Data model label" : "DIAG_MRI_DONE",
+            "XSD type" : "tag",
             "XSD label" : "Dataelement_30_3"
           },
           "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/description[at0001]/items[at0048,'MRI']/value",
@@ -4235,6 +4507,7 @@
               "annotations" : {
                 "comment" : "For example: 'Pattern suggests significant renal impairment'. The content of the conclusion will vary, depending on the investigation performed. This conclusion should be aligned with the coded 'Test diagnosis'.",
                 "Data model label" : "BRAF_PIC3CA_HER_MUTATION_STATUS",
+                "XSD type" : "tag",
                 "XSD label" : "Dataelement_87_1"
               },
               "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1,'Oncogenic mutations test']/data[at0001]/events[at0002]/data[at0003]/items[at0057,'BRAF, PIC3CA, HER2 mutation status']/value",
@@ -4514,6 +4787,7 @@
               "annotations" : {
                 "comment" : "For example: 'Pattern suggests significant renal impairment'. The content of the conclusion will vary, depending on the investigation performed. This conclusion should be aligned with the coded 'Test diagnosis'.",
                 "Data model label" : "MM_MICROSAT_INSTABILITY",
+                "XSD type" : "tag",
                 "XSD label" : "Dataelement_14_3"
               },
               "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1,'Microsatellites instability analysis']/data[at0001]/events[at0002]/data[at0003]/items[at0057,'Microsatellite instability']/value",
@@ -4683,6 +4957,7 @@
                 },
                 "annotations" : {
                   "Data model label" : "MM_KRAS_MUTATION_NRAS_EX4",
+                  "XSD type" : "tag",
                   "XSD label" : "Dataelement_25_3"
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1,'KRAS mutation status']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.genetic_variant_presence.v0,'NRAS exon 4 (codons 117 or 146)']/items[at0002,'NRAS exon 4 (codons 117 or 146)']/value",
@@ -4793,6 +5068,7 @@
                 },
                 "annotations" : {
                   "Data model label" : "MM_KRAS_MUTATION_NRAS_EX3",
+                  "XSD type" : "tag",
                   "XSD label" : "Dataelement_24_4"
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1,'KRAS mutation status']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.genetic_variant_presence.v0,'NRAS exon 3 (codons 59 or 61)']/items[at0002,'NRAS exon 3 (codons 59 or 61)']/value",
@@ -4903,6 +5179,7 @@
                 },
                 "annotations" : {
                   "Data model label" : "MM_KRAS_MUTATION_NRAS_EX2",
+                  "XSD type" : "tag",
                   "XSD label" : "Dataelement_23_5 "
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1,'KRAS mutation status']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.genetic_variant_presence.v0,'NRAS exon 2 (codons 12 or 13)']/items[at0002,'NRAS exon 2 (codons 12 or 13)']/value",
@@ -5013,6 +5290,7 @@
                 },
                 "annotations" : {
                   "Data model label" : "MM_KRAS_MUTATION_KRAS_EX4",
+                  "XSD type" : "tag",
                   "XSD label" : "Dataelement_22_4"
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1,'KRAS mutation status']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.genetic_variant_presence.v0,'KRAS exon 4 (codons 117 or 146)']/items[at0002,'KRAS exon 4 (codons 117 or 146)']/value",
@@ -5123,6 +5401,7 @@
                 },
                 "annotations" : {
                   "Data model label" : "MM_KRAS_MUTATION_KRAS_EX3",
+                  "XSD type" : "tag",
                   "XSD label" : "Dataelement_21_5"
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1,'KRAS mutation status']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.genetic_variant_presence.v0,'KRAS exon 3 (codons 59 or 61)']/items[at0002,'KRAS exon 3 (codons 59 or 61)']/value",
@@ -5233,6 +5512,7 @@
                 },
                 "annotations" : {
                   "Dala model label" : "MM_KRAS_MUTATION_KRAS_EX2",
+                  "XSD type" : "tag",
                   "XSD label" : "Dataelement_20_3"
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Molecular markers']/items[at0002]/items[openEHR-EHR-OBSERVATION.laboratory_test_result.v1,'KRAS mutation status']/data[at0001]/events[at0002]/data[at0003]/items[openEHR-EHR-CLUSTER.genetic_variant_presence.v0,'KRAS exon 2 (codons 12 or 13)']/items[at0002,'KRAS exon 2 (codons 12 or 13)']/value",
@@ -5397,6 +5677,7 @@
             "annotations" : {
               "comment" : "There may be multiple variations on the assessment of risk. The Choice data type allows for recording of the assessment as either free text or value sets (such as low, medium or hig). The proportion data type allows recording of a percentage, a ratio or a fraction. The quantity data type allows recording of a decimal number.",
               "Data model label" : "MM_RISK_SITUATION_HNPCC",
+              "XSD type" : "tag",
               "XSD label" : "Dataelement_16_3"
             },
             "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Molecular markers']/items[at0002]/items[openEHR-EHR-EVALUATION.health_risk.v1]/data[at0001]/items[at0003,'Risk situation (only HNPCC)']/value",
@@ -5520,6 +5801,7 @@
           },
           "annotations" : {
             "Data model label" : "VITAL_STATUS",
+            "XSD type" : "tag",
             "XSD label" : "Dataelement_5_2"
           },
           "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Vital status and survival information']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1,'Vital status and survival information']/data[at0001]/items[at0002,'Vital status']/value",
@@ -5576,6 +5858,7 @@
             "annotations" : {
               "comment" : "For example: 'on 12 Jan 2017' or 'on 30 Oct 2017 to 6 Nov 2017'.",
               "Data model label" : "VITAL_STATUS_TIMESTAMP ",
+              "XSD type" : "tag",
               "XSD label" : "Dataelement_6_3"
             },
             "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Vital status and survival information']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1,'Vital status and survival information']/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Vital status timing']/items[at0001,'Timestamp of last update of vital status']/value",
@@ -5636,6 +5919,7 @@
               "annotations" : {
                 "comment" : "For example: '3 days after onset of menstruation = menstrual onset + 3 days', '2 weeks prior to admission= admission -2 weeks'.",
                 "Data model label" : "OVERALL_SURVIVAL_STATUS",
+                "XSD type" : "tag",
                 "XSD label" : "Dataelement_7_2"
               },
               "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Vital status and survival information']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1,'Vital status and survival information']/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Vital status timing']/items[at0006,'Overall survival status']/items[at0009,'Overall survival status']/value",
