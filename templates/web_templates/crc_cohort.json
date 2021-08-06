@@ -1,6 +1,6 @@
 {
   "templateId" : "crc_cohort",
-  "semVer" : "4.2.0",
+  "semVer" : "5.0.0",
   "version" : "2.3",
   "defaultLanguage" : "en",
   "languages" : [ "en" ],
@@ -2597,39 +2597,14 @@
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy start']/items[at0006,'Start of radiation therapy']/items[at0009,'Date of start of radiation therapy']/value",
                 "inputs" : [ {
-                  "suffix" : "year",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
-                  "suffix" : "month",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
                   "suffix" : "week",
                   "type" : "INTEGER",
                   "validation" : {
                     "range" : {
                       "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
-                  "suffix" : "day",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
+                      "min" : 0,
+                      "maxOp" : "<=",
+                      "max" : 600
                     }
                   }
                 } ]
@@ -2709,39 +2684,14 @@
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy end']/items[at0006,'End of radiation therapy']/items[at0009,'Date of end of radiation therapy']/value",
                 "inputs" : [ {
-                  "suffix" : "year",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
-                  "suffix" : "month",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
                   "suffix" : "week",
                   "type" : "INTEGER",
                   "validation" : {
                     "range" : {
                       "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
-                  "suffix" : "day",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
+                      "min" : 0,
+                      "maxOp" : "<=",
+                      "max" : 600
                     }
                   }
                 } ]
@@ -2935,39 +2885,14 @@
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy start']/items[at0006,'Start of targeted therapy']/items[at0009,'Date of start of targeted therapy']/value",
                 "inputs" : [ {
-                  "suffix" : "year",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
-                  "suffix" : "month",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
                   "suffix" : "week",
                   "type" : "INTEGER",
                   "validation" : {
                     "range" : {
                       "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
-                  "suffix" : "day",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
+                      "min" : 0,
+                      "maxOp" : "<=",
+                      "max" : 600
                     }
                   }
                 } ]
@@ -3047,39 +2972,14 @@
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy end']/items[at0006,'End of targeted therapy']/items[at0009,'Date of end of targeted therapy']/value",
                 "inputs" : [ {
-                  "suffix" : "year",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
-                  "suffix" : "month",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
                   "suffix" : "week",
                   "type" : "INTEGER",
                   "validation" : {
                     "range" : {
                       "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
-                  "suffix" : "day",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
+                      "min" : 0,
+                      "maxOp" : "<=",
+                      "max" : 600
                     }
                   }
                 } ]
@@ -3326,39 +3226,14 @@
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy start']/items[at0006,'Start of pharmacotherapy']/items[at0009,'Date of start of pharmacotherapy']/value",
                 "inputs" : [ {
-                  "suffix" : "year",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
-                  "suffix" : "month",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
                   "suffix" : "week",
                   "type" : "INTEGER",
                   "validation" : {
                     "range" : {
                       "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
-                  "suffix" : "day",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
+                      "min" : 0,
+                      "maxOp" : "<=",
+                      "max" : 600
                     }
                   }
                 } ]
@@ -3438,39 +3313,14 @@
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy end']/items[at0006,'End of pharmacotherapy']/items[at0009,'Date of end of pharmacotherapy']/value",
                 "inputs" : [ {
-                  "suffix" : "year",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
-                  "suffix" : "month",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
                   "suffix" : "week",
                   "type" : "INTEGER",
                   "validation" : {
                     "range" : {
                       "minOp" : ">=",
-                      "min" : 0
-                    }
-                  }
-                }, {
-                  "suffix" : "day",
-                  "type" : "INTEGER",
-                  "validation" : {
-                    "range" : {
-                      "minOp" : ">=",
-                      "min" : 0
+                      "min" : 0,
+                      "maxOp" : "<=",
+                      "max" : 600
                     }
                   }
                 } ]
