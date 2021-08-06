@@ -14,7 +14,7 @@
         <other_details id="original_namespace"></other_details>
         <other_details id="original_publisher"></other_details>
         <other_details id="custodian_namespace"></other_details>
-        <other_details id="sem_ver">4.2.0</other_details>
+        <other_details id="sem_ver">5.0.0</other_details>
         <other_details id="MD5-CAM-1.0.1">d36e923f9c476b3bb598459d7f879f14</other_details>
         <other_details id="PARENT:MD5-CAM-1.0.1">641B268BE8805CEB8DC21AB82C53AB3F</other_details>
         <other_details id="build_uid"></other_details>
@@ -10694,7 +10694,15 @@ If the anatomical location is included in the Problem/diagnosis name via precoor
                 </occurrences>
                 <node_id></node_id>
                 <item xsi:type="C_DURATION">
-                    <pattern>PYMWD</pattern>
+                    <pattern>PW</pattern>
+                    <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>true</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>P0W</lower>
+                        <upper>P600W</upper>
+                    </range>
                 </item>
             </children>
         </attributes>
@@ -11162,7 +11170,15 @@ If the anatomical location is included in the Problem/diagnosis name via precoor
                 </occurrences>
                 <node_id></node_id>
                 <item xsi:type="C_DURATION">
-                    <pattern>PYMWD</pattern>
+                    <pattern>PW</pattern>
+                    <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>true</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>P0W</lower>
+                        <upper>P600W</upper>
+                    </range>
                 </item>
             </children>
         </attributes>
@@ -12263,7 +12279,15 @@ If the anatomical location is included in the Problem/diagnosis name via precoor
                 </occurrences>
                 <node_id></node_id>
                 <item xsi:type="C_DURATION">
-                    <pattern>PYMWD</pattern>
+                    <pattern>PW</pattern>
+                    <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>true</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>P0W</lower>
+                        <upper>P600W</upper>
+                    </range>
                 </item>
             </children>
         </attributes>
@@ -12731,7 +12755,15 @@ If the anatomical location is included in the Problem/diagnosis name via precoor
                 </occurrences>
                 <node_id></node_id>
                 <item xsi:type="C_DURATION">
-                    <pattern>PYMWD</pattern>
+                    <pattern>PW</pattern>
+                    <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>true</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>P0W</lower>
+                        <upper>P600W</upper>
+                    </range>
                 </item>
             </children>
         </attributes>
@@ -14115,7 +14147,15 @@ If the anatomical location is included in the Problem/diagnosis name via precoor
                 </occurrences>
                 <node_id></node_id>
                 <item xsi:type="C_DURATION">
-                    <pattern>PYMWD</pattern>
+                    <pattern>PW</pattern>
+                    <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>true</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>P0W</lower>
+                        <upper>P600W</upper>
+                    </range>
                 </item>
             </children>
         </attributes>
@@ -14584,7 +14624,15 @@ If the anatomical location is included in the Problem/diagnosis name via precoor
                 </occurrences>
                 <node_id></node_id>
                 <item xsi:type="C_DURATION">
-                    <pattern>PYMWD</pattern>
+                    <pattern>PW</pattern>
+                    <range>
+                        <lower_included>true</lower_included>
+                        <upper_included>true</upper_included>
+                        <lower_unbounded>false</lower_unbounded>
+                        <upper_unbounded>false</upper_unbounded>
+                        <lower>P0W</lower>
+                        <upper>P600W</upper>
+                    </range>
                 </item>
             </children>
         </attributes>
