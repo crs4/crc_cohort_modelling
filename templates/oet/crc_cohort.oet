@@ -38,7 +38,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>0a63bc94bf538947867813c23c9644ef</value>
+                <value>d36e923f9c476b3bb598459d7f879f14</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -2309,7 +2309,8 @@
                         <Rule max="0" path="/items[at0021]"/>
                         <Rule max="1" min="1"
                             name="Start of pharmacotherapy" path="/items[at0006]"/>
-                        <Rule name="From event" path="/items[at0006]/items[at0005]"/>
+                        <Rule default="Primary diagnosis"
+                            name="From event" path="/items[at0006]/items[at0005]"/>
                         <Rule min="1"
                             name="Date of start of pharmacotherapy" path="/items[at0006]/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
