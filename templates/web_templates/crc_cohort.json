@@ -3301,7 +3301,8 @@
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy start']/items[at0006,'Start of pharmacotherapy']/items[at0005,'From event']/value",
                 "inputs" : [ {
-                  "type" : "TEXT"
+                  "type" : "TEXT",
+                  "defaultValue" : "Primary diagnosis"
                 } ]
               }, {
                 "id" : "date_of_start_of_pharmacotherapy",
