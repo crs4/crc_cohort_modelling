@@ -34,7 +34,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>4.2.0</value>
+                <value>5.0.0</value>
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
@@ -2016,7 +2016,9 @@
                         <Rule min="1"
                             name="Date of start of radiation therapy" path="/items[at0006]/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
-                                <pattern>PYMWD</pattern>
+                                <pattern>PW</pattern>
+                                <maxMagnitude>P600W</maxMagnitude>
+                                <minMagnitude>P0W</minMagnitude>
                                 <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
@@ -2062,7 +2064,9 @@
                         <Rule min="1"
                             name="Date of end of radiation therapy" path="/items[at0006]/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
-                                <pattern>PYMWD</pattern>
+                                <pattern>PW</pattern>
+                                <maxMagnitude>P600W</maxMagnitude>
+                                <minMagnitude>P0W</minMagnitude>
                                 <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
@@ -2162,7 +2166,9 @@
                         <Rule min="1"
                             name="Date of start of targeted therapy" path="/items[at0006]/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
-                                <pattern>PYMWD</pattern>
+                                <pattern>PW</pattern>
+                                <maxMagnitude>P600W</maxMagnitude>
+                                <minMagnitude>P0W</minMagnitude>
                                 <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
@@ -2207,7 +2213,9 @@
                             name="From event" path="/items[at0006]/items[at0005]"/>
                         <Rule name="Date of end of targeted therapy" path="/items[at0006]/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
-                                <pattern>PYMWD</pattern>
+                                <pattern>PW</pattern>
+                                <maxMagnitude>P600W</maxMagnitude>
+                                <minMagnitude>P0W</minMagnitude>
                                 <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
@@ -2314,7 +2322,9 @@
                         <Rule min="1"
                             name="Date of start of pharmacotherapy" path="/items[at0006]/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
-                                <pattern>PYMWD</pattern>
+                                <pattern>PW</pattern>
+                                <maxMagnitude>P600W</maxMagnitude>
+                                <minMagnitude>P0W</minMagnitude>
                                 <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
@@ -2361,7 +2371,9 @@
                         <Rule min="1"
                             name="Date of end of pharmacotherapy" path="/items[at0006]/items[at0009]">
                             <constraint xsi:type="tem:durationConstraint">
-                                <pattern>PYMWD</pattern>
+                                <pattern>PW</pattern>
+                                <maxMagnitude>P600W</maxMagnitude>
+                                <minMagnitude>P0W</minMagnitude>
                                 <includesMaximum>true</includesMaximum>
                                 <includesMinimum>true</includesMinimum>
                             </constraint>
