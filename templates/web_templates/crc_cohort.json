@@ -1,6 +1,6 @@
 {
   "templateId" : "crc_cohort",
-  "semVer" : "5.0.0",
+  "semVer" : "5.1.14",
   "version" : "2.3",
   "defaultLanguage" : "en",
   "languages" : [ "en" ],
@@ -129,7 +129,7 @@
       "localizedName" : "Patient data",
       "rmType" : "SECTION",
       "nodeId" : "openEHR-EHR-SECTION.demographics_rcp.v1",
-      "min" : 0,
+      "min" : 1,
       "max" : 1,
       "localizedNames" : {
         "en" : "Patient data"
@@ -144,7 +144,7 @@
         "localizedName" : "Gender",
         "rmType" : "EVALUATION",
         "nodeId" : "openEHR-EHR-EVALUATION.gender.v1",
-        "min" : 0,
+        "min" : 1,
         "max" : 1,
         "localizedNames" : {
           "en" : "Gender"
@@ -238,7 +238,7 @@
         "localizedName" : "Primary diagnosis",
         "rmType" : "EVALUATION",
         "nodeId" : "openEHR-EHR-EVALUATION.problem_diagnosis.v1",
-        "min" : 0,
+        "min" : 1,
         "max" : 1,
         "localizedNames" : {
           "en" : "Primary diagnosis"
@@ -302,7 +302,7 @@
           "localizedName" : "Diagnosis timing",
           "rmType" : "CLUSTER",
           "nodeId" : "openEHR-EHR-CLUSTER.timing_nondaily.v1",
-          "min" : 0,
+          "min" : 1,
           "max" : 1,
           "localizedNames" : {
             "en" : "Diagnosis timing"
@@ -457,7 +457,7 @@
           "localizedName" : "Metastasis diagnosis",
           "rmType" : "CLUSTER",
           "nodeId" : "openEHR-EHR-CLUSTER.timing_nondaily.v1",
-          "min" : 0,
+          "min" : 1,
           "max" : 1,
           "localizedNames" : {
             "en" : "Metastasis diagnosis"
@@ -472,8 +472,8 @@
             "localizedName" : "Metastasis diagnosis",
             "rmType" : "CLUSTER",
             "nodeId" : "at0006",
-            "min" : 0,
-            "max" : -1,
+            "min" : 1,
+            "max" : 1,
             "localizedNames" : {
               "en" : "Metastasis diagnosis"
             },
@@ -487,7 +487,7 @@
               "localizedName" : "From event",
               "rmType" : "DV_TEXT",
               "nodeId" : "at0005",
-              "min" : 0,
+              "min" : 1,
               "max" : 1,
               "localizedNames" : {
                 "en" : "From event"
@@ -509,7 +509,7 @@
               "localizedName" : "Time of recurrence",
               "rmType" : "DV_DURATION",
               "nodeId" : "at0009",
-              "min" : 0,
+              "min" : 1,
               "max" : 1,
               "localizedNames" : {
                 "en" : "Time of recurrence"
@@ -601,7 +601,7 @@
       "localizedName" : "Histopathology",
       "rmType" : "SECTION",
       "nodeId" : "openEHR-EHR-SECTION.result_details.v0",
-      "min" : 0,
+      "min" : 1,
       "max" : 1,
       "localizedNames" : {
         "en" : "Histopathology"
@@ -631,7 +631,7 @@
           "localizedName" : "Laboratory test result",
           "rmType" : "OBSERVATION",
           "nodeId" : "openEHR-EHR-OBSERVATION.laboratory_test_result.v1",
-          "min" : 0,
+          "min" : 1,
           "max" : 1,
           "localizedNames" : {
             "en" : "Laboratory test result"
@@ -921,8 +921,8 @@
                 "localizedName" : "Anatomical pathology finding",
                 "rmType" : "CLUSTER",
                 "nodeId" : "at0005",
-                "min" : 0,
-                "max" : -1,
+                "min" : 1,
+                "max" : 1,
                 "localizedNames" : {
                   "en" : "Anatomical pathology finding"
                 },
@@ -955,7 +955,7 @@
                   "localizedName" : "Digital imaging invasion front",
                   "rmType" : "CLUSTER",
                   "nodeId" : "openEHR-EHR-CLUSTER.multimedia_source.v0",
-                  "min" : 0,
+                  "min" : 1,
                   "max" : 1,
                   "localizedNames" : {
                     "en" : "Digital imaging invasion front"
@@ -970,7 +970,7 @@
                     "localizedName" : "Availability invasion front digital imaging",
                     "rmType" : "DV_TEXT",
                     "nodeId" : "at0005",
-                    "min" : 0,
+                    "min" : 1,
                     "max" : 1,
                     "localizedNames" : {
                       "en" : "Availability invasion front digital imaging"
@@ -1026,7 +1026,7 @@
                 "rmType" : "CLUSTER",
                 "nodeId" : "at0005",
                 "min" : 0,
-                "max" : -1,
+                "max" : 1,
                 "localizedNames" : {
                   "en" : "Anatomical pathology finding"
                 },
@@ -1059,7 +1059,7 @@
                   "localizedName" : "Biological material from recurrence available",
                   "rmType" : "DV_BOOLEAN",
                   "nodeId" : "at0006",
-                  "min" : 0,
+                  "min" : 1,
                   "max" : 1,
                   "localizedNames" : {
                     "en" : "Biological material from recurrence available"
@@ -1134,7 +1134,7 @@
           "localizedName" : "Cancer diagnosis",
           "rmType" : "EVALUATION",
           "nodeId" : "openEHR-EHR-EVALUATION.problem_diagnosis.v1",
-          "min" : 0,
+          "min" : 1,
           "max" : 1,
           "localizedNames" : {
             "en" : "Cancer diagnosis"
@@ -1230,7 +1230,7 @@
             "localizedName" : "Synoptic details - Colorectal cancer",
             "rmType" : "CLUSTER",
             "nodeId" : "openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0",
-            "min" : 0,
+            "min" : 1,
             "max" : 1,
             "localizedNames" : {
               "en" : "Synoptic details - Colorectal cancer"
@@ -1245,7 +1245,7 @@
               "localizedName" : "Microscopic findings",
               "rmType" : "CLUSTER",
               "nodeId" : "at0001",
-              "min" : 0,
+              "min" : 1,
               "max" : 1,
               "localizedNames" : {
                 "en" : "Microscopic findings"
@@ -1533,7 +1533,7 @@
                 "localizedName" : "TNM pathological classification",
                 "rmType" : "CLUSTER",
                 "nodeId" : "openEHR-EHR-CLUSTER.tnm-pathological.v1",
-                "min" : 0,
+                "min" : 1,
                 "max" : 1,
                 "localizedNames" : {
                   "en" : "TNM pathological classification"
@@ -1913,7 +1913,7 @@
                 "localizedName" : "Distant metastasis",
                 "rmType" : "CLUSTER",
                 "nodeId" : "at0263",
-                "min" : 0,
+                "min" : 1,
                 "max" : 1,
                 "localizedNames" : {
                   "en" : "Distant metastasis"
@@ -1923,53 +1923,6 @@
                 },
                 "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Cancer diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[at0263]",
                 "children" : [ {
-                  "id" : "distant_metastasis",
-                  "name" : "Distant metastasis",
-                  "localizedName" : "Distant metastasis",
-                  "rmType" : "DV_CODED_TEXT",
-                  "nodeId" : "at0264",
-                  "min" : 0,
-                  "max" : 1,
-                  "localizedNames" : {
-                    "en" : "Distant metastasis"
-                  },
-                  "localizedDescriptions" : {
-                    "en" : "Findings of histologically confirmed distant metastasis."
-                  },
-                  "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Cancer diagnosis']/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[at0263]/items[at0264]/value",
-                  "inputs" : [ {
-                    "suffix" : "code",
-                    "type" : "CODED_TEXT",
-                    "list" : [ {
-                      "value" : "at0362",
-                      "label" : "Present",
-                      "localizedLabels" : {
-                        "en" : "Present"
-                      },
-                      "localizedDescriptions" : {
-                        "en" : "Evidence of distant metastasis."
-                      }
-                    }, {
-                      "value" : "at0363",
-                      "label" : "Absent",
-                      "localizedLabels" : {
-                        "en" : "Absent"
-                      },
-                      "localizedDescriptions" : {
-                        "en" : "No evidence of distant metastasis."
-                      }
-                    }, {
-                      "value" : "at0364",
-                      "label" : "Indeterminate",
-                      "localizedLabels" : {
-                        "en" : "Indeterminate"
-                      },
-                      "localizedDescriptions" : {
-                        "en" : "Evidence of metastasis has not been determined."
-                      }
-                    } ]
-                  } ]
-                }, {
                   "id" : "anatomical_location",
                   "name" : "Anatomical location",
                   "localizedName" : "Anatomical location",
@@ -2096,7 +2049,7 @@
       "localizedName" : "Surgery",
       "rmType" : "SECTION",
       "nodeId" : "openEHR-EHR-SECTION.procedures_rcp.v1",
-      "min" : 0,
+      "min" : 1,
       "max" : 1,
       "localizedNames" : {
         "en" : "Surgery"
@@ -2111,7 +2064,7 @@
         "localizedName" : "Surgery",
         "rmType" : "ACTION",
         "nodeId" : "openEHR-EHR-ACTION.procedure.v1",
-        "min" : 0,
+        "min" : 1,
         "max" : -1,
         "localizedNames" : {
           "en" : "Surgery"
@@ -2275,7 +2228,7 @@
           "localizedName" : "Surgery timing",
           "rmType" : "CLUSTER",
           "nodeId" : "openEHR-EHR-CLUSTER.timing_nondaily.v1",
-          "min" : 0,
+          "min" : 1,
           "max" : 1,
           "localizedNames" : {
             "en" : "Surgery timing"
@@ -2290,8 +2243,8 @@
             "localizedName" : "Surgery",
             "rmType" : "CLUSTER",
             "nodeId" : "at0006",
-            "min" : 0,
-            "max" : -1,
+            "min" : 1,
+            "max" : 1,
             "localizedNames" : {
               "en" : "Surgery"
             },
@@ -2458,7 +2411,7 @@
       "localizedName" : "Therapies",
       "rmType" : "SECTION",
       "nodeId" : "openEHR-EHR-SECTION.procedures_rcp.v1",
-      "min" : 0,
+      "min" : 1,
       "max" : 1,
       "localizedNames" : {
         "en" : "Therapies"
@@ -2473,7 +2426,7 @@
         "localizedName" : "Radiation therapy",
         "rmType" : "SECTION",
         "nodeId" : "openEHR-EHR-SECTION.adhoc.v1",
-        "min" : 0,
+        "min" : 1,
         "max" : 1,
         "localizedNames" : {
           "en" : "Radiation therapy"
@@ -2488,7 +2441,7 @@
           "localizedName" : "Radiation therapy",
           "rmType" : "ACTION",
           "nodeId" : "openEHR-EHR-ACTION.procedure.v1",
-          "min" : 0,
+          "min" : 1,
           "max" : -1,
           "localizedNames" : {
             "en" : "Radiation therapy"
@@ -2616,7 +2569,7 @@
             "localizedName" : "Radiation therapy end",
             "rmType" : "CLUSTER",
             "nodeId" : "openEHR-EHR-CLUSTER.timing_nondaily.v1",
-            "min" : 0,
+            "min" : 1,
             "max" : 1,
             "localizedNames" : {
               "en" : "Radiation therapy end"
@@ -2631,8 +2584,8 @@
               "localizedName" : "End of radiation therapy",
               "rmType" : "CLUSTER",
               "nodeId" : "at0006",
-              "min" : 0,
-              "max" : -1,
+              "min" : 1,
+              "max" : 1,
               "localizedNames" : {
                 "en" : "End of radiation therapy"
               },
@@ -2761,7 +2714,7 @@
         "localizedName" : "Targeted therapy",
         "rmType" : "SECTION",
         "nodeId" : "openEHR-EHR-SECTION.adhoc.v1",
-        "min" : 0,
+        "min" : 1,
         "max" : 1,
         "localizedNames" : {
           "en" : "Targeted therapy"
@@ -2776,7 +2729,7 @@
           "localizedName" : "Targeted therapy",
           "rmType" : "ACTION",
           "nodeId" : "openEHR-EHR-ACTION.procedure.v1",
-          "min" : 0,
+          "min" : 1,
           "max" : -1,
           "localizedNames" : {
             "en" : "Targeted therapy"
@@ -2956,7 +2909,7 @@
                 "localizedName" : "Date of end of targeted therapy",
                 "rmType" : "DV_DURATION",
                 "nodeId" : "at0009",
-                "min" : 0,
+                "min" : 1,
                 "max" : 1,
                 "localizedNames" : {
                   "en" : "Date of end of targeted therapy"
@@ -3049,7 +3002,7 @@
         "localizedName" : "Pharmacotherapy",
         "rmType" : "SECTION",
         "nodeId" : "openEHR-EHR-SECTION.adhoc.v1",
-        "min" : 0,
+        "min" : 1,
         "max" : 1,
         "localizedNames" : {
           "en" : "Pharmacotherapy"
@@ -3064,7 +3017,7 @@
           "localizedName" : "Medication management",
           "rmType" : "ACTION",
           "nodeId" : "openEHR-EHR-ACTION.medication.v1",
-          "min" : 0,
+          "min" : 1,
           "max" : -1,
           "localizedNames" : {
             "en" : "Medication management"
@@ -3390,7 +3343,7 @@
         "localizedName" : "Response to therapy",
         "rmType" : "SECTION",
         "nodeId" : "openEHR-EHR-SECTION.adhoc.v1",
-        "min" : 0,
+        "min" : 1,
         "max" : 1,
         "localizedNames" : {
           "en" : "Response to therapy"
@@ -3405,7 +3358,7 @@
           "localizedName" : "Clinical synopsis",
           "rmType" : "EVALUATION",
           "nodeId" : "openEHR-EHR-EVALUATION.clinical_synopsis.v1",
-          "min" : 0,
+          "min" : 1,
           "max" : -1,
           "localizedNames" : {
             "en" : "Clinical synopsis"
@@ -3477,8 +3430,8 @@
               "localizedName" : "Therapy response timestamp",
               "rmType" : "CLUSTER",
               "nodeId" : "at0006",
-              "min" : 0,
-              "max" : -1,
+              "min" : 1,
+              "max" : 1,
               "localizedNames" : {
                 "en" : "Therapy response timestamp"
               },
@@ -3736,7 +3689,7 @@
         "localizedName" : "CT",
         "rmType" : "ACTION",
         "nodeId" : "openEHR-EHR-ACTION.procedure.v1",
-        "min" : 0,
+        "min" : 1,
         "max" : 1,
         "localizedNames" : {
           "en" : "CT"
@@ -3868,7 +3821,7 @@
         "localizedName" : "Liver imaging",
         "rmType" : "ACTION",
         "nodeId" : "openEHR-EHR-ACTION.procedure.v1",
-        "min" : 0,
+        "min" : 1,
         "max" : 1,
         "localizedNames" : {
           "en" : "Liver imaging"
@@ -4000,7 +3953,7 @@
         "localizedName" : "Lung imaging",
         "rmType" : "ACTION",
         "nodeId" : "openEHR-EHR-ACTION.procedure.v1",
-        "min" : 0,
+        "min" : 1,
         "max" : 1,
         "localizedNames" : {
           "en" : "Lung imaging"
@@ -4132,7 +4085,7 @@
         "localizedName" : "MRI",
         "rmType" : "ACTION",
         "nodeId" : "openEHR-EHR-ACTION.procedure.v1",
-        "min" : 0,
+        "min" : 1,
         "max" : 1,
         "localizedNames" : {
           "en" : "MRI"
@@ -4347,7 +4300,7 @@
               "localizedName" : "BRAF, PIC3CA, HER2 mutation status",
               "rmType" : "DV_TEXT",
               "nodeId" : "at0057",
-              "min" : 0,
+              "min" : 1,
               "max" : 1,
               "localizedNames" : {
                 "en" : "BRAF, PIC3CA, HER2 mutation status"
@@ -4575,7 +4528,7 @@
           "localizedName" : "Microsatellites instability analysis",
           "rmType" : "OBSERVATION",
           "nodeId" : "openEHR-EHR-OBSERVATION.laboratory_test_result.v1",
-          "min" : 0,
+          "min" : 1,
           "max" : -1,
           "localizedNames" : {
             "en" : "Microsatellites instability analysis"
@@ -4712,7 +4665,7 @@
           "localizedName" : "KRAS mutation status",
           "rmType" : "OBSERVATION",
           "nodeId" : "openEHR-EHR-OBSERVATION.laboratory_test_result.v1",
-          "min" : 0,
+          "min" : 1,
           "max" : 1,
           "localizedNames" : {
             "en" : "KRAS mutation status"
@@ -4779,7 +4732,7 @@
                 "localizedName" : "Variant name",
                 "rmType" : "DV_TEXT",
                 "nodeId" : "at0001",
-                "min" : 0,
+                "min" : 1,
                 "max" : 1,
                 "localizedNames" : {
                   "en" : "Variant name"
@@ -5517,7 +5470,7 @@
             "localizedName" : "Risk situation (only HNPCC)",
             "rmType" : "DV_TEXT",
             "nodeId" : "at0003",
-            "min" : 0,
+            "min" : 1,
             "max" : 1,
             "localizedNames" : {
               "en" : "Risk situation (only HNPCC)"
@@ -5612,7 +5565,7 @@
       "localizedName" : "Vital status and survival information",
       "rmType" : "SECTION",
       "nodeId" : "openEHR-EHR-SECTION.adhoc.v1",
-      "min" : 0,
+      "min" : 1,
       "max" : 1,
       "localizedNames" : {
         "en" : "Vital status and survival information"
@@ -5627,7 +5580,7 @@
         "localizedName" : "Vital status and survival information",
         "rmType" : "EVALUATION",
         "nodeId" : "openEHR-EHR-EVALUATION.clinical_synopsis.v1",
-        "min" : 0,
+        "min" : 1,
         "max" : 1,
         "localizedNames" : {
           "en" : "Vital status and survival information"
@@ -5682,7 +5635,7 @@
           "localizedName" : "Vital status timing",
           "rmType" : "CLUSTER",
           "nodeId" : "openEHR-EHR-CLUSTER.timing_nondaily.v1",
-          "min" : 0,
+          "min" : 1,
           "max" : 1,
           "dependsOn" : [ "vital_status" ],
           "localizedNames" : {
@@ -5722,7 +5675,7 @@
             "localizedName" : "Overall survival status",
             "rmType" : "CLUSTER",
             "nodeId" : "at0006",
-            "min" : 0,
+            "min" : 1,
             "max" : -1,
             "localizedNames" : {
               "en" : "Overall survival status"
