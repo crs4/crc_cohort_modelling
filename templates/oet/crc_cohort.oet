@@ -34,7 +34,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>10.0.0</value>
+                <value>10.0.1</value>
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
@@ -2683,10 +2683,10 @@
                     min="1" path="/items" xsi:type="tem:EVALUATION">
                     <Rule name="Specific response" path="/data[at0001]/items[at0002]">
                         <constraint xsi:type="tem:textConstraint">
-                            <includedValues>omop_vocabulary::Complete response::36309727</includedValues>
-                            <includedValues>omop_vocabulary::Partial response::36309453</includedValues>
-                            <includedValues>omop_vocabulary::Progressive disease::36308003</includedValues>
-                            <includedValues>omop_vocabulary::Stable disease::36309215</includedValues>
+                            <includedValues>omop_vocabulary::36309727::Complete response</includedValues>
+                            <includedValues>omop_vocabulary::36309453::Partial response</includedValues>
+                            <includedValues>omop_vocabulary::36308003::Progressive disease</includedValues>
+                            <includedValues>omop_vocabulary::36309215::Stable disease</includedValues>
                         </constraint>
                     </Rule>
                     <Items

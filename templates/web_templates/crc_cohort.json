@@ -1,6 +1,6 @@
 {
   "templateId" : "crc_cohort",
-  "semVer" : "10.0.0",
+  "semVer" : "10.0.1",
   "version" : "2.3",
   "defaultLanguage" : "en",
   "languages" : [ "en" ],
@@ -3756,26 +3756,26 @@
               "suffix" : "code",
               "type" : "CODED_TEXT",
               "list" : [ {
-                "value" : "Complete response",
-                "label" : "36309727",
+                "value" : "36309727",
+                "label" : "Complete response",
                 "localizedLabels" : {
                   "en" : ""
                 }
               }, {
-                "value" : "Partial response",
-                "label" : "36309453",
+                "value" : "36309453",
+                "label" : "Partial response",
                 "localizedLabels" : {
                   "en" : ""
                 }
               }, {
-                "value" : "Progressive disease",
-                "label" : "36308003",
+                "value" : "36308003",
+                "label" : "Progressive disease",
                 "localizedLabels" : {
                   "en" : ""
                 }
               }, {
-                "value" : "Stable disease",
-                "label" : "36309215",
+                "value" : "36309215",
+                "label" : "Stable disease",
                 "localizedLabels" : {
                   "en" : ""
                 }
