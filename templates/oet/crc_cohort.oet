@@ -34,11 +34,11 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>10.0.1</value>
+                <value>11.1.0</value>
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>45a79185980d9eeddb976e393679c6b0</value>
+                <value>2096ffcb788fb801a10c2c0f7a0454b4</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -518,7 +518,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[at0063]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[at0063]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -534,7 +534,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[at0049]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[at0049]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -550,7 +550,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[at0048]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[at0048]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -566,7 +566,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[at0002]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[at0002]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -582,7 +582,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -594,7 +594,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -610,7 +610,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -622,7 +622,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Radiation therapy start']/items[at0006]/items[at0009]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Radiation therapy start']/items[at0006]/items[at0009]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -638,7 +638,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Radiation therapy end']/items[at0006]/items[at0009]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Radiation therapy end']/items[at0006]/items[at0009]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -654,7 +654,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -666,7 +666,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Targeted therapy start']/items[at0006]/items[at0009]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Targeted therapy start']/items[at0006]/items[at0009]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -682,7 +682,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Targeted therapy end']/items[at0006]/items[at0009]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1]/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Targeted therapy end']/items[at0006]/items[at0009]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -698,7 +698,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[at0020]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[at0020]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -714,7 +714,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[at0156]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[at0156]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -730,7 +730,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]">
         <items>
             <item>
                 <key>XSD label </key>
@@ -742,7 +742,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Pharmacotherapy start']/items[at0006]/items[at0009]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Pharmacotherapy start']/items[at0006]/items[at0009]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -758,7 +758,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Pharmacotherapy end']/items[at0006]/items[at0009]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1, 'Pharmacotherapy end']/items[at0006]/items[at0009]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -774,7 +774,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/data[at0001]/items[at0002]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/data[at0001]/items[at0002]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -790,7 +790,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -802,7 +802,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1, 'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -818,7 +818,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'Colonoscopy']/description[at0001]/items[at0048]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'Colonoscopy']/description[at0001]/items[at0048]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -834,7 +834,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'CT']/description[at0001]/items[at0048]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'CT']/description[at0001]/items[at0048]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -850,7 +850,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'Liver imaging']/description[at0001]/items[at0048]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'Liver imaging']/description[at0001]/items[at0048]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -866,7 +866,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'Lung imaging']/description[at0001]/items[at0048]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'Lung imaging']/description[at0001]/items[at0048]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -882,7 +882,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'MRI']/description[at0001]/items[at0048]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1, 'MRI']/description[at0001]/items[at0048]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -1058,7 +1058,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1]/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/data[at0001]/items[at0002]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Vital status and survival information']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/data[at0001]/items[at0002]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -1074,7 +1074,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1]/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Vital status and survival information']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0006]/items[at0009]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -1090,7 +1090,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1]/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0001]">
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Vital status and survival information']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1]/items[at0001]">
         <items>
             <item>
                 <key>XSD label</key>
@@ -1135,7 +1135,9 @@
                 concept_name="Problem/Diagnosis" max="1" min="1"
                 name="Primary diagnosis" path="/items" xsi:type="tem:EVALUATION">
                 <Rule default="local::44803809::Colorectal cancer"
-                    name="Primary diagnosis" path="/data[at0001]/items[at0002]"/>
+                    name="Primary diagnosis" path="/data[at0001]/items[at0002]">
+                    <constraint xsi:type="tem:textConstraint"/>
+                </Rule>
                 <Rule max="0" path="/data[at0001]/items[at0009]"/>
                 <Rule max="0" path="/data[at0001]/items[at0012]"/>
                 <Rule max="0" path="/data[at0001]/items[at0077]"/>
@@ -1771,7 +1773,7 @@
                                 <includedValues>omop_vocabular::4029619::Bone marrow</includedValues>
                                 <includedValues>omop_vocabular::4133034::Brain</includedValues>
                                 <includedValues>omop_vocabular::45880117::Hepatic</includedValues>
-                                <includedValues>omop_vocabular::45881859::Hepatic</includedValues>
+                                <includedValues>omop_vocabular::45881859::Lymph Nodes</includedValues>
                                 <includedValues>omop_vocabular::45878582::None</includedValues>
                                 <includedValues>omop_vocabular::45880118::Osseous</includedValues>
                                 <includedValues>omop_vocabular::45880116::Peritoneum</includedValues>
@@ -1900,8 +1902,8 @@
                 </Items>
             </Item>
         </Content>
-        <Content archetype_id="openEHR-EHR-SECTION.procedures_rcp.v1"
-            concept_name="Procedures" max="1" min="1" name="Surgery"
+        <Content archetype_id="openEHR-EHR-SECTION.adhoc.v1"
+            concept_name="Ad hoc heading" max="1" name="Surgery"
             path="/content" xsi:type="tem:SECTION">
             <Item archetype_id="openEHR-EHR-ACTION.procedure.v1"
                 concept_name="Procedure" min="1" name="Surgery"
@@ -2075,8 +2077,8 @@
                 </Items>
             </Item>
         </Content>
-        <Content archetype_id="openEHR-EHR-SECTION.procedures_rcp.v1"
-            concept_name="Procedures" max="1" name="Therapies"
+        <Content archetype_id="openEHR-EHR-SECTION.adhoc.v1"
+            concept_name="Ad hoc heading" max="1" name="Therapies"
             path="/content" xsi:type="tem:SECTION">
             <Item archetype_id="openEHR-EHR-SECTION.adhoc.v1"
                 concept_name="Ad hoc heading" max="1"
@@ -2782,8 +2784,8 @@
                 </Item>
             </Item>
         </Content>
-        <Content archetype_id="openEHR-EHR-SECTION.procedures_rcp.v1"
-            concept_name="Procedures" max="1"
+        <Content archetype_id="openEHR-EHR-SECTION.adhoc.v1"
+            concept_name="Ad hoc heading" max="1"
             name="Diagnostic examinations" path="/content" xsi:type="tem:SECTION">
             <Item archetype_id="openEHR-EHR-ACTION.procedure.v1"
                 concept_name="Procedure" max="1" min="1"
@@ -3598,7 +3600,7 @@
                 <value>protocol</value>
             </items>
         </constraints>
-        <constraints path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.procedures_rcp.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/protocol">
+        <constraints path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Surgery']/items[openEHR-EHR-ACTION.procedure.v1]/protocol">
             <items id="VisibleInView">
                 <value>protocol</value>
             </items>
@@ -3691,21 +3693,15 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">D5BC5C645975EFCAE96A7231F81479ED</digest>
     </integrity_checks>
-    <integrity_checks
-        archetype_id="openEHR-EHR-SECTION.procedures_rcp.v1"
+    <integrity_checks archetype_id="openEHR-EHR-SECTION.adhoc.v1"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">77530BD1AE5D2F25431190EC9984A04C</digest>
+        <digest id="MD5-CAM-1.0.1">8FE80F3E80C594AAF99D3BA540A53D73</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-ACTION.procedure.v1"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">7976419EEFB8BFACDA7BAB23201F9BEF</digest>
-    </integrity_checks>
-    <integrity_checks archetype_id="openEHR-EHR-SECTION.adhoc.v1"
-        xmlns:tem="openEHR/v1/Template"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">8FE80F3E80C594AAF99D3BA540A53D73</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-ACTION.medication.v1"
         xmlns:tem="openEHR/v1/Template"

@@ -1,6 +1,6 @@
 {
   "templateId" : "crc_cohort",
-  "semVer" : "10.0.1",
+  "semVer" : "11.1.0",
   "version" : "2.3",
   "defaultLanguage" : "en",
   "languages" : [ "en" ],
@@ -2031,7 +2031,7 @@
                         }
                       }, {
                         "value" : "45881859",
-                        "label" : "Hepatic",
+                        "label" : "Lymph Nodes",
                         "localizedLabels" : {
                           "en" : ""
                         }
@@ -2129,16 +2129,16 @@
       "name" : "Surgery",
       "localizedName" : "Surgery",
       "rmType" : "SECTION",
-      "nodeId" : "openEHR-EHR-SECTION.procedures_rcp.v1",
-      "min" : 1,
+      "nodeId" : "openEHR-EHR-SECTION.adhoc.v1",
+      "min" : 0,
       "max" : 1,
       "localizedNames" : {
         "en" : "Surgery"
       },
       "localizedDescriptions" : {
-        "en" : "Procedures heading (AoMRC)."
+        "en" : "A generic section header which should be renamed in a template to suit a specific clinical context."
       },
-      "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']",
+      "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']",
       "children" : [ {
         "id" : "surgery",
         "name" : "Surgery",
@@ -2157,21 +2157,21 @@
           "XSD label" : "Surgery",
           "XSD type" : "Event.eventype"
         },
-        "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']",
+        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']",
         "children" : [ {
           "id" : "ism_transition",
           "name" : "Ism_transition",
           "rmType" : "ISM_TRANSITION",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/ism_transition",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/ism_transition",
           "children" : [ {
             "id" : "current_state",
             "name" : "Current_state",
             "rmType" : "DV_CODED_TEXT",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/ism_transition/current_state",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/ism_transition/current_state",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "CODED_TEXT",
@@ -2187,7 +2187,7 @@
             "rmType" : "DV_CODED_TEXT",
             "min" : 0,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/ism_transition/transition",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/ism_transition/transition",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "TEXT"
@@ -2202,7 +2202,7 @@
             "rmType" : "DV_CODED_TEXT",
             "min" : 0,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/ism_transition/careflow_step",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/ism_transition/careflow_step",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "CODED_TEXT",
@@ -2238,7 +2238,7 @@
             "XSD type" : "tag",
             "XSD label" : "Dataelement_49_1"
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[at0002,'Surgery type']/value",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[at0002,'Surgery type']/value",
           "inputs" : [ {
             "suffix" : "code",
             "type" : "CODED_TEXT",
@@ -2331,7 +2331,7 @@
             "XSD type" : "tag",
             "XSD label" : "Dataelement_67_1"
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[at0049,'Other surgery type']/value",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[at0049,'Other surgery type']/value",
           "inputs" : [ {
             "type" : "TEXT"
           } ]
@@ -2355,7 +2355,7 @@
             "XSD type" : "tag",
             "XSD label" : "Dataelement_93_1"
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[at0063,'Location of the tumor']/value",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[at0063,'Location of the tumor']/value",
           "inputs" : [ {
             "suffix" : "code",
             "type" : "CODED_TEXT",
@@ -2436,7 +2436,7 @@
           "localizedDescriptions" : {
             "en" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Surgery timing']",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Surgery timing']",
           "children" : [ {
             "id" : "surgery",
             "name" : "Surgery",
@@ -2451,7 +2451,7 @@
             "localizedDescriptions" : {
               "en" : "The activity should take place in relation to a specific named event."
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Surgery timing']/items[at0006,'Surgery']",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Surgery timing']/items[at0006,'Surgery']",
             "children" : [ {
               "id" : "from_event",
               "name" : "From event",
@@ -2469,7 +2469,7 @@
               "annotations" : {
                 "comment" : "This element is intended for events that can occur at variable dates, such as onset of menstruation, and not for doses or activities that are conditional on a different varable. If required, the event name can be coded using a terminology, which could potentially be used to trigger an application to set a concrete date for the activity."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Surgery timing']/items[at0006,'Surgery']/items[at0005,'From event']/value",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Surgery timing']/items[at0006,'Surgery']/items[at0005,'From event']/value",
               "inputs" : [ {
                 "type" : "TEXT",
                 "defaultValue" : "Primary diagnosis"
@@ -2494,7 +2494,7 @@
                 "XSD type" : "tag",
                 "XSD label" : "Dataelement_8_3"
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Surgery timing']/items[at0006,'Surgery']/items[at0009,'Surgery start relative']/value",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Surgery timing']/items[at0006,'Surgery']/items[at0009,'Surgery start relative']/value",
               "inputs" : [ {
                 "suffix" : "week",
                 "type" : "INTEGER",
@@ -2529,7 +2529,7 @@
             "XSD type" : "tag",
             "XSD label" : "Dataelement_9_2"
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[at0048,'Surgery radicality']/value",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/description[at0001]/items[at0048,'Surgery radicality']/value",
           "inputs" : [ {
             "suffix" : "code",
             "type" : "CODED_TEXT",
@@ -2566,7 +2566,7 @@
           "rmType" : "DV_DATE_TIME",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/time",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/time",
           "inputs" : [ {
             "type" : "DATETIME"
           } ],
@@ -2577,7 +2577,7 @@
           "rmType" : "CODE_PHRASE",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/language",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/language",
           "inContext" : true
         }, {
           "id" : "encoding",
@@ -2585,7 +2585,7 @@
           "rmType" : "CODE_PHRASE",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/encoding",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/encoding",
           "inContext" : true
         }, {
           "id" : "subject",
@@ -2593,7 +2593,7 @@
           "rmType" : "PARTY_PROXY",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/subject",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Surgery']/items[openEHR-EHR-ACTION.procedure.v1,'Surgery']/subject",
           "inputs" : [ {
             "suffix" : "id",
             "type" : "TEXT"
@@ -2615,16 +2615,16 @@
       "name" : "Therapies",
       "localizedName" : "Therapies",
       "rmType" : "SECTION",
-      "nodeId" : "openEHR-EHR-SECTION.procedures_rcp.v1",
+      "nodeId" : "openEHR-EHR-SECTION.adhoc.v1",
       "min" : 0,
       "max" : 1,
       "localizedNames" : {
         "en" : "Therapies"
       },
       "localizedDescriptions" : {
-        "en" : "Procedures heading (AoMRC)."
+        "en" : "A generic section header which should be renamed in a template to suit a specific clinical context."
       },
-      "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']",
+      "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']",
       "children" : [ {
         "id" : "radiation_therapy",
         "name" : "Radiation therapy",
@@ -2639,7 +2639,7 @@
         "localizedDescriptions" : {
           "en" : "A generic section header which should be renamed in a template to suit a specific clinical context."
         },
-        "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']",
+        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']",
         "children" : [ {
           "id" : "radiation_therapy",
           "name" : "Radiation therapy",
@@ -2658,21 +2658,21 @@
             "XSD label" : "Radiation therapy",
             "XSD type" : "Event.eventype"
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']",
           "children" : [ {
             "id" : "ism_transition",
             "name" : "Ism_transition",
             "rmType" : "ISM_TRANSITION",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/ism_transition",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/ism_transition",
             "children" : [ {
               "id" : "current_state",
               "name" : "Current_state",
               "rmType" : "DV_CODED_TEXT",
               "min" : 1,
               "max" : 1,
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/ism_transition/current_state",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/ism_transition/current_state",
               "inputs" : [ {
                 "suffix" : "code",
                 "type" : "CODED_TEXT",
@@ -2688,7 +2688,7 @@
               "rmType" : "DV_CODED_TEXT",
               "min" : 0,
               "max" : 1,
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/ism_transition/transition",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/ism_transition/transition",
               "inputs" : [ {
                 "suffix" : "code",
                 "type" : "TEXT"
@@ -2703,7 +2703,7 @@
               "rmType" : "DV_CODED_TEXT",
               "min" : 0,
               "max" : 1,
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/ism_transition/careflow_step",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/ism_transition/careflow_step",
               "inputs" : [ {
                 "suffix" : "code",
                 "type" : "CODED_TEXT",
@@ -2736,7 +2736,7 @@
             "annotations" : {
               "comment" : "Coding of the specific procedure with a terminology is preferred, where possible."
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[at0002,'Therapy']/value",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[at0002,'Therapy']/value",
             "inputs" : [ {
               "type" : "TEXT",
               "defaultValue" : "Radiation therapy"
@@ -2755,7 +2755,7 @@
             "localizedDescriptions" : {
               "en" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy start']",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy start']",
             "children" : [ {
               "id" : "start_of_radiation_therapy",
               "name" : "Start of radiation therapy",
@@ -2770,7 +2770,7 @@
               "localizedDescriptions" : {
                 "en" : "The activity should take place in relation to a specific named event."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy start']/items[at0006,'Start of radiation therapy']",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy start']/items[at0006,'Start of radiation therapy']",
               "children" : [ {
                 "id" : "from_event",
                 "name" : "From event",
@@ -2788,7 +2788,7 @@
                 "annotations" : {
                   "comment" : "This element is intended for events that can occur at variable dates, such as onset of menstruation, and not for doses or activities that are conditional on a different varable. If required, the event name can be coded using a terminology, which could potentially be used to trigger an application to set a concrete date for the activity."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy start']/items[at0006,'Start of radiation therapy']/items[at0005,'From event']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy start']/items[at0006,'Start of radiation therapy']/items[at0005,'From event']/value",
                 "inputs" : [ {
                   "type" : "TEXT",
                   "defaultValue" : "Primary diagnosis"
@@ -2813,7 +2813,7 @@
                   "XSD type" : "tag",
                   "XSD label" : "Dataelement_12_4"
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy start']/items[at0006,'Start of radiation therapy']/items[at0009,'Date of start of radiation therapy']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy start']/items[at0006,'Start of radiation therapy']/items[at0009,'Date of start of radiation therapy']/value",
                 "inputs" : [ {
                   "suffix" : "week",
                   "type" : "INTEGER",
@@ -2842,7 +2842,7 @@
             "localizedDescriptions" : {
               "en" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy end']",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy end']",
             "children" : [ {
               "id" : "end_of_radiation_therapy",
               "name" : "End of radiation therapy",
@@ -2857,7 +2857,7 @@
               "localizedDescriptions" : {
                 "en" : "The activity should take place in relation to a specific named event."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy end']/items[at0006,'End of radiation therapy']",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy end']/items[at0006,'End of radiation therapy']",
               "children" : [ {
                 "id" : "from_event",
                 "name" : "From event",
@@ -2875,7 +2875,7 @@
                 "annotations" : {
                   "comment" : "This element is intended for events that can occur at variable dates, such as onset of menstruation, and not for doses or activities that are conditional on a different varable. If required, the event name can be coded using a terminology, which could potentially be used to trigger an application to set a concrete date for the activity."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy end']/items[at0006,'End of radiation therapy']/items[at0005,'From event']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy end']/items[at0006,'End of radiation therapy']/items[at0005,'From event']/value",
                 "inputs" : [ {
                   "type" : "TEXT",
                   "defaultValue" : "Primary diagnosis"
@@ -2900,7 +2900,7 @@
                   "XSD type" : "tag",
                   "XSD label" : "Dataelement_13_2"
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy end']/items[at0006,'End of radiation therapy']/items[at0009,'Date of end of radiation therapy']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Radiation therapy end']/items[at0006,'End of radiation therapy']/items[at0009,'Date of end of radiation therapy']/value",
                 "inputs" : [ {
                   "suffix" : "week",
                   "type" : "INTEGER",
@@ -2921,7 +2921,7 @@
             "rmType" : "DV_DATE_TIME",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/time",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/time",
             "inputs" : [ {
               "type" : "DATETIME"
             } ],
@@ -2932,7 +2932,7 @@
             "rmType" : "CODE_PHRASE",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/language",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/language",
             "inContext" : true
           }, {
             "id" : "encoding",
@@ -2940,7 +2940,7 @@
             "rmType" : "CODE_PHRASE",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/encoding",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/encoding",
             "inContext" : true
           }, {
             "id" : "subject",
@@ -2948,7 +2948,7 @@
             "rmType" : "PARTY_PROXY",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/subject",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Radiation therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Radiation therapy']/subject",
             "inputs" : [ {
               "suffix" : "id",
               "type" : "TEXT"
@@ -2979,7 +2979,7 @@
         "localizedDescriptions" : {
           "en" : "A generic section header which should be renamed in a template to suit a specific clinical context."
         },
-        "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']",
+        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']",
         "children" : [ {
           "id" : "targeted_therapy",
           "name" : "Targeted therapy",
@@ -2998,21 +2998,21 @@
             "XSD label" : "Targeted therapy",
             "XSD type" : "Event.eventype"
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']",
           "children" : [ {
             "id" : "ism_transition",
             "name" : "Ism_transition",
             "rmType" : "ISM_TRANSITION",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/ism_transition",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/ism_transition",
             "children" : [ {
               "id" : "current_state",
               "name" : "Current_state",
               "rmType" : "DV_CODED_TEXT",
               "min" : 1,
               "max" : 1,
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/ism_transition/current_state",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/ism_transition/current_state",
               "inputs" : [ {
                 "suffix" : "code",
                 "type" : "CODED_TEXT",
@@ -3028,7 +3028,7 @@
               "rmType" : "DV_CODED_TEXT",
               "min" : 0,
               "max" : 1,
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/ism_transition/transition",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/ism_transition/transition",
               "inputs" : [ {
                 "suffix" : "code",
                 "type" : "TEXT"
@@ -3043,7 +3043,7 @@
               "rmType" : "DV_CODED_TEXT",
               "min" : 0,
               "max" : 1,
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/ism_transition/careflow_step",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/ism_transition/careflow_step",
               "inputs" : [ {
                 "suffix" : "code",
                 "type" : "CODED_TEXT",
@@ -3076,7 +3076,7 @@
             "annotations" : {
               "comment" : "Coding of the specific procedure with a terminology is preferred, where possible."
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[at0002,'Therapy']/value",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[at0002,'Therapy']/value",
             "inputs" : [ {
               "type" : "TEXT",
               "defaultValue" : "Targeted therapy"
@@ -3095,7 +3095,7 @@
             "localizedDescriptions" : {
               "en" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy start']",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy start']",
             "children" : [ {
               "id" : "start_of_targeted_therapy",
               "name" : "Start of targeted therapy",
@@ -3110,7 +3110,7 @@
               "localizedDescriptions" : {
                 "en" : "The activity should take place in relation to a specific named event."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy start']/items[at0006,'Start of targeted therapy']",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy start']/items[at0006,'Start of targeted therapy']",
               "children" : [ {
                 "id" : "from_event",
                 "name" : "From event",
@@ -3128,7 +3128,7 @@
                 "annotations" : {
                   "comment" : "This element is intended for events that can occur at variable dates, such as onset of menstruation, and not for doses or activities that are conditional on a different varable. If required, the event name can be coded using a terminology, which could potentially be used to trigger an application to set a concrete date for the activity."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy start']/items[at0006,'Start of targeted therapy']/items[at0005,'From event']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy start']/items[at0006,'Start of targeted therapy']/items[at0005,'From event']/value",
                 "inputs" : [ {
                   "type" : "TEXT",
                   "defaultValue" : "Primary diagnosis"
@@ -3153,7 +3153,7 @@
                   "XSD type" : "tag",
                   "XSD label" : "Dataelement_35_3"
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy start']/items[at0006,'Start of targeted therapy']/items[at0009,'Date of start of targeted therapy']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy start']/items[at0006,'Start of targeted therapy']/items[at0009,'Date of start of targeted therapy']/value",
                 "inputs" : [ {
                   "suffix" : "week",
                   "type" : "INTEGER",
@@ -3182,7 +3182,7 @@
             "localizedDescriptions" : {
               "en" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy end']",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy end']",
             "children" : [ {
               "id" : "end_of_targeted_therapy",
               "name" : "End of targeted therapy",
@@ -3197,7 +3197,7 @@
               "localizedDescriptions" : {
                 "en" : "The activity should take place in relation to a specific named event."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy end']/items[at0006,'End of targeted therapy']",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy end']/items[at0006,'End of targeted therapy']",
               "children" : [ {
                 "id" : "from_event",
                 "name" : "From event",
@@ -3215,7 +3215,7 @@
                 "annotations" : {
                   "comment" : "This element is intended for events that can occur at variable dates, such as onset of menstruation, and not for doses or activities that are conditional on a different varable. If required, the event name can be coded using a terminology, which could potentially be used to trigger an application to set a concrete date for the activity."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy end']/items[at0006,'End of targeted therapy']/items[at0005,'From event']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy end']/items[at0006,'End of targeted therapy']/items[at0005,'From event']/value",
                 "inputs" : [ {
                   "type" : "TEXT",
                   "defaultValue" : "Primary diagnosis"
@@ -3240,7 +3240,7 @@
                   "XSD type" : "tag",
                   "XSD label" : "Dataelement_36_1"
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy end']/items[at0006,'End of targeted therapy']/items[at0009,'Date of end of targeted therapy']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/description[at0001]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Targeted therapy end']/items[at0006,'End of targeted therapy']/items[at0009,'Date of end of targeted therapy']/value",
                 "inputs" : [ {
                   "suffix" : "week",
                   "type" : "INTEGER",
@@ -3261,7 +3261,7 @@
             "rmType" : "DV_DATE_TIME",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/time",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/time",
             "inputs" : [ {
               "type" : "DATETIME"
             } ],
@@ -3272,7 +3272,7 @@
             "rmType" : "CODE_PHRASE",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/language",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/language",
             "inContext" : true
           }, {
             "id" : "encoding",
@@ -3280,7 +3280,7 @@
             "rmType" : "CODE_PHRASE",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/encoding",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/encoding",
             "inContext" : true
           }, {
             "id" : "subject",
@@ -3288,7 +3288,7 @@
             "rmType" : "PARTY_PROXY",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/subject",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Targeted therapy']/items[openEHR-EHR-ACTION.procedure.v1,'Targeted therapy']/subject",
             "inputs" : [ {
               "suffix" : "id",
               "type" : "TEXT"
@@ -3319,7 +3319,7 @@
         "localizedDescriptions" : {
           "en" : "A generic section header which should be renamed in a template to suit a specific clinical context."
         },
-        "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']",
+        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']",
         "children" : [ {
           "id" : "medication_management",
           "name" : "Medication management",
@@ -3339,21 +3339,21 @@
             "comment" : "This is not limited to activities performed based on medication orders from clinicians, but could also include for example taking over the counter medication.",
             "XSD type" : "Event.eventype"
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]",
           "children" : [ {
             "id" : "ism_transition",
             "name" : "Ism_transition",
             "rmType" : "ISM_TRANSITION",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/ism_transition",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/ism_transition",
             "children" : [ {
               "id" : "current_state",
               "name" : "Current_state",
               "rmType" : "DV_CODED_TEXT",
               "min" : 1,
               "max" : 1,
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/ism_transition/current_state",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/ism_transition/current_state",
               "inputs" : [ {
                 "suffix" : "code",
                 "type" : "CODED_TEXT",
@@ -3369,7 +3369,7 @@
               "rmType" : "DV_CODED_TEXT",
               "min" : 0,
               "max" : 1,
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/ism_transition/transition",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/ism_transition/transition",
               "inputs" : [ {
                 "suffix" : "code",
                 "type" : "TEXT"
@@ -3384,7 +3384,7 @@
               "rmType" : "DV_CODED_TEXT",
               "min" : 0,
               "max" : 1,
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/ism_transition/careflow_step",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/ism_transition/careflow_step",
               "inputs" : [ {
                 "suffix" : "code",
                 "type" : "CODED_TEXT",
@@ -3420,7 +3420,7 @@
               "XSD type" : "tag",
               "XSD label" : "Dataelement_59_5"
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[at0020,'Scheme of pharmacotherapy']/value",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[at0020,'Scheme of pharmacotherapy']/value",
             "inputs" : [ {
               "type" : "TEXT",
               "list" : [ {
@@ -3470,7 +3470,7 @@
               "XSD type" : "tag",
               "XSD label" : "Dataelement_81_3"
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[at0156,'Other pharmacotherapy scheme']/value",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[at0156,'Other pharmacotherapy scheme']/value",
             "inputs" : [ {
               "type" : "TEXT"
             } ]
@@ -3488,7 +3488,7 @@
             "localizedDescriptions" : {
               "en" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy start']",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy start']",
             "children" : [ {
               "id" : "start_of_pharmacotherapy",
               "name" : "Start of pharmacotherapy",
@@ -3503,7 +3503,7 @@
               "localizedDescriptions" : {
                 "en" : "The activity should take place in relation to a specific named event."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy start']/items[at0006,'Start of pharmacotherapy']",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy start']/items[at0006,'Start of pharmacotherapy']",
               "children" : [ {
                 "id" : "from_event",
                 "name" : "From event",
@@ -3521,7 +3521,7 @@
                 "annotations" : {
                   "comment" : "This element is intended for events that can occur at variable dates, such as onset of menstruation, and not for doses or activities that are conditional on a different varable. If required, the event name can be coded using a terminology, which could potentially be used to trigger an application to set a concrete date for the activity."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy start']/items[at0006,'Start of pharmacotherapy']/items[at0005,'From event']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy start']/items[at0006,'Start of pharmacotherapy']/items[at0005,'From event']/value",
                 "inputs" : [ {
                   "type" : "TEXT",
                   "defaultValue" : "Primary diagnosis"
@@ -3546,7 +3546,7 @@
                   "XSD type" : "tag",
                   "XSD label" : "Dataelement_10_2"
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy start']/items[at0006,'Start of pharmacotherapy']/items[at0009,'Date of start of pharmacotherapy']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy start']/items[at0006,'Start of pharmacotherapy']/items[at0009,'Date of start of pharmacotherapy']/value",
                 "inputs" : [ {
                   "suffix" : "week",
                   "type" : "INTEGER",
@@ -3575,7 +3575,7 @@
             "localizedDescriptions" : {
               "en" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy end']",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy end']",
             "children" : [ {
               "id" : "end_of_pharmacotherapy",
               "name" : "End of pharmacotherapy",
@@ -3590,7 +3590,7 @@
               "localizedDescriptions" : {
                 "en" : "The activity should take place in relation to a specific named event."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy end']/items[at0006,'End of pharmacotherapy']",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy end']/items[at0006,'End of pharmacotherapy']",
               "children" : [ {
                 "id" : "from_event",
                 "name" : "From event",
@@ -3608,7 +3608,7 @@
                 "annotations" : {
                   "comment" : "This element is intended for events that can occur at variable dates, such as onset of menstruation, and not for doses or activities that are conditional on a different varable. If required, the event name can be coded using a terminology, which could potentially be used to trigger an application to set a concrete date for the activity."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy end']/items[at0006,'End of pharmacotherapy']/items[at0005,'From event']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy end']/items[at0006,'End of pharmacotherapy']/items[at0005,'From event']/value",
                 "inputs" : [ {
                   "type" : "TEXT",
                   "defaultValue" : "Primary diagnosis"
@@ -3633,7 +3633,7 @@
                   "XSD type" : "tag",
                   "XSD label" : "Dataelement_11_2"
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy end']/items[at0006,'End of pharmacotherapy']/items[at0009,'Date of end of pharmacotherapy']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/description[at0017]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Pharmacotherapy end']/items[at0006,'End of pharmacotherapy']/items[at0009,'Date of end of pharmacotherapy']/value",
                 "inputs" : [ {
                   "suffix" : "week",
                   "type" : "INTEGER",
@@ -3654,7 +3654,7 @@
             "rmType" : "DV_DATE_TIME",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/time",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/time",
             "inputs" : [ {
               "type" : "DATETIME"
             } ],
@@ -3665,7 +3665,7 @@
             "rmType" : "CODE_PHRASE",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/language",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/language",
             "inContext" : true
           }, {
             "id" : "encoding",
@@ -3673,7 +3673,7 @@
             "rmType" : "CODE_PHRASE",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/encoding",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/encoding",
             "inContext" : true
           }, {
             "id" : "subject",
@@ -3681,7 +3681,7 @@
             "rmType" : "PARTY_PROXY",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/subject",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Pharmacotherapy']/items[openEHR-EHR-ACTION.medication.v1]/subject",
             "inputs" : [ {
               "suffix" : "id",
               "type" : "TEXT"
@@ -3712,7 +3712,7 @@
         "localizedDescriptions" : {
           "en" : "A generic section header which should be renamed in a template to suit a specific clinical context."
         },
-        "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']",
+        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']",
         "children" : [ {
           "id" : "clinical_synopsis",
           "name" : "Clinical synopsis",
@@ -3731,7 +3731,7 @@
             "XSD label" : "Response to therapy",
             "XSD type" : "Event.eventype"
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]",
           "children" : [ {
             "id" : "specific_response",
             "name" : "Specific response",
@@ -3751,7 +3751,7 @@
               "XSD type" : "tag",
               "XSD label" : "Dataelement_33_1"
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/data[at0001]/items[at0002,'Specific response']/value",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/data[at0001]/items[at0002,'Specific response']/value",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "CODED_TEXT",
@@ -3797,7 +3797,7 @@
             "localizedDescriptions" : {
               "en" : "Structured information about the intended timing pattern for a therapeutic or diagnostic activity occurring over days, weeks, months or years."
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Response timing']",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Response timing']",
             "children" : [ {
               "id" : "therapy_response_timestamp",
               "name" : "Therapy response timestamp",
@@ -3812,7 +3812,7 @@
               "localizedDescriptions" : {
                 "en" : "The activity should take place in relation to a specific named event."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Response timing']/items[at0006,'Therapy response timestamp']",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Response timing']/items[at0006,'Therapy response timestamp']",
               "children" : [ {
                 "id" : "from_event",
                 "name" : "From event",
@@ -3830,7 +3830,7 @@
                 "annotations" : {
                   "comment" : "This element is intended for events that can occur at variable dates, such as onset of menstruation, and not for doses or activities that are conditional on a different varable. If required, the event name can be coded using a terminology, which could potentially be used to trigger an application to set a concrete date for the activity."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Response timing']/items[at0006,'Therapy response timestamp']/items[at0005,'From event']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Response timing']/items[at0006,'Therapy response timestamp']/items[at0005,'From event']/value",
                 "inputs" : [ {
                   "type" : "TEXT",
                   "defaultValue" : "Primary diagnosis"
@@ -3855,7 +3855,7 @@
                   "XSD type" : "tag",
                   "XSD label" : "Dataelement_34_1"
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Response timing']/items[at0006,'Therapy response timestamp']/items[at0009,'Time of therapy response']/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/protocol[at0003]/items[openEHR-EHR-CLUSTER.timing_nondaily.v1,'Response timing']/items[at0006,'Therapy response timestamp']/items[at0009,'Time of therapy response']/value",
                 "inputs" : [ {
                   "suffix" : "week",
                   "type" : "INTEGER",
@@ -3876,7 +3876,7 @@
             "rmType" : "CODE_PHRASE",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/language",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/language",
             "inContext" : true
           }, {
             "id" : "encoding",
@@ -3884,7 +3884,7 @@
             "rmType" : "CODE_PHRASE",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/encoding",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/encoding",
             "inContext" : true
           }, {
             "id" : "subject",
@@ -3892,7 +3892,7 @@
             "rmType" : "PARTY_PROXY",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/subject",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Therapies']/items[openEHR-EHR-SECTION.adhoc.v1,'Response to therapy']/items[openEHR-EHR-EVALUATION.clinical_synopsis.v1]/subject",
             "inputs" : [ {
               "suffix" : "id",
               "type" : "TEXT"
@@ -3915,16 +3915,16 @@
       "name" : "Diagnostic examinations",
       "localizedName" : "Diagnostic examinations",
       "rmType" : "SECTION",
-      "nodeId" : "openEHR-EHR-SECTION.procedures_rcp.v1",
+      "nodeId" : "openEHR-EHR-SECTION.adhoc.v1",
       "min" : 0,
       "max" : 1,
       "localizedNames" : {
         "en" : "Diagnostic examinations"
       },
       "localizedDescriptions" : {
-        "en" : "Procedures heading (AoMRC)."
+        "en" : "A generic section header which should be renamed in a template to suit a specific clinical context."
       },
-      "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']",
+      "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']",
       "children" : [ {
         "id" : "colonoscopy",
         "name" : "Colonoscopy",
@@ -3939,21 +3939,21 @@
         "localizedDescriptions" : {
           "en" : "A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes."
         },
-        "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']",
+        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']",
         "children" : [ {
           "id" : "ism_transition",
           "name" : "Ism_transition",
           "rmType" : "ISM_TRANSITION",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/ism_transition",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/ism_transition",
           "children" : [ {
             "id" : "current_state",
             "name" : "Current_state",
             "rmType" : "DV_CODED_TEXT",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/ism_transition/current_state",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/ism_transition/current_state",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "CODED_TEXT",
@@ -3969,7 +3969,7 @@
             "rmType" : "DV_CODED_TEXT",
             "min" : 0,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/ism_transition/transition",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/ism_transition/transition",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "TEXT"
@@ -3984,7 +3984,7 @@
             "rmType" : "DV_CODED_TEXT",
             "min" : 0,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/ism_transition/careflow_step",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/ism_transition/careflow_step",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "CODED_TEXT",
@@ -4017,7 +4017,7 @@
           "annotations" : {
             "comment" : "Coding of the specific procedure with a terminology is preferred, where possible."
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/description[at0001]/items[at0002]/value",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/description[at0001]/items[at0002]/value",
           "inputs" : [ {
             "type" : "TEXT",
             "defaultValue" : "Colonoscopy"
@@ -4042,7 +4042,7 @@
             "XSD type" : "tag",
             "XSD label" : "Dataelement_88_1"
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/description[at0001]/items[at0048,'Colonoscopy']/value",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/description[at0001]/items[at0048,'Colonoscopy']/value",
           "inputs" : [ {
             "type" : "TEXT",
             "list" : [ {
@@ -4066,7 +4066,7 @@
           "rmType" : "DV_DATE_TIME",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/time",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/time",
           "inputs" : [ {
             "type" : "DATETIME"
           } ],
@@ -4077,7 +4077,7 @@
           "rmType" : "CODE_PHRASE",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/language",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/language",
           "inContext" : true
         }, {
           "id" : "encoding",
@@ -4085,7 +4085,7 @@
           "rmType" : "CODE_PHRASE",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/encoding",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/encoding",
           "inContext" : true
         }, {
           "id" : "subject",
@@ -4093,7 +4093,7 @@
           "rmType" : "PARTY_PROXY",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/subject",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Colonoscopy']/subject",
           "inputs" : [ {
             "suffix" : "id",
             "type" : "TEXT"
@@ -4123,21 +4123,21 @@
         "localizedDescriptions" : {
           "en" : "A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes."
         },
-        "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']",
+        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']",
         "children" : [ {
           "id" : "ism_transition",
           "name" : "Ism_transition",
           "rmType" : "ISM_TRANSITION",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/ism_transition",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/ism_transition",
           "children" : [ {
             "id" : "current_state",
             "name" : "Current_state",
             "rmType" : "DV_CODED_TEXT",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/ism_transition/current_state",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/ism_transition/current_state",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "CODED_TEXT",
@@ -4153,7 +4153,7 @@
             "rmType" : "DV_CODED_TEXT",
             "min" : 0,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/ism_transition/transition",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/ism_transition/transition",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "TEXT"
@@ -4168,7 +4168,7 @@
             "rmType" : "DV_CODED_TEXT",
             "min" : 0,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/ism_transition/careflow_step",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/ism_transition/careflow_step",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "CODED_TEXT",
@@ -4201,7 +4201,7 @@
           "annotations" : {
             "comment" : "Coding of the specific procedure with a terminology is preferred, where possible."
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/description[at0001]/items[at0002]/value",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/description[at0001]/items[at0002]/value",
           "inputs" : [ {
             "type" : "TEXT",
             "defaultValue" : "CT"
@@ -4226,7 +4226,7 @@
             "XSD type" : "tag",
             "XSD label" : "Dataelement_31_3"
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/description[at0001]/items[at0048,'CT']/value",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/description[at0001]/items[at0048,'CT']/value",
           "inputs" : [ {
             "type" : "TEXT",
             "list" : [ {
@@ -4250,7 +4250,7 @@
           "rmType" : "DV_DATE_TIME",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/time",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/time",
           "inputs" : [ {
             "type" : "DATETIME"
           } ],
@@ -4261,7 +4261,7 @@
           "rmType" : "CODE_PHRASE",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/language",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/language",
           "inContext" : true
         }, {
           "id" : "encoding",
@@ -4269,7 +4269,7 @@
           "rmType" : "CODE_PHRASE",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/encoding",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/encoding",
           "inContext" : true
         }, {
           "id" : "subject",
@@ -4277,7 +4277,7 @@
           "rmType" : "PARTY_PROXY",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/subject",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'CT']/subject",
           "inputs" : [ {
             "suffix" : "id",
             "type" : "TEXT"
@@ -4307,21 +4307,21 @@
         "localizedDescriptions" : {
           "en" : "A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes."
         },
-        "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']",
+        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']",
         "children" : [ {
           "id" : "ism_transition",
           "name" : "Ism_transition",
           "rmType" : "ISM_TRANSITION",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/ism_transition",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/ism_transition",
           "children" : [ {
             "id" : "current_state",
             "name" : "Current_state",
             "rmType" : "DV_CODED_TEXT",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/ism_transition/current_state",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/ism_transition/current_state",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "CODED_TEXT",
@@ -4337,7 +4337,7 @@
             "rmType" : "DV_CODED_TEXT",
             "min" : 0,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/ism_transition/transition",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/ism_transition/transition",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "TEXT"
@@ -4352,7 +4352,7 @@
             "rmType" : "DV_CODED_TEXT",
             "min" : 0,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/ism_transition/careflow_step",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/ism_transition/careflow_step",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "CODED_TEXT",
@@ -4385,7 +4385,7 @@
           "annotations" : {
             "comment" : "Coding of the specific procedure with a terminology is preferred, where possible."
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/description[at0001]/items[at0002]/value",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/description[at0001]/items[at0002]/value",
           "inputs" : [ {
             "type" : "TEXT",
             "defaultValue" : "Liver imaging"
@@ -4410,7 +4410,7 @@
             "XSD label" : "Dataelement_61_5",
             "Dat model label" : "DIAG_LIVER_IMAGING_DONE"
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/description[at0001]/items[at0048,'Liver imaging']/value",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/description[at0001]/items[at0048,'Liver imaging']/value",
           "inputs" : [ {
             "type" : "TEXT",
             "list" : [ {
@@ -4434,7 +4434,7 @@
           "rmType" : "DV_DATE_TIME",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/time",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/time",
           "inputs" : [ {
             "type" : "DATETIME"
           } ],
@@ -4445,7 +4445,7 @@
           "rmType" : "CODE_PHRASE",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/language",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/language",
           "inContext" : true
         }, {
           "id" : "encoding",
@@ -4453,7 +4453,7 @@
           "rmType" : "CODE_PHRASE",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/encoding",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/encoding",
           "inContext" : true
         }, {
           "id" : "subject",
@@ -4461,7 +4461,7 @@
           "rmType" : "PARTY_PROXY",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/subject",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Liver imaging']/subject",
           "inputs" : [ {
             "suffix" : "id",
             "type" : "TEXT"
@@ -4491,21 +4491,21 @@
         "localizedDescriptions" : {
           "en" : "A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes."
         },
-        "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']",
+        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']",
         "children" : [ {
           "id" : "ism_transition",
           "name" : "Ism_transition",
           "rmType" : "ISM_TRANSITION",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/ism_transition",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/ism_transition",
           "children" : [ {
             "id" : "current_state",
             "name" : "Current_state",
             "rmType" : "DV_CODED_TEXT",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/ism_transition/current_state",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/ism_transition/current_state",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "CODED_TEXT",
@@ -4521,7 +4521,7 @@
             "rmType" : "DV_CODED_TEXT",
             "min" : 0,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/ism_transition/transition",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/ism_transition/transition",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "TEXT"
@@ -4536,7 +4536,7 @@
             "rmType" : "DV_CODED_TEXT",
             "min" : 0,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/ism_transition/careflow_step",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/ism_transition/careflow_step",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "CODED_TEXT",
@@ -4569,7 +4569,7 @@
           "annotations" : {
             "comment" : "Coding of the specific procedure with a terminology is preferred, where possible."
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/description[at0001]/items[at0002]/value",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/description[at0001]/items[at0002]/value",
           "inputs" : [ {
             "type" : "TEXT",
             "defaultValue" : "Lung imaging"
@@ -4594,7 +4594,7 @@
             "XSD type" : "tag",
             "XSD label" : "Dataelement_63_4"
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/description[at0001]/items[at0048,'Lung imaging']/value",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/description[at0001]/items[at0048,'Lung imaging']/value",
           "inputs" : [ {
             "type" : "TEXT",
             "list" : [ {
@@ -4618,7 +4618,7 @@
           "rmType" : "DV_DATE_TIME",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/time",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/time",
           "inputs" : [ {
             "type" : "DATETIME"
           } ],
@@ -4629,7 +4629,7 @@
           "rmType" : "CODE_PHRASE",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/language",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/language",
           "inContext" : true
         }, {
           "id" : "encoding",
@@ -4637,7 +4637,7 @@
           "rmType" : "CODE_PHRASE",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/encoding",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/encoding",
           "inContext" : true
         }, {
           "id" : "subject",
@@ -4645,7 +4645,7 @@
           "rmType" : "PARTY_PROXY",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/subject",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'Lung imaging']/subject",
           "inputs" : [ {
             "suffix" : "id",
             "type" : "TEXT"
@@ -4675,21 +4675,21 @@
         "localizedDescriptions" : {
           "en" : "A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes."
         },
-        "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']",
+        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']",
         "children" : [ {
           "id" : "ism_transition",
           "name" : "Ism_transition",
           "rmType" : "ISM_TRANSITION",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/ism_transition",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/ism_transition",
           "children" : [ {
             "id" : "current_state",
             "name" : "Current_state",
             "rmType" : "DV_CODED_TEXT",
             "min" : 1,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/ism_transition/current_state",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/ism_transition/current_state",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "CODED_TEXT",
@@ -4705,7 +4705,7 @@
             "rmType" : "DV_CODED_TEXT",
             "min" : 0,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/ism_transition/transition",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/ism_transition/transition",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "TEXT"
@@ -4720,7 +4720,7 @@
             "rmType" : "DV_CODED_TEXT",
             "min" : 0,
             "max" : 1,
-            "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/ism_transition/careflow_step",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/ism_transition/careflow_step",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "CODED_TEXT",
@@ -4753,7 +4753,7 @@
           "annotations" : {
             "comment" : "Coding of the specific procedure with a terminology is preferred, where possible."
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/description[at0001]/items[at0002]/value",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/description[at0001]/items[at0002]/value",
           "inputs" : [ {
             "type" : "TEXT",
             "defaultValue" : "MRI"
@@ -4778,7 +4778,7 @@
             "XSD type" : "tag",
             "XSD label" : "Dataelement_30_3"
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/description[at0001]/items[at0048,'MRI']/value",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/description[at0001]/items[at0048,'MRI']/value",
           "inputs" : [ {
             "type" : "TEXT",
             "list" : [ {
@@ -4802,7 +4802,7 @@
           "rmType" : "DV_DATE_TIME",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/time",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/time",
           "inputs" : [ {
             "type" : "DATETIME"
           } ],
@@ -4813,7 +4813,7 @@
           "rmType" : "CODE_PHRASE",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/language",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/language",
           "inContext" : true
         }, {
           "id" : "encoding",
@@ -4821,7 +4821,7 @@
           "rmType" : "CODE_PHRASE",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/encoding",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/encoding",
           "inContext" : true
         }, {
           "id" : "subject",
@@ -4829,7 +4829,7 @@
           "rmType" : "PARTY_PROXY",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.procedures_rcp.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/subject",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Diagnostic examinations']/items[openEHR-EHR-ACTION.procedure.v1,'MRI']/subject",
           "inputs" : [ {
             "suffix" : "id",
             "type" : "TEXT"
