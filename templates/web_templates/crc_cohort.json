@@ -1,6 +1,6 @@
 {
   "templateId" : "crc_cohort",
-  "semVer" : "11.1.0",
+  "semVer" : "12.2.2",
   "version" : "2.3",
   "defaultLanguage" : "en",
   "languages" : [ "en" ],
@@ -129,7 +129,7 @@
       "localizedName" : "Patient data",
       "rmType" : "SECTION",
       "nodeId" : "openEHR-EHR-SECTION.demographics_rcp.v1",
-      "min" : 1,
+      "min" : 0,
       "max" : 1,
       "localizedNames" : {
         "en" : "Patient data"
@@ -280,11 +280,16 @@
           "aqlPath" : "/content[openEHR-EHR-SECTION.demographics_rcp.v1,'Patient data']/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Primary diagnosis']/data[at0001]/items[at0002,'Primary diagnosis']/value",
           "inputs" : [ {
             "suffix" : "code",
-            "type" : "TEXT",
-            "defaultValue" : "44803809"
-          }, {
-            "suffix" : "value",
-            "type" : "TEXT"
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "44803809",
+              "label" : "Colorectal cancer",
+              "localizedLabels" : {
+                "en" : ""
+              }
+            } ],
+            "defaultValue" : "44803809",
+            "terminology" : "omop_vocabulary"
           } ]
         }, {
           "id" : "date_of_diagnosis",
@@ -619,7 +624,7 @@
       "localizedName" : "Histopathology",
       "rmType" : "SECTION",
       "nodeId" : "openEHR-EHR-SECTION.result_details.v0",
-      "min" : 1,
+      "min" : 0,
       "max" : 1,
       "localizedNames" : {
         "en" : "Histopathology"
@@ -634,7 +639,7 @@
         "localizedName" : "Result group",
         "rmType" : "SECTION",
         "nodeId" : "at0002",
-        "min" : 1,
+        "min" : 0,
         "max" : 1,
         "localizedNames" : {
           "en" : "Result group"
@@ -2060,8 +2065,8 @@
                           "en" : ""
                         }
                       }, {
-                        "value" : "45882504",
-                        "label" : "Pleura",
+                        "value" : "45881858",
+                        "label" : "Lung",
                         "localizedLabels" : {
                           "en" : ""
                         }
@@ -2078,7 +2083,7 @@
                           "en" : ""
                         }
                       } ],
-                      "terminology" : "omop_vocabular"
+                      "terminology" : "omop_vocabulary"
                     } ]
                   } ]
                 } ]
@@ -2145,8 +2150,8 @@
         "localizedName" : "Surgery",
         "rmType" : "ACTION",
         "nodeId" : "openEHR-EHR-ACTION.procedure.v1",
-        "min" : 1,
-        "max" : -1,
+        "min" : 0,
+        "max" : 1,
         "localizedNames" : {
           "en" : "Surgery"
         },
@@ -2428,7 +2433,7 @@
           "localizedName" : "Surgery timing",
           "rmType" : "CLUSTER",
           "nodeId" : "openEHR-EHR-CLUSTER.timing_nondaily.v1",
-          "min" : 1,
+          "min" : 0,
           "max" : 1,
           "localizedNames" : {
             "en" : "Surgery timing"
@@ -3326,7 +3331,7 @@
           "localizedName" : "Medication management",
           "rmType" : "ACTION",
           "nodeId" : "openEHR-EHR-ACTION.medication.v1",
-          "min" : 1,
+          "min" : 0,
           "max" : -1,
           "localizedNames" : {
             "en" : "Medication management"
@@ -3719,8 +3724,8 @@
           "localizedName" : "Clinical synopsis",
           "rmType" : "EVALUATION",
           "nodeId" : "openEHR-EHR-EVALUATION.clinical_synopsis.v1",
-          "min" : 1,
-          "max" : -1,
+          "min" : 0,
+          "max" : 1,
           "localizedNames" : {
             "en" : "Clinical synopsis"
           },
