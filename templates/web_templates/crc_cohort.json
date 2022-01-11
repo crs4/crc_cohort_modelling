@@ -1,6 +1,6 @@
 {
   "templateId" : "crc_cohort",
-  "semVer" : "12.2.2",
+  "semVer" : "12.4.0",
   "version" : "2.3",
   "defaultLanguage" : "en",
   "languages" : [ "en" ],
@@ -468,11 +468,16 @@
           "aqlPath" : "/content[openEHR-EHR-SECTION.demographics_rcp.v1,'Patient data']/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Metastasis diagnosis']/data[at0001]/items[at0002,'Metastasis diagnosis']/value",
           "inputs" : [ {
             "suffix" : "code",
-            "type" : "TEXT",
-            "defaultValue" : " 36769180"
-          }, {
-            "suffix" : "value",
-            "type" : "TEXT"
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "36769180",
+              "label" : "Metastasis",
+              "localizedLabels" : {
+                "en" : ""
+              }
+            } ],
+            "defaultValue" : "36769180",
+            "terminology" : "omop_vocabular"
           } ]
         }, {
           "id" : "metastasis_diagnosis2",
@@ -1199,11 +1204,16 @@
             "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Cancer diagnosis']/data[at0001]/items[at0002]/value",
             "inputs" : [ {
               "suffix" : "code",
-              "type" : "TEXT",
-              "defaultValue" : "44803809"
-            }, {
-              "suffix" : "value",
-              "type" : "TEXT"
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "44803809",
+                "label" : "Colorectal cancer",
+                "localizedLabels" : {
+                  "en" : ""
+                }
+              } ],
+              "defaultValue" : "44803809",
+              "terminology" : "omop_vocabulary"
             } ]
           }, {
             "id" : "localization_of_primary_tumor",

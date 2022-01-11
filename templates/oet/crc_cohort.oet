@@ -34,11 +34,11 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>12.2.2</value>
+                <value>12.4.0</value>
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>59efcf7e1f90e63317fe19b70765d3b2</value>
+                <value>e56d7791f6a2e3ababf290052b4613ac</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -1253,8 +1253,12 @@
                 archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1"
                 concept_name="Problem/Diagnosis" max="1"
                 name="Metastasis diagnosis" path="/items" xsi:type="tem:EVALUATION">
-                <Rule default="local:: 36769180:: Metastasis"
-                    name="Metastasis diagnosis" path="/data[at0001]/items[at0002]"/>
+                <Rule default="omop_vocabular::36769180::Metastasis"
+                    name="Metastasis diagnosis" path="/data[at0001]/items[at0002]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>omop_vocabular::36769180::Metastasis</includedValues>
+                    </constraint>
+                </Rule>
                 <Rule max="0" path="/data[at0001]/items[at0009]"/>
                 <Rule max="0" path="/data[at0001]/items[at0012]"/>
                 <Rule max="0" path="/data[at0001]/items[at0077]"/>
@@ -1633,7 +1637,12 @@
                 concept_name="Problem/Diagnosis" max="1" min="1"
                 name="Cancer diagnosis"
                 path="/items[at0002]/items[at0004]" xsi:type="tem:EVALUATION">
-                <Rule default="local::44803809::Colorectal cancer" path="/data[at0001]/items[at0002]"/>
+                <Rule
+                    default="omop_vocabulary::44803809::Colorectal cancer" path="/data[at0001]/items[at0002]">
+                    <constraint xsi:type="tem:textConstraint">
+                        <includedValues>omop_vocabulary::44803809::Colorectal cancer</includedValues>
+                    </constraint>
+                </Rule>
                 <Rule max="0" path="/data[at0001]/items[at0009]"/>
                 <Rule max="1" min="1"
                     name="Localization of primary tumor" path="/data[at0001]/items[at0012]">
