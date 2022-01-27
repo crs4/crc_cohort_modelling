@@ -17,4 +17,4 @@ access](https://www.bbmri-eric.eu/services/access-policies/).
 
 ## Usage
 
-If you use this work in a paper, don't forget to give credits to the authors by citing the URL of this repository and its DOI (see above).
+If you use this work in a paper, don't forget to give credits to the authors by citing the URL of this repository.
