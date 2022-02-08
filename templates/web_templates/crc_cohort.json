@@ -1,6 +1,6 @@
 {
   "templateId" : "crc_cohort",
-  "semVer" : "12.4.0",
+  "semVer" : "19.0.0",
   "version" : "2.3",
   "defaultLanguage" : "en",
   "languages" : [ "en" ],
@@ -477,7 +477,7 @@
               }
             } ],
             "defaultValue" : "36769180",
-            "terminology" : "omop_vocabular"
+            "terminology" : "omop_vocabulary"
           } ]
         }, {
           "id" : "metastasis_diagnosis2",
@@ -644,7 +644,7 @@
         "localizedName" : "Result group",
         "rmType" : "SECTION",
         "nodeId" : "at0002",
-        "min" : 0,
+        "min" : 1,
         "max" : 1,
         "localizedNames" : {
           "en" : "Result group"
@@ -1987,7 +1987,7 @@
                   "localizedName" : "Anatomical location",
                   "rmType" : "CLUSTER",
                   "nodeId" : "openEHR-EHR-CLUSTER.anatomical_location.v1",
-                  "min" : 0,
+                  "min" : 1,
                   "max" : -1,
                   "localizedNames" : {
                     "en" : "Anatomical location"
@@ -2160,8 +2160,8 @@
         "localizedName" : "Surgery",
         "rmType" : "ACTION",
         "nodeId" : "openEHR-EHR-ACTION.procedure.v1",
-        "min" : 0,
-        "max" : 1,
+        "min" : 1,
+        "max" : -1,
         "localizedNames" : {
           "en" : "Surgery"
         },
@@ -2849,7 +2849,7 @@
             "localizedName" : "Radiation therapy end",
             "rmType" : "CLUSTER",
             "nodeId" : "openEHR-EHR-CLUSTER.timing_nondaily.v1",
-            "min" : 1,
+            "min" : 0,
             "max" : 1,
             "localizedNames" : {
               "en" : "Radiation therapy end"
@@ -3204,7 +3204,7 @@
               "localizedName" : "End of targeted therapy",
               "rmType" : "CLUSTER",
               "nodeId" : "at0006",
-              "min" : 0,
+              "min" : 1,
               "max" : -1,
               "localizedNames" : {
                 "en" : "End of targeted therapy"
@@ -3341,7 +3341,7 @@
           "localizedName" : "Medication management",
           "rmType" : "ACTION",
           "nodeId" : "openEHR-EHR-ACTION.medication.v1",
-          "min" : 0,
+          "min" : 1,
           "max" : -1,
           "localizedNames" : {
             "en" : "Medication management"
@@ -3582,7 +3582,7 @@
             "localizedName" : "Pharmacotherapy end",
             "rmType" : "CLUSTER",
             "nodeId" : "openEHR-EHR-CLUSTER.timing_nondaily.v1",
-            "min" : 1,
+            "min" : 0,
             "max" : 1,
             "localizedNames" : {
               "en" : "Pharmacotherapy end"
@@ -3734,8 +3734,8 @@
           "localizedName" : "Clinical synopsis",
           "rmType" : "EVALUATION",
           "nodeId" : "openEHR-EHR-EVALUATION.clinical_synopsis.v1",
-          "min" : 0,
-          "max" : 1,
+          "min" : 1,
+          "max" : -1,
           "localizedNames" : {
             "en" : "Clinical synopsis"
           },
@@ -3946,7 +3946,7 @@
         "localizedName" : "Colonoscopy",
         "rmType" : "ACTION",
         "nodeId" : "openEHR-EHR-ACTION.procedure.v1",
-        "min" : 1,
+        "min" : 0,
         "max" : 1,
         "localizedNames" : {
           "en" : "Colonoscopy"
@@ -4882,7 +4882,7 @@
         "localizedName" : "Result group",
         "rmType" : "SECTION",
         "nodeId" : "at0002",
-        "min" : 0,
+        "min" : 1,
         "max" : 1,
         "localizedNames" : {
           "en" : "Result group"
@@ -5279,6 +5279,7 @@
                   "type" : "CODED_TEXT",
                   "list" : [ {
                     "value" : "at0004",
+                    "label" : "Present",
                     "localizedLabels" : {
                       "en" : "Present"
                     },
@@ -5293,6 +5294,7 @@
                     }
                   }, {
                     "value" : "at0005",
+                    "label" : "Absent",
                     "localizedLabels" : {
                       "en" : "Absent"
                     },
@@ -5307,6 +5309,7 @@
                     }
                   }, {
                     "value" : "at0007",
+                    "label" : "Indeterminate",
                     "localizedLabels" : {
                       "en" : "Indeterminate"
                     },
@@ -5319,8 +5322,7 @@
                         "terminologyId" : "LOINC"
                       }
                     }
-                  } ],
-                  "terminology" : "local_terms"
+                  } ]
                 } ],
                 "termBindings" : {
                   "LOINC" : {
@@ -6334,7 +6336,7 @@
               "localizedName" : "From event",
               "rmType" : "DV_TEXT",
               "nodeId" : "at0005",
-              "min" : 0,
+              "min" : 1,
               "max" : 1,
               "localizedNames" : {
                 "en" : "From event"
