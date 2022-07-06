@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <template xmlns="http://schemas.openehr.org/v1">
     <language>
         <terminology_id>
@@ -6622,7 +6622,7 @@ Coding with a terminology is desirable, where possible.</items>
     </existence>
     <match_negated>false</match_negated>
     <children xsi:type="ARCHETYPE_SLOT">
-        <rm_type_name>NOT_SET</rm_type_name>
+        <rm_type_name>CLUSTER</rm_type_name>
         <occurrences>
             <lower_included>true</lower_included>
             <upper_included>false</upper_included>
