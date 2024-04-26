@@ -1,6 +1,6 @@
 {
   "templateId" : "BBMRI-ERIC Colorectal Cancer Cohort Report",
-  "semVer" : "36.0.0",
+  "semVer" : "38.2.0",
   "version" : "2.3",
   "defaultLanguage" : "en",
   "languages" : [ "en" ],
@@ -2054,7 +2054,7 @@
         "name" : "Specimen_summary",
         "localizedName" : "Specimen_summary",
         "rmType" : "EVALUATION",
-        "nodeId" : "openEHR-EHR-EVALUATION.specimen_summary.v0",
+        "nodeId" : "openEHR-EHR-EVALUATION.specimen_summary.v1",
         "min" : 0,
         "max" : -1,
         "localizedNames" : {
@@ -2064,11 +2064,9 @@
           "en" : "Summary or persistent information about a single specimen."
         },
         "annotations" : {
-          "XSD label" : "Sample",
-          "comment" : "For example: a harvested oocyte, a bacterial culture, tumor tissue or tissue graft.",
-          "XSD type" : "Event.eventype"
+          "comment" : "For example: a harvested oocyte, a bacterial culture, tumor tissue or tissue graft."
         },
-        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]",
+        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]",
         "children" : [ {
           "id" : "sample_id",
           "name" : "Sample ID",
@@ -2085,11 +2083,11 @@
           },
           "annotations" : {
             "comment" : "For example: SEC-ID (The Single European Code) for tissues and cell products or biobank generated biospeciment ID like \"Kit_KFO241_123456789_BLD_01\".",
-            "Dala model label" : "SAMPLE_ID",
+            "Data model label" : "SAMPLE_ID",
             "XSD type" : "tag",
             "XSD label" : "Dataelement_56_2"
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/data[at0001]/items[at0002,'Sample ID']/value",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/data[at0001]/items[at0002,'Sample ID']/value",
           "inputs" : [ {
             "suffix" : "id",
             "type" : "TEXT"
@@ -2120,7 +2118,7 @@
           "annotations" : {
             "comment" : "For example: Tissue or body fluid."
           },
-          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]",
           "children" : [ {
             "id" : "material_type",
             "name" : "Material type",
@@ -2142,7 +2140,7 @@
               "XSD label" : "Dataelement_54_2",
               "fhir_mapping" : "Specimen.type"
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0029,'Material type']/value",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0029,'Material type']/value",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "CODED_TEXT",
@@ -2186,7 +2184,7 @@
               "XSD type" : "tag",
               "XSD label" : "Dataelement_55_2"
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0079,'Preservation mode']/value",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0079,'Preservation mode']/value",
             "inputs" : [ {
               "suffix" : "code",
               "type" : "CODED_TEXT",
@@ -2231,7 +2229,7 @@
               "XSD type" : "tag",
               "XSD label" : "Dataelement_89_3"
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0015,'Year of sample collection']/value",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[at0015,'Year of sample collection']/value",
             "inputs" : [ {
               "type" : "DATETIME",
               "validation" : {
@@ -2252,7 +2250,7 @@
             "localizedDescriptions" : {
               "en" : "A media file that is acquired or used as part of the healthcare process, and associated metadata."
             },
-            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]",
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]",
             "children" : [ {
               "id" : "identifier",
               "name" : "Identifier",
@@ -2267,7 +2265,7 @@
               "localizedDescriptions" : {
                 "en" : "Unique ID for the media file."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0010]",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0010]",
               "children" : [ {
                 "id" : "identifier_value",
                 "localizedName" : "Identifier",
@@ -2281,7 +2279,7 @@
                 "localizedDescriptions" : {
                   "en" : "Unique ID for the media file."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0010]/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0010]/value",
                 "inputs" : [ {
                   "suffix" : "id",
                   "type" : "TEXT"
@@ -2308,7 +2306,7 @@
                 "localizedDescriptions" : {
                   "en" : "Unique ID for the media file."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0010]/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0010]/value",
                 "inputs" : [ {
                   "type" : "TEXT"
                 } ]
@@ -2327,7 +2325,7 @@
               "localizedDescriptions" : {
                 "en" : "The date/time, partial date or period when the media file was generated or authored."
               },
-              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0004]",
+              "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0004]",
               "children" : [ {
                 "id" : "date_time_value",
                 "localizedName" : "Created",
@@ -2341,7 +2339,7 @@
                 "localizedDescriptions" : {
                   "en" : "The date/time, partial date or period when the media file was generated or authored."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0004]/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0004]/value",
                 "inputs" : [ {
                   "type" : "DATETIME"
                 } ]
@@ -2358,14 +2356,14 @@
                 "localizedDescriptions" : {
                   "en" : "The date/time, partial date or period when the media file was generated or authored."
                 },
-                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0004]/value",
+                "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0004]/value",
                 "children" : [ {
                   "id" : "lower",
                   "rmType" : "DV_DATE_TIME",
                   "nodeId" : "",
                   "min" : 1,
                   "max" : 1,
-                  "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0004]/value/lower",
+                  "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0004]/value/lower",
                   "inputs" : [ {
                     "type" : "DATETIME"
                   } ]
@@ -2375,7 +2373,7 @@
                   "nodeId" : "",
                   "min" : 1,
                   "max" : 1,
-                  "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0004]/value/upper",
+                  "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.specimen.v1]/items[openEHR-EHR-CLUSTER.media_file.v1]/items[at0004]/value/upper",
                   "inputs" : [ {
                     "type" : "DATETIME"
                   } ]
@@ -2389,7 +2387,7 @@
           "rmType" : "CODE_PHRASE",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/language",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/language",
           "inContext" : true
         }, {
           "id" : "encoding",
@@ -2397,7 +2395,7 @@
           "rmType" : "CODE_PHRASE",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/encoding",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/encoding",
           "inContext" : true
         }, {
           "id" : "subject",
@@ -2405,7 +2403,7 @@
           "rmType" : "PARTY_PROXY",
           "min" : 1,
           "max" : 1,
-          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v0]/subject",
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]/subject",
           "inputs" : [ {
             "suffix" : "id",
             "type" : "TEXT"
