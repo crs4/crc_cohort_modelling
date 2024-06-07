@@ -1,6 +1,6 @@
 {
   "templateId" : "BBMRI-ERIC_Colorectal_Cancer_Cohort_Report",
-  "semVer" : "39.2.1",
+  "semVer" : "39.3.0",
   "version" : "2.3",
   "defaultLanguage" : "en",
   "languages" : [ "en" ],
@@ -83,20 +83,20 @@
           },
           "aqlPath" : "/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.organisation.v1,'Biobank']/items[openEHR-EHR-CLUSTER.case_identification.v0]",
           "children" : [ {
-            "id" : "biobank_patient_identifer",
-            "name" : "biobank_patient_identifer",
-            "localizedName" : "biobank_patient_identifer",
+            "id" : "biobank_patient_identifier",
+            "name" : "biobank_patient_identifier",
+            "localizedName" : "biobank_patient_identifier",
             "rmType" : "DV_TEXT",
             "nodeId" : "at0001",
             "min" : 1,
             "max" : 1,
             "localizedNames" : {
-              "en" : "biobank_patient_identifer"
+              "en" : "biobank_patient_identifier"
             },
             "localizedDescriptions" : {
               "en" : "The identifier of this case."
             },
-            "aqlPath" : "/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.organisation.v1,'Biobank']/items[openEHR-EHR-CLUSTER.case_identification.v0]/items[at0001,'biobank_patient_identifer']/value",
+            "aqlPath" : "/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.organisation.v1,'Biobank']/items[openEHR-EHR-CLUSTER.case_identification.v0]/items[at0001,'biobank_patient_identifier']/value",
             "inputs" : [ {
               "type" : "TEXT"
             } ]

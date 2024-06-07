@@ -15,7 +15,7 @@
         <other_details id="original_namespace"></other_details>
         <other_details id="original_publisher"></other_details>
         <other_details id="custodian_namespace"></other_details>
-        <other_details id="sem_ver">39.2.1</other_details>
+        <other_details id="sem_ver">39.3.0</other_details>
         <other_details id="MD5-CAM-1.0.1">9d1490a107de41c096aa03cb9451bdf4</other_details>
         <other_details id="build_uid"></other_details>
         <other_details id="PARENT:MD5-CAM-1.0.1">005501C1FA493A4838F5F1121F2870EC</other_details>
@@ -492,7 +492,7 @@
 </occurrences>
 <node_id></node_id>
 <item xsi:type="C_STRING">
-    <list>biobank_patient_identifer</list>
+    <list>biobank_patient_identifier</list>
 </item>
                             </children>
                         </attributes>
@@ -519,7 +519,7 @@
             <items id="description">To record case identification details for public health purposes.</items>
         </term_definitions>
         <term_definitions code="at0001">
-            <items id="text">biobank_patient_identifer</items>
+            <items id="text">biobank_patient_identifier</items>
             <items id="description">The identifier of this case.</items>
         </term_definitions>
         <term_definitions code="at0002">
