@@ -42,15 +42,19 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>38.2.0</value>
+                <value>39.2.0</value>
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>665b3617d9601fede8e84db635a2e65b</value>
+                <value>9d1490a107de41c096aa03cb9451bdf4</value>
             </item>
             <item>
                 <key>build_uid</key>
                 <value/>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>005501C1FA493A4838F5F1121F2870EC</value>
             </item>
             <item>
                 <key>original_language</key>
@@ -454,6 +458,22 @@
             </item>
         </items>
     </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[at0263]/items[openEHR-EHR-CLUSTER.anatomical_location.v1]/items[at0001]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Dataelement_68_2</value>
+            </item>
+            <item>
+                <key>Data model label</key>
+                <value>HIST_METASTASIS</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>tag</value>
+            </item>
+        </items>
+    </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001.1]/items[openEHR-EHR-CLUSTER.tnm-pathological.v1]/items[at0005.1]">
         <items>
             <item>
@@ -543,22 +563,6 @@
             <item>
                 <key>Data model label</key>
                 <value>WHO_GRADE</value>
-            </item>
-            <item>
-                <key>XSD type</key>
-                <value>tag</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.result_details.v0, 'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1]/data[at0001]/items[openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0]/items[at0001]/items[at0263]/items[openEHR-EHR-CLUSTER.anatomical_location.v1]/items[at0001]">
-        <items>
-            <item>
-                <key>XSD label</key>
-                <value>Dataelement_68_2</value>
-            </item>
-            <item>
-                <key>Data model label</key>
-                <value>HIST_METASTASIS</value>
             </item>
             <item>
                 <key>XSD type</key>
@@ -1294,7 +1298,7 @@
             </item>
         </items>
     </annotations>
-    <definition archetype_id="openEHR-EHR-COMPOSITION.report.v1" concept_name="Report" name="BBMRI-ERIC Colorectal Cancer Cohort Report" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+    <definition archetype_id="openEHR-EHR-COMPOSITION.report.v1" concept_name="Report" name="BBMRI-ERIC_Colorectal_Cancer_Cohort_Report" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
         <Content archetype_id="openEHR-EHR-SECTION.demographics_rcp.v1" concept_name="Patient demographics" max="1" name="Patient data" path="/content" xsi:type="tem:SECTION">
             <Item archetype_id="openEHR-EHR-EVALUATION.gender.v1" max="1" min="1" path="/items" xsi:type="tem:EVALUATION">
                 <Rule max="0" path="/data[at0002]/items[at0022]"/>
@@ -2019,6 +2023,39 @@
                     </Rule>
                     <Rule max="0" path="/items[at0001]/items[at0179]/items[at0220]"/>
                     <Rule max="0" path="/items[at0001]/items[at0309]"/>
+                    <Items archetype_id="openEHR-EHR-CLUSTER.anatomical_location.v1" min="1" path="/items[at0001]/items[at0263]/items[at0287]" xsi:type="tem:CLUSTER">
+                        <Rule name="Localization of metastasis" path="/items[at0001]">
+                            <constraint xsi:type="tem:textConstraint">
+                                <includedValues>omop_vocabulary::4051774::Adrenals</includedValues>
+                                <includedValues>omop_vocabulary::4029619::Bone marrow</includedValues>
+                                <includedValues>omop_vocabulary::4133034::Brain</includedValues>
+                                <includedValues>omop_vocabulary::45880117::Hepatic</includedValues>
+                                <includedValues>omop_vocabulary::45881859::Lymph Nodes</includedValues>
+                                <includedValues>omop_vocabulary::45878582::None</includedValues>
+                                <includedValues>omop_vocabulary::45880118::Osseous</includedValues>
+                                <includedValues>omop_vocabulary::45880116::Peritoneum</includedValues>
+                                <includedValues>omop_vocabulary::45882504::Pleura</includedValues>
+                                <includedValues>omop_vocabulary::45881858::Lung</includedValues>
+                                <includedValues>omop_vocabulary::45881860::Skin</includedValues>
+                                <includedValues>omop_vocabulary::45878394::Others</includedValues>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0065]"/>
+                        <Rule max="0" path="/items[at0002]"/>
+                        <Rule max="0" path="/items[at0064]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Coded_text</includedTypes>
+                                <includedTypes>Text</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0055]">
+                            <constraint xsi:type="tem:multipleConstraint">
+                                <includedTypes>Coded_text</includedTypes>
+                                <includedTypes>Text</includedTypes>
+                            </constraint>
+                        </Rule>
+                        <Rule max="0" path="/items[at0023]"/>
+                    </Items>
                     <Items archetype_id="openEHR-EHR-CLUSTER.tnm-pathological.v1" max="1" min="1" path="/items[at0001]/items[at0002]" xsi:type="tem:CLUSTER">
                         <Rule max="0" path="/items[at0001]"/>
                         <Rule max="0" path="/items[at0002]"/>
@@ -2115,39 +2152,6 @@
                         <Rule max="0" path="/items[at0.2]"/>
                         <Rule max="0" path="/items[at0.3]"/>
                         <Rule max="0" path="/items[at0.8]"/>
-                    </Items>
-                    <Items archetype_id="openEHR-EHR-CLUSTER.anatomical_location.v1" min="1" path="/items[at0001]/items[at0263]/items[at0287]" xsi:type="tem:CLUSTER">
-                        <Rule name="Localization of metastasis" path="/items[at0001]">
-                            <constraint xsi:type="tem:textConstraint">
-                                <includedValues>omop_vocabulary::4051774::Adrenals</includedValues>
-                                <includedValues>omop_vocabulary::4029619::Bone marrow</includedValues>
-                                <includedValues>omop_vocabulary::4133034::Brain</includedValues>
-                                <includedValues>omop_vocabulary::45880117::Hepatic</includedValues>
-                                <includedValues>omop_vocabulary::45881859::Lymph Nodes</includedValues>
-                                <includedValues>omop_vocabulary::45878582::None</includedValues>
-                                <includedValues>omop_vocabulary::45880118::Osseous</includedValues>
-                                <includedValues>omop_vocabulary::45880116::Peritoneum</includedValues>
-                                <includedValues>omop_vocabulary::45882504::Pleura</includedValues>
-                                <includedValues>omop_vocabulary::45881858::Lung</includedValues>
-                                <includedValues>omop_vocabulary::45881860::Skin</includedValues>
-                                <includedValues>omop_vocabulary::45878394::Others</includedValues>
-                            </constraint>
-                        </Rule>
-                        <Rule max="0" path="/items[at0065]"/>
-                        <Rule max="0" path="/items[at0002]"/>
-                        <Rule max="0" path="/items[at0064]">
-                            <constraint xsi:type="tem:multipleConstraint">
-                                <includedTypes>Coded_text</includedTypes>
-                                <includedTypes>Text</includedTypes>
-                            </constraint>
-                        </Rule>
-                        <Rule max="0" path="/items[at0055]">
-                            <constraint xsi:type="tem:multipleConstraint">
-                                <includedTypes>Coded_text</includedTypes>
-                                <includedTypes>Text</includedTypes>
-                            </constraint>
-                        </Rule>
-                        <Rule max="0" path="/items[at0023]"/>
                     </Items>
                 </Items>
             </Item>
@@ -3852,6 +3856,12 @@
                 </Rule>
                 <Rule max="0" path="/items[at0004]"/>
                 <Rule max="0" path="/items[at0019]"/>
+                <Items archetype_id="openEHR-EHR-CLUSTER.case_identification.v0" max="1" path="/items[at0017]" xsi:type="tem:CLUSTER">
+                    <Rule min="1" name="biobank_patient_identifer" path="/items[at0001]"/>
+                    <Rule max="0" path="/items[at0002]"/>
+                    <Rule max="0" path="/items[at0003]"/>
+                    <Rule max="0" path="/items[at0006]"/>
+                </Items>
             </Items>
             <Items archetype_id="openEHR-EHR-CLUSTER.case_identification.v0" max="1" min="1" path="/context/other_context[at0001]/items[at0006]" xsi:type="tem:CLUSTER">
                 <Rule min="1" name="Patient pseudonym" path="/items[at0001]"/>
@@ -3896,7 +3906,7 @@
         <digest id="MD5-CAM-1.0.1">BF9B28403CBB9F2FB9C120F3EB89DA8E</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">6780584ECAE98538AF60C1335D7ED4BF</digest>
+        <digest id="MD5-CAM-1.0.1">78D1421288E4ED0C46F353927AC1B525</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.timing_nondaily.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">95309E1587F2F9A3D1845B07B1011799</digest>
@@ -3905,7 +3915,7 @@
         <digest id="MD5-CAM-1.0.1">5F046998E9BD3174F2499443BF7BB7E7</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.laboratory_test_result.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">D02DE57ACD4A04C1ADAE1F8B28197890</digest>
+        <digest id="MD5-CAM-1.0.1">AB458098681E9505986ADFCEC7FEC742</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.specimen.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">22CC4D6E678D5921D1235F94FF1DDDB1</digest>
@@ -3920,31 +3930,31 @@
         <digest id="MD5-CAM-1.0.1">F537F96BF4102BD332807BA2111BDBD8</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.media_file.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">F3CC0032E8B4B09C7B535211E3DFAE66</digest>
+        <digest id="MD5-CAM-1.0.1">4F1513E139C5587C27C46E70882ECD97</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.synoptic_details_colorectal_carcinoma.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">28c10388cc33fff918cdbec7b8d7269a</digest>
     </integrity_checks>
-    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.tnm-pathological.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">D5BC5C645975EFCAE96A7231F81479ED</digest>
-    </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.anatomical_location.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">62823A86BC1C2B02574125E21F5DECCB</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.tnm-pathological.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">D5BC5C645975EFCAE96A7231F81479ED</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-SECTION.adhoc.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">8FE80F3E80C594AAF99D3BA540A53D73</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-EVALUATION.specimen_summary.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">C2AC439C451B57961BB462BBBAAD040A</digest>
+        <digest id="MD5-CAM-1.0.1">9665FDA48B2D3A8BB2AE634119108D78</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-ACTION.procedure.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">7976419EEFB8BFACDA7BAB23201F9BEF</digest>
+        <digest id="MD5-CAM-1.0.1">1D47B8E4DEB9C323DBCBE477A47C21FC</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-ACTION.medication.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">F0C4134C4DCAEB8F6EBD3A9318C5B87B</digest>
+        <digest id="MD5-CAM-1.0.1">B13761A29099D1CB3EBA7A250777A6FC</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-EVALUATION.clinical_synopsis.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">1C27320A9B0499317426B81E69A5862D</digest>
+        <digest id="MD5-CAM-1.0.1">0A06AC36BF82029DCD53C8C128EE29DD</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.genetic_variant_presence.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">FA49B7ED2418260198D18D3F69CEABD7</digest>

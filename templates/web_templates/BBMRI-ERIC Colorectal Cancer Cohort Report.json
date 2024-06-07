@@ -1,19 +1,19 @@
 {
   "templateId" : "BBMRI-ERIC Colorectal Cancer Cohort Report",
-  "semVer" : "38.2.0",
+  "semVer" : "39.2.0",
   "version" : "2.3",
   "defaultLanguage" : "en",
   "languages" : [ "en" ],
   "tree" : {
     "id" : "bbmri-eric_colorectal_cancer_cohort_report",
-    "name" : "BBMRI-ERIC Colorectal Cancer Cohort Report",
-    "localizedName" : "BBMRI-ERIC Colorectal Cancer Cohort Report",
+    "name" : "BBMRI-ERIC_Colorectal_Cancer_Cohort_Report",
+    "localizedName" : "BBMRI-ERIC_Colorectal_Cancer_Cohort_Report",
     "rmType" : "COMPOSITION",
     "nodeId" : "openEHR-EHR-COMPOSITION.report.v1",
     "min" : 1,
     "max" : 1,
     "localizedNames" : {
-      "en" : "BBMRI-ERIC Colorectal Cancer Cohort Report"
+      "en" : "BBMRI-ERIC_Colorectal_Cancer_Cohort_Report"
     },
     "localizedDescriptions" : {
       "en" : "Document to communicate information to others, commonly in response to a request from another party."
@@ -67,6 +67,40 @@
           "inputs" : [ {
             "type" : "TEXT"
           } ]
+        }, {
+          "id" : "case_identification",
+          "name" : "Case identification",
+          "localizedName" : "Case identification",
+          "rmType" : "CLUSTER",
+          "nodeId" : "openEHR-EHR-CLUSTER.case_identification.v0",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Case identification"
+          },
+          "localizedDescriptions" : {
+            "en" : "To record case identification details for public health purposes."
+          },
+          "aqlPath" : "/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.organisation.v1,'Biobank']/items[openEHR-EHR-CLUSTER.case_identification.v0]",
+          "children" : [ {
+            "id" : "biobank_patient_identifer",
+            "name" : "biobank_patient_identifer",
+            "localizedName" : "biobank_patient_identifer",
+            "rmType" : "DV_TEXT",
+            "nodeId" : "at0001",
+            "min" : 1,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "biobank_patient_identifer"
+            },
+            "localizedDescriptions" : {
+              "en" : "The identifier of this case."
+            },
+            "aqlPath" : "/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.organisation.v1,'Biobank']/items[openEHR-EHR-CLUSTER.case_identification.v0]/items[at0001,'biobank_patient_identifer']/value",
+            "inputs" : [ {
+              "type" : "TEXT"
+            } ]
+          } ]
         } ]
       }, {
         "id" : "case_identification",
@@ -95,7 +129,7 @@
             "en" : "Patient pseudonym"
           },
           "localizedDescriptions" : {
-            "en" : "The identifier of this case."
+            "en" : "The identifier of this case given in the cohort aggregation db."
           },
           "annotations" : {
             "Data model label" : "PATIENT_ID",
@@ -334,6 +368,27 @@
             "terminology" : "omop_vocabulary"
           } ]
         }, {
+          "id" : "variant",
+          "name" : "Variant",
+          "localizedName" : "Variant",
+          "rmType" : "DV_TEXT",
+          "nodeId" : "at0079",
+          "min" : 0,
+          "max" : -1,
+          "localizedNames" : {
+            "en" : "Variant"
+          },
+          "localizedDescriptions" : {
+            "en" : "Specific variant or subtype of the Diagnosis, if relevant."
+          },
+          "annotations" : {
+            "comment" : "For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible. "
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.demographics_rcp.v1,'Patient data']/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Primary diagnosis']/data[at0001]/items[at0079]/value",
+          "inputs" : [ {
+            "type" : "TEXT"
+          } ]
+        }, {
           "id" : "date_of_diagnosis",
           "name" : "Date of diagnosis",
           "localizedName" : "Date of diagnosis",
@@ -520,6 +575,27 @@
             } ],
             "defaultValue" : "36769180",
             "terminology" : "omop_vocabulary"
+          } ]
+        }, {
+          "id" : "variant",
+          "name" : "Variant",
+          "localizedName" : "Variant",
+          "rmType" : "DV_TEXT",
+          "nodeId" : "at0079",
+          "min" : 0,
+          "max" : -1,
+          "localizedNames" : {
+            "en" : "Variant"
+          },
+          "localizedDescriptions" : {
+            "en" : "Specific variant or subtype of the Diagnosis, if relevant."
+          },
+          "annotations" : {
+            "comment" : "For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible. "
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.demographics_rcp.v1,'Patient data']/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Metastasis diagnosis']/data[at0001]/items[at0079]/value",
+          "inputs" : [ {
+            "type" : "TEXT"
           } ]
         }, {
           "id" : "metastasis_diagnosis2",
@@ -1109,6 +1185,27 @@
               } ],
               "defaultValue" : "44803809",
               "terminology" : "omop_vocabulary"
+            } ]
+          }, {
+            "id" : "variant",
+            "name" : "Variant",
+            "localizedName" : "Variant",
+            "rmType" : "DV_TEXT",
+            "nodeId" : "at0079",
+            "min" : 0,
+            "max" : -1,
+            "localizedNames" : {
+              "en" : "Variant"
+            },
+            "localizedDescriptions" : {
+              "en" : "Specific variant or subtype of the Diagnosis, if relevant."
+            },
+            "annotations" : {
+              "comment" : "For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible. "
+            },
+            "aqlPath" : "/content[openEHR-EHR-SECTION.result_details.v0,'Histopathology']/items[at0002]/items[openEHR-EHR-EVALUATION.problem_diagnosis.v1,'Cancer diagnosis']/data[at0001]/items[at0079]/value",
+            "inputs" : [ {
+              "type" : "TEXT"
             } ]
           }, {
             "id" : "localization_of_primary_tumor",
@@ -2051,14 +2148,14 @@
       "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']",
       "children" : [ {
         "id" : "specimen_summary",
-        "name" : "Specimen_summary",
-        "localizedName" : "Specimen_summary",
+        "name" : "Specimen summary",
+        "localizedName" : "Specimen summary",
         "rmType" : "EVALUATION",
         "nodeId" : "openEHR-EHR-EVALUATION.specimen_summary.v1",
         "min" : 0,
         "max" : -1,
         "localizedNames" : {
-          "en" : "Specimen_summary"
+          "en" : "Specimen summary"
         },
         "localizedDescriptions" : {
           "en" : "Summary or persistent information about a single specimen."
