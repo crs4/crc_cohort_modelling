@@ -15,7 +15,7 @@
         <other_details id="original_namespace"></other_details>
         <other_details id="original_publisher"></other_details>
         <other_details id="custodian_namespace"></other_details>
-        <other_details id="sem_ver">39.2.0</other_details>
+        <other_details id="sem_ver">39.2.1</other_details>
         <other_details id="MD5-CAM-1.0.1">9d1490a107de41c096aa03cb9451bdf4</other_details>
         <other_details id="build_uid"></other_details>
         <other_details id="PARENT:MD5-CAM-1.0.1">005501C1FA493A4838F5F1121F2870EC</other_details>
@@ -36,9 +36,9 @@
         <value>44b2395e-c2fb-44ec-8363-2e87f2d4cd82</value>
     </uid>
     <template_id>
-        <value>BBMRI-ERIC Colorectal Cancer Cohort Report</value>
+        <value>BBMRI-ERIC_Colorectal_Cancer_Cohort_Report</value>
     </template_id>
-    <concept>BBMRI-ERIC Colorectal Cancer Cohort Report</concept>
+    <concept>BBMRI-ERIC_Colorectal_Cancer_Cohort_Report</concept>
     <definition>
         <rm_type_name>COMPOSITION</rm_type_name>
         <occurrences>
@@ -27538,7 +27538,7 @@ Coding with a terminology is desirable, where possible.</items>
             <value>openEHR-EHR-COMPOSITION.report.v1</value>
         </archetype_id>
         <template_id>
-            <value>BBMRI-ERIC Colorectal Cancer Cohort Report</value>
+            <value>BBMRI-ERIC_Colorectal_Cancer_Cohort_Report</value>
         </template_id>
         <term_definitions code="at0000">
             <items id="text">BBMRI-ERIC_Colorectal_Cancer_Cohort_Report</items>

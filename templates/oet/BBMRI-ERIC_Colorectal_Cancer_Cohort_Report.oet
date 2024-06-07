@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
     <id>44b2395e-c2fb-44ec-8363-2e87f2d4cd82</id>
-    <name>BBMRI-ERIC Colorectal Cancer Cohort Report</name>
+    <name>BBMRI-ERIC_Colorectal_Cancer_Cohort_Report</name>
     <description>
         <original_author>
             <item>
@@ -42,7 +42,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>39.2.0</value>
+                <value>39.2.1</value>
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>

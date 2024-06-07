@@ -1,6 +1,6 @@
 {
-  "templateId" : "BBMRI-ERIC Colorectal Cancer Cohort Report",
-  "semVer" : "39.2.0",
+  "templateId" : "BBMRI-ERIC_Colorectal_Cancer_Cohort_Report",
+  "semVer" : "39.2.1",
   "version" : "2.3",
   "defaultLanguage" : "en",
   "languages" : [ "en" ],
