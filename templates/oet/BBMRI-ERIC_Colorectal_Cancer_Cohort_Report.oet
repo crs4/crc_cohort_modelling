@@ -46,7 +46,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>9d1490a107de41c096aa03cb9451bdf4</value>
+                <value>38f10ca46053f8181b85b719773c9ade</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -583,6 +583,18 @@
             <item>
                 <key>XSD type</key>
                 <value>tag</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.report.v1]/content[openEHR-EHR-SECTION.adhoc.v1, 'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]">
+        <items>
+            <item>
+                <key>XSD label</key>
+                <value>Sample</value>
+            </item>
+            <item>
+                <key>XSD type</key>
+                <value>Event.eventype</value>
             </item>
         </items>
     </annotations>

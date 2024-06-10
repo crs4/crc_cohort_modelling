@@ -2161,7 +2161,9 @@
           "en" : "Summary or persistent information about a single specimen."
         },
         "annotations" : {
-          "comment" : "For example: a harvested oocyte, a bacterial culture, tumor tissue or tissue graft."
+          "XSD label" : "Sample",
+          "comment" : "For example: a harvested oocyte, a bacterial culture, tumor tissue or tissue graft.",
+          "XSD type" : "Event.eventype"
         },
         "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Sample']/items[openEHR-EHR-EVALUATION.specimen_summary.v1]",
         "children" : [ {
