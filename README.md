@@ -18,3 +18,6 @@ access](https://www.bbmri-eric.eu/services/access-policies/).
 ## Usage
 
 If you use this work in a paper, don't forget to give credits to the authors by citing the URL of this repository.
+
+## Acknowledgments
+This work has been partially supported by EOSC-Life (grant agreement number 824087), since the modelling activity has been started within the EOSC-Life WP1 Demonstrator “Cloudification of BBMRI-ERICCRC-Cohort and its Digital Pathology Imaging” (APPID 1228).
