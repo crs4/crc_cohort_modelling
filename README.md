@@ -1,8 +1,7 @@
-# crc_cohort_modelling
+# Colorectal Cancer Cohort modelling
 
 This repository contains the semantic model, expressed in openEHR, for the clinical data included in the Colorectal Cancer Cohort (CRC-Cohort) acquired by BBMRI-ERIC.
-The modelling has been started within the EOSC-Life WP1 Demonstrator “Cloudification of BBMRI-ERIC CRC-Cohort and its Digital Pathology Imaging” (APPID 1228), which had among its objectives 
-the improvement of the CRC-Cohort dataset.
+The modelling has been started within the EOSC-Life WP1 Demonstrator “Cloudification of BBMRI-ERIC CRC-Cohort and its Digital Pathology Imaging” (APPID 1228), which had among its objectives the improvement of the CRC-Cohort dataset.
 
 ## What's the CRC-Cohort?
 
